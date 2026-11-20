@@ -1,0 +1,35 @@
+{
+  "revision": "1.1",
+  "date": "2026-10-29",
+  "user_report": "Unity FBXImporter.cpp Line 420: File is corrupted",
+  "diagnosis": "Previous FBX postprocessor incorrectly mapped native type C (char) to type B (bool) for 19 Shading flags. Blender parser accepted this, but user Unity importer rejected the file.",
+  "fix": "Removed the entire FBX parse/re-encode postprocessor. Canonical Visual names are set before native serialization. Native Blender writer now writes 19 type C Shading flags.",
+  "archive": "Source~\\Archive\\2026-10-29_FBX_v1_rejected",
+  "previous_fbx_sha256": "fff4cd30f61de25cb6a4bbef8896e8698cd19e8d511b8a55eecef988aca43d33",
+  "fixed_fbx_sha256": "88358e7dbd654a46e50e954733344d9b4a5c0c31b625e89984c93fc181dd1d72",
+  "source_blend_sha256": "c4b5e6b46b5c9ac49ca848ad90a3c063a11c45117bf138b69a66c54eaf9fe991",
+  "fbx_guid_preserved": "c7b64e6b8e7db924c9d3df3f05ff2184",
+  "meta_bytes_unchanged": true,
+  "meshes": 7,
+  "empties": 12,
+  "triangles": 13128,
+  "game_materials": 3,
+  "validation": {
+    "blender_roundtrip": "passed; see FBX_Roundtrip_QA.json",
+    "independent_parser": "ufbx strict load passed",
+    "independent_axis_config": "Y-up, positive odd front, left-handed: right=-X, up=+Y, front=+Z; explicit X handedness conversion; matches Unity FBX axis convention",
+    "independent_parser_stdout": "LOAD_OK strict=1 meshes=7 empties=12 materials=3 triangles=13128\nUNITY_LH_MIN -0.150999962 -0.061200002 -0.024500003\nUNITY_LH_MAX 0.061200000 0.101261750 0.080999993\nNODE Tourniquet_Model POSITION 0.000000000 0.000000000 0.000000000 UP 0.000000000 1.000000000 -0.000000075 FORWARD 0.000000000 0.000000075 1.000000000\nNODE Pivot_WindlassAxis POSITION 0.000000000 0.094999999 -0.000000007 UP 0.000000000 1.000000000 -0.000000075 FORWARD 0.000000000 0.000000075 1.000000000\nNODE Pivot_BandEnd POSITION -0.150999993 0.035000000 -0.000000003 UP -0.254493383 0.967074515 -0.000000054 FORWARD -0.967074515 -0.254493383 0.000000092\nNODE Surface_TimeLabel POSITION 0.044000000 0.091710009 0.063999996 UP 0.000000000 0.996700005 -0.081173270 FORWARD 0.000000000 0.081173270 0.996700005\nNODE Point_LimbAttach POSITION 0.000000000 0.000000000 0.000000000 UP 0.000000000 1.000000000 -0.000000075 FORWARD 0.000000000 0.000000075 1.000000000\n",
+    "unity_importer_recheck": "not run by agent; pending user"
+  },
+  "preserved": [
+    "source .blend file",
+    "geometry",
+    "pivots",
+    "textures",
+    "Unity .meta GUID",
+    "Unity code",
+    "Prefab",
+    "scene",
+    "ProjectSettings"
+  ]
+}

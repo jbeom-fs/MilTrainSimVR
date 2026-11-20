@@ -1,0 +1,6 @@
+{
+  "baseline_count": 4339,
+  "after_count": 4339,
+  "outside_authorized_paths_changed": [],
+  "method": "git tracked/nonignored untracked file size + nanosecond modification time; excludes authorized TrainingDisplay folder and its sibling .meta"
+}

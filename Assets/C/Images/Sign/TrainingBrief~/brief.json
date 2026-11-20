@@ -1,0 +1,8 @@
+{
+  "title": "시가지 전투 임무",
+  "subtitle": "MISSION BRIEFING",
+  "enemies": 20,
+  "freeSeconds": 300,
+  "zone": "백화점 3층",
+  "enemyCaptureDelay": 60
+}

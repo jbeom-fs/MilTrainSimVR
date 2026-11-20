@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689cf7301f09f074db46c5e033e5c606, type: 3}
+  m_Name: C_EnemyHold
+  m_EditorClassIdentifier: Assembly-CSharp::MilTrainSimVR.UrbanCombat.EnemyHoldSettings
+  rightShift: {x: -1.3, y: -1.4, z: -0.9}
+  rightPalmTurn: 16
+  rightTilt: 0
+  rightCurl:
+    indexBase: 20
+    indexMid: 100
+    middleBase: 77
+    middleMid: 20
+    middleTip: 23
+    thumbIn: 66
+    thumbMid: 0
+    thumbTip: 0
+  leftShift: {x: 0, y: 0.7, z: 0}
+  leftFingerAngle: 19
+  leftTilt: -7.5
+  leftCurl:
+    indexBase: 37
+    indexMid: 61
+    middleBase: 81
+    middleMid: 34
+    middleTip: 50
+    thumbIn: 6
+    thumbMid: 17
+    thumbTip: 15
+  leftSlide: 8
+  eyeRelief: 9
+  aimShift: {x: 3, y: -1, z: 0}
+  aimTilt: {x: 0, y: 0, z: 0}
+  lowGrip: {x: 8, y: 104, z: 22}
+  lowYaw: -51
+  lowPitch: 17
+  lowRoll: 0
+  lowFollowChest: 1
+  rightElbowBias: {x: 12, y: -25, z: 0}
+  leftElbowBias: {x: -6, y: -25, z: 0}
+  twistToForearm: 0.5
+  gripCenter: {x: 0, y: -1.2, z: 0.2}
+  gripUp: {x: 0, y: 0.994, z: 0.11}
+  handguardCenter: {x: 0, y: 10.1, z: 33}
+  rearSight: {x: 0, y: 15.5, z: 2}
+  rightFistCenter: {x: -0.4, y: 7.5, z: 5.3}
+  leftCupCenter: {x: 0, y: 6.6, z: 6.4}
+  rightEyeFromHead: {x: 3.2, y: 9, z: 8.5}

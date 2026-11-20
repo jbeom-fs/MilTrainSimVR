@@ -1,0 +1,1242 @@
+{
+  "topology": [
+    {
+      "object": "Visual__Part_Band",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Part_Body",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Part_Windlass",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Part_WindlassClip",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Part_SecuringStrap",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Part_TimeLabel",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    },
+    {
+      "object": "Visual__Pivot_BandEnd",
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "loose_vertices": 0,
+      "degenerate_faces": 0
+    }
+  ],
+  "free_rotation_degrees_step": 5,
+  "free_rotation_rod_clip_intersections": [
+    [
+      0,
+      0
+    ],
+    [
+      5,
+      0
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      15,
+      0
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      25,
+      0
+    ],
+    [
+      30,
+      0
+    ],
+    [
+      35,
+      0
+    ],
+    [
+      40,
+      0
+    ],
+    [
+      45,
+      0
+    ],
+    [
+      50,
+      0
+    ],
+    [
+      55,
+      0
+    ],
+    [
+      60,
+      0
+    ],
+    [
+      65,
+      0
+    ],
+    [
+      70,
+      0
+    ],
+    [
+      75,
+      0
+    ],
+    [
+      80,
+      0
+    ],
+    [
+      85,
+      0
+    ],
+    [
+      90,
+      0
+    ],
+    [
+      95,
+      0
+    ],
+    [
+      100,
+      0
+    ],
+    [
+      105,
+      0
+    ],
+    [
+      110,
+      0
+    ],
+    [
+      115,
+      0
+    ],
+    [
+      120,
+      0
+    ],
+    [
+      125,
+      0
+    ],
+    [
+      130,
+      0
+    ],
+    [
+      135,
+      0
+    ],
+    [
+      140,
+      0
+    ],
+    [
+      145,
+      0
+    ],
+    [
+      150,
+      0
+    ],
+    [
+      155,
+      0
+    ],
+    [
+      160,
+      0
+    ],
+    [
+      165,
+      0
+    ],
+    [
+      170,
+      0
+    ],
+    [
+      175,
+      0
+    ],
+    [
+      180,
+      0
+    ],
+    [
+      185,
+      0
+    ],
+    [
+      190,
+      0
+    ],
+    [
+      195,
+      0
+    ],
+    [
+      200,
+      0
+    ],
+    [
+      205,
+      0
+    ],
+    [
+      210,
+      0
+    ],
+    [
+      215,
+      0
+    ],
+    [
+      220,
+      0
+    ],
+    [
+      225,
+      0
+    ],
+    [
+      230,
+      0
+    ],
+    [
+      235,
+      0
+    ],
+    [
+      240,
+      0
+    ],
+    [
+      245,
+      0
+    ],
+    [
+      250,
+      0
+    ],
+    [
+      255,
+      0
+    ],
+    [
+      260,
+      0
+    ],
+    [
+      265,
+      0
+    ],
+    [
+      270,
+      0
+    ],
+    [
+      275,
+      0
+    ],
+    [
+      280,
+      0
+    ],
+    [
+      285,
+      0
+    ],
+    [
+      290,
+      0
+    ],
+    [
+      295,
+      0
+    ],
+    [
+      300,
+      0
+    ],
+    [
+      305,
+      0
+    ],
+    [
+      310,
+      0
+    ],
+    [
+      315,
+      0
+    ],
+    [
+      320,
+      0
+    ],
+    [
+      325,
+      0
+    ],
+    [
+      330,
+      0
+    ],
+    [
+      335,
+      0
+    ],
+    [
+      340,
+      0
+    ],
+    [
+      345,
+      0
+    ],
+    [
+      350,
+      0
+    ],
+    [
+      355,
+      0
+    ],
+    [
+      360,
+      0
+    ]
+  ],
+  "seat_entry_degrees_step": 2,
+  "seat_entry_rod_clip_intersections": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      6,
+      0
+    ],
+    [
+      8,
+      0
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      12,
+      0
+    ],
+    [
+      14,
+      0
+    ],
+    [
+      16,
+      0
+    ],
+    [
+      18,
+      0
+    ],
+    [
+      20,
+      0
+    ],
+    [
+      22,
+      0
+    ],
+    [
+      24,
+      0
+    ],
+    [
+      26,
+      0
+    ],
+    [
+      28,
+      0
+    ],
+    [
+      30,
+      0
+    ]
+  ],
+  "seat_pose_rod_body_intersections": 0,
+  "ready_rod_body_intersections": 0,
+  "mechanical_mount_contact": "Clip foot fitted against body surface; coincident mounting boundaries are intentional.",
+  "free_rotation_height_m": 0.095,
+  "seated_rod_height_m": 0.076,
+  "axial_lowering_m": 0.019,
+  "seated_angle_unity_y_degrees": -30,
+  "limitations": [
+    "BVH triangle intersection is a geometric sample, not physical snap-fit or clinical validation.",
+    "Band has separate deformation samples, no completed runtime tightening animation.",
+    "Full 360 rotation sample checks rod against fixed clip. Internal band must be driven with rod; cloth simulation not required.",
+    "Finishing tab has a collision-free opening/lift sample; complete closing and fastening animation is future work."
+  ],
+  "full_rotation_fixed_parts": [
+    {
+      "angle": 0,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 5,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 10,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 15,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 20,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 25,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 30,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 35,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 40,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 45,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 50,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 55,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 60,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 65,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 70,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 75,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 80,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 85,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 90,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 95,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 100,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 105,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 110,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 115,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 120,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 125,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 130,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 135,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 140,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 145,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 150,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 155,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 160,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 165,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 170,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 175,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 180,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 185,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 190,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 195,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 200,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 205,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 210,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 215,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 220,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 225,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 230,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 235,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 240,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 245,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 250,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 255,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 260,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 265,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 270,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 275,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 280,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 285,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 290,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 295,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 300,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 305,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 310,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 315,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 320,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 325,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 330,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 335,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 340,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 345,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 350,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 355,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    },
+    {
+      "angle": 360,
+      "intersections": {
+        "Visual__Part_WindlassClip": 0,
+        "Visual__Part_SecuringStrap": 0,
+        "Visual__Part_TimeLabel": 0,
+        "Body_Polymer": 0
+      }
+    }
+  ],
+  "finishing_hinge_lift": [
+    {
+      "value": 0.0,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.1,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.2,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.3,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.4,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.5,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.6,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.7,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.8,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 0.9,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    },
+    {
+      "value": 1.0,
+      "strap_clip_intersections": 0,
+      "patch_clip_intersections": 0
+    }
+  ],
+  "pull_20mm": {
+    "body": 0,
+    "loop": 0
+  },
+  "uv": [
+    {
+      "object": "Visual__Part_Band",
+      "min": [
+        0.019999999552965164,
+        0.019999999552965164
+      ],
+      "max": [
+        0.9800000190734863,
+        0.2750000059604645
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Part_Body",
+      "min": [
+        0.019999999552965164,
+        0.35034042596817017
+      ],
+      "max": [
+        0.9611155986785889,
+        0.9546595811843872
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Part_Windlass",
+      "min": [
+        0.5566378235816956,
+        0.34745675325393677
+      ],
+      "max": [
+        0.7298557162284851,
+        0.9575433135032654
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Part_WindlassClip",
+      "min": [
+        0.5583886504173279,
+        0.35008299350738525
+      ],
+      "max": [
+        0.9616113305091858,
+        0.936833381652832
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Part_SecuringStrap",
+      "min": [
+        0.019999999552965164,
+        0.5699999928474426
+      ],
+      "max": [
+        0.47999998927116394,
+        0.6500000357627869
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Part_TimeLabel",
+      "min": [
+        0.020000040531158447,
+        0.7300000190734863
+      ],
+      "max": [
+        0.4999999403953552,
+        0.9599999785423279
+      ],
+      "zero_area_uv_faces": 0
+    },
+    {
+      "object": "Visual__Pivot_BandEnd",
+      "min": [
+        0.019999999552965164,
+        0.2849999964237213
+      ],
+      "max": [
+        0.9800000190734863,
+        0.5450000166893005
+      ],
+      "zero_area_uv_faces": 0
+    }
+  ],
+  "uv_notes": [
+    "Atlas outer padding at least 40px; polymer reserved rectangle has extra padding.",
+    "Polymer UV islands are packed per Visual and intentionally overlap between rigid objects to reuse non-directional grain.",
+    "Textile front, back and edges use separate strips; small strap edges deliberately reuse cloth strips.",
+    "No unique bake/lightmap UV2 is supplied.",
+    "Stretch review: longitudinal textile strips follow path arc length; polymer islands are smart projected."
+  ],
+  "seat_pose_rod_clip_intersections": 0
+}

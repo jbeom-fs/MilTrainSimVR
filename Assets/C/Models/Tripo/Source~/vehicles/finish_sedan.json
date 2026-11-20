@@ -1,0 +1,19 @@
+{
+ "blend": "C:/Temp/tripo_low/sedan/Sedan.blend",
+ "object": "Sedan",
+ "name": "Sedan",
+ "basecolor": "C:/Temp/tripo_low/sedan/Sedan_basecolor.jpg",
+ "normal": "C:/Temp/tripo_low/sedan/Sedan_normal.png",
+ "out_dir": "C:/Temp/tripo_low/sedan_finish",
+ "out_res": 2048,
+ "margin": 48,
+ "scale": [
+  4.35,
+  4.2,
+  4.12
+ ],
+ "front": "+X",
+ "beltline": 0.88,
+ "wheel_radius": 0.315,
+ "glass_opacity": 0.6
+}

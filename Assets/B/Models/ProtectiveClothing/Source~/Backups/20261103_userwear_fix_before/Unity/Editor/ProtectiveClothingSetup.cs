@@ -1,0 +1,2098 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using MilTrainSimVR.B.ProtectiveClothing;
+using TMPro;
+using Unity.XR.CoreUtils;
+using UnityEditor;
+using UnityEditor.Rendering.Universal.ShaderGUI;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Attachment;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.UI;
+using Object = UnityEngine.Object;
+
+namespace MilTrainSimVR.B.ProtectiveClothing.EditorSetup
+{
+    // Protective clothing equipment chapter, worn on the user's own body (basic wearing; no training order, runner or completion
+    // screen): importer settings of the two protective clothing FBX files (the worn model is rigged: Generic, no avatar, no
+    // animation; the pickup model has no rig) and their three textures, a derived metallic-smoothness map, the shared URP Lit
+    // material, and the work scene B_ProtectiveClothing_Equipment with the XR Origin (inactive Simulator), one EventSystem with the
+    // XR UI input module, floor, workbench with the six pickups, the user body (mannequin rig estimated from the HMD and
+    // controllers, with the skinned worn model and the six wear zones), a full-length mirror, the guidance board with the
+    // development reset button, and the target marker. Editor-only; run by the user.
+    //
+    // Model use (Assets/B/Models/ProtectiveClothing/Source~/README_Model.md): the worn meshes were fitted to the mannequin's bind
+    // T pose with the mannequin's common origin and are skinned to PC_Armature, a copy of the mannequin skeleton (same bone names
+    // and rest pose) inside the worn FBX. Here the worn model instance sits at the identity of the user body's mannequin model
+    // instance; at runtime each worn bone follows the mannequin bone of the same name (ProtectiveClothingUserBody). The
+    // mannequin's bones are set to the bind pose of its skinned mesh (bindposes) on the scene instance and its Animator is
+    // disabled; the mannequin FBX, its importer and its rig are not changed. Menu 2 compares the scene's bones and worn Attach
+    // points with the model documents (ReferenceInspection.json, AnchorManifest.json).
+    //
+    // The earlier reclined display (PC_MannequinRoot with its mannequin and worn instances and PC_DisplayBoard, PC_Stand,
+    // PC_Platform) is removed only where it is exactly what this setup generated: model instances of those two FBX files and
+    // primitive boxes with the furniture material and nothing else; anything else is kept and reported.
+    //
+    // Pickups: the pickup model is instanced and unpacked once; each <Name>_Pickup mesh (with its Grip and Attach Empties, its
+    // imported pose kept) goes under its own PC_<Name>_Pickup object with a Rigidbody, a box collider and an XRGrabInteractable.
+    //
+    // Idempotent: assets by path, scene objects by name, components by type. Layout (root, workbench, pickup slots, board, mirror),
+    // collider sizes, zone points, zone radii and the body's alignment values are set only on creation; references, grab and
+    // physics settings, materials, the bind pose, the instances' identity and the saved visibility are rewritten on every run.
+    // The FBX files, the .blend and the image files are only read (the derived map is a new file). Other scenes, K1, the shared
+    // Training code and project settings are not touched.
+    static class ProtectiveClothingSetup
+    {
+        const string LogTag = "[ProtectiveClothing]";
+        const string ModelDir = "Assets/B/Models/ProtectiveClothing";
+        const string PickupFbxPath = ModelDir + "/ProtectiveClothing_Pickup.fbx";
+        const string WornFbxPath = ModelDir + "/ProtectiveClothing_Worn.fbx";
+        const string BaseColorPath = ModelDir + "/Textures/PC_BaseColor_2K.png";
+        const string NormalPath = ModelDir + "/Textures/PC_Normal_1K.png";
+        const string RoughnessPath = ModelDir + "/Textures/PC_Roughness_1K.png";
+        const string ReferenceJsonPath = ModelDir + "/Source~/ReferenceInspection.json";
+        const string AnchorJsonPath = ModelDir + "/Source~/AnchorManifest.json";
+        const string MaterialDir = "Assets/B/Materials/ProtectiveClothing";
+        const string SharedMaterialPath = MaterialDir + "/PC_Shared.mat";
+        const string MetallicSmoothnessPath = MaterialDir + "/PC_MetallicSmoothness_1K.png";
+        const string FurnitureMaterialPath = MaterialDir + "/PC_Furniture.mat";
+        const string MarkerMaterialPath = MaterialDir + "/PC_TargetMarker.mat";
+        const string MirrorMaterialPath = MaterialDir + "/PC_MirrorScreen.mat";
+        const string ScenePath = "Assets/B/Scene/B_ProtectiveClothing_Equipment.unity";
+        const string XrOriginPrefabPath = "Assets/Samples/XR Interaction Toolkit/3.4.1/Starter Assets/Prefabs/XR Origin (XR Rig).prefab";
+        const string SimulatorPrefabPath = "Assets/Samples/XR Interaction Toolkit/3.4.1/XR Interaction Simulator/XR Interaction Simulator.prefab";
+        const string MannequinFbxPath = "Assets/B/Models/Mannequin/Mannequin.fbx";
+        const string KoreanFontPath = "Assets/B/Fonts/NotoSansKR-Regular SDF.asset";
+        const string MixamoPrefix = "mixamorig1:";
+
+        const string RootName = "PC_Equipment";
+        const string FloorName = "PC_Floor";
+        const string WorkbenchName = "PC_Workbench";
+        const string PickupsName = "PC_Pickups";
+        const string UserBodyName = "PC_UserBody";
+        const string MirrorName = "PC_Mirror";
+        const string BoardName = "PC_Board";
+        const string MarkerName = "PC_TargetMarker";
+        const string EventSystemName = "EventSystem";
+        const string ArmatureName = "PC_Armature";
+        // The earlier reclined display; removed only where it is exactly what this setup generated (see the class notes).
+        const string MannequinRootName = "PC_MannequinRoot";
+        const string DisplayBoardName = "PC_DisplayBoard";
+        const string StandName = "PC_Stand";
+        const string EarlierPlatformName = "PC_Platform";
+
+        // Layout on creation only (world, metres; the user stands at the XR Origin at the world origin facing +Z): workbench on the
+        // user's left, full-length mirror ahead, guidance board ahead on the right. The user body follows the HMD at runtime.
+        static readonly Vector3 WorkbenchCenter = new Vector3(-0.85f, 0.425f, 0.6f);
+        static readonly Vector3 WorkbenchSize = new Vector3(0.85f, 0.85f, 1.3f);
+        static readonly Vector3 MirrorCenter = new Vector3(0f, 0.98f, 1.5f);
+        static readonly Vector2 MirrorSize = new Vector2(0.9f, 1.9f);
+        static readonly Vector3 BoardPosition = new Vector3(0.95f, 1.45f, 0.75f);
+        // The reclined display layout's board default (behind the mannequin's head end, where the mirror now stands): a board still
+        // exactly there is moved once to the current default; any other pose is the user's and is kept.
+        static readonly Vector3 EarlierBoardPosition = new Vector3(0f, 1.85f, 2.45f);
+        const float StandingEyeHeight = 1.6f;
+
+        // Wear zones (created once, then the user's): (part, parent bone, radius m). Jacket and trousers zones in front of the chest
+        // and the waist on the body's centre line, (Blender x, y, z) of the mannequin's bind pose, 0.20 m in front of its centre
+        // line (about 8 cm in front of the chest / pelvis surface where a held part naturally is). 0.36 m apart vertically, so the
+        // two 0.15 m spheres do not overlap even scaled to a 1.4 m eye height. Gloves: on the palm (between the wrist and the
+        // middle finger root) of the target hand. Overboots: an easy-reach zone in front of each thigh (half way from hip to knee,
+        // 0.12 m forward, 0.07 m outward) with 0.12 m radius: the left and right zones about 0.34 m apart do not overlap.
+        static readonly Vector3 JacketZoneBlender = new Vector3(0f, -0.20f, 1.31f);
+        static readonly Vector3 TrousersZoneBlender = new Vector3(0f, -0.20f, 0.95f);
+        const float ThighZoneFraction = 0.5f;
+        const float ThighZoneForward = 0.12f;
+        const float ThighZoneOutward = 0.07f;
+        static readonly (ProtectiveClothingPart part, string bone, float radius)[] ZoneDefaults =
+        {
+            (ProtectiveClothingPart.Jacket, "Spine2", 0.15f), (ProtectiveClothingPart.Trousers, "Hips", 0.15f),
+            (ProtectiveClothingPart.GloveLeft, "LeftHand", 0.15f), (ProtectiveClothingPart.GloveRight, "RightHand", 0.15f),
+            (ProtectiveClothingPart.OverbootLeft, "LeftUpLeg", 0.12f), (ProtectiveClothingPart.OverbootRight, "RightUpLeg", 0.12f)
+        };
+        // Body eye point as fractions of the head bone to mesh top height: up and forward (same as the K1 avatar). Adjustable later.
+        const float EyeUpFraction = 0.45f;
+        const float EyeForwardFraction = 0.42f;
+        // (serialized limb field, upper, lower, end, aim, side) mixamo names without prefix.
+        static readonly (string field, string upper, string lower, string end, string aim, string side)[] BodyLimbs =
+        {
+            ("leftArm", "LeftArm", "LeftForeArm", "LeftHand", "LeftHandMiddle1", "LeftHandIndex1"),
+            ("rightArm", "RightArm", "RightForeArm", "RightHand", "RightHandMiddle1", "RightHandIndex1"),
+            ("leftLeg", "LeftUpLeg", "LeftLeg", "LeftFoot", "LeftToeBase", null),
+            ("rightLeg", "RightUpLeg", "RightLeg", "RightFoot", "RightToeBase", null),
+        };
+        // Starter Assets controller models (nested prefab instances under each controller).
+        const string LeftControllerModelName = "XR Controller Left";
+        const string RightControllerModelName = "XR Controller Right";
+        // Pickup slots on the workbench top (local to PC_Pickups at the top centre): left items on -X, nearest row gloves, then
+        // jacket and trousers, then overboots.
+        static readonly (ProtectiveClothingPart part, Vector3 slot)[] Slots =
+        {
+            (ProtectiveClothingPart.GloveLeft, new Vector3(-0.21f, 0f, -0.42f)), (ProtectiveClothingPart.GloveRight, new Vector3(0.21f, 0f, -0.42f)),
+            (ProtectiveClothingPart.Jacket, new Vector3(-0.21f, 0f, 0f)), (ProtectiveClothingPart.Trousers, new Vector3(0.21f, 0f, 0f)),
+            (ProtectiveClothingPart.OverbootLeft, new Vector3(-0.21f, 0f, 0.42f)), (ProtectiveClothingPart.OverbootRight, new Vector3(0.21f, 0f, 0.42f))
+        };
+        const float PickupMass = 0.6f;
+
+        static readonly Vector2 BoardSize = new Vector2(640f, 300f);
+        const float CanvasScale = 0.001f;
+        const int UiLayer = 5;
+        static readonly Color BoardBackground = new Color(0.07f, 0.09f, 0.11f, 1f);
+        static readonly Color BoardText = new Color(0.94f, 0.95f, 0.96f, 1f);
+        static readonly Color ButtonColor = new Color(0.16f, 0.42f, 0.7f, 1f);
+        static readonly Color FurnitureColor = new Color(0.5f, 0.52f, 0.55f, 1f);
+        static readonly Color MarkerColor = new Color(0.25f, 0.85f, 1f, 0.6f);
+        const float MarkerWidth = 0.006f;
+
+        static readonly ProtectiveClothingPart[] Parts = (ProtectiveClothingPart[])Enum.GetValues(typeof(ProtectiveClothingPart));
+
+        // ---------- Menu 1 ----------
+
+        [MenuItem("B/Protective Clothing/1. Build Equipment Scene", true)]
+        static bool CanBuild() => !EditorApplication.isPlayingOrWillChangePlaymode;
+
+        // Checked before anything is changed (no asset, importer or scene work happens before these return): not in or entering
+        // Play mode, not compiling, and no open scene with unsaved changes. No save dialog is shown and no scene is saved, reverted,
+        // closed or switched on the user's behalf; the user tidies the scenes and runs the menu again. A normal run saves only
+        // the protective clothing scene.
+        static bool CanChange(out string reason)
+        {
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
+            {
+                reason = "Play mode is running or starting. Exit Play mode, then run the menu again.";
+                return false;
+            }
+            if (EditorApplication.isCompiling || EditorApplication.isUpdating)
+            {
+                reason = "scripts are compiling or assets are importing. Wait until it finishes, then run the menu again.";
+                return false;
+            }
+            var dirty = Enumerable.Range(0, SceneManager.sceneCount).Select(SceneManager.GetSceneAt).Where(s => s.isDirty).ToArray();
+            if (dirty.Length > 0)
+            {
+                reason = "unsaved changes in the open scene(s) " + string.Join(", ", dirty.Select(s => "'" + (string.IsNullOrEmpty(s.path) ? s.name : s.path) + "'")) +
+                         ". This menu opens and saves its own scene, so it does not run over unsaved work. Save or revert them yourself, " +
+                         "then run the menu again.";
+                return false;
+            }
+            reason = null;
+            return true;
+        }
+
+        [MenuItem("B/Protective Clothing/1. Build Equipment Scene")]
+        static void Build()
+        {
+            if (!CanChange(out var reason))
+            {
+                Debug.LogError($"{LogTag} Build stopped before any change: {reason} Nothing was changed.");
+                return;
+            }
+
+            var log = new StringBuilder(LogTag + " Build (equipment chapter on the user's body: grab, bring to the body zone, automatic wearing, reset)\n");
+            try
+            {
+                ConfigureModel(PickupFbxPath, false, log);
+                ConfigureModel(WornFbxPath, true, log);
+                ConfigureTexture(BaseColorPath, TextureImporterType.Default, true, log);
+                ConfigureTexture(NormalPath, TextureImporterType.NormalMap, false, log);
+                ConfigureTexture(RoughnessPath, TextureImporterType.Default, false, log);
+                EnsureFolder(MaterialDir);
+                var metallicSmoothness = EnsureMetallicSmoothness(log);
+                var shared = EnsureSharedMaterial(metallicSmoothness, log);
+                var furniture = EnsureLitMaterial(FurnitureMaterialPath, FurnitureColor, log);
+                var markerMaterial = EnsureMarkerMaterial(log);
+                var mirrorMaterial = EnsureMirrorMaterial(log);
+
+                var scene = OpenOrCreateScene(log);
+                EnsureSceneContent(scene, shared, furniture, markerMaterial, mirrorMaterial, log);
+                EditorSceneManager.MarkSceneDirty(scene);
+                if (!EditorSceneManager.SaveScene(scene, ScenePath))
+                    throw new InvalidOperationException("Saving scene failed: " + ScenePath);
+                log.AppendLine("Scene saved: " + ScenePath + " (Build Settings unchanged)");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(log + "\nFAILED: " + e);
+                return;
+            }
+            Debug.Log(log.ToString());
+            Validate();
+        }
+
+        // ---------- Assets ----------
+
+        // Importer settings of the protective clothing FBX files only: metres from the file (no 100 / 0.01 fix), axis conversion
+        // kept on the objects (not baked), an explicit prefab root so the FBX root node keeps its own transform, no imported
+        // materials (the shared material is assigned explicitly in the scene), no cameras, lights, animation or blend shapes. The
+        // worn model is rigged (skinned meshes on PC_Armature): Generic rig without an avatar (the user body drives its bones);
+        // the pickup model has no rig.
+        static void ConfigureModel(string path, bool rigged, StringBuilder log)
+        {
+            if (!(AssetImporter.GetAtPath(path) is ModelImporter importer))
+                throw new InvalidOperationException("Model importer not found (let Unity import the model folder first): " + path);
+            var changes = new List<string>();
+            void Set<T>(string label, T current, T wanted, Action<T> apply)
+            {
+                if (EqualityComparer<T>.Default.Equals(current, wanted))
+                    return;
+                apply(wanted);
+                changes.Add($"{label} {wanted}");
+            }
+            Set("globalScale", importer.globalScale, 1f, v => importer.globalScale = v);
+            Set("useFileScale", importer.useFileScale, true, v => importer.useFileScale = v);
+            Set("bakeAxisConversion", importer.bakeAxisConversion, false, v => importer.bakeAxisConversion = v);
+            Set("preserveHierarchy", importer.preserveHierarchy, true, v => importer.preserveHierarchy = v);
+            Set("materialImportMode", importer.materialImportMode, ModelImporterMaterialImportMode.None, v => importer.materialImportMode = v);
+            Set("importCameras", importer.importCameras, false, v => importer.importCameras = v);
+            Set("importLights", importer.importLights, false, v => importer.importLights = v);
+            Set("importAnimation", importer.importAnimation, false, v => importer.importAnimation = v);
+            Set("animationType", importer.animationType, rigged ? ModelImporterAnimationType.Generic : ModelImporterAnimationType.None, v => importer.animationType = v);
+            if (rigged)
+            {
+                Set("avatarSetup", importer.avatarSetup, ModelImporterAvatarSetup.NoAvatar, v => importer.avatarSetup = v);
+                Set("optimizeGameObjects", importer.optimizeGameObjects, false, v => importer.optimizeGameObjects = v);
+            }
+            Set("importBlendShapes", importer.importBlendShapes, false, v => importer.importBlendShapes = v);
+            Set("isReadable", importer.isReadable, false, v => importer.isReadable = v);
+            Set("addCollider", importer.addCollider, false, v => importer.addCollider = v);
+            if (changes.Count == 0)
+            {
+                log.AppendLine("Model importer kept: " + path);
+                return;
+            }
+            importer.SaveAndReimport();
+            log.AppendLine($"Model importer updated ({path}; FBX file unchanged): " + string.Join(", ", changes));
+        }
+
+        static void ConfigureTexture(string path, TextureImporterType type, bool sRGB, StringBuilder log)
+        {
+            if (!(AssetImporter.GetAtPath(path) is TextureImporter importer))
+                throw new InvalidOperationException("Texture importer not found (let Unity import the model folder first): " + path);
+            var changes = new List<string>();
+            if (importer.textureType != type)
+            {
+                importer.textureType = type;
+                changes.Add("type " + type);
+            }
+            if (type != TextureImporterType.NormalMap && importer.sRGBTexture != sRGB)
+            {
+                importer.sRGBTexture = sRGB;
+                changes.Add("sRGB " + (sRGB ? "on" : "off"));
+            }
+            if (importer.wrapMode != TextureWrapMode.Repeat)
+            {
+                importer.wrapMode = TextureWrapMode.Repeat;
+                changes.Add("wrap Repeat");
+            }
+            if (importer.alphaIsTransparency)
+            {
+                importer.alphaIsTransparency = false;
+                changes.Add("alpha is not transparency");
+            }
+            if (changes.Count == 0)
+            {
+                log.AppendLine("Texture importer kept: " + path);
+                return;
+            }
+            importer.SaveAndReimport();
+            log.AppendLine($"Texture importer updated ({path}; image file unchanged): " + string.Join(", ", changes));
+        }
+
+        // URP Lit takes smoothness from the alpha of its metallic map. Derived from PC_Roughness_1K (read from the PNG file, which
+        // is not changed): RGB 0 (not metallic), A = 1 - roughness. Rewritten only when its content would change.
+        static Texture2D EnsureMetallicSmoothness(StringBuilder log)
+        {
+            var source = new Texture2D(2, 2, TextureFormat.RGBA32, false, true);
+            var output = (Texture2D)null;
+            try
+            {
+                if (!source.LoadImage(File.ReadAllBytes(RoughnessPath)))
+                    throw new InvalidOperationException("Could not read " + RoughnessPath);
+                var pixels = source.GetPixels32();
+                for (var i = 0; i < pixels.Length; i++)
+                    pixels[i] = new Color32(0, 0, 0, (byte)(255 - pixels[i].r));
+                output = new Texture2D(source.width, source.height, TextureFormat.RGBA32, false, true);
+                output.SetPixels32(pixels);
+                output.Apply();
+                var png = output.EncodeToPNG();
+                var same = File.Exists(MetallicSmoothnessPath) && File.ReadAllBytes(MetallicSmoothnessPath).SequenceEqual(png);
+                if (!same)
+                {
+                    File.WriteAllBytes(MetallicSmoothnessPath, png);
+                    AssetDatabase.ImportAsset(MetallicSmoothnessPath, ImportAssetOptions.ForceUpdate);
+                }
+                log.AppendLine($"Derived metallic-smoothness map {(same ? "kept" : "written")}: {MetallicSmoothnessPath} ({source.width}x{source.height}; " +
+                               "RGB 0, alpha = 1 - roughness of " + RoughnessPath + ")");
+            }
+            finally
+            {
+                Object.DestroyImmediate(source);
+                if (output != null)
+                    Object.DestroyImmediate(output);
+            }
+
+            if (!(AssetImporter.GetAtPath(MetallicSmoothnessPath) is TextureImporter importer))
+                throw new InvalidOperationException("Derived map importer not found: " + MetallicSmoothnessPath);
+            if (importer.textureType != TextureImporterType.Default || importer.sRGBTexture || importer.alphaSource != TextureImporterAlphaSource.FromInput ||
+                importer.alphaIsTransparency || importer.wrapMode != TextureWrapMode.Repeat)
+            {
+                importer.textureType = TextureImporterType.Default;
+                importer.sRGBTexture = false;
+                importer.alphaSource = TextureImporterAlphaSource.FromInput;
+                importer.alphaIsTransparency = false;
+                importer.wrapMode = TextureWrapMode.Repeat;
+                importer.SaveAndReimport();
+                log.AppendLine("Derived map importer set: linear (sRGB off), alpha from input");
+            }
+            return LoadRequired<Texture2D>(MetallicSmoothnessPath);
+        }
+
+        // One shared opaque URP Lit material for all twelve meshes. Required settings rewritten every run; colour, normal scale and
+        // smoothness strength only on creation.
+        static Material EnsureSharedMaterial(Texture2D metallicSmoothness, StringBuilder log)
+        {
+            var lit = Shader.Find("Universal Render Pipeline/Lit") ?? throw new InvalidOperationException("URP Lit shader not found.");
+            var m = AssetDatabase.LoadAssetAtPath<Material>(SharedMaterialPath);
+            var created = m == null;
+            if (created)
+            {
+                m = new Material(lit) { name = "PC_Shared" };
+                m.SetColor("_BaseColor", Color.white);
+                m.SetFloat("_BumpScale", 1f);
+                m.SetFloat("_Smoothness", 1f);
+                AssetDatabase.CreateAsset(m, SharedMaterialPath);
+            }
+            else if (m.shader != lit)
+            {
+                m.shader = lit;
+            }
+            m.SetFloat("_WorkflowMode", (float)LitGUI.WorkflowMode.Metallic);
+            m.SetFloat("_Surface", (float)BaseShaderGUI.SurfaceType.Opaque);
+            m.SetFloat("_AlphaClip", 0f);
+            m.SetFloat("_Cull", (float)BaseShaderGUI.RenderFace.Front);
+            m.SetTexture("_BaseMap", LoadRequired<Texture2D>(BaseColorPath));
+            m.SetTexture("_BumpMap", LoadRequired<Texture2D>(NormalPath));
+            m.SetTexture("_MetallicGlossMap", metallicSmoothness);
+            m.SetFloat("_SmoothnessTextureChannel", 0f);
+            m.SetFloat("_Metallic", 0f);
+            BaseShaderGUI.SetMaterialKeywords(m, LitGUI.SetMaterialKeywords);
+            EditorUtility.SetDirty(m);
+            AssetDatabase.SaveAssetIfDirty(m);
+            log.AppendLine($"Shared material {(created ? "created" : "kept and required settings rewritten")}: {SharedMaterialPath} (URP Lit opaque, " +
+                           "base colour sRGB, normal map, smoothness from the derived map alpha)");
+            return m;
+        }
+
+        static Material EnsureLitMaterial(string path, Color color, StringBuilder log)
+        {
+            var lit = Shader.Find("Universal Render Pipeline/Lit") ?? throw new InvalidOperationException("URP Lit shader not found.");
+            var m = AssetDatabase.LoadAssetAtPath<Material>(path);
+            if (m != null)
+            {
+                log.AppendLine("Scene material kept: " + path);
+                return m;
+            }
+            m = new Material(lit) { name = Path.GetFileNameWithoutExtension(path) };
+            m.SetFloat("_WorkflowMode", (float)LitGUI.WorkflowMode.Metallic);
+            m.SetFloat("_Surface", (float)BaseShaderGUI.SurfaceType.Opaque);
+            m.SetColor("_BaseColor", color);
+            m.SetFloat("_Metallic", 0f);
+            m.SetFloat("_Smoothness", 0.2f);
+            BaseShaderGUI.SetMaterialKeywords(m, LitGUI.SetMaterialKeywords);
+            AssetDatabase.CreateAsset(m, path);
+            log.AppendLine("Scene material created: " + path);
+            return m;
+        }
+
+        // Target ring: URP Unlit, transparent (alpha blend), both faces; colour only on creation.
+        static Material EnsureMarkerMaterial(StringBuilder log)
+        {
+            var unlit = Shader.Find("Universal Render Pipeline/Unlit") ?? throw new InvalidOperationException("URP Unlit shader not found.");
+            var m = AssetDatabase.LoadAssetAtPath<Material>(MarkerMaterialPath);
+            var created = m == null;
+            if (created)
+            {
+                m = new Material(unlit) { name = Path.GetFileNameWithoutExtension(MarkerMaterialPath) };
+                m.SetColor("_BaseColor", MarkerColor);
+                AssetDatabase.CreateAsset(m, MarkerMaterialPath);
+            }
+            else if (m.shader != unlit)
+            {
+                m.shader = unlit;
+            }
+            m.SetFloat("_Surface", (float)BaseShaderGUI.SurfaceType.Transparent);
+            m.SetFloat("_Blend", (float)BaseShaderGUI.BlendMode.Alpha);
+            m.SetFloat("_Cull", (float)BaseShaderGUI.RenderFace.Both);
+            BaseShaderGUI.SetMaterialKeywords(m);
+            EditorUtility.SetDirty(m);
+            AssetDatabase.SaveAssetIfDirty(m);
+            log.AppendLine($"Marker material {(created ? "created" : "kept and required settings rewritten")}: {MarkerMaterialPath} (URP Unlit transparent)");
+            return m;
+        }
+
+        // Mirror screen: URP Unlit, white and untextured; the mirror texture comes from a property block at runtime.
+        static Material EnsureMirrorMaterial(StringBuilder log)
+        {
+            var unlit = Shader.Find("Universal Render Pipeline/Unlit") ?? throw new InvalidOperationException("URP Unlit shader not found.");
+            var m = AssetDatabase.LoadAssetAtPath<Material>(MirrorMaterialPath);
+            var created = m == null;
+            if (created)
+            {
+                m = new Material(unlit) { name = Path.GetFileNameWithoutExtension(MirrorMaterialPath) };
+                AssetDatabase.CreateAsset(m, MirrorMaterialPath);
+            }
+            else if (m.shader != unlit)
+            {
+                m.shader = unlit;
+            }
+            m.SetColor("_BaseColor", Color.white);
+            m.SetTexture("_BaseMap", null);
+            m.SetFloat("_Surface", (float)BaseShaderGUI.SurfaceType.Opaque);
+            BaseShaderGUI.SetMaterialKeywords(m);
+            EditorUtility.SetDirty(m);
+            AssetDatabase.SaveAssetIfDirty(m);
+            log.AppendLine($"Mirror material {(created ? "created" : "kept and required settings rewritten")}: {MirrorMaterialPath} (URP Unlit, white)");
+            return m;
+        }
+
+        // ---------- Scene ----------
+
+        static Scene OpenOrCreateScene(StringBuilder log)
+        {
+            Scene scene;
+            if (!File.Exists(ScenePath))
+            {
+                scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+                var light = new GameObject("Directional Light").AddComponent<Light>();
+                light.type = LightType.Directional;
+                light.intensity = 1f;
+                light.shadows = LightShadows.Soft;
+                light.transform.rotation = Quaternion.Euler(50f, -30f, 0f);
+                EnsureFolder(Path.GetDirectoryName(ScenePath).Replace('\\', '/'));
+                if (!EditorSceneManager.SaveScene(scene, ScenePath))
+                    throw new InvalidOperationException("Saving scene failed: " + ScenePath);
+                log.AppendLine("Scene created: " + ScenePath);
+            }
+            else
+            {
+                var active = EditorSceneManager.GetActiveScene();
+                scene = active.path == ScenePath ? active : EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+                log.AppendLine("Scene opened: " + ScenePath);
+            }
+
+            var origins = InScene<XROrigin>(scene);
+            if (origins.Length == 0)
+            {
+                var origin = (GameObject)PrefabUtility.InstantiatePrefab(LoadRequired<GameObject>(XrOriginPrefabPath), scene);
+                origin.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+                log.AppendLine("XR Origin (Starter Assets prefab, unchanged) added at the world origin");
+            }
+            else
+            {
+                log.AppendLine($"XR Origin kept ({origins.Length})");
+            }
+            if (InScene<XRInteractionManager>(scene).Length == 0)
+            {
+                var manager = new GameObject("XR Interaction Manager").AddComponent<XRInteractionManager>();
+                if (manager.gameObject.scene != scene)
+                    SceneManager.MoveGameObjectToScene(manager.gameObject, scene);
+                log.AppendLine("XR Interaction Manager added");
+            }
+            var simulatorAsset = LoadRequired<GameObject>(SimulatorPrefabPath);
+            var simulators = SceneInstances(scene, simulatorAsset);
+            if (simulators.Length == 0)
+            {
+                // Desktop checks only; saved inactive so it never overrides headset input (same as the other B scenes).
+                var simulator = (GameObject)PrefabUtility.InstantiatePrefab(simulatorAsset, scene);
+                simulator.SetActive(false);
+                log.AppendLine("XR Interaction Simulator added (inactive)");
+            }
+            foreach (var simulator in simulators.Where(s => s.activeSelf))
+            {
+                simulator.SetActive(false);
+                log.AppendLine("XR Interaction Simulator set inactive for saving (activate it only for desktop checks)");
+            }
+            EnsureEventSystem(scene, log);
+            return scene;
+        }
+
+        static void EnsureEventSystem(Scene scene, StringBuilder log)
+        {
+            var systems = InScene<EventSystem>(scene);
+            if (systems.Length > 1)
+                throw new InvalidOperationException($"{systems.Length} EventSystems in {ScenePath}; keep one and run again.");
+            if (systems.Length == 1)
+            {
+                var modules = systems[0].GetComponents<BaseInputModule>();
+                if (modules.Length != 1 || !(modules[0] is XRUIInputModule))
+                    throw new InvalidOperationException($"EventSystem '{systems[0].name}' must use only XRUIInputModule (found " +
+                                                        $"{string.Join(", ", modules.Select(m => m.GetType().Name))}); not changed.");
+                log.AppendLine($"EventSystem '{systems[0].name}' with XRUIInputModule kept");
+                return;
+            }
+            var go = new GameObject(EventSystemName, typeof(EventSystem), typeof(XRUIInputModule));
+            if (go.scene != scene)
+                SceneManager.MoveGameObjectToScene(go, scene);
+            log.AppendLine("EventSystem created with XRUIInputModule");
+        }
+
+        readonly struct XrInputSet
+        {
+            public readonly XROrigin Origin;
+            public readonly Transform Head;
+            public readonly TrackedPoseDriver HeadDriver;
+            public readonly Transform Left;
+            public readonly TrackedPoseDriver LeftDriver;
+            public readonly Transform Right;
+            public readonly TrackedPoseDriver RightDriver;
+
+            public XrInputSet(XROrigin origin, Transform head, Transform left, Transform right)
+            {
+                Origin = origin;
+                Head = head;
+                HeadDriver = head.GetComponent<TrackedPoseDriver>();
+                Left = left;
+                LeftDriver = left.GetComponent<TrackedPoseDriver>();
+                Right = right;
+                RightDriver = right.GetComponent<TrackedPoseDriver>();
+            }
+        }
+
+        // The XR Origin's camera and the Starter Assets 'Left Controller' / 'Right Controller', each with its TrackedPoseDriver.
+        static XrInputSet XrInputs(XROrigin origin)
+        {
+            var inputs = new XrInputSet(origin, origin.Camera.transform, RequireDeep(origin.transform, "Left Controller"), RequireDeep(origin.transform, "Right Controller"));
+            if (inputs.HeadDriver == null || inputs.LeftDriver == null || inputs.RightDriver == null)
+                throw new InvalidOperationException("TrackedPoseDriver missing on the XR Origin camera or a controller.");
+            return inputs;
+        }
+
+        static void EnsureSceneContent(Scene scene, Material shared, Material furniture, Material markerMaterial, Material mirrorMaterial, StringBuilder log)
+        {
+            var origins = InScene<XROrigin>(scene);
+            if (origins.Length != 1 || origins[0].Camera == null)
+                throw new InvalidOperationException($"Expected one XR Origin with a camera in {ScenePath} (found {origins.Length}).");
+            var origin = origins[0];
+            var inputs = XrInputs(origin);
+            var eye = origin.transform.position + Vector3.up * StandingEyeHeight;
+
+            var roots = scene.GetRootGameObjects().Where(g => g.name == RootName).ToArray();
+            if (roots.Length > 1)
+                throw new InvalidOperationException($"{roots.Length} root objects named {RootName}; remove the extra one and run again.");
+            var root = roots.Length == 1 ? roots[0].transform : new GameObject(RootName).transform;
+            log.AppendLine(RootName + (roots.Length == 1 ? " kept" : " created at the world origin"));
+
+            EnsureFloor(root, log);
+            EnsureBox(root, WorkbenchName, WorkbenchCenter, WorkbenchSize, furniture, log);
+            RemoveDisplay(root, furniture, log);
+
+            var body = EnsureUserBody(root, inputs, shared, log);
+            var worn = Parts.ToDictionary(p => p, p => body.WornSkins[(int)p].gameObject);
+            var pieces = EnsurePickups(root, worn, shared, log);
+            var equipment = GetOrAdd<ProtectiveClothingEquipment>(root.gameObject);
+            var equipmentData = new SerializedObject(equipment);
+            SetObjects(Property(equipmentData, "pieces"), pieces.Cast<Object>().ToArray());
+            Property(equipmentData, "body").objectReferenceValue = body;
+            equipmentData.ApplyModifiedPropertiesWithoutUndo();
+            if (!equipment.TryValidate(out var error))
+                throw new InvalidOperationException(error);
+            log.AppendLine($"ProtectiveClothingEquipment on {RootName}: six parts worn at {UserBodyName}'s zones; arm margin {equipment.ArmMargin:0.###} m (kept)");
+
+            var marker = EnsureMarker(root, markerMaterial, log);
+            EnsureBoard(root, equipment, marker, origin, eye, log);
+            EnsureMirror(root, inputs, mirrorMaterial, eye, log);
+        }
+
+        // The earlier reclined display. Removed: the mannequin and worn model instances under PC_MannequinRoot, and PC_DisplayBoard,
+        // PC_Stand and PC_Platform only while each is still a generated furniture box (primitive cube, furniture material, box
+        // collider, nothing else, no children). PC_MannequinRoot itself goes only when nothing else is left in it. Anything else
+        // is kept and reported.
+        static void RemoveDisplay(Transform root, Material furniture, StringBuilder log)
+        {
+            var mannequinAsset = LoadRequired<GameObject>(MannequinFbxPath);
+            var wornAsset = LoadRequired<GameObject>(WornFbxPath);
+            var display = root.Find(MannequinRootName);
+            if (display != null)
+            {
+                foreach (var child in display.Cast<Transform>().ToArray())
+                {
+                    if (IsInstanceOf(child.gameObject, mannequinAsset) || IsInstanceOf(child.gameObject, wornAsset) ||
+                        (child.name == DisplayBoardName && IsGeneratedBox(child, furniture)))
+                    {
+                        log.AppendLine($"Earlier display: {child.name} removed from {MannequinRootName}");
+                        Object.DestroyImmediate(child.gameObject);
+                    }
+                    else
+                    {
+                        log.AppendLine($"Earlier display: {MannequinRootName}/{child.name} is not a generated display object; kept (remove it yourself if unused)");
+                    }
+                }
+                if (display.childCount == 0 && display.GetComponents<Component>().Length == 1)
+                {
+                    Object.DestroyImmediate(display.gameObject);
+                    log.AppendLine($"Earlier display: {MannequinRootName} removed (empty)");
+                }
+                else
+                {
+                    log.AppendLine($"Earlier display: {MannequinRootName} kept (it still holds other objects or components)");
+                }
+            }
+            foreach (var name in new[] { DisplayBoardName, StandName, EarlierPlatformName })
+            {
+                var box = root.Find(name);
+                if (box == null)
+                    continue;
+                if (IsGeneratedBox(box, furniture))
+                {
+                    Object.DestroyImmediate(box.gameObject);
+                    log.AppendLine($"Earlier display: {name} removed (generated furniture box)");
+                }
+                else
+                {
+                    log.AppendLine($"Earlier display: {name} kept (changed from the generated box; remove it yourself if unused)");
+                }
+            }
+        }
+
+        static bool IsGeneratedBox(Transform t, Material furniture) =>
+            t.childCount == 0 && t.GetComponents<Component>().Length == 4 && t.TryGetComponent<MeshFilter>(out var filter) && filter.sharedMesh != null &&
+            filter.sharedMesh.name == "Cube" && t.TryGetComponent<MeshRenderer>(out var renderer) && renderer.sharedMaterials.Length == 1 &&
+            renderer.sharedMaterial == furniture && t.TryGetComponent<BoxCollider>(out _);
+
+        // The user body (see the class notes): PC_UserBody under the root, at the XR Origin on creation (placed from the HMD at
+        // runtime), with one Mannequin.fbx instance turned to face +Z (bind pose, Animator off) and one worn model instance at the
+        // identity of the mannequin instance (both share the model frame and the runtime eye-height scale). Zone points are created
+        // once under their bones; zone radii and the body's alignment values only on creation; references every run.
+        static ProtectiveClothingUserBody EnsureUserBody(Transform root, XrInputSet inputs, Material shared, StringBuilder log)
+        {
+            var t = root.Find(UserBodyName);
+            var created = t == null;
+            if (created)
+            {
+                t = new GameObject(UserBodyName).transform;
+                t.SetParent(root, false);
+                t.SetPositionAndRotation(inputs.Origin.transform.position, Quaternion.Euler(0f, inputs.Origin.transform.eulerAngles.y, 0f));
+                log.AppendLine(UserBodyName + " created at the XR Origin (placed from the HMD at runtime; the XR Origin, camera and controllers are never moved for it)");
+            }
+            var body = GetOrAdd<ProtectiveClothingUserBody>(t.gameObject);
+
+            var mannequinAsset = LoadRequired<GameObject>(MannequinFbxPath);
+            var found = t.Cast<Transform>().Where(c => IsInstanceOf(c.gameObject, mannequinAsset)).ToArray();
+            if (found.Length > 1)
+                throw new InvalidOperationException($"{found.Length} Mannequin instances under {UserBodyName}; keep one.");
+            var model = found.Length == 1 ? found[0] : ((GameObject)PrefabUtility.InstantiatePrefab(mannequinAsset, t)).transform;
+            model.localPosition = Vector3.zero;
+            model.localScale = Vector3.one;
+            log.AppendLine($"Mannequin instance {(found.Length == 1 ? "kept" : "created")} under {UserBodyName} ({MannequinFbxPath}, import settings unchanged; scaled to the eye height at runtime)");
+            var worn = EnsureModelInstance(model, LoadRequired<GameObject>(WornFbxPath), log);
+            var mannequinSkins = model.GetComponentsInChildren<SkinnedMeshRenderer>(true).Where(s => !s.transform.IsChildOf(worn)).ToArray();
+            if (mannequinSkins.Length == 0)
+                throw new InvalidOperationException("Mannequin has no skinned mesh renderer.");
+            ApplyBindPose(mannequinSkins, log);
+            var bones = MannequinBones(mannequinSkins);
+            // Front (the shoulders' right x up) to the body's +Z.
+            var right = Vector3.ProjectOnPlane(Bone(bones, "RightArm").position - Bone(bones, "LeftArm").position, t.up);
+            var front = Vector3.Cross(right, t.up);
+            if (front.sqrMagnitude < 1e-6f)
+                throw new InvalidOperationException("Mannequin shoulders give no front direction.");
+            var turn = Quaternion.FromToRotation(front.normalized, t.forward);
+            if (Quaternion.Angle(turn, Quaternion.identity) > 0.01f)
+            {
+                model.rotation = turn * model.rotation;
+                log.AppendLine($"Mannequin turned {Quaternion.Angle(turn, Quaternion.identity):F1} deg to face the body's +Z");
+            }
+            PrefabUtility.RecordPrefabInstancePropertyModifications(model);
+            DisableAnimators(model, log);
+
+            var wornSkins = new SkinnedMeshRenderer[Parts.Length];
+            foreach (var part in Parts)
+            {
+                var mesh = RequireDeep(worn, ProtectiveClothingPiece.WornName(part));
+                RequireDeep(mesh, ProtectiveClothingPiece.WornAttachName(part));
+                if (!mesh.TryGetComponent<SkinnedMeshRenderer>(out var skin) || skin.sharedMesh == null || skin.bones.Length == 0)
+                    throw new InvalidOperationException($"{mesh.name} is not a skinned mesh: reimport {WornFbxPath} (rigged worn model, Generic rig) and run again.");
+                SetSharedMaterial(mesh, shared);
+                if (mesh.gameObject.activeSelf)
+                    mesh.gameObject.SetActive(false);
+                PrefabUtility.RecordPrefabInstancePropertyModifications(mesh.gameObject);
+                wornSkins[(int)part] = skin;
+            }
+            log.AppendLine("Worn meshes: skinned to " + ArmatureName + ", shared material, saved hidden (shown by wearing only)");
+
+            var data = new SerializedObject(body);
+            Property(data, "head").objectReferenceValue = inputs.Head;
+            Property(data, "headDriver").objectReferenceValue = inputs.HeadDriver;
+            Property(data, "leftController").objectReferenceValue = inputs.Left;
+            Property(data, "leftDriver").objectReferenceValue = inputs.LeftDriver;
+            Property(data, "rightController").objectReferenceValue = inputs.Right;
+            Property(data, "rightDriver").objectReferenceValue = inputs.RightDriver;
+            Property(data, "model").objectReferenceValue = model;
+            Property(data, "hips").objectReferenceValue = Bone(bones, "Hips");
+            var headBone = Bone(bones, "Head");
+            Property(data, "headBone").objectReferenceValue = headBone;
+            foreach (var limb in BodyLimbs)
+            {
+                var limbProperty = Property(data, limb.field);
+                limbProperty.FindPropertyRelative("upper").objectReferenceValue = Bone(bones, limb.upper);
+                limbProperty.FindPropertyRelative("lower").objectReferenceValue = Bone(bones, limb.lower);
+                limbProperty.FindPropertyRelative("end").objectReferenceValue = Bone(bones, limb.end);
+                limbProperty.FindPropertyRelative("aim").objectReferenceValue = Bone(bones, limb.aim);
+                limbProperty.FindPropertyRelative("side").objectReferenceValue = limb.side != null ? Bone(bones, limb.side) : null;
+            }
+            SetObjects(Property(data, "wornSkins"), wornSkins.Cast<Object>().ToArray());
+            var bodyRenderers = model.GetComponentsInChildren<Renderer>(true).Where(r => !r.transform.IsChildOf(worn)).ToArray();
+            SetObjects(Property(data, "bodyRenderers"), bodyRenderers.Cast<Object>().ToArray());
+            SetObjects(Property(data, "leftControllerModel"), ControllerModel(inputs.Left, LeftControllerModelName, log).Cast<Object>().ToArray());
+            SetObjects(Property(data, "rightControllerModel"), ControllerModel(inputs.Right, RightControllerModelName, log).Cast<Object>().ToArray());
+
+            var zones = Property(data, "zones");
+            if (zones.arraySize != Parts.Length)
+                zones.arraySize = Parts.Length;
+            foreach (var (part, boneName, radius) in ZoneDefaults)
+            {
+                var zoneName = ZoneName(part);
+                var point = FindDeep(model, zoneName);
+                if (point == null)
+                {
+                    point = new GameObject(zoneName).transform;
+                    point.SetParent(Bone(bones, boneName), false);
+                    point.position = DefaultZonePoint(part, t, model, bones);
+                    log.AppendLine($"{zoneName} created under {MixamoPrefix}{boneName} (radius {radius:0.###} m)");
+                }
+                var element = zones.GetArrayElementAtIndex((int)part);
+                element.FindPropertyRelative("point").objectReferenceValue = point;
+                var r = element.FindPropertyRelative("radius");
+                if (!(r.floatValue > 0f) || float.IsInfinity(r.floatValue))
+                    r.floatValue = radius;
+            }
+
+            // Default eye point only for a new body (or none yet); a tuned offset is kept.
+            var eye = Property(data, "eyeOffset");
+            if (eye.vector3Value == Vector3.zero)
+            {
+                // Head top from the mesh bounds: the source import strips unweighted end bones such as HeadTop_End.
+                var headHeight = mannequinSkins.Max(m => m.bounds.max.y) - headBone.position.y;
+                if (headHeight <= 0.05f)
+                    throw new InvalidOperationException($"Mannequin head bone is {headHeight:F3} m below the mesh top; check the model.");
+                var eyeWorld = headBone.position + Vector3.up * (headHeight * EyeUpFraction) + t.forward * (headHeight * EyeForwardFraction);
+                eye.vector3Value = headBone.InverseTransformPoint(eyeWorld);
+                log.AppendLine($"Body eye offset (head bone space) set to {Vec(eye.vector3Value)}");
+            }
+            if (created)
+                Property(data, "floorHeight").floatValue = inputs.Origin.transform.position.y;
+            data.ApplyModifiedPropertiesWithoutUndo();
+            if (!body.TryValidate(out var error))
+                throw new InvalidOperationException(error);
+            log.AppendLine($"{UserBodyName}: head and both controllers tracked, trunk, legs and feet estimated; mannequin skin hidden in the HMD only; " +
+                           "six wear zones on the rig");
+            return body;
+        }
+
+        static string ZoneName(ProtectiveClothingPart part) => "PC_Zone_" + ProtectiveClothingPiece.ModelName(part);
+
+        // Default zone centres (see ZoneDefaults), with the mannequin in its bind pose and facing the body's +Z.
+        static Vector3 DefaultZonePoint(ProtectiveClothingPart part, Transform body, Transform model, Dictionary<string, Transform> bones)
+        {
+            var side = part == ProtectiveClothingPart.GloveLeft || part == ProtectiveClothingPart.OverbootLeft ? "Left" : "Right";
+            switch (part)
+            {
+                case ProtectiveClothingPart.Jacket:
+                    return model.TransformPoint(ToUnity(JacketZoneBlender));
+                case ProtectiveClothingPart.Trousers:
+                    return model.TransformPoint(ToUnity(TrousersZoneBlender));
+                case ProtectiveClothingPart.GloveLeft:
+                case ProtectiveClothingPart.GloveRight:
+                    return Vector3.Lerp(Bone(bones, side + "Hand").position, Bone(bones, side + "HandMiddle1").position, 0.5f);
+                default:
+                    var hip = Bone(bones, side + "UpLeg").position;
+                    var knee = Bone(bones, side + "Leg").position;
+                    var outward = body.right * Mathf.Sign(Vector3.Dot(hip - Bone(bones, "Hips").position, body.right));
+                    return Vector3.Lerp(hip, knee, ThighZoneFraction) + body.forward * ThighZoneForward + outward * ThighZoneOutward;
+            }
+        }
+
+        // Renderers of a Starter Assets controller model (not drawn while that hand's glove is worn). Missing: reported, policy off.
+        static Renderer[] ControllerModel(Transform controller, string modelName, StringBuilder log)
+        {
+            var model = FindDeep(controller, modelName);
+            if (model == null)
+            {
+                log.AppendLine($"NOTE '{modelName}' not found under {controller.name}: that controller model stays drawn while the glove is worn");
+                return Array.Empty<Renderer>();
+            }
+            return model.GetComponentsInChildren<Renderer>(true).Where(r => r is MeshRenderer || r is SkinnedMeshRenderer).ToArray();
+        }
+
+        // Bones of the mannequin's skinned meshes by name (the worn skeleton has the same names; it is never searched here).
+        static Dictionary<string, Transform> MannequinBones(IEnumerable<SkinnedMeshRenderer> skins)
+        {
+            var bones = new Dictionary<string, Transform>();
+            foreach (var skin in skins)
+            {
+                foreach (var bone in skin.bones)
+                {
+                    if (bone != null)
+                        bones[bone.name] = bone;
+                }
+            }
+            return bones;
+        }
+
+        static Transform Bone(Dictionary<string, Transform> bones, string name) =>
+            bones.TryGetValue(MixamoPrefix + name, out var bone) ? bone : throw new InvalidOperationException($"Mannequin bone '{MixamoPrefix}{name}' not found.");
+
+        // Full-length mirror (ProtectiveClothingMirror): a quad and its own disabled camera (no AudioListener, never MainCamera, not
+        // stereo); pose, size and resolution only on creation.
+        static void EnsureMirror(Transform root, XrInputSet inputs, Material material, Vector3 eye, StringBuilder log)
+        {
+            var t = root.Find(MirrorName);
+            var created = t == null;
+            if (created)
+            {
+                t = new GameObject(MirrorName).transform;
+                t.SetParent(root, false);
+                // Quad front (-Z) toward the standing start point.
+                t.SetPositionAndRotation(MirrorCenter, Quaternion.LookRotation(Vector3.ProjectOnPlane(MirrorCenter - eye, Vector3.up), Vector3.up));
+            }
+            var mirror = GetOrAdd<ProtectiveClothingMirror>(t.gameObject);
+
+            var surface = t.Find("Surface");
+            if (surface == null)
+            {
+                surface = GameObject.CreatePrimitive(PrimitiveType.Quad).transform;
+                surface.name = "Surface";
+                Object.DestroyImmediate(surface.GetComponent<Collider>());
+                surface.SetParent(t, false);
+                surface.localScale = new Vector3(MirrorSize.x, MirrorSize.y, 1f);
+            }
+            foreach (var collider in surface.GetComponents<Collider>())
+                Object.DestroyImmediate(collider);
+            var screen = surface.GetComponent<MeshRenderer>();
+            screen.sharedMaterial = material;
+            screen.shadowCastingMode = ShadowCastingMode.Off;
+            screen.receiveShadows = false;
+            screen.lightProbeUsage = LightProbeUsage.Off;
+            screen.reflectionProbeUsage = ReflectionProbeUsage.Off;
+
+            var cameraTransform = t.Find("Camera");
+            if (cameraTransform == null)
+            {
+                cameraTransform = new GameObject("Camera").transform;
+                cameraTransform.SetParent(t, false);
+            }
+            var camera = GetOrAdd<Camera>(cameraTransform.gameObject);
+            // Saved disabled and untargeted; ProtectiveClothingMirror owns the texture and turns the camera on with it.
+            camera.enabled = false;
+            camera.targetTexture = null;
+            camera.stereoTargetEye = StereoTargetEyeMask.None;
+            camera.depth = -10f;
+            camera.tag = "Untagged";
+            camera.nearClipPlane = 0.01f;
+            if (created)
+                camera.fieldOfView = 35f;
+            camera.useOcclusionCulling = false;
+            camera.allowHDR = false;
+            camera.allowMSAA = false;
+            var cameraData = camera.GetUniversalAdditionalCameraData();
+            cameraData.renderShadows = false;
+            cameraData.renderPostProcessing = false;
+            cameraData.antialiasing = UnityEngine.Rendering.Universal.AntialiasingMode.None;
+            cameraData.requiresDepthTexture = false;
+            cameraData.requiresColorTexture = false;
+            foreach (var listener in t.GetComponentsInChildren<AudioListener>(true))
+                Object.DestroyImmediate(listener);
+
+            var data = new SerializedObject(mirror);
+            Property(data, "viewCamera").objectReferenceValue = camera;
+            Property(data, "screen").objectReferenceValue = screen;
+            Property(data, "head").objectReferenceValue = inputs.Head;
+            if (created)
+            {
+                Property(data, "resolution").intValue = 1024;
+                Property(data, "farClip").floatValue = 6f;
+            }
+            data.ApplyModifiedPropertiesWithoutUndo();
+            if (!mirror.TryValidate(out var error))
+                throw new InvalidOperationException(error);
+            log.AppendLine($"{MirrorName} {(created ? "created" : "kept")} at {Vec(t.position)}, {surface.lossyScale.x:F2} x {surface.lossyScale.y:F2} m " +
+                           "(one centre-eye image, not per-eye stereo; camera saved disabled)");
+        }
+
+        static void EnsureFloor(Transform root, StringBuilder log)
+        {
+            var floor = root.Find(FloorName);
+            if (floor != null)
+            {
+                log.AppendLine(FloorName + " kept");
+                return;
+            }
+            floor = GameObject.CreatePrimitive(PrimitiveType.Plane).transform;
+            floor.name = FloorName;
+            floor.SetParent(root, false);
+            floor.localPosition = Vector3.zero;
+            log.AppendLine(FloorName + " created (10 x 10 m plane with its collider)");
+        }
+
+        // Display furniture with its box collider (dropped pickups rest on it). Pose and size only on creation.
+        static void EnsureBox(Transform root, string name, Vector3 center, Vector3 size, Material material, StringBuilder log)
+        {
+            var box = root.Find(name);
+            if (box == null)
+            {
+                box = GameObject.CreatePrimitive(PrimitiveType.Cube).transform;
+                box.name = name;
+                box.SetParent(root, false);
+                box.position = center;
+                box.localScale = size;
+                log.AppendLine($"{name} created ({size.x:0.##} x {size.y:0.##} x {size.z:0.##} m, box collider)");
+            }
+            else
+            {
+                log.AppendLine(name + " kept (pose and size unchanged)");
+            }
+            box.GetComponent<MeshRenderer>().sharedMaterial = material;
+            if (!box.TryGetComponent<BoxCollider>(out _))
+                box.gameObject.AddComponent<BoxCollider>();
+        }
+
+        // One instance of the model under the parent at its identity (the worn model under the body's mannequin model: the common
+        // frame of the mannequin and the worn meshes). The local pose is rewritten every run.
+        static Transform EnsureModelInstance(Transform parent, GameObject asset, StringBuilder log)
+        {
+            var found = parent.Cast<Transform>().Where(t => IsInstanceOf(t.gameObject, asset)).ToArray();
+            if (found.Length > 1)
+                throw new InvalidOperationException($"{found.Length} {asset.name} instances under {parent.name}; keep one.");
+            var t = found.Length == 1 ? found[0] : ((GameObject)PrefabUtility.InstantiatePrefab(asset, parent)).transform;
+            var moved = t.localPosition != Vector3.zero || t.localRotation != Quaternion.identity || t.localScale != Vector3.one;
+            t.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            t.localScale = Vector3.one;
+            PrefabUtility.RecordPrefabInstancePropertyModifications(t);
+            log.AppendLine($"{asset.name} instance {(found.Length == 1 ? "kept" : "created")} at the identity of {parent.name}" + (moved ? " (local pose reset)" : ""));
+            return t;
+        }
+
+        // Bones of the scene instance to the skinned meshes' bind pose (world = renderer.localToWorld * bindpose^-1), parents first.
+        // Only the given (mannequin) skins; the FBX, its importer and its rig are not changed; only this instance's bone transforms
+        // are overridden.
+        static void ApplyBindPose(SkinnedMeshRenderer[] skins, StringBuilder log)
+        {
+            var targets = BindTargets(skins);
+            var moved = 0f;
+            var turned = 0f;
+            foreach (var pair in targets.OrderBy(p => Depth(p.Key)))
+            {
+                var bone = pair.Key;
+                var m = pair.Value;
+                var position = (Vector3)m.GetColumn(3);
+                moved = Mathf.Max(moved, Vector3.Distance(bone.position, position));
+                turned = Mathf.Max(turned, Quaternion.Angle(bone.rotation, m.rotation));
+                bone.SetPositionAndRotation(position, m.rotation);
+                PrefabUtility.RecordPrefabInstancePropertyModifications(bone);
+            }
+            log.AppendLine($"Mannequin bones set to the bind pose of its skinned mesh ({targets.Count} bones; largest change {moved * 1000f:F1} mm, {turned:F1} deg)");
+        }
+
+        static Dictionary<Transform, Matrix4x4> BindTargets(IEnumerable<SkinnedMeshRenderer> skins)
+        {
+            var targets = new Dictionary<Transform, Matrix4x4>();
+            foreach (var skin in skins)
+            {
+                var bones = skin.bones;
+                var binds = skin.sharedMesh != null ? skin.sharedMesh.bindposes : Array.Empty<Matrix4x4>();
+                if (bones.Length != binds.Length)
+                    throw new InvalidOperationException($"{skin.name}: {bones.Length} bones but {binds.Length} bind poses.");
+                for (var i = 0; i < bones.Length; i++)
+                {
+                    if (bones[i] == null)
+                        continue;
+                    var m = skin.transform.localToWorldMatrix * binds[i].inverse;
+                    if (targets.TryGetValue(bones[i], out var other) && Vector3.Distance(other.GetColumn(3), m.GetColumn(3)) > 1e-4f)
+                        throw new InvalidOperationException($"Bind poses of {bones[i].name} disagree between skinned meshes.");
+                    targets[bones[i]] = m;
+                }
+            }
+            return targets;
+        }
+
+        static void DisableAnimators(Transform model, StringBuilder log)
+        {
+            var animators = model.GetComponentsInChildren<Animator>(true);
+            foreach (var animator in animators)
+            {
+                animator.enabled = false;
+                PrefabUtility.RecordPrefabInstancePropertyModifications(animator);
+            }
+            log.AppendLine($"Animators disabled on the {model.name} instance and its worn model ({animators.Length}); the user body is the only rig writer");
+        }
+
+        static int Depth(Transform t)
+        {
+            var depth = 0;
+            for (var p = t.parent; p != null; p = p.parent)
+                depth++;
+            return depth;
+        }
+
+        static void SetSharedMaterial(Transform mesh, Material material)
+        {
+            if (!mesh.TryGetComponent<Renderer>(out var renderer))
+                throw new InvalidOperationException($"'{mesh.name}' has no renderer.");
+            renderer.sharedMaterials = Enumerable.Repeat(material, Mathf.Max(1, renderer.sharedMaterials.Length)).ToArray();
+            renderer.shadowCastingMode = ShadowCastingMode.On;
+            PrefabUtility.RecordPrefabInstancePropertyModifications(renderer);
+        }
+
+        // Pickups: missing ones come from one unpacked pickup model instance (their imported pose relative to the model root kept,
+        // Grip and Attach with them); each under PC_<Name>_Pickup at its workbench slot (slot pose and collider size only on
+        // creation). Grab, physics, material and references rewritten every run.
+        static ProtectiveClothingPiece[] EnsurePickups(Transform root, Dictionary<ProtectiveClothingPart, GameObject> worn, Material shared, StringBuilder log)
+        {
+            var holder = root.Find(PickupsName);
+            if (holder == null)
+            {
+                holder = new GameObject(PickupsName).transform;
+                holder.SetParent(root, false);
+                holder.position = WorkbenchCenter + Vector3.up * (WorkbenchSize.y * 0.5f + 0.002f);
+                log.AppendLine(PickupsName + " created on the workbench top");
+            }
+
+            var missing = Parts.Where(p => holder.Find(WrapperName(p)) == null).ToArray();
+            if (missing.Length > 0)
+            {
+                var instance = (GameObject)PrefabUtility.InstantiatePrefab(LoadRequired<GameObject>(PickupFbxPath));
+                instance.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+                PrefabUtility.UnpackPrefabInstance(instance, PrefabUnpackMode.Completely, InteractionMode.AutomatedAction);
+                try
+                {
+                    foreach (var part in missing)
+                    {
+                        var mesh = RequireDeep(instance.transform, ProtectiveClothingPiece.PickupMeshName(part));
+                        var relative = instance.transform.worldToLocalMatrix * mesh.localToWorldMatrix;
+                        var wrapper = new GameObject(WrapperName(part)).transform;
+                        wrapper.SetParent(holder, false);
+                        wrapper.localPosition = Slots.First(s => s.part == part).slot;
+                        wrapper.localRotation = Quaternion.identity;
+                        mesh.SetParent(wrapper, false);
+                        mesh.localPosition = relative.GetColumn(3);
+                        mesh.localRotation = relative.rotation;
+                        mesh.localScale = relative.lossyScale;
+                        var box = wrapper.gameObject.AddComponent<BoxCollider>();
+                        var bounds = BoundsIn(wrapper, mesh);
+                        box.center = bounds.center;
+                        box.size = bounds.size;
+                        log.AppendLine($"{WrapperName(part)} created at its workbench slot ({ProtectiveClothingPiece.PickupMeshName(part)} with its imported pose, " +
+                                       $"box collider {Vec(bounds.size)} m)");
+                    }
+                }
+                finally
+                {
+                    Object.DestroyImmediate(instance);
+                }
+            }
+
+            var pieces = new ProtectiveClothingPiece[Parts.Length];
+            foreach (var part in Parts)
+            {
+                var wrapper = holder.Find(WrapperName(part));
+                var mesh = RequireDeep(wrapper, ProtectiveClothingPiece.PickupMeshName(part));
+                var grip = RequireDeep(mesh, ProtectiveClothingPiece.GripName(part));
+                var attach = RequireDeep(mesh, ProtectiveClothingPiece.PickupAttachName(part));
+                SetSharedMaterial(mesh, shared);
+                foreach (var extra in wrapper.GetComponentsInChildren<Collider>(true).Where(x => x.transform != wrapper))
+                    Object.DestroyImmediate(extra);
+                if (!wrapper.TryGetComponent<BoxCollider>(out var box))
+                    box = wrapper.gameObject.AddComponent<BoxCollider>();
+                box.isTrigger = false;
+                var body = ConfigureBody(wrapper);
+                var grab = ConfigureGrab(wrapper, box, grip);
+
+                var piece = GetOrAdd<ProtectiveClothingPiece>(wrapper.gameObject);
+                var data = new SerializedObject(piece);
+                Property(data, "part").enumValueIndex = (int)part;
+                Property(data, "grab").objectReferenceValue = grab;
+                Property(data, "body").objectReferenceValue = body;
+                Property(data, "grabCollider").objectReferenceValue = box;
+                Property(data, "grip").objectReferenceValue = grip;
+                Property(data, "pickupAttach").objectReferenceValue = attach;
+                Property(data, "worn").objectReferenceValue = worn[part];
+                Property(data, "wornAttach").objectReferenceValue = RequireDeep(worn[part].transform, ProtectiveClothingPiece.WornAttachName(part));
+                data.ApplyModifiedPropertiesWithoutUndo();
+                if (!piece.gameObject.activeSelf)
+                    piece.gameObject.SetActive(true);
+                if (!piece.TryValidate(out var error))
+                    throw new InvalidOperationException(error);
+                pieces[(int)part] = piece;
+            }
+            log.AppendLine("Pickups: XRGrabInteractable (Instantaneous, Grip attach, single select, no throw), dynamic Rigidbody with gravity, " +
+                           "one box collider each, shared material; saved shown on the workbench");
+            return pieces;
+        }
+
+        static string WrapperName(ProtectiveClothingPart part) => $"PC_{ProtectiveClothingPiece.ModelName(part)}_Pickup";
+
+        static Rigidbody ConfigureBody(Transform wrapper)
+        {
+            var created = !wrapper.TryGetComponent<Rigidbody>(out var body);
+            if (created)
+            {
+                body = wrapper.gameObject.AddComponent<Rigidbody>();
+                body.mass = PickupMass;
+            }
+            // Rests on the workbench and falls onto the floor or the platform when released; XRI makes it kinematic while held.
+            body.isKinematic = false;
+            body.useGravity = true;
+            body.interpolation = RigidbodyInterpolation.Interpolate;
+            body.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+            return body;
+        }
+
+        static XRGrabInteractable ConfigureGrab(Transform wrapper, BoxCollider box, Transform grip)
+        {
+            var grab = GetOrAdd<XRGrabInteractable>(wrapper.gameObject);
+            grab.movementType = XRBaseInteractable.MovementType.Instantaneous;
+            grab.trackPosition = true;
+            grab.trackRotation = true;
+            grab.trackScale = false;
+            grab.throwOnDetach = false;
+            grab.forceGravityOnDetach = false;
+            grab.attachEaseInTime = 0f;
+            grab.smoothPosition = false;
+            grab.smoothRotation = false;
+            // The Grip point comes to the hand.
+            grab.attachTransform = grip;
+            grab.useDynamicAttach = false;
+            grab.farAttachMode = InteractableFarAttachMode.DeferToInteractor;
+            grab.selectMode = InteractableSelectMode.Single;
+            grab.retainTransformParent = true;
+            grab.addDefaultGrabTransformers = true;
+            grab.colliders.Clear();
+            grab.colliders.Add(box);
+            if (grab.interactionLayers.value == 0)
+                grab.interactionLayers = InteractionLayerMask.GetMask("Default");
+            return grab;
+        }
+
+        // Target ring (one, display only: no collider), saved hidden; its points are written by the guide at runtime.
+        static LineRenderer EnsureMarker(Transform root, Material material, StringBuilder log)
+        {
+            var t = root.Find(MarkerName);
+            var created = t == null;
+            if (created)
+            {
+                t = new GameObject(MarkerName).transform;
+                t.SetParent(root, false);
+            }
+            t.localScale = Vector3.one;
+            var line = GetOrAdd<LineRenderer>(t.gameObject);
+            line.sharedMaterial = material;
+            line.useWorldSpace = false;
+            line.loop = true;
+            line.widthMultiplier = MarkerWidth;
+            line.positionCount = 0;
+            line.alignment = LineAlignment.View;
+            line.shadowCastingMode = ShadowCastingMode.Off;
+            line.receiveShadows = false;
+            foreach (var c in t.GetComponentsInChildren<Collider>(true))
+                Object.DestroyImmediate(c);
+            t.gameObject.SetActive(false);
+            log.AppendLine($"{MarkerName} {(created ? "created" : "kept")}: one target ring (zone radius), display only, saved hidden");
+            return line;
+        }
+
+        // World-space board: one instruction line and the development reset button; pose only on creation. Only the button image
+        // takes rays.
+        static void EnsureBoard(Transform root, ProtectiveClothingEquipment equipment, LineRenderer marker, XROrigin origin, Vector3 eye, StringBuilder log)
+        {
+            var font = LoadRequired<TMP_FontAsset>(KoreanFontPath);
+            var t = root.Find(BoardName);
+            var created = t == null;
+            // The board is a canvas at CanvasScale (0.001 per unit), so its defaults are checked at that scale; the scale is kept.
+            var boardScale = Vector3.one * CanvasScale;
+            string pose;
+            if (created)
+            {
+                t = new GameObject(BoardName, typeof(RectTransform)).transform;
+                t.SetParent(root, false);
+                t.gameObject.layer = UiLayer;
+                t.localScale = boardScale;
+                t.SetPositionAndRotation(BoardPosition, FacingEye(BoardPosition, eye));
+                pose = $"created at the default {Vec(BoardPosition)}, scale {CanvasScale}";
+            }
+            else if (IsPose(t, EarlierBoardPosition, FacingEye(EarlierBoardPosition, eye), boardScale))
+            {
+                // Exactly the reclined display's default (where the mirror now stands): moved once ahead on the right (position and
+                // rotation only; the scale stays). The next run finds it at the current default and leaves it.
+                t.SetPositionAndRotation(BoardPosition, FacingEye(BoardPosition, eye));
+                pose = $"was exactly at the earlier default {Vec(EarlierBoardPosition)}: moved once to {Vec(BoardPosition)} (scale {CanvasScale} kept)";
+            }
+            else if (IsPose(t, BoardPosition, FacingEye(BoardPosition, eye), boardScale))
+            {
+                pose = "kept at the current default";
+            }
+            else
+            {
+                pose = $"kept (user position, rotation or scale; the current default is {Vec(BoardPosition)}, scale {CanvasScale})";
+            }
+            ((RectTransform)t).sizeDelta = BoardSize;
+            var canvas = GetOrAdd<Canvas>(t.gameObject);
+            canvas.renderMode = RenderMode.WorldSpace;
+            canvas.worldCamera = origin.Camera;
+            GetOrAdd<CanvasScaler>(t.gameObject);
+            foreach (var raycaster in t.GetComponents<GraphicRaycaster>().Where(r => !(r is TrackedDeviceGraphicRaycaster)))
+                Object.DestroyImmediate(raycaster);
+            GetOrAdd<TrackedDeviceGraphicRaycaster>(t.gameObject);
+
+            var background = EnsureRect(t, "Background", Vector2.zero, BoardSize);
+            var image = GetOrAdd<Image>(background.gameObject);
+            if (image.color == Color.white)
+                image.color = BoardBackground;
+            var instruction = EnsureText(t, "Instruction", new Vector2(0f, 55f), new Vector2(580f, 120f), 30f, font);
+            var buttonRect = EnsureRect(t, "ResetButton", new Vector2(0f, -85f), new Vector2(240f, 70f));
+            var buttonImage = GetOrAdd<Image>(buttonRect.gameObject);
+            if (buttonImage.color == Color.white)
+                buttonImage.color = ButtonColor;
+            var button = GetOrAdd<Button>(buttonRect.gameObject);
+            button.targetGraphic = buttonImage;
+            var label = EnsureText(buttonRect, "Label", Vector2.zero, new Vector2(240f, 70f), 28f, font);
+            foreach (var graphic in t.GetComponentsInChildren<Graphic>(true))
+                graphic.raycastTarget = graphic == buttonImage;
+
+            var guide = GetOrAdd<ProtectiveClothingGuide>(t.gameObject);
+            var data = new SerializedObject(guide);
+            Property(data, "equipment").objectReferenceValue = equipment;
+            Property(data, "koreanFont").objectReferenceValue = font;
+            Property(data, "instructionText").objectReferenceValue = instruction;
+            Property(data, "resetButton").objectReferenceValue = button;
+            Property(data, "resetButtonText").objectReferenceValue = label;
+            Property(data, "marker").objectReferenceValue = marker;
+            Property(data, "viewer").objectReferenceValue = origin.Camera.transform;
+            data.ApplyModifiedPropertiesWithoutUndo();
+            if (!guide.TryValidate(out var error))
+                throw new InvalidOperationException(error);
+            log.AppendLine($"{BoardName} {pose}: instruction line, reset button (code listener only), " +
+                           "tracked device raycaster, ProtectiveClothingGuide");
+        }
+
+        static Quaternion FacingEye(Vector3 position, Vector3 eye) => Quaternion.LookRotation(Vector3.ProjectOnPlane(position - eye, Vector3.up), Vector3.up);
+
+        // World position and rotation, and the local scale each caller expects (CanvasScale for the board).
+        static bool IsPose(Transform t, Vector3 position, Quaternion rotation, Vector3 localScale) =>
+            (t.position - position).sqrMagnitude < 1e-8f && Quaternion.Angle(t.rotation, rotation) < 0.01f && (t.localScale - localScale).sqrMagnitude < 1e-12f;
+
+        static RectTransform EnsureRect(Transform parent, string name, Vector2 position, Vector2 size)
+        {
+            var t = parent.Find(name);
+            if (t != null)
+                return (RectTransform)t;
+            var rect = new GameObject(name, typeof(RectTransform)).GetComponent<RectTransform>();
+            rect.SetParent(parent, false);
+            rect.gameObject.layer = UiLayer;
+            rect.anchoredPosition = position;
+            rect.sizeDelta = size;
+            return rect;
+        }
+
+        // Layout and style only on creation; text stays empty (filled at runtime).
+        static TMP_Text EnsureText(Transform parent, string name, Vector2 position, Vector2 size, float fontSize, TMP_FontAsset font)
+        {
+            var created = parent.Find(name) == null;
+            var rect = EnsureRect(parent, name, position, size);
+            var text = GetOrAdd<TextMeshProUGUI>(rect.gameObject);
+            text.raycastTarget = false;
+            if (!created)
+                return text;
+            text.font = font;
+            text.text = string.Empty;
+            text.fontSize = fontSize;
+            text.alignment = TextAlignmentOptions.Center;
+            text.color = BoardText;
+            text.textWrappingMode = TextWrappingModes.Normal;
+            text.enableAutoSizing = false;
+            return text;
+        }
+
+        // ---------- Menu 2 ----------
+
+        [MenuItem("B/Protective Clothing/2. Validate Equipment Scene (report only)")]
+        static void Validate()
+        {
+            var r = new Report();
+            r.Section("Model files and importers");
+            var pickupModel = AssetDatabase.LoadAssetAtPath<GameObject>(PickupFbxPath);
+            var wornModel = AssetDatabase.LoadAssetAtPath<GameObject>(WornFbxPath);
+            ValidateModelImporter(PickupFbxPath, false, r);
+            ValidateModelImporter(WornFbxPath, true, r);
+            ValidateModelContent(pickupModel, wornModel, r);
+            r.Section("Textures and material");
+            ValidateTexturesAndMaterial(r);
+            r.Section("Scene");
+            if (!File.Exists(ScenePath))
+                r.Check(false, "Scene missing: " + ScenePath);
+            else if (EditorSceneManager.GetActiveScene().path != ScenePath)
+                r.NotRun($"Scene checks: open {ScenePath} and run '2. Validate Equipment Scene' again.");
+            else
+                ValidateScene(EditorSceneManager.GetActiveScene(), wornModel, r);
+            r.Flush();
+        }
+
+        static void ValidateModelImporter(string path, bool rigged, Report r)
+        {
+            var importer = AssetImporter.GetAtPath(path) as ModelImporter;
+            r.Check(importer != null, "Model importer present: " + path);
+            if (importer == null)
+                return;
+            r.Check(Mathf.Approximately(importer.globalScale, 1f) && importer.useFileScale && !importer.bakeAxisConversion && importer.preserveHierarchy,
+                $"{Path.GetFileName(path)}: scale 1 with file units (no 100 / 0.01 fix), axis conversion not baked, explicit prefab root");
+            r.Check(importer.materialImportMode == ModelImporterMaterialImportMode.None && !importer.importCameras && !importer.importLights &&
+                    !importer.importAnimation,
+                $"{Path.GetFileName(path)}: no imported materials, cameras, lights or animation");
+            if (rigged)
+                r.Check(importer.animationType == ModelImporterAnimationType.Generic && importer.avatarSetup == ModelImporterAvatarSetup.NoAvatar &&
+                        !importer.optimizeGameObjects,
+                    $"{Path.GetFileName(path)}: rigged (Generic, no avatar, bones kept as objects): the user body drives its skeleton");
+            else
+                r.Check(importer.animationType == ModelImporterAnimationType.None, $"{Path.GetFileName(path)}: no rig (grabbable props)");
+        }
+
+        // Contract names (README_Model.md): six meshes and their Empties, each exactly once; worn meshes at the common origin.
+        static void ValidateModelContent(GameObject pickupModel, GameObject wornModel, Report r)
+        {
+            r.Check(pickupModel != null && wornModel != null, "Pickup and worn models load");
+            if (pickupModel == null || wornModel == null)
+                return;
+            var pickupNames = pickupModel.GetComponentsInChildren<Transform>(true).Select(t => t.name).ToArray();
+            var wornNames = wornModel.GetComponentsInChildren<Transform>(true).Select(t => t.name).ToArray();
+            var problems = new List<string>();
+            foreach (var part in Parts)
+            {
+                foreach (var name in new[] { ProtectiveClothingPiece.PickupMeshName(part), ProtectiveClothingPiece.GripName(part), ProtectiveClothingPiece.PickupAttachName(part) })
+                {
+                    if (pickupNames.Count(n => n == name) != 1)
+                        problems.Add($"pickup {name} x{pickupNames.Count(n => n == name)}");
+                }
+                foreach (var name in new[] { ProtectiveClothingPiece.WornName(part), ProtectiveClothingPiece.WornAttachName(part) })
+                {
+                    if (wornNames.Count(n => n == name) != 1)
+                        problems.Add($"worn {name} x{wornNames.Count(n => n == name)}");
+                }
+            }
+            r.Check(problems.Count == 0, "Six parts: each pickup mesh, Grip, pickup Attach, worn mesh and worn Attach exactly once" +
+                                         (problems.Count > 0 ? ": " + string.Join(", ", problems) : ""));
+            var notCommon = Parts.Select(p => FindDeep(wornModel.transform, ProtectiveClothingPiece.WornName(p)))
+                .Where(t => t != null && (t.localPosition.sqrMagnitude > 1e-10f || Quaternion.Angle(t.localRotation, Quaternion.identity) > 0.01f ||
+                                          (t.localScale - Vector3.one).sqrMagnitude > 1e-8f))
+                .Select(t => t.name).ToArray();
+            r.Check(notCommon.Length == 0, "Worn meshes share the worn model's origin (local identity under the FBX root)" +
+                                           (notCommon.Length > 0 ? ": " + string.Join(", ", notCommon) : ""));
+            var mats = wornModel.GetComponentsInChildren<Renderer>(true).Concat(pickupModel.GetComponentsInChildren<Renderer>(true))
+                .Select(x => x.sharedMaterials.Length).ToArray();
+            r.Info($"Model renderers: {mats.Length}, material slots each: {string.Join("/", mats.Distinct())}");
+            ValidateWornRig(pickupModel, wornModel, r);
+        }
+
+        // The worn model's skinning (README_Model.md, UserWearReport.json): six skinned meshes on PC_Armature, a copy of the
+        // mannequin skeleton. Each bone must exist in the mannequin under the same name and rest where the mannequin bind pose
+        // puts it (the user body then drives it by that name); each part only uses its own side's bones.
+        static void ValidateWornRig(GameObject pickupModel, GameObject wornModel, Report r)
+        {
+            r.Check(FindDeep(wornModel.transform, ArmatureName) != null, $"Worn model holds its skeleton {ArmatureName}");
+            r.Check(pickupModel.GetComponentsInChildren<SkinnedMeshRenderer>(true).Length == 0, "Pickup meshes are not skinned (independent props)");
+            var skins = Parts.Select(p => FindDeep(wornModel.transform, ProtectiveClothingPiece.WornName(p))?.GetComponent<SkinnedMeshRenderer>()).ToArray();
+            r.Check(skins.All(s => s != null && s.sharedMesh != null && s.bones.Length > 0 && s.bones.All(b => b != null)),
+                "Six worn meshes are skinned (SkinnedMeshRenderer with bones); if not, reimport the worn FBX");
+            if (skins.Any(s => s == null))
+                return;
+            string Short(Transform b) => b.name.StartsWith(MixamoPrefix) ? b.name.Substring(MixamoPrefix.Length) : b.name;
+            var rules = new (ProtectiveClothingPart part, string[] required, Func<string, bool> allowed)[]
+            {
+                (ProtectiveClothingPart.Jacket, new[] { "Spine2", "LeftArm", "RightArm", "LeftForeArm", "RightForeArm" }, b => !b.Contains("Leg") && !b.Contains("Foot") && !b.Contains("Toe")),
+                (ProtectiveClothingPart.Trousers, new[] { "Hips", "LeftUpLeg", "RightUpLeg", "LeftLeg", "RightLeg" }, b => !b.Contains("Arm") && !b.Contains("Hand")),
+                (ProtectiveClothingPart.GloveLeft, new[] { "LeftHand" }, b => b.StartsWith("Left") && (b.Contains("Hand") || b.Contains("ForeArm"))),
+                (ProtectiveClothingPart.GloveRight, new[] { "RightHand" }, b => b.StartsWith("Right") && (b.Contains("Hand") || b.Contains("ForeArm"))),
+                (ProtectiveClothingPart.OverbootLeft, new[] { "LeftFoot" }, b => b.StartsWith("Left") && (b.Contains("Leg") || b.Contains("Foot") || b.Contains("Toe"))),
+                (ProtectiveClothingPart.OverbootRight, new[] { "RightFoot" }, b => b.StartsWith("Right") && (b.Contains("Leg") || b.Contains("Foot") || b.Contains("Toe")))
+            };
+            var sideProblems = new List<string>();
+            foreach (var (part, required, allowed) in rules)
+            {
+                var names = skins[(int)part].bones.Select(Short).ToArray();
+                var missing = required.Where(x => !names.Contains(x)).ToArray();
+                var wrong = names.Where(x => !allowed(x)).ToArray();
+                if (missing.Length > 0 || wrong.Length > 0)
+                    sideProblems.Add($"{part}: missing {string.Join("/", missing)} wrong {string.Join("/", wrong)}");
+            }
+            r.Check(sideProblems.Count == 0, "Skin bones per part: jacket upper body and both arms, trousers hips and both legs, each glove / overboot only its own side's hand / leg bones" +
+                                             (sideProblems.Count > 0 ? ": " + string.Join("; ", sideProblems) : ""));
+
+            var mannequin = AssetDatabase.LoadAssetAtPath<GameObject>(MannequinFbxPath);
+            var mannequinSkins = mannequin != null ? mannequin.GetComponentsInChildren<SkinnedMeshRenderer>(true) : Array.Empty<SkinnedMeshRenderer>();
+            var bind = new Dictionary<string, Vector3>();
+            foreach (var skin in mannequinSkins)
+            {
+                var binds = skin.sharedMesh != null ? skin.sharedMesh.bindposes : Array.Empty<Matrix4x4>();
+                for (var i = 0; i < skin.bones.Length && i < binds.Length; i++)
+                {
+                    if (skin.bones[i] != null)
+                        bind[skin.bones[i].name] = (skin.transform.localToWorldMatrix * binds[i].inverse).GetColumn(3);
+                }
+            }
+            var bones = skins.SelectMany(s => s.bones).Distinct().ToArray();
+            var unknown = bones.Where(b => !bind.ContainsKey(b.name)).Select(b => b.name).ToArray();
+            r.Check(bind.Count > 0 && unknown.Length == 0, $"Every worn skin bone ({bones.Length}) has a mannequin bone of the same name" +
+                                                           (unknown.Length > 0 ? ": missing " + string.Join(", ", unknown) : ""));
+            var worst = bones.Where(b => bind.ContainsKey(b.name)).Select(b => Vector3.Distance(b.position, bind[b.name])).DefaultIfEmpty(0f).Max();
+            r.Check(worst < 0.001f, $"Worn skeleton rest = mannequin bind pose (same model frame; worst bone {worst * 1000f:F2} mm, limit 1 mm)");
+        }
+
+        static void ValidateTexturesAndMaterial(Report r)
+        {
+            var baseColor = AssetImporter.GetAtPath(BaseColorPath) as TextureImporter;
+            var normal = AssetImporter.GetAtPath(NormalPath) as TextureImporter;
+            var roughness = AssetImporter.GetAtPath(RoughnessPath) as TextureImporter;
+            var derived = AssetImporter.GetAtPath(MetallicSmoothnessPath) as TextureImporter;
+            r.Check(baseColor != null && baseColor.textureType == TextureImporterType.Default && baseColor.sRGBTexture, "PC_BaseColor_2K: colour texture, sRGB on");
+            r.Check(normal != null && normal.textureType == TextureImporterType.NormalMap, "PC_Normal_1K: Normal Map");
+            r.Check(roughness != null && !roughness.sRGBTexture, "PC_Roughness_1K: sRGB off (linear data)");
+            r.Check(derived != null && !derived.sRGBTexture && derived.alphaSource == TextureImporterAlphaSource.FromInput,
+                "Derived PC_MetallicSmoothness_1K: linear, alpha from input (smoothness = 1 - roughness)");
+            foreach (var path in new[] { BaseColorPath, NormalPath, RoughnessPath, MetallicSmoothnessPath })
+            {
+                var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+                if (tex != null)
+                    r.Info($"{Path.GetFileName(path)} {tex.width}x{tex.height}");
+            }
+
+            var m = AssetDatabase.LoadAssetAtPath<Material>(SharedMaterialPath);
+            r.Check(m != null && m.shader != null && m.shader.name == "Universal Render Pipeline/Lit", "Shared material PC_Shared uses URP Lit");
+            if (m == null)
+                return;
+            r.Check(m.GetTexture("_BaseMap") == AssetDatabase.LoadAssetAtPath<Texture2D>(BaseColorPath) &&
+                    m.GetTexture("_BumpMap") == AssetDatabase.LoadAssetAtPath<Texture2D>(NormalPath) &&
+                    m.GetTexture("_MetallicGlossMap") == AssetDatabase.LoadAssetAtPath<Texture2D>(MetallicSmoothnessPath) &&
+                    Mathf.Approximately(m.GetFloat("_SmoothnessTextureChannel"), 0f),
+                "PC_Shared: base colour, normal map and metallic-smoothness map (smoothness from its alpha) assigned");
+            r.Check(m.IsKeywordEnabled("_NORMALMAP") && m.IsKeywordEnabled("_METALLICSPECGLOSSMAP"), "PC_Shared keywords: _NORMALMAP, _METALLICSPECGLOSSMAP");
+            r.Info($"PC_Shared: smoothness strength {m.GetFloat("_Smoothness"):0.##}, normal scale {m.GetFloat("_BumpScale"):0.##}, render face front");
+        }
+
+        static void ValidateScene(Scene scene, GameObject wornAsset, Report r)
+        {
+            var origins = InScene<XROrigin>(scene);
+            r.Check(origins.Length == 1 && origins[0].Camera != null, $"One XR Origin with a camera ({origins.Length})");
+            var liveCameras = Active(InScene<Camera>(scene)).Where(c => c.enabled).ToArray();
+            var listeners = Active(InScene<AudioListener>(scene)).Where(l => l.enabled).ToArray();
+            r.Check(liveCameras.Length == 1 && origins.Length == 1 && liveCameras[0] == origins[0].Camera && listeners.Length == 1,
+                $"One enabled camera (the XR camera; the mirror camera is saved disabled) and one AudioListener ({liveCameras.Length}, {listeners.Length})");
+            r.Check(InScene<XRInteractionManager>(scene).Length == 1, "One XR Interaction Manager");
+            var systems = Active(InScene<EventSystem>(scene));
+            r.Check(systems.Length == 1 && systems[0].GetComponents<BaseInputModule>().Length == 1 && systems[0].GetComponent<BaseInputModule>() is XRUIInputModule,
+                $"One active EventSystem with only XRUIInputModule ({systems.Length})");
+            var simulators = SceneInstances(scene, AssetDatabase.LoadAssetAtPath<GameObject>(SimulatorPrefabPath));
+            r.Check(simulators.All(s => !s.activeSelf), $"XR Interaction Simulator saved inactive ({simulators.Length})");
+            var nearFars = origins.Length == 1 ? origins[0].GetComponentsInChildren<NearFarInteractor>(true) : Array.Empty<NearFarInteractor>();
+            r.Check(nearFars.Any(n => n.handedness == InteractorHandedness.Left) && nearFars.Any(n => n.handedness == InteractorHandedness.Right),
+                "Both hands have a NearFar interactor (either hand can grab)");
+
+            var roots = scene.GetRootGameObjects().Where(g => g.name == RootName).ToArray();
+            r.Check(roots.Length == 1, $"One {RootName}");
+            if (roots.Length != 1)
+                return;
+            var root = roots[0].transform;
+            var equipments = InScene<ProtectiveClothingEquipment>(scene);
+            r.Check(equipments.Length == 1 && equipments[0].transform == root, "One ProtectiveClothingEquipment on " + RootName);
+            if (equipments.Length != 1)
+                return;
+            var equipment = equipments[0];
+            r.Check(equipment.TryValidate(out var error), "Equipment references, parts, user body and zones valid" + (error != null ? ": " + error : ""));
+            r.Info($"Arm margin {equipment.ArmMargin:0.###} m: a grabbed part wears only after its Attach point was seen beyond its zone by this much (no grab-moment wear)");
+
+            ValidateLock(root, equipment, r);
+
+            r.Section("User body, worn model and alignment (trunk, legs and feet are estimated, not measured)");
+            Guarded(r, "body", () => ValidateBody(scene, root, equipment, origins.Length == 1 ? origins[0] : null, wornAsset, r));
+
+            r.Section("Wear zones (development values; reach and feel are the user's check)");
+            Guarded(r, "zones", () => ValidateZones(root, equipment, r));
+
+            r.Section("Mirror");
+            Guarded(r, "mirror", () => ValidateMirror(scene, root, origins.Length == 1 ? origins[0] : null, r));
+
+            r.Section("Pickups");
+            Guarded(r, "pickups", () => ValidatePickups(scene, root, equipment, r));
+
+            r.Section("Guidance, marker and reset");
+            Guarded(r, "guidance", () => ValidateGuide(scene, root, equipment, origins.Length == 1 ? origins[0] : null, r));
+            r.Info("Grabbing, wearing at the body zones, the glove hand rule, angle independence, wrong side and released pickups, tracking and " +
+                   "focus loss, two-hand use, body following, first-person view, mirror, reset, reach, fit and performance are runtime checks for the user.");
+        }
+
+        // A check group that throws (for example on a broken reference) is reported as a FAIL; the other groups still run.
+        static void Guarded(Report r, string group, Action check)
+        {
+            try
+            {
+                check();
+            }
+            catch (Exception e)
+            {
+                r.Check(false, $"{group} checks stopped by {e.GetType().Name}: {e.Message}");
+            }
+        }
+
+        // The lock path of an invalid setup: Awake disables every grab it can reach (the pieces' grabs and every grab under the
+        // equipment), so each pickup must carry its grab on itself under the equipment; static, not a Play result.
+        static void ValidateLock(Transform root, ProtectiveClothingEquipment equipment, Report r)
+        {
+            var under = root.GetComponentsInChildren<XRGrabInteractable>(true);
+            var pieces = root.GetComponentsInChildren<ProtectiveClothingPiece>(true);
+            var withoutGrab = pieces.Where(p => !p.TryGetComponent<XRGrabInteractable>(out _)).Select(p => p.name).ToArray();
+            var outside = equipment.Pieces.Where(p => p != null && !p.transform.IsChildOf(root)).Select(p => p.name).ToArray();
+            r.Check(withoutGrab.Length == 0 && outside.Length == 0,
+                $"Invalid-setup lock reaches every pickup: {under.Length} grab(s) under {RootName}, each piece carries its own grab" +
+                (withoutGrab.Length > 0 ? "; no grab on " + string.Join(", ", withoutGrab) : "") +
+                (outside.Length > 0 ? "; outside the equipment: " + string.Join(", ", outside) : ""));
+            r.Check(under.All(g => g.enabled), "Saved grabs enabled (only an invalid setup disables them at Awake)");
+            r.Info("Locks at runtime: invalid setup -> grabs disabled at Awake and the setup error line; reset running, failed reset or the " +
+                   "equipment disabled -> its select filter refuses new grabs (registered from Awake to OnDestroy) and wearing is not judged");
+        }
+
+        static void ValidateBody(Scene scene, Transform root, ProtectiveClothingEquipment equipment, XROrigin origin, GameObject wornAsset, Report r)
+        {
+            var bodies = InScene<ProtectiveClothingUserBody>(scene);
+            r.Check(bodies.Length == 1 && bodies[0].transform.parent == root && bodies[0].name == UserBodyName, $"One {UserBodyName} under {RootName} ({bodies.Length})");
+            if (bodies.Length != 1)
+                return;
+            var body = bodies[0];
+            r.Check(equipment.Body == body, "Equipment uses this user body");
+            r.Check(body.TryValidate(out var error), "User body inputs, rig, worn meshes and zones valid" + (error != null ? ": " + error : ""));
+            var data = new SerializedObject(body);
+            Object Ref(string field) => data.FindProperty(field)?.objectReferenceValue;
+            if (origin != null)
+            {
+                var inputs = XrInputs(origin);
+                r.Check(Ref("head") == inputs.Head && Ref("headDriver") == inputs.HeadDriver && Ref("leftController") == inputs.Left &&
+                        Ref("leftDriver") == inputs.LeftDriver && Ref("rightController") == inputs.Right && Ref("rightDriver") == inputs.RightDriver,
+                    "Body reads the XR Origin camera and both controllers with their TrackedPoseDrivers");
+                r.Check(!body.transform.IsChildOf(origin.transform) && !origin.transform.IsChildOf(body.transform), "Body is not under the XR Origin (the rig is never moved for it)");
+                var leftModel = ObjectArray(data, "leftControllerModel").OfType<Renderer>().ToArray();
+                var rightModel = ObjectArray(data, "rightControllerModel").OfType<Renderer>().ToArray();
+                r.Check(leftModel.Length > 0 && leftModel.All(x => x.transform.IsChildOf(inputs.Left)) && rightModel.Length > 0 && rightModel.All(x => x.transform.IsChildOf(inputs.Right)),
+                    $"Controller model renderers found under each controller ({leftModel.Length}, {rightModel.Length}); not drawn while that hand's glove is worn");
+            }
+
+            var mannequinAsset = AssetDatabase.LoadAssetAtPath<GameObject>(MannequinFbxPath);
+            var model = body.Model;
+            r.Check(model != null && IsInstanceOf(model.gameObject, mannequinAsset) && model.parent == body.transform && model.localPosition.sqrMagnitude < 1e-10f &&
+                    (model.localScale - Vector3.one).sqrMagnitude < 1e-8f,
+                $"Body model: {MannequinFbxPath} instance directly under {UserBodyName}, local origin, saved scale 1 (eye-height scale at runtime only)");
+            var importer = AssetImporter.GetAtPath(MannequinFbxPath) as ModelImporter;
+            r.Check(importer != null && importer.animationType == ModelImporterAnimationType.Generic, "Source Mannequin.fbx import left as it was (Generic)");
+            var mannequins = SceneInstances(scene, mannequinAsset);
+            r.Check(mannequins.Length == 1, $"One mannequin instance in the scene, the user body's (the earlier display mannequin is gone) ({mannequins.Length})");
+            var display = root.Find(MannequinRootName);
+            if (display != null)
+                r.Info($"{MannequinRootName} kept with {display.childCount} user object(s); it is not used for wearing");
+            if (model == null)
+                return;
+            var worns = SceneInstances(scene, wornAsset);
+            var worn = worns.Length == 1 ? worns[0].transform : null;
+            r.Check(worn != null && worn.parent == model && worn.localPosition.sqrMagnitude < 1e-10f && Quaternion.Angle(worn.localRotation, Quaternion.identity) < 0.01f &&
+                    (worn.localScale - Vector3.one).sqrMagnitude < 1e-8f,
+                $"One worn model instance at the identity of the body's mannequin model (shared frame and runtime scale) ({worns.Length})");
+            if (worn == null)
+                return;
+            r.Check(model.GetComponentsInChildren<Animator>(true).All(a => !a.enabled), "Animators of the mannequin and the worn model disabled (the user body is the only rig writer)");
+            var strays = body.GetComponentsInChildren<Collider>(true).Length + body.GetComponentsInChildren<Rigidbody>(true).Length +
+                         body.GetComponentsInChildren<XRBaseInteractable>(true).Length + body.GetComponentsInChildren<Camera>(true).Length +
+                         body.GetComponentsInChildren<AudioListener>(true).Length;
+            r.Check(strays == 0, $"No collider, rigidbody, interactable, camera or AudioListener under {UserBodyName} ({strays})");
+
+            var mannequinSkins = model.GetComponentsInChildren<SkinnedMeshRenderer>(true).Where(s => !s.transform.IsChildOf(worn)).ToArray();
+            var targets = BindTargets(mannequinSkins);
+            var worstMove = targets.Select(p => Vector3.Distance(p.Key.position, p.Value.GetColumn(3))).DefaultIfEmpty(0f).Max();
+            var worstTurn = targets.Select(p => Quaternion.Angle(p.Key.rotation, p.Value.rotation)).DefaultIfEmpty(0f).Max();
+            r.Check(targets.Count > 0 && worstMove < 0.001f && worstTurn < 0.1f,
+                $"Mannequin bones saved in the skinned mesh's bind pose (the body's rest; {targets.Count} bones; worst {worstMove * 1000f:F2} mm, {worstTurn:F2} deg)");
+            var bodyRenderers = ObjectArray(data, "bodyRenderers").OfType<Renderer>().ToArray();
+            r.Check(bodyRenderers.Length > 0 && mannequinSkins.All(s => bodyRenderers.Contains(s)) && bodyRenderers.All(x => x.transform.IsChildOf(model) && !x.transform.IsChildOf(worn)),
+                "Mannequin skin listed as hidden from the HMD camera (the worn meshes are not)");
+
+            // Model documents (Blender metres, +Z up, -Y front, +X the mannequin's left) in the model's frame: (-x, z, -y).
+            var reference = ReadText(ReferenceJsonPath);
+            var anchors = ReadText(AnchorJsonPath);
+            if (reference == null || anchors == null)
+            {
+                r.Check(false, "Model documents readable: " + ReferenceJsonPath + ", " + AnchorJsonPath);
+                return;
+            }
+            var bones = MannequinBones(mannequinSkins);
+            var boneProblems = new List<string>();
+            var worstBone = 0f;
+            foreach (var bone in new[] { "Hips", "LeftHand", "RightHand", "LeftFoot", "RightFoot", "Head" })
+            {
+                var referenceBoneHead = BoneHead(reference, MixamoPrefix + bone);
+                if (!bones.TryGetValue(MixamoPrefix + bone, out var t) || referenceBoneHead == null)
+                {
+                    boneProblems.Add(bone + " missing");
+                    continue;
+                }
+                var d = Vector3.Distance(model.InverseTransformPoint(t.position), ToUnity(referenceBoneHead.Value));
+                worstBone = Mathf.Max(worstBone, d);
+                if (d > 0.005f)
+                    boneProblems.Add($"{bone} {d * 1000f:F1} mm");
+            }
+            r.Check(boneProblems.Count == 0, $"Bones match ReferenceInspection.json (bind T pose; worst {worstBone * 1000f:F1} mm, limit 5 mm)" +
+                                             (boneProblems.Count > 0 ? ": " + string.Join(", ", boneProblems) : ""));
+            var attachProblems = new List<string>();
+            var worstAttach = 0f;
+            foreach (var part in Parts)
+            {
+                var t = FindDeep(worn, ProtectiveClothingPiece.WornAttachName(part));
+                var doc = AnchorTranslation(anchors, ProtectiveClothingPiece.WornAttachName(part));
+                if (t == null || doc == null)
+                {
+                    attachProblems.Add(part + " missing");
+                    continue;
+                }
+                var d = Vector3.Distance(model.InverseTransformPoint(t.position), ToUnity(doc.Value));
+                worstAttach = Mathf.Max(worstAttach, d);
+                if (d > 0.001f)
+                    attachProblems.Add($"{part} {d * 1000f:F1} mm");
+            }
+            r.Check(attachProblems.Count == 0, $"Worn Attach points (bind pose references) match AnchorManifest.json (worst {worstAttach * 1000f:F2} mm, limit 1 mm)" +
+                                               (attachProblems.Count > 0 ? ": " + string.Join(", ", attachProblems) : ""));
+
+            // Each worn skin bone follows the mannequin bone of the same name; both rest at the same place in the saved bind pose.
+            var shared = AssetDatabase.LoadAssetAtPath<Material>(SharedMaterialPath);
+            var skinsOk = Parts.All(p => body.WornSkins[(int)p] != null && body.WornSkins[(int)p].name == ProtectiveClothingPiece.WornName(p) && body.WornSkins[(int)p].transform.IsChildOf(worn));
+            r.Check(skinsOk, "Body worn meshes: the six skinned meshes of the worn instance, in part order");
+            if (!skinsOk)
+                return;
+            var wornBones = body.WornSkins.SelectMany(s => s.bones).Distinct().ToArray();
+            var unmatched = wornBones.Where(b => b == null || !bones.ContainsKey(b.name)).Select(b => b == null ? "(empty)" : b.name).ToArray();
+            var worstFollow = wornBones.Where(b => b != null && bones.ContainsKey(b.name)).Select(b => Vector3.Distance(b.position, bones[b.name].position)).DefaultIfEmpty(0f).Max();
+            var worstAxis = wornBones.Where(b => b != null && bones.ContainsKey(b.name)).Select(b => Quaternion.Angle(b.rotation, bones[b.name].rotation)).DefaultIfEmpty(0f).Max();
+            r.Check(unmatched.Length == 0 && worstFollow < 0.001f,
+                $"Worn bones ({wornBones.Length}) each follow a mannequin bone of the same name, resting on it (worst {worstFollow * 1000f:F2} mm, limit 1 mm)" +
+                (unmatched.Length > 0 ? ": unmatched " + string.Join(", ", unmatched) : ""));
+            r.Info($"Worn bone axes differ from the mannequin's by up to {worstAxis:F1} deg (bone orientation of the FBX export); the body keeps that fixed offset");
+            r.Check(body.WornSkins.All(s => !s.gameObject.activeSelf), "Worn meshes saved hidden (shown by wearing only)");
+            r.Check(body.WornSkins.All(s => s.sharedMaterials.All(m => m == shared)), "Worn meshes use the shared material PC_Shared");
+
+            r.Info($"Alignment: eye offset {Vec(data.FindProperty("eyeOffset").vector3Value)} (head bone space), standing eye height " +
+                   $"{data.FindProperty("standingEyeHeight").floatValue:F2} m, floor {data.FindProperty("floorHeight").floatValue:F2} m, wrist offset " +
+                   $"{Vec(data.FindProperty("wristOffset").vector3Value)}, first-person clearance {data.FindProperty("firstPersonClearance").floatValue:F2} m");
+            r.Info("Display (code): mannequin skin never in the HMD camera; worn parts in the HMD except the jacket and trousers while the HMD is beyond the " +
+                   "body's crouch / lean reach; a worn glove hides that controller's model; the mirror sees everything. Head and hands are tracked, the " +
+                   "trunk, legs and feet are an estimate: not a measurement of the user's body or of the real fit.");
+        }
+
+        static IEnumerable<Object> ObjectArray(SerializedObject data, string field)
+        {
+            var array = data.FindProperty(field);
+            for (var i = 0; array != null && i < array.arraySize; i++)
+                yield return array.GetArrayElementAtIndex(i).objectReferenceValue;
+        }
+
+        // Zone points under their bones and sides, and centre distances in the saved bind pose (scale 1) and at the runtime eye-height
+        // scale: a part held at another zone's centre must be outside its own zone (FAIL), and the spheres should not overlap (NOTE).
+        static void ValidateZones(Transform root, ProtectiveClothingEquipment equipment, Report r)
+        {
+            var body = equipment.Body;
+            if (body == null || body.Model == null || body.Zones.Count != Parts.Length || body.Zones.Any(z => z.point == null))
+            {
+                r.Check(false, "Six zones on the user body");
+                return;
+            }
+            var model = body.Model;
+            var data = new SerializedObject(body);
+            var headBone = data.FindProperty("headBone").objectReferenceValue as Transform;
+            var restEye = headBone != null ? body.transform.InverseTransformPoint(headBone.TransformPoint(data.FindProperty("eyeOffset").vector3Value)).y : 0f;
+            var scale = restEye > 0.1f ? data.FindProperty("standingEyeHeight").floatValue / restEye : 1f;
+            var placement = new List<string>();
+            foreach (var (part, boneName, _) in ZoneDefaults)
+            {
+                var point = body.ZonePoint(part);
+                var onBone = false;
+                for (var p = point.parent; p != null && p != model; p = p.parent)
+                    onBone |= p.name == MixamoPrefix + boneName;
+                var x = model.InverseTransformPoint(point.position).x;
+                var sideOk = part == ProtectiveClothingPart.GloveLeft || part == ProtectiveClothingPart.OverbootLeft ? x < -0.02f
+                    : part == ProtectiveClothingPart.GloveRight || part == ProtectiveClothingPart.OverbootRight ? x > 0.02f : Mathf.Abs(x) < 0.05f;
+                if (!onBone || !sideOk)
+                    placement.Add($"{part} ({(onBone ? "" : "not under " + boneName + " ")}{(sideOk ? "" : "wrong side")})");
+                var floor = body.transform.position.y;
+                r.Info($"{part} zone radius {body.ZoneRadius(part):0.###} m, height {point.position.y - floor:F2} m in the saved pose, about " +
+                       $"{(point.position.y - floor) * scale:F2} m at the {data.FindProperty("standingEyeHeight").floatValue:F2} m eye height");
+            }
+            r.Check(placement.Count == 0, "Zones under their bones and on the body's own side (chest/waist centred, left parts on the left)" +
+                                          (placement.Count > 0 ? ": " + string.Join(", ", placement) : ""));
+            foreach (var part in new[] { ProtectiveClothingPart.GloveLeft, ProtectiveClothingPart.GloveRight })
+            {
+                var hand = data.FindProperty(part == ProtectiveClothingPart.GloveLeft ? "leftArm" : "rightArm").FindPropertyRelative("end").objectReferenceValue as Transform;
+                var d = hand != null ? Vector3.Distance(hand.position, body.ZonePoint(part).position) : float.PositiveInfinity;
+                r.Check(d < 0.12f, $"{part} zone on that hand ({d:F3} m from the wrist bone; follows the controller)");
+            }
+            var pairs = new[]
+            {
+                (ProtectiveClothingPart.Jacket, ProtectiveClothingPart.Trousers), (ProtectiveClothingPart.OverbootLeft, ProtectiveClothingPart.OverbootRight),
+                (ProtectiveClothingPart.Trousers, ProtectiveClothingPart.OverbootLeft), (ProtectiveClothingPart.Trousers, ProtectiveClothingPart.OverbootRight),
+                (ProtectiveClothingPart.Jacket, ProtectiveClothingPart.OverbootLeft), (ProtectiveClothingPart.Jacket, ProtectiveClothingPart.OverbootRight)
+            };
+            foreach (var (a, b) in pairs)
+            {
+                var ra = body.ZoneRadius(a);
+                var rb = body.ZoneRadius(b);
+                var d = Vector3.Distance(body.ZonePoint(a).position, body.ZonePoint(b).position);
+                var scaled = d * Mathf.Min(scale, 1f);
+                r.Check(scaled > Mathf.Max(ra, rb), $"{a} / {b} zones {d:F3} m apart ({scaled:F3} m scaled): more than either radius ({ra:0.###}, {rb:0.###} m), " +
+                                                    "so a part held at the other zone's centre is not worn" +
+                                                    (scaled >= ra + rb ? "; the zones do not overlap" : "; NOTE the zones overlap near the middle"));
+            }
+            r.Info("Gloves: each zone moves with its hand; the left glove wears only from the right hand and the right glove only from the left, so " +
+                   "grabbing a glove never wears it on the grabbing hand. Overboots: the zone in front of the thigh is an easy-reach area; the worn " +
+                   "overboot shows on the estimated foot.");
+            r.Info("Wear needs (code): held now, holding hand tracked, focus, not resetting, head (and for a glove the target hand) tracked and settled, " +
+                   "armed, Attach within the zone radius. No angle, release, hold time or button.");
+        }
+
+        // The full-length mirror: its own disabled camera (no AudioListener, never MainCamera, not stereo), a quad with the mirror
+        // material, full-body geometry from the start point and clear of the workbench, board and pickups.
+        static void ValidateMirror(Scene scene, Transform root, XROrigin origin, Report r)
+        {
+            var mirrors = InScene<ProtectiveClothingMirror>(scene);
+            r.Check(mirrors.Length == 1 && mirrors[0].transform.parent == root && mirrors[0].name == MirrorName, $"One {MirrorName} under {RootName} ({mirrors.Length})");
+            if (mirrors.Length != 1)
+                return;
+            var mirror = mirrors[0];
+            r.Check(mirror.TryValidate(out var error), $"{MirrorName} valid" + (error != null ? ": " + error : ""));
+            var camera = mirror.ViewCamera;
+            if (camera == null || mirror.Screen == null)
+                return;
+            r.Check(!camera.enabled && camera.targetTexture == null && camera.stereoTargetEye == StereoTargetEyeMask.None && !camera.CompareTag("MainCamera") &&
+                    camera.GetComponent<AudioListener>() == null && (origin == null || !camera.transform.IsChildOf(origin.transform)),
+                $"{MirrorName} camera saved disabled, no target texture (created at runtime), not stereo, not MainCamera, no AudioListener, not under the XR Origin");
+            var cameraData = camera.GetComponent<UniversalAdditionalCameraData>();
+            r.Check(cameraData != null && !cameraData.renderShadows && !cameraData.renderPostProcessing, $"{MirrorName} camera: no shadows or post processing");
+            var filter = mirror.Screen.GetComponent<MeshFilter>();
+            r.Check(filter != null && filter.sharedMesh != null && filter.sharedMesh.name == "Quad" &&
+                    mirror.Screen.sharedMaterial == AssetDatabase.LoadAssetAtPath<Material>(MirrorMaterialPath) && mirror.Screen.shadowCastingMode == ShadowCastingMode.Off &&
+                    mirror.Screen.GetComponents<Collider>().Length == 0,
+                $"{MirrorName} screen: Unity Quad with PC_MirrorScreen, no shadows, no collider");
+            if (origin != null)
+            {
+                var surface = mirror.Screen.transform;
+                var normal = -surface.forward;
+                var eye = origin.transform.position + Vector3.up * StandingEyeHeight;
+                var distance = Vector3.Dot(eye - surface.position, normal);
+                bool Visible(Vector3 point)
+                {
+                    var reflected = point - 2f * Vector3.Dot(point - surface.position, normal) * normal;
+                    var direction = reflected - eye;
+                    var along = distance / -Vector3.Dot(direction, normal);
+                    var local = surface.InverseTransformPoint(eye + direction * along);
+                    return Mathf.Abs(local.x) <= 0.5f && Mathf.Abs(local.y) <= 0.5f;
+                }
+                var feet = origin.transform.position;
+                var top = new Vector3(feet.x, eye.y + 0.12f, feet.z);
+                r.Check(distance > 0f && Visible(feet) && Visible(top),
+                    $"{MirrorName}: feet and head top of a {StandingEyeHeight} m eye-height user at the XR Origin fall on the mirror (geometry, {distance:F2} m away)");
+            }
+            var bounds = mirror.Screen.bounds;
+            bounds.Expand(0.02f);
+            var hits = root.GetComponentsInChildren<Renderer>(true)
+                .Where(x => x != mirror.Screen && !(x is LineRenderer) && !x.transform.IsChildOf(mirror.transform) && x.GetComponentInParent<ProtectiveClothingUserBody>(true) == null &&
+                            x.transform.name != FloorName && x.bounds.Intersects(bounds))
+                .Select(x => x.name).Distinct().ToArray();
+            var board = root.Find(BoardName) as RectTransform;
+            if (board != null)
+            {
+                var corners = new Vector3[4];
+                board.GetWorldCorners(corners);
+                var boardBounds = new Bounds(corners[0], Vector3.zero);
+                foreach (var corner in corners)
+                    boardBounds.Encapsulate(corner);
+                if (boardBounds.Intersects(bounds))
+                    hits = hits.Append(BoardName).ToArray();
+            }
+            r.Check(hits.Length == 0, $"{MirrorName} clear of the workbench, pickups and guidance board" + (hits.Length > 0 ? ": " + string.Join(", ", hits) : ""));
+            r.Info("Mirror image is one centre-eye render shown to both eyes (monocular), not a per-eye stereo mirror. Display, depth and clipping are NOT verified here.");
+        }
+
+        static void ValidatePickups(Scene scene, Transform root, ProtectiveClothingEquipment equipment, Report r)
+        {
+            var pieces = equipment.Pieces;
+            var shared = AssetDatabase.LoadAssetAtPath<Material>(SharedMaterialPath);
+            r.Check(InScene<ProtectiveClothingPiece>(scene).Length == Parts.Length && pieces.Count == Parts.Length &&
+                    pieces.Select(p => p == null ? -1 : (int)p.Part).SequenceEqual(Parts.Select(p => (int)p)),
+                "Six pieces, one per part, in part order (Jacket, Trousers, Glove_L, Glove_R, Overboot_L, Overboot_R)");
+            if (pieces.Any(p => p == null))
+                return;
+            r.Check(pieces.All(p => p.Grab != null && p.Grip != null && p.PickupAttach != null && p.WornAttach != null && p.Worn != null),
+                "Every piece has its grab, Grip, Attach points and worn mesh");
+            r.Check(pieces.Select(p => p.Grab).Distinct().Count() == pieces.Count && pieces.Select(p => p.Grip).Distinct().Count() == pieces.Count &&
+                    pieces.Select(p => p.PickupAttach).Distinct().Count() == pieces.Count && pieces.Select(p => p.WornAttach).Distinct().Count() == pieces.Count &&
+                    pieces.Select(p => p.Worn).Distinct().Count() == pieces.Count,
+                "No grab, Grip, Attach or worn mesh shared between parts");
+            foreach (var p in pieces)
+            {
+                var name = ProtectiveClothingPiece.ModelName(p.Part);
+                r.Check(p.TryValidate(out var error), $"{name}: references, names and structure" + (error != null ? ": " + error : ""));
+                var g = p.Grab;
+                var b = p.Body;
+                r.Check(g != null && g.selectMode == InteractableSelectMode.Single && g.attachTransform == p.Grip && !g.useDynamicAttach && !g.throwOnDetach &&
+                        g.movementType == XRBaseInteractable.MovementType.Instantaneous && g.colliders.Count == 1 && g.colliders[0] == p.GrabCollider,
+                    $"{name}: grab single select, Grip attach, one collider, no throw");
+                r.Check(b != null && !b.isKinematic && b.useGravity && p.GrabCollider is BoxCollider box && !box.isTrigger &&
+                        p.GetComponentsInChildren<Collider>(true).Length == 1,
+                    $"{name}: dynamic Rigidbody with gravity, one solid box collider");
+                r.Check(p.gameObject.activeSelf && p.GetComponentsInChildren<Renderer>(true).All(x => x.sharedMaterials.All(m => m == shared)),
+                    $"{name}: pickup saved shown with the shared material");
+                r.Check(g != null && g.selectExited.GetPersistentEventCount() == 0 && g.selectEntered.GetPersistentEventCount() == 0,
+                    $"{name}: no persistent grab events (the equipment subscribes in code)");
+            }
+
+            var bounds = pieces.Select(p => RendererBounds(p.transform)).ToArray();
+            var overlaps = new List<string>();
+            for (var i = 0; i < bounds.Length; i++)
+            {
+                for (var j = i + 1; j < bounds.Length; j++)
+                {
+                    if (bounds[i].Intersects(bounds[j]))
+                        overlaps.Add($"{pieces[i].Part}/{pieces[j].Part}");
+                }
+            }
+            r.Check(overlaps.Count == 0, "Pickups do not overlap on the workbench" + (overlaps.Count > 0 ? ": " + string.Join(", ", overlaps) : ""));
+            var bench = root.Find(WorkbenchName);
+            if (bench != null && bench.TryGetComponent<Collider>(out var benchCollider))
+            {
+                var top = benchCollider.bounds.max.y;
+                var off = pieces.Where((p, i) => Mathf.Abs(bounds[i].min.y - top) > 0.02f || bounds[i].min.x < benchCollider.bounds.min.x ||
+                                                 bounds[i].max.x > benchCollider.bounds.max.x || bounds[i].min.z < benchCollider.bounds.min.z ||
+                                                 bounds[i].max.z > benchCollider.bounds.max.z)
+                    .Select(p => p.Part.ToString()).ToArray();
+                r.Check(off.Length == 0, $"Pickups rest on the workbench top ({top:F2} m) within its edges" + (off.Length > 0 ? ": " + string.Join(", ", off) : ""));
+            }
+            else
+            {
+                r.Check(false, WorkbenchName + " with a collider");
+            }
+            var floor = root.Find(FloorName);
+            r.Check(floor != null && floor.TryGetComponent<Collider>(out _), $"{FloorName} has a collider (released pickups never fall through)");
+        }
+
+        static void ValidateGuide(Scene scene, Transform root, ProtectiveClothingEquipment equipment, XROrigin origin, Report r)
+        {
+            var guides = InScene<ProtectiveClothingGuide>(scene);
+            r.Check(guides.Length == 1 && guides[0].TryValidate(out _) && guides[0].Equipment == equipment, "One guide reading the equipment, with its texts, button and marker");
+            if (guides.Length != 1)
+                return;
+            var guide = guides[0];
+            var data = new SerializedObject(guide);
+            r.Check(origin != null && data.FindProperty("viewer")?.objectReferenceValue == origin.Camera.transform, "Marker faces the XR camera");
+            var marker = guide.Marker;
+            r.Check(marker != null && !marker.gameObject.activeSelf && marker.GetComponentsInChildren<Collider>(true).Length == 0 && marker.sharedMaterial != null &&
+                    marker.transform.lossyScale == Vector3.one && !marker.useWorldSpace,
+                "One target ring: saved hidden, no collider, material set, unit scale (its radius is the guided zone's radius)");
+            var board = guide.transform;
+            r.Check(board.TryGetComponent<Canvas>(out var canvas) && canvas.renderMode == RenderMode.WorldSpace && board.GetComponent<TrackedDeviceGraphicRaycaster>() != null,
+                "Board: world-space canvas with a tracked device raycaster");
+            var button = guide.ResetButton;
+            var targets = board.GetComponentsInChildren<Graphic>(true).Where(x => x.raycastTarget).ToArray();
+            r.Check(button != null && targets.Length == 1 && targets[0] == button.targetGraphic && button.onClick.GetPersistentEventCount() == 0,
+                "Only the reset button image takes rays; no persistent OnClick entries (code listener only)");
+            var filled = board.GetComponentsInChildren<TMP_Text>(true).Where(t => !string.IsNullOrEmpty(t.text)).Select(t => t.name).ToArray();
+            r.Check(filled.Length == 0, "Board texts saved empty (text comes from ProtectiveClothingSubtitles at runtime)" + (filled.Length > 0 ? ": " + string.Join(", ", filled) : ""));
+
+            var font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(KoreanFontPath);
+            if (font == null || font.sourceFontFile == null)
+            {
+                r.Check(false, "Korean TMP font with source file: " + KoreanFontPath);
+                return;
+            }
+            var missing = string.Concat(ProtectiveClothingSubtitles.All).Distinct()
+                .Where(c => !char.IsWhiteSpace(c) && !char.IsControl(c) && !font.sourceFontFile.HasCharacter(c)).ToArray();
+            r.Check(missing.Length == 0, "Font source has every guidance character" + (missing.Length > 0 ? ": missing '" + new string(missing) + "'" : ""));
+            var instruction = board.Find("Instruction") is { } instructionObject && instructionObject.TryGetComponent<TMP_Text>(out var text) ? text : null;
+            if (instruction != null)
+            {
+                // Rough fit: Hangul 1 em, other characters 0.6 em; one line each at the instruction's font size and width.
+                var width = ((RectTransform)instruction.transform).rect.width;
+                var longest = ProtectiveClothingSubtitles.Lines.Max(l => l.Sum(c => c >= 0x1100 ? 1f : 0.6f) * instruction.fontSize);
+                r.Check(longest <= width * 2f, $"Instruction lines fit in two lines (longest {longest:F0} of {width:F0} per line)");
+            }
+        }
+
+        // ---------- Model documents ----------
+
+        static string ReadText(string path) => File.Exists(path) ? File.ReadAllText(path) : null;
+
+        const string Number = @"(-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?)";
+
+        // "mixamorig1:<Bone>": { "head": [x, y, z] ... } in ReferenceInspection.json (Blender metres).
+        static Vector3? BoneHead(string json, string bone)
+        {
+            var m = Regex.Match(json, "\"" + Regex.Escape(bone) + "\"\\s*:\\s*\\{\\s*\"head\"\\s*:\\s*\\[\\s*" + Number + "\\s*,\\s*" + Number + "\\s*,\\s*" + Number);
+            return m.Success ? new Vector3(Parse(m.Groups[1].Value), Parse(m.Groups[2].Value), Parse(m.Groups[3].Value)) : (Vector3?)null;
+        }
+
+        // Translation of "matrix_world_blender_m" (rows) of an object in AnchorManifest.json (Blender metres).
+        static Vector3? AnchorTranslation(string json, string objectName)
+        {
+            var start = json.IndexOf("\"" + objectName + "\"", StringComparison.Ordinal);
+            if (start < 0)
+                return null;
+            var matrix = json.IndexOf("\"matrix_world_blender_m\"", start, StringComparison.Ordinal);
+            if (matrix < 0)
+                return null;
+            var numbers = Regex.Matches(json.Substring(matrix), Number).Cast<Match>().Take(16).Select(x => Parse(x.Value)).ToArray();
+            return numbers.Length == 16 ? new Vector3(numbers[3], numbers[7], numbers[11]) : (Vector3?)null;
+        }
+
+        static float Parse(string s) => float.Parse(s, NumberStyles.Float, CultureInfo.InvariantCulture);
+
+        // Blender (+X the mannequin's left, -Y front, +Z up) to the Unity frame of both FBX instances (FBX Y up, X mirrored).
+        static Vector3 ToUnity(Vector3 blender) => new Vector3(-blender.x, blender.z, -blender.y);
+
+        // ---------- Helpers ----------
+
+        sealed class Report
+        {
+            readonly StringBuilder text = new StringBuilder(LogTag + " Validation report (editor static check; not a Play, Simulator or headset result)\n");
+            int failures;
+            int notRun;
+
+            public void Check(bool ok, string message)
+            {
+                text.AppendLine((ok ? "PASS  " : "FAIL  ") + message);
+                if (!ok) failures++;
+            }
+
+            public void Info(string message) => text.AppendLine("INFO  " + message);
+
+            public void Section(string title) => text.AppendLine("== " + title + " ==");
+
+            public void NotRun(string message)
+            {
+                text.AppendLine("NOT RUN  " + message);
+                notRun++;
+            }
+
+            public void Flush()
+            {
+                if (failures > 0)
+                {
+                    text.AppendLine($"Result: {failures} FAIL item(s)." + (notRun > 0 ? $" {notRun} required check group(s) not run." : ""));
+                    Debug.LogError(text.ToString());
+                }
+                else if (notRun > 0)
+                {
+                    text.AppendLine($"Result: INCOMPLETE - {notRun} required check group(s) not run. This is not a pass.");
+                    Debug.LogWarning(text.ToString());
+                }
+                else
+                {
+                    text.AppendLine("Result: no FAIL items. This is static configuration only: grabbing, automatic wearing, the look of the worn " +
+                                    "parts, readability, reach and reset still need the user's Unity and Simulator / headset check.");
+                    Debug.Log(text.ToString());
+                }
+            }
+        }
+
+        static Bounds RendererBounds(Transform t)
+        {
+            var renderers = t.GetComponentsInChildren<Renderer>(true);
+            var bounds = renderers.Length > 0 ? renderers[0].bounds : new Bounds(t.position, Vector3.zero);
+            foreach (var x in renderers)
+                bounds.Encapsulate(x.bounds);
+            return bounds;
+        }
+
+        // Axis-aligned bounds, in space, of a part's mesh bounds.
+        static Bounds BoundsIn(Transform space, Transform part)
+        {
+            if (!part.TryGetComponent<MeshFilter>(out var filter) || filter.sharedMesh == null)
+                throw new InvalidOperationException($"'{part.name}' has no mesh.");
+            var local = filter.sharedMesh.bounds;
+            var matrix = space.worldToLocalMatrix * part.localToWorldMatrix;
+            var bounds = new Bounds(matrix.MultiplyPoint3x4(local.center), Vector3.zero);
+            for (var i = 0; i < 8; i++)
+            {
+                var corner = new Vector3((i & 1) == 0 ? -1f : 1f, (i & 2) == 0 ? -1f : 1f, (i & 4) == 0 ? -1f : 1f);
+                bounds.Encapsulate(matrix.MultiplyPoint3x4(local.center + Vector3.Scale(local.extents, corner)));
+            }
+            return bounds;
+        }
+
+        static T[] InScene<T>(Scene scene) where T : Component =>
+            scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<T>(true)).ToArray();
+
+        static T[] Active<T>(T[] components) where T : Component => components.Where(c => c.gameObject.activeInHierarchy).ToArray();
+
+        // Every instance root of the model or prefab in the scene, also one added under another instance (by original source).
+        static GameObject[] SceneInstances(Scene scene, GameObject prefab) =>
+            prefab == null ? Array.Empty<GameObject>() :
+            scene.GetRootGameObjects().SelectMany(g => g.GetComponentsInChildren<Transform>(true)).Select(t => t.gameObject)
+                .Where(g => IsInstanceOf(g, prefab)).ToArray();
+
+        static bool IsInstanceOf(GameObject go, GameObject asset) =>
+            asset != null && PrefabUtility.IsAnyPrefabInstanceRoot(go) && PrefabUtility.GetCorrespondingObjectFromOriginalSource(go) == asset;
+
+        static T GetOrAdd<T>(GameObject go) where T : Component =>
+            go.TryGetComponent<T>(out var component) ? component : go.AddComponent<T>();
+
+        static SerializedProperty Property(SerializedObject data, string name) =>
+            data.FindProperty(name) ?? throw new InvalidOperationException($"Serialized field '{name}' not found on {data.targetObject.GetType().Name}.");
+
+        static void SetObjects(SerializedProperty array, Object[] values)
+        {
+            array.arraySize = values.Length;
+            for (var i = 0; i < values.Length; i++)
+                array.GetArrayElementAtIndex(i).objectReferenceValue = values[i];
+        }
+
+        static Transform FindDeep(Transform root, string name)
+        {
+            if (root.name == name)
+                return root;
+            foreach (Transform child in root)
+            {
+                var found = FindDeep(child, name);
+                if (found != null)
+                    return found;
+            }
+            return null;
+        }
+
+        static Transform RequireDeep(Transform root, string name) =>
+            FindDeep(root, name) ?? throw new InvalidOperationException($"'{name}' not found under {root.name}");
+
+        static string Vec(Vector3 v) => $"({v.x:F3}, {v.y:F3}, {v.z:F3})";
+
+        static T LoadRequired<T>(string path) where T : Object =>
+            AssetDatabase.LoadAssetAtPath<T>(path) ?? throw new InvalidOperationException("Asset not found: " + path);
+
+        static void EnsureFolder(string path)
+        {
+            if (AssetDatabase.IsValidFolder(path))
+                return;
+            var parent = Path.GetDirectoryName(path).Replace('\\', '/');
+            EnsureFolder(parent);
+            AssetDatabase.CreateFolder(parent, Path.GetFileName(path));
+        }
+    }
+}

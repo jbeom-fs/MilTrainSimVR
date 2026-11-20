@@ -1,0 +1,22 @@
+{
+  "external_changes_observed": [
+    {
+      "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity",
+      "start_sha256": "a15bb094ee2a7cb18d44aaae20c1737f5a124c75e09dcbaaefae205f917f0888",
+      "end_sha256": "30b03fb3c851974bd787409f4ff3b32fdc35d582ec0ee2a2cbe6fd7ed65dfac4"
+    }
+  ],
+  "note": "No Unity execution or scene/script/settings write was issued by this modeling task. Existing scene changed externally during work; preserve it, do not attribute a cause or restore it.",
+  "meta_observed_change": {
+    "file": "ProtectiveClothing_Worn.fbx.meta",
+    "observed_lastwrite_kst": "2026-11-04 15:09:49",
+    "field": "animationType",
+    "start": 0,
+    "observed": 2,
+    "guid_unchanged": true,
+    "observed_copy": "Backups/20261104_145838_h4_review_before/WornMeta_ObservedExternalChange_150949.meta",
+    "restored_start_bytes": true,
+    "restored_sha256": "88f8d0973a4c4e11609295cfd4b6986a77f2c75c3a2824fb6db66f6dfdfc59f0",
+    "cause": "unconfirmed; an already-running Unity Editor was present"
+  }
+}

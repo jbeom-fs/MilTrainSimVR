@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "files_checked": 1420,
+  "changed_existing_files": [],
+  "missing_existing_files": [],
+  "scope": "All pre-existing Assets/B, Packages, ProjectSettings, Docs/B files; no write operations issued for A/C or shared paths",
+  "live_blender_unchanged": true
+}

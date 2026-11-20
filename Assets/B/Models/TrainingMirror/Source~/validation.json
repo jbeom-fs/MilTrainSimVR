@@ -1,0 +1,949 @@
+{
+  "coordinate_mapping": "Blender (X,Y,Z) = Unity (X,-Z,Y). FBX axis conversion baked; all mesh origins at Surface center, identity object transforms.",
+  "models": {
+    "K1": {
+      "surface_m": [
+        0.8,
+        1.8
+      ],
+      "surface_center_above_floor_m": 0.95,
+      "nominal_opening_m": [
+        0.802,
+        1.802
+      ],
+      "frame_width_m": 0.02,
+      "frame_depth_m": 0.028,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.42100000381469727,
+            -0.949999988079071,
+            -0.009999999776482582
+          ],
+          "max": [
+            0.42100000381469727,
+            0.9210000038146973,
+            0.15000000596046448
+          ],
+          "size": [
+            0.8420000076293945,
+            1.8709999918937683,
+            0.16000000573694706
+          ]
+        },
+        "triangles": 1148,
+        "material_count": 1,
+        "parts": [
+          {
+            "name": "K1_Frame",
+            "triangles": 448,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.002957636241825811,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.003047668059538529,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_RearSupport_L",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0005743899583255519,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_Foot_L",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 7.591170964061187e-05,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_RearBrace_L",
+            "triangles": 80,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0002507332294835677,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_RearSupport_R",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0005743899583255519,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_Foot_R",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 7.591170964061165e-05,
+            "identity_transform": true
+          },
+          {
+            "name": "K1_RearBrace_R",
+            "triangles": 80,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.00025073323635908877,
+            "identity_transform": true
+          }
+        ]
+      },
+      "roundtrip": {
+        "geometry_equal_to_10_micrometers": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.42100000381469727,
+              -0.949999988079071,
+              -0.010000069625675678
+            ],
+            "max": [
+              0.42100000381469727,
+              0.9210000038146973,
+              0.15000008046627045
+            ],
+            "size": [
+              0.8420000076293945,
+              1.8709999918937683,
+              0.16000015009194613
+            ]
+          },
+          "triangles": 1148,
+          "material_count": 1,
+          "parts": [
+            {
+              "name": "K1_Backplate.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.003047668059538529,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_RearBrace_R.001",
+              "triangles": 80,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0002507332363590893,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_RearSupport_R.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0005743899583255519,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_Foot_L.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 7.591170964061122e-05,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_RearSupport_L.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0005743899583255519,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_Foot_R.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 7.5911709640611e-05,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_Frame.001",
+              "triangles": 448,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0029576362418258077,
+              "identity_transform": false
+            },
+            {
+              "name": "K1_RearBrace_L.001",
+              "triangles": 80,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0002507332294835682,
+              "identity_transform": false
+            }
+          ]
+        }
+      },
+      "extended_checks": {
+        "surface_rectangle_intrusions_at_or_in_front_of_z0": [],
+        "duplicate_faces_across_parts": [],
+        "strict_aabb_volume_overlaps_between_parts": [],
+        "outward_normal_check": [
+          {
+            "name": "K1_Frame",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_Backplate",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_RearSupport_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_Foot_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_RearBrace_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_RearSupport_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_Foot_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "K1_RearBrace_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          }
+        ],
+        "floor_y_m": -0.95,
+        "frame_bottom_clearance_m": 0.02899999618530269,
+        "backplate_front_z_m": 0.017999999225139618,
+        "fbx_raw": {
+          "version": 7400,
+          "global_settings": {
+            "UpAxis": [
+              1
+            ],
+            "UpAxisSign": [
+              1
+            ],
+            "FrontAxis": [
+              2
+            ],
+            "FrontAxisSign": [
+              1
+            ],
+            "CoordAxis": [
+              0
+            ],
+            "CoordAxisSign": [
+              1
+            ],
+            "UnitScaleFactor": [
+              100.0
+            ]
+          },
+          "models": [
+            {
+              "name": "K1_Backplate",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_Foot_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_Foot_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_Frame",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_RearBrace_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_RearBrace_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_RearSupport_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "K1_RearSupport_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "bounds_m": {
+            "min": [
+              -0.42100000381469727,
+              -0.949999988079071,
+              -0.009999999776482582
+            ],
+            "max": [
+              0.42100000381469727,
+              0.9210000038146973,
+              0.15000000596046448
+            ]
+          }
+        }
+      }
+    },
+    "PC": {
+      "surface_m": [
+        0.9,
+        1.9
+      ],
+      "surface_center_above_floor_m": 0.98,
+      "nominal_opening_m": [
+        0.902,
+        1.902
+      ],
+      "frame_width_m": 0.02,
+      "frame_depth_m": 0.028,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.47099998593330383,
+            -0.9800000190734863,
+            -0.009999999776482582
+          ],
+          "max": [
+            0.47099998593330383,
+            0.9710000157356262,
+            0.15000000596046448
+          ],
+          "size": [
+            0.9419999718666077,
+            1.9510000348091125,
+            0.16000000573694706
+          ]
+        },
+        "triangles": 1212,
+        "material_count": 1,
+        "parts": [
+          {
+            "name": "PC_Frame",
+            "triangles": 512,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.003181396461513055,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0036004093417187576,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_RearSupport_L",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0006002490914046203,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_Foot_L",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 7.591177253592656e-05,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_RearBrace_L",
+            "triangles": 80,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.00025073232083174294,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_RearSupport_R",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0006002490914046211,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_Foot_R",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 7.591177253592591e-05,
+            "identity_transform": true
+          },
+          {
+            "name": "PC_RearBrace_R",
+            "triangles": 80,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_blender_m3": 0.0002507323185511812,
+            "identity_transform": true
+          }
+        ]
+      },
+      "roundtrip": {
+        "geometry_equal_to_10_micrometers": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.47099998593330383,
+              -0.9800000190734863,
+              -0.010000073350965977
+            ],
+            "max": [
+              0.47099998593330383,
+              0.9710000157356262,
+              0.15000008046627045
+            ],
+            "size": [
+              0.9419999718666077,
+              1.9510000348091125,
+              0.16000015381723642
+            ]
+          },
+          "triangles": 1212,
+          "material_count": 1,
+          "parts": [
+            {
+              "name": "PC_Foot_R.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 7.591177253592591e-05,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_RearBrace_L.001",
+              "triangles": 80,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.00025073232083174153,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_RearSupport_L.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0006002490914046203,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_Backplate.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0036004093417187576,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_Foot_L.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 7.591177253592656e-05,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_Frame.001",
+              "triangles": 512,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0031813964615130547,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_RearBrace_R.001",
+              "triangles": 80,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0002507323185511824,
+              "identity_transform": false
+            },
+            {
+              "name": "PC_RearSupport_R.001",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_blender_m3": 0.0006002490914046211,
+              "identity_transform": false
+            }
+          ]
+        }
+      },
+      "extended_checks": {
+        "surface_rectangle_intrusions_at_or_in_front_of_z0": [],
+        "duplicate_faces_across_parts": [],
+        "strict_aabb_volume_overlaps_between_parts": [],
+        "outward_normal_check": [
+          {
+            "name": "PC_Frame",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_Backplate",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_RearSupport_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_Foot_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_RearBrace_L",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_RearSupport_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_Foot_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          },
+          {
+            "name": "PC_RearBrace_R",
+            "faces_changed_by_outward_normal_recalculation": 0
+          }
+        ],
+        "floor_y_m": -0.98,
+        "frame_bottom_clearance_m": 0.008999984264373762,
+        "backplate_front_z_m": 0.017999999225139618,
+        "fbx_raw": {
+          "version": 7400,
+          "global_settings": {
+            "UpAxis": [
+              1
+            ],
+            "UpAxisSign": [
+              1
+            ],
+            "FrontAxis": [
+              2
+            ],
+            "FrontAxisSign": [
+              1
+            ],
+            "CoordAxis": [
+              0
+            ],
+            "CoordAxisSign": [
+              1
+            ],
+            "UnitScaleFactor": [
+              100.0
+            ]
+          },
+          "models": [
+            {
+              "name": "PC_Backplate",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_Foot_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_Foot_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_Frame",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_RearBrace_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_RearBrace_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_RearSupport_L",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "name": "PC_RearSupport_R",
+              "type": "Mesh",
+              "translation": [
+                0,
+                0,
+                0
+              ],
+              "rotation": [
+                0,
+                0,
+                0
+              ],
+              "scale": [
+                1,
+                1,
+                1
+              ]
+            }
+          ],
+          "bounds_m": {
+            "min": [
+              -0.47099998593330383,
+              -0.9800000190734863,
+              -0.009999999776482582
+            ],
+            "max": [
+              0.47099998593330383,
+              0.9710000157356262,
+              0.15000000596046448
+            ]
+          }
+        }
+      }
+    }
+  }
+}

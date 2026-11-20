@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.TrainingUI",
+    "rootNamespace": "MilTrainSimVR.B.TrainingUI",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI"]
+}

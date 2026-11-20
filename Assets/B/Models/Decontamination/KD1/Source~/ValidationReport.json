@@ -1,0 +1,1908 @@
+{
+  "units": "Metric, scale_length=1m",
+  "dimension_status": "All dimensions are photo/mannequin estimates, not official KD-1 measurements",
+  "authoring_axes": "+Z up, -Y forward; hand fingers +Y in pad canonical fit",
+  "source": {
+    "KD1_OuterPack": {
+      "scene": "GAME_OuterPack_Sealed",
+      "dimensions_xyz_m": [
+        0.20000000298023224,
+        0.1599999964237213,
+        0.03290990740060806
+      ],
+      "bounds_min": [
+        -0.10000000149011612,
+        -0.07999999821186066,
+        0.0
+      ],
+      "bounds_max": [
+        0.10000000149011612,
+        0.07999999821186066,
+        0.03290990740060806
+      ],
+      "triangles": 1440,
+      "objects": [
+        {
+          "name": "KD1_OuterPack",
+          "fbx_name": "KD1_OuterPack",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Grip.KD1_OuterPack",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack",
+          "location": [
+            0.0,
+            0.0,
+            0.01645495370030403
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Open.KD1_OuterPack",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack",
+          "location": [
+            0.0,
+            0.07999999821186066,
+            0.01645495370030403
+          ],
+          "rotation_degrees": [
+            -90.00000250447816,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            1.0,
+            -4.371138828673793e-08
+          ]
+        },
+        {
+          "name": "Part_OuterPack_Sealed",
+          "fbx_name": "Part_OuterPack_Sealed",
+          "type": "MESH",
+          "parent": "KD1_OuterPack",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 722,
+          "triangles": 1440,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 0.000889869787227,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ]
+        }
+      ]
+    },
+    "KD1_OuterPack_Open": {
+      "scene": "GAME_OuterPack_Open",
+      "dimensions_xyz_m": [
+        0.24400437623262405,
+        0.2000015750527382,
+        0.03851309046149254
+      ],
+      "bounds_min": [
+        -0.10000000149011612,
+        -0.10000000149011612,
+        0.0
+      ],
+      "bounds_max": [
+        0.14400437474250793,
+        0.10000157356262207,
+        0.03851309046149254
+      ],
+      "triangles": 2896,
+      "objects": [
+        {
+          "name": "KD1_OuterPack_Open",
+          "fbx_name": "KD1_OuterPack_Open",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Grip.KD1_OuterPack_Open",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack_Open",
+          "location": [
+            0.0,
+            0.0,
+            0.01925654523074627
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Open.KD1_OuterPack_Open",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack_Open",
+          "location": [
+            0.0,
+            0.07100000232458115,
+            0.01925654523074627
+          ],
+          "rotation_degrees": [
+            -90.00000250447816,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            1.0,
+            -4.371138828673793e-08
+          ]
+        },
+        {
+          "name": "Part_OuterPack_Open",
+          "fbx_name": "Part_OuterPack_Open",
+          "type": "MESH",
+          "parent": "KD1_OuterPack_Open",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 1444,
+          "triangles": 2884,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 1.951189908336405e-05,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ]
+        },
+        {
+          "name": "Part_RemovedSeal_Outer",
+          "fbx_name": "Part_RemovedSeal_Outer",
+          "type": "MESH",
+          "parent": "KD1_OuterPack_Open",
+          "location": [
+            0.14000000059604645,
+            0.0,
+            0.0020000000949949026
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            90.00000250447816
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 8,
+          "triangles": 12,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 1.1200246651240826e-06,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ]
+        }
+      ]
+    },
+    "KD1_Packet": {
+      "scene": "GAME_Packet_Sealed",
+      "dimensions_xyz_m": [
+        0.17599999904632568,
+        0.14000000059604645,
+        0.006466114427894354
+      ],
+      "bounds_min": [
+        -0.08799999952316284,
+        -0.07000000029802322,
+        0.0
+      ],
+      "bounds_max": [
+        0.08799999952316284,
+        0.07000000029802322,
+        0.006466114427894354
+      ],
+      "triangles": 896,
+      "objects": [
+        {
+          "name": "KD1_Packet",
+          "fbx_name": "KD1_Packet",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Grip.KD1_Packet",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "location": [
+            0.0,
+            0.0,
+            0.003233057213947177
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Open.KD1_Packet",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "location": [
+            0.0,
+            0.07000000029802322,
+            0.003233057213947177
+          ],
+          "rotation_degrees": [
+            -90.00000250447816,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            1.0,
+            -4.371138828673793e-08
+          ]
+        },
+        {
+          "name": "Anchor_PadRest.KD1_Packet",
+          "fbx_name": "Anchor_PadRest",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "location": [
+            0.0,
+            0.0,
+            0.0015999999595806003
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_Packet_Sealed",
+          "fbx_name": "Part_Packet_Sealed",
+          "type": "MESH",
+          "parent": "KD1_Packet",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 450,
+          "triangles": 896,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 0.00013428478732960673,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ]
+        }
+      ]
+    },
+    "KD1_Packet_Open": {
+      "scene": "GAME_Packet_Open",
+      "dimensions_xyz_m": [
+        0.2152043730020523,
+        0.17600178718566895,
+        0.010142010636627674
+      ],
+      "bounds_min": [
+        -0.08799999952316284,
+        -0.08799999952316284,
+        0.0
+      ],
+      "bounds_max": [
+        0.12720437347888947,
+        0.0880017876625061,
+        0.010142010636627674
+      ],
+      "triangles": 1808,
+      "objects": [
+        {
+          "name": "KD1_Packet_Open",
+          "fbx_name": "KD1_Packet_Open",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Grip.KD1_Packet_Open",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "location": [
+            0.0,
+            0.0,
+            0.005071005318313837
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Open.KD1_Packet_Open",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "location": [
+            0.0,
+            0.061000000685453415,
+            0.005071005318313837
+          ],
+          "rotation_degrees": [
+            -90.00000250447816,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            1.0,
+            -4.371138828673793e-08
+          ]
+        },
+        {
+          "name": "Anchor_PadRest.KD1_Packet_Open",
+          "fbx_name": "Anchor_PadRest",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "location": [
+            0.0,
+            0.0,
+            0.003700000001117587
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_Packet_Open",
+          "fbx_name": "Part_Packet_Open",
+          "type": "MESH",
+          "parent": "KD1_Packet_Open",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 900,
+          "triangles": 1796,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 1.2930650357599334e-05,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ]
+        },
+        {
+          "name": "Part_RemovedSeal_Packet",
+          "fbx_name": "Part_RemovedSeal_Packet",
+          "type": "MESH",
+          "parent": "KD1_Packet_Open",
+          "location": [
+            0.12319999933242798,
+            0.0,
+            0.0020000000949949026
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            90.00000250447816
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 8,
+          "triangles": 12,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 9.856224866066007e-07,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ]
+        }
+      ]
+    },
+    "KD1_Pad": {
+      "scene": "GAME_Pad_Fitted",
+      "dimensions_xyz_m": [
+        0.16000720858573914,
+        0.12203934788703918,
+        0.08667004853487015
+      ],
+      "bounds_min": [
+        -0.08000360429286957,
+        -0.06101967394351959,
+        -0.02392669767141342
+      ],
+      "bounds_max": [
+        0.08000360429286957,
+        0.06101967394351959,
+        0.06274335086345673
+      ],
+      "triangles": 2560,
+      "objects": [
+        {
+          "name": "KD1_Pad",
+          "fbx_name": "KD1_Pad",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Contact.KD1_Pad",
+          "fbx_name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "KD1_Pad",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            180.00000500895632,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            8.742277657347586e-08,
+            -1.0
+          ]
+        },
+        {
+          "name": "Anchor_HandFit.KD1_Pad",
+          "fbx_name": "Anchor_HandFit",
+          "type": "EMPTY",
+          "parent": "KD1_Pad",
+          "location": [
+            0.0,
+            -0.061000000685453415,
+            0.03505318611860275
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_EdgeBinding_Fitted",
+          "fbx_name": "Part_EdgeBinding_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 384,
+          "triangles": 768,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 6.959750305196984e-07,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ]
+        },
+        {
+          "name": "Part_HandSleeve_Fitted",
+          "fbx_name": "Part_HandSleeve_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 450,
+          "triangles": 896,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 1.2367035552904398e-05,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ]
+        },
+        {
+          "name": "Part_PadContact_Fitted",
+          "fbx_name": "Part_PadContact_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 450,
+          "triangles": 896,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 3.5317281709637626e-05,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_WorkingFace"
+          ]
+        }
+      ]
+    },
+    "KD1_Pad_Packed": {
+      "scene": "GAME_Pad_Packed",
+      "dimensions_xyz_m": [
+        0.16000720858573914,
+        0.12203934788703918,
+        0.003999949898570776
+      ],
+      "bounds_min": [
+        -0.08000360429286957,
+        -0.06101967394351959,
+        0.0
+      ],
+      "bounds_max": [
+        0.08000360429286957,
+        0.06101967394351959,
+        0.003999949898570776
+      ],
+      "triangles": 2560,
+      "objects": [
+        {
+          "name": "KD1_Pad_Packed",
+          "fbx_name": "KD1_Pad_Packed",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Contact.KD1_Pad_Packed",
+          "fbx_name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "KD1_Pad_Packed",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            180.00000500895632,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            8.742277657347586e-08,
+            -1.0
+          ]
+        },
+        {
+          "name": "Anchor_HandFit.KD1_Pad_Packed",
+          "fbx_name": "Anchor_HandFit",
+          "type": "EMPTY",
+          "parent": "KD1_Pad_Packed",
+          "location": [
+            0.0,
+            -0.061000000685453415,
+            0.0024999999441206455
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_EdgeBinding_Packed",
+          "fbx_name": "Part_EdgeBinding_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 384,
+          "triangles": 768,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 6.969308367011889e-07,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ]
+        },
+        {
+          "name": "Part_HandSleeve_Packed",
+          "fbx_name": "Part_HandSleeve_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 450,
+          "triangles": 896,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 7.745111189485485e-06,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ]
+        },
+        {
+          "name": "Part_PadContact_Packed",
+          "fbx_name": "Part_PadContact_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 450,
+          "triangles": 896,
+          "nonmanifold_edges": 0,
+          "zero_area_triangles": 0,
+          "loose_vertices": 0,
+          "duplicate_positions": 0,
+          "signed_volume_m3": 3.521844266295661e-05,
+          "uv_layers": [
+            "UVMap"
+          ],
+          "materials": [
+            "KD1_Mat_WorkingFace"
+          ]
+        }
+      ]
+    }
+  },
+  "unity_validation": "NOT PERFORMED",
+  "geometry_checks": {
+    "packet4_outer_surface_crossings": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "packet4_z_offsets_m": [
+      0.0034,
+      0.01,
+      0.0166,
+      0.0232
+    ],
+    "packet4_shared_mesh": true,
+    "handfit_surface_crossings": {
+      "Part_EdgeBinding_Fitted": 0,
+      "Part_HandSleeve_Fitted": 0,
+      "Part_PadContact_Fitted": 0
+    },
+    "pad_in_packet_surface_crossings": {
+      "Part_EdgeBinding_Packed": 0,
+      "Part_HandSleeve_Packed": 0,
+      "Part_PadContact_Packed": 0
+    },
+    "pad_packing_offset_m": 0.0016,
+    "scope": "Static documented poses only. No cloth, hand tracking, all-pose fit, or Unity interaction test.",
+    "pad_in_open_packet_surface_crossings": {
+      "Part_EdgeBinding_Packed": 0,
+      "Part_HandSleeve_Packed": 0,
+      "Part_PadContact_Packed": 0
+    },
+    "pad_open_packet_offset_m": 0.0037,
+    "edge_binding_fit": "Fitted binding follows evaluated static contact-sheet top; no exposed coplanar caps",
+    "contact_anchor_surface_distance_m": 0.0,
+    "contact_surface_normal": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "pad_open_packet_linear_sweep": {
+      "direction": "Blender +Y through assumed open mouth, packed pad at z=3.7mm",
+      "samples": 181,
+      "step_m": 0.001,
+      "collisions": [],
+      "scope": "Geometric clearance for demonstrative straight path only, not actual opening procedure or runtime interaction"
+    }
+  },
+  "materials": [
+    {
+      "name": "KD1_Mat_PacketFilm",
+      "roughness": 0.47999998927116394,
+      "metallic": 0.0,
+      "images": [
+        {
+          "path": "//..\\Textures\\KD1_Packet_BaseColor.png",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Source~\\..\\Textures\\KD1_Packet_BaseColor.png",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "sha256": "5b7bcedfe9014a0493f5a1a62fbb4eef5d405b73f27a9b5e095df85f6fee2438"
+        }
+      ]
+    },
+    {
+      "name": "KD1_Mat_OuterFilm",
+      "roughness": 0.47999998927116394,
+      "metallic": 0.0,
+      "images": [
+        {
+          "path": "//..\\Textures\\KD1_Outer_BaseColor.png",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Source~\\..\\Textures\\KD1_Outer_BaseColor.png",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "sha256": "81a4bb4fb3bc65461826ad2a930c73e9564ed4ff22d02618cf7c8cc5a213b6a5"
+        }
+      ]
+    },
+    {
+      "name": "KD1_Mat_BindingSleeve",
+      "roughness": 0.7799999713897705,
+      "metallic": 0.0,
+      "images": [
+        {
+          "path": "//..\\Textures\\KD1_Pad_BaseColor.png",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Source~\\..\\Textures\\KD1_Pad_BaseColor.png",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873"
+        }
+      ]
+    },
+    {
+      "name": "KD1_Mat_WorkingFace",
+      "roughness": 0.8799999952316284,
+      "metallic": 0.0,
+      "images": [
+        {
+          "path": "//..\\Textures\\KD1_Pad_BaseColor.png",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Source~\\..\\Textures\\KD1_Pad_BaseColor.png",
+          "resolution": [
+            1024,
+            1024
+          ],
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873"
+        }
+      ]
+    }
+  ],
+  "runtime_material_count": 4,
+  "runtime_texture_count": 3,
+  "triangle_totals": {
+    "unique_main_assets": 4896,
+    "displayed_kit_outer_plus_four_packets_plus_fitted_pad": 7584,
+    "all_six_state_assets_unique": 12160
+  },
+  "export_settings": {
+    "global_scale": 1,
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_UNITS",
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "use_space_transform": true,
+    "bake_space_transform": false,
+    "bake_anim": false,
+    "path_mode": "RELATIVE",
+    "selection_only": true,
+    "object_types": [
+      "MESH",
+      "EMPTY"
+    ],
+    "postprocessing": "NONE"
+  },
+  "exports": [
+    {
+      "asset": "KD1_OuterPack",
+      "path": "KD1_OuterPack.fbx",
+      "object_count": 4,
+      "sha256": "6f0f959ce0b2a89482fbb0bc79d973542752b9c0d95c0259bbd18f389efc230e"
+    },
+    {
+      "asset": "KD1_OuterPack_Open",
+      "path": "Variants\\KD1_OuterPack_Open.fbx",
+      "object_count": 5,
+      "sha256": "9fb99e824618ba1c59697587883019d5b7ac9e590121a03a7c3e970db1677e72"
+    },
+    {
+      "asset": "KD1_Packet",
+      "path": "KD1_Packet.fbx",
+      "object_count": 5,
+      "sha256": "26bd4e91708f0b14a6db0430a09a1faff49abe541148782cdbbcb01bf3d6e920"
+    },
+    {
+      "asset": "KD1_Packet_Open",
+      "path": "Variants\\KD1_Packet_Open.fbx",
+      "object_count": 6,
+      "sha256": "feaa3071a52cad748e89f59b62b779e94d569c8d50944ea6f5ce40c83b2f77ff"
+    },
+    {
+      "asset": "KD1_Pad",
+      "path": "KD1_Pad.fbx",
+      "object_count": 6,
+      "sha256": "ee77da881ca9e1b4b63c92dd8391f53efb33c9a8a6960a7a91143357c227db03"
+    },
+    {
+      "asset": "KD1_Pad_Packed",
+      "path": "Variants\\KD1_Pad_Packed.fbx",
+      "object_count": 6,
+      "sha256": "d2a78b8fa564672f352e3a2a7a77009cbbc964658200b8f9bf7c1eb6ecfef5a8"
+    }
+  ],
+  "fbx_roundtrip": {
+    "KD1_OuterPack": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 4,
+      "objects": [
+        {
+          "source_name": "KD1_OuterPack",
+          "fbx_name": "KD1_OuterPack",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Grip.KD1_OuterPack",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Open.KD1_OuterPack",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack",
+          "max_world_matrix_error": 4.013392711499364e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0000000000000195
+        },
+        {
+          "source_name": "Part_OuterPack_Sealed",
+          "fbx_name": "Part_OuterPack_Sealed",
+          "type": "MESH",
+          "parent": "KD1_OuterPack",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1440,
+          "max_vertex_error_m": 1.343172506551582e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999998660496203,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    },
+    "KD1_OuterPack_Open": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 5,
+      "objects": [
+        {
+          "source_name": "KD1_OuterPack_Open",
+          "fbx_name": "KD1_OuterPack_Open",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Grip.KD1_OuterPack_Open",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Open.KD1_OuterPack_Open",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_OuterPack_Open",
+          "max_world_matrix_error": 4.013392711499364e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0000000000000195
+        },
+        {
+          "source_name": "Part_OuterPack_Open",
+          "fbx_name": "Part_OuterPack_Open",
+          "type": "MESH",
+          "parent": "KD1_OuterPack_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 2884,
+          "max_vertex_error_m": 1.343172506551582e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999998491475708,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_RemovedSeal_Outer",
+          "fbx_name": "Part_RemovedSeal_Outer",
+          "type": "MESH",
+          "parent": "KD1_OuterPack_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 12,
+          "max_vertex_error_m": 2.2083344930479143e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999403953552,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_OuterFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    },
+    "KD1_Packet": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 5,
+      "objects": [
+        {
+          "source_name": "KD1_Packet",
+          "fbx_name": "KD1_Packet",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Grip.KD1_Packet",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Open.KD1_Packet",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "max_world_matrix_error": 4.013392711499364e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0000000000000195
+        },
+        {
+          "source_name": "Anchor_PadRest.KD1_Packet",
+          "fbx_name": "Anchor_PadRest",
+          "type": "EMPTY",
+          "parent": "KD1_Packet",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Part_Packet_Sealed",
+          "fbx_name": "Part_Packet_Sealed",
+          "type": "MESH",
+          "parent": "KD1_Packet",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 896,
+          "max_vertex_error_m": 1.1408701539039612e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.999999843625119,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    },
+    "KD1_Packet_Open": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 6,
+      "objects": [
+        {
+          "source_name": "KD1_Packet_Open",
+          "fbx_name": "KD1_Packet_Open",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Grip.KD1_Packet_Open",
+          "fbx_name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Open.KD1_Packet_Open",
+          "fbx_name": "Anchor_Open",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "max_world_matrix_error": 4.013392711499364e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0000000000000195
+        },
+        {
+          "source_name": "Anchor_PadRest.KD1_Packet_Open",
+          "fbx_name": "Anchor_PadRest",
+          "type": "EMPTY",
+          "parent": "KD1_Packet_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Part_Packet_Open",
+          "fbx_name": "Part_Packet_Open",
+          "type": "MESH",
+          "parent": "KD1_Packet_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1796,
+          "max_vertex_error_m": 1.1175870895385742e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999998815815161,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_RemovedSeal_Packet",
+          "fbx_name": "Part_RemovedSeal_Packet",
+          "type": "MESH",
+          "parent": "KD1_Packet_Open",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 12,
+          "max_vertex_error_m": 2.074676430652289e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999701976776,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_PacketFilm"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    },
+    "KD1_Pad": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 6,
+      "objects": [
+        {
+          "source_name": "KD1_Pad",
+          "fbx_name": "KD1_Pad",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Contact.KD1_Pad",
+          "fbx_name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "KD1_Pad",
+          "max_world_matrix_error": 9.934765898833575e-08,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 0.999999999999999
+        },
+        {
+          "source_name": "Anchor_HandFit.KD1_Pad",
+          "fbx_name": "Anchor_HandFit",
+          "type": "EMPTY",
+          "parent": "KD1_Pad",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Part_EdgeBinding_Fitted",
+          "fbx_name": "Part_EdgeBinding_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 768,
+          "max_vertex_error_m": 1.0244548320770264e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999270376279,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_HandSleeve_Fitted",
+          "fbx_name": "Part_HandSleeve_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 896,
+          "max_vertex_error_m": 1.343172506551582e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999998761340976,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_PadContact_Fitted",
+          "fbx_name": "Part_PadContact_Fitted",
+          "type": "MESH",
+          "parent": "KD1_Pad",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 896,
+          "max_vertex_error_m": 1.0030650976489142e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999037463567,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_WorkingFace"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    },
+    "KD1_Pad_Packed": {
+      "status": "PASS Blender FBX reimport only",
+      "object_count": 6,
+      "objects": [
+        {
+          "source_name": "KD1_Pad_Packed",
+          "fbx_name": "KD1_Pad_Packed",
+          "type": "EMPTY",
+          "parent": null,
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Anchor_Contact.KD1_Pad_Packed",
+          "fbx_name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "KD1_Pad_Packed",
+          "max_world_matrix_error": 9.934765898833575e-08,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 0.999999999999999
+        },
+        {
+          "source_name": "Anchor_HandFit.KD1_Pad_Packed",
+          "fbx_name": "Anchor_HandFit",
+          "type": "EMPTY",
+          "parent": "KD1_Pad_Packed",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "plus_z_dot": 1.0
+        },
+        {
+          "source_name": "Part_EdgeBinding_Packed",
+          "fbx_name": "Part_EdgeBinding_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 768,
+          "max_vertex_error_m": 1.0011717677116394e-08,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999218816811,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_HandSleeve_Packed",
+          "fbx_name": "Part_HandSleeve_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 896,
+          "max_vertex_error_m": 8.847564458847046e-09,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999998898983904,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_BindingSleeve"
+          ],
+          "roughness_metallic_max_error": 0
+        },
+        {
+          "source_name": "Part_PadContact_Packed",
+          "fbx_name": "Part_PadContact_Packed",
+          "type": "MESH",
+          "parent": "KD1_Pad_Packed",
+          "max_world_matrix_error": 1.6292068494294654e-07,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 896,
+          "max_vertex_error_m": 9.938162293110508e-09,
+          "max_uv_error": 0,
+          "min_normal_dot": 0.9999999042070158,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "KD1_Mat_WorkingFace"
+          ],
+          "roughness_metallic_max_error": 0
+        }
+      ]
+    }
+  },
+  "blend_reopen": {
+    "status": "PASS",
+    "filepath": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Source~\\KD1_Decontamination.blend",
+    "scenes": [
+      "CHECK_Packet4_Storage",
+      "CHECK_Pad_InPacket",
+      "GAME_OuterPack_Open",
+      "GAME_OuterPack_Sealed",
+      "GAME_Packet_Open",
+      "GAME_Packet_Sealed",
+      "GAME_Pad_Fitted",
+      "GAME_Pad_Packed",
+      "REVIEW_HandFit",
+      "REVIEW_KD1"
+    ],
+    "separate_state_scenes": true
+  },
+  "clean_texture_reimport": [
+    {
+      "fbx": "KD1_OuterPack.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_OuterFilm",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Textures\\KD1_Outer_BaseColor.png",
+          "sha256": "81a4bb4fb3bc65461826ad2a930c73e9564ed4ff22d02618cf7c8cc5a213b6a5",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "fbx": "Variants\\KD1_OuterPack_Open.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_OuterFilm.001",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Variants\\..\\Textures\\KD1_Outer_BaseColor.png",
+          "sha256": "81a4bb4fb3bc65461826ad2a930c73e9564ed4ff22d02618cf7c8cc5a213b6a5",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "fbx": "KD1_Packet.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_PacketFilm",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Textures\\KD1_Packet_BaseColor.png",
+          "sha256": "5b7bcedfe9014a0493f5a1a62fbb4eef5d405b73f27a9b5e095df85f6fee2438",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "fbx": "Variants\\KD1_Packet_Open.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_PacketFilm.001",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Variants\\..\\Textures\\KD1_Packet_BaseColor.png",
+          "sha256": "5b7bcedfe9014a0493f5a1a62fbb4eef5d405b73f27a9b5e095df85f6fee2438",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "fbx": "KD1_Pad.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_BindingSleeve",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Textures\\KD1_Pad_BaseColor.png",
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873",
+          "resolution": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "material": "KD1_Mat_WorkingFace",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Textures\\KD1_Pad_BaseColor.png",
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "fbx": "Variants\\KD1_Pad_Packed.fbx",
+      "status": "PASS with no preloaded source images",
+      "textures": [
+        {
+          "material": "KD1_Mat_BindingSleeve.001",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Variants\\..\\Textures\\KD1_Pad_BaseColor.png",
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873",
+          "resolution": [
+            1024,
+            1024
+          ]
+        },
+        {
+          "material": "KD1_Mat_WorkingFace.001",
+          "resolved_path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\KD1\\Variants\\..\\Textures\\KD1_Pad_BaseColor.png",
+          "sha256": "9f6f2cd1ceff9ab2a8407389247dd5cccd29863bb823889c40c04c634e181873",
+          "resolution": [
+            1024,
+            1024
+          ]
+        }
+      ]
+    }
+  ]
+}

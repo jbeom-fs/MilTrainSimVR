@@ -1,0 +1,170 @@
+{
+  "ProtectiveClothing_Pickup.fbx": {
+    "sha256": "4a2c7e856ff4dffdb31c2a7f2a5b1ffa0a779f792ef31710a232b1a0e407fc8b",
+    "bytes": 441292
+  },
+  "ProtectiveClothing_Pickup.fbx.meta": {
+    "sha256": "b7f899001a241fe7261451ff2be42d2d86ab2fdddb747c657b20cbb722916903",
+    "bytes": 2861
+  },
+  "ProtectiveClothing_Worn.fbx": {
+    "sha256": "ceb3e7819bd2c15bd390a1ab066ae904a2f7782c7f997e3113dd6e39e9ee88d3",
+    "bytes": 804364
+  },
+  "ProtectiveClothing_Worn.fbx.meta": {
+    "sha256": "88f8d0973a4c4e11609295cfd4b6986a77f2c75c3a2824fb6db66f6dfdfc59f0",
+    "bytes": 2861
+  },
+  "Textures.meta": {
+    "sha256": "ebadfb069f9e9dd05f39b05b44eb6b7b1d62e974db9fe75a952bd6a7d56c7cd0",
+    "bytes": 172
+  },
+  "Source~\\AnchorManifest.json": {
+    "sha256": "759468fa92995c409911f9196d602c8f76f40bc6b6312481b0f5336c59da71ca",
+    "bytes": 8506
+  },
+  "Source~\\build_final.log": {
+    "sha256": "81ce1e14d1c4ac52d4fc86a4400af13e5d39ee774dc14b3a1bf24cb83085d1b0",
+    "bytes": 15696
+  },
+  "Source~\\build_protective_clothing.py": {
+    "sha256": "82847f45519180b9425c9091e5adb1c1949336c32611b15ca1706691e32570ac",
+    "bytes": 20576
+  },
+  "Source~\\DeliveryManifest.json": {
+    "sha256": "c765b96875679e5bdd3a6410ac0f2fd80d7981b1bff1466fc3ef6519eb43a1a5",
+    "bytes": 4898
+  },
+  "Source~\\FBX_Roundtrip_Review.blend": {
+    "sha256": "fa29d6962692ab5441869ced7d658d2b5faf38fb4122d21de20bfd12771331fc",
+    "bytes": 858101
+  },
+  "Source~\\finalize_documentation.py": {
+    "sha256": "fbb845f843d00364c6d84dc1d072b1a87a4065550c9274bfbd10ab409bdf36b7",
+    "bytes": 17448
+  },
+  "Source~\\FitAdjustments.json": {
+    "sha256": "c4c0918dbd35e26500998477c563546415fa8fdb10e1f1c13d317d37d55bd042",
+    "bytes": 112
+  },
+  "Source~\\inspect_pose.py": {
+    "sha256": "00a26f63753d1e3989f1fed8b49b95d74c43c81b8820bca83717984e4fe6a2c1",
+    "bytes": 1384
+  },
+  "Source~\\inspect_reference.py": {
+    "sha256": "f024f8c1e6e154ca66ed807f3c4c010a5b55c6386f17326e5eb7832fee551e6a",
+    "bytes": 1472
+  },
+  "Source~\\make_textures.py": {
+    "sha256": "bc5b9499f5ea14748042bfc7e4a0e25b61bf917e158ceef8214502e8ca374cdb",
+    "bytes": 1789
+  },
+  "Source~\\MeshStatistics.json": {
+    "sha256": "2f7450f4dc6df90a5f7ecbfd3bead7d6a4db874b2ebd3f198c3cfa5ab4cbe5ad",
+    "bytes": 6292
+  },
+  "Source~\\OriginalAssetHashes.json": {
+    "sha256": "04caa058e874e7003c0b0b0c1d488dc81d34206dd5c9354ac49b55237e9bbc76",
+    "bytes": 615
+  },
+  "Source~\\PoseInspection.json": {
+    "sha256": "1dfd62b65bd4f6fb53dbe97f00601cdbd6051593a0cbce007a7826e5b1ee2c80",
+    "bytes": 69898
+  },
+  "Source~\\ProtectiveClothing.blend": {
+    "sha256": "086f5d87cc47bda3c66cf7494ed17eb84e3fa3af31552356ee2087b832326c72",
+    "bytes": 37314212
+  },
+  "Source~\\README_Model.md": {
+    "sha256": "e65b193a6161078ee7b706e366b650710b3d35920a2e632a579cbea6bec914e0",
+    "bytes": 15975
+  },
+  "Source~\\ReferenceInspection.json": {
+    "sha256": "dbbfe8758fb070081c718e8ce395f502540b2cde38fc4a7703a27576171d08ad",
+    "bytes": 28002
+  },
+  "Source~\\validate.log": {
+    "sha256": "aa1fe381915c4842680dad4406aa3c92254adbfe189809a8c44feba68cd9c988",
+    "bytes": 4188
+  },
+  "Source~\\validate_exports.py": {
+    "sha256": "953616b24a515cf1b40d088b1acef537aa50245b0e983c5c45c8cca0255334b7",
+    "bytes": 6683
+  },
+  "Source~\\ValidationReport.json": {
+    "sha256": "2b2e062452df8e5b354866ee4dd5bcd61753b3ff084ab4739311f28878511722",
+    "bytes": 18467
+  },
+  "Textures\\PC_BaseColor_2K.png": {
+    "sha256": "4f15d80aad4e4c9e93294bf815476a1699567e28859f8fa8148ca6e506ab8a6e",
+    "bytes": 1996083
+  },
+  "Textures\\PC_BaseColor_2K.png.meta": {
+    "sha256": "9ae7cccaefcccffd92f10da3bf5bf8ad8e25850ea39156c5b448b01c77241f89",
+    "bytes": 3009
+  },
+  "Textures\\PC_Normal_1K.png": {
+    "sha256": "9acb7f1d7ccbbd47864f3afa4ac17654c5a3fe43500d608101781b125a7c6d9d",
+    "bytes": 5660
+  },
+  "Textures\\PC_Normal_1K.png.meta": {
+    "sha256": "1742129201356b8348ece1e41ce811095b3d8abb1538c50ae9c5cc7d256f2d81",
+    "bytes": 3009
+  },
+  "Textures\\PC_Roughness_1K.png": {
+    "sha256": "52ed6dcd4d025405591fdfd14a451d57d5f2b77c574eeaaabb86fbd592a8f80f",
+    "bytes": 3173
+  },
+  "Textures\\PC_Roughness_1K.png.meta": {
+    "sha256": "a8f6bec372ef1d0638f379f2be6205a6a75b07d97d0e9917f2047fab4485a9a9",
+    "bytes": 3009
+  },
+  "Source~\\Previews\\Ankle_L.png": {
+    "sha256": "41ba7aadb1c771083539233f5db5e838694974433179403201af5f517bd95d5a",
+    "bytes": 1306805
+  },
+  "Source~\\Previews\\Ankle_R.png": {
+    "sha256": "24b158185b81667348082c43846512045fb937d891e17fe8bda7cde4af37a615",
+    "bytes": 1317095
+  },
+  "Source~\\Previews\\Components_Separated.png": {
+    "sha256": "171688c4e74baeaa271c12627789348bda08ae76af580e05abf163917823d2b1",
+    "bytes": 1249540
+  },
+  "Source~\\Previews\\Pickup_All.png": {
+    "sha256": "19d41f2254bff0ca9eda54ab607e88a0632bc278a7a5d62cbb6b3fd7cc4a11de",
+    "bytes": 1285833
+  },
+  "Source~\\Previews\\Review_ContactSheet.jpg": {
+    "sha256": "9e54ce7bc4788f10aab925331d0e3fe4715aed44a941e5c356ac3f2fd19cf677",
+    "bytes": 192744
+  },
+  "Source~\\Previews\\Worn_Back.png": {
+    "sha256": "fe2b4c4866b977340583a8124164a9b86e76c9bf2dad92e2e0ef6f4d7bf9f95d",
+    "bytes": 1256716
+  },
+  "Source~\\Previews\\Worn_Front.png": {
+    "sha256": "1f955213080d3d295ae2b5845cf4ead7b27d536b2e7954d72cc62dbe00d079b1",
+    "bytes": 1261045
+  },
+  "Source~\\Previews\\Worn_Left.png": {
+    "sha256": "d54b2ce5d9912b10c51c5602fdd75ac3daa535b2316e028b10f70d5bd29640b1",
+    "bytes": 1236111
+  },
+  "Source~\\Previews\\Worn_Right.png": {
+    "sha256": "9b3c206913e90b24c1a49aeae455cdc75752cdb3a132a805d693b8c0882da710",
+    "bytes": 1243681
+  },
+  "Source~\\Previews\\Worn_ThreeQuarter.png": {
+    "sha256": "c1cf3dd0bcc9064206c577af066aff7504ed06587e87237858343ceee3abc01a",
+    "bytes": 1248118
+  },
+  "Source~\\Previews\\Wrist_L.png": {
+    "sha256": "0e6c4f1779192d3d4845f6ef23876a189c2a7bd8b83b50ce22aeb3321e9e873b",
+    "bytes": 1196168
+  },
+  "Source~\\Previews\\Wrist_R.png": {
+    "sha256": "0993bf510280643cdef93bc9b540cb71970fa23702e4481e6dfb168688ece72a",
+    "bytes": 1192229
+  }
+}

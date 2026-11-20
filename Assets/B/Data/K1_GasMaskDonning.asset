@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459822cc25c34b4f821d45146380729e, type: 3}
+  m_Name: K1_GasMaskDonning
+  m_EditorClassIdentifier: MilTrainSimVR.B.Training::MilTrainSimVR.B.Training.TrainingDefinition
+  TrainingId: k1-gas-mask-donning
+  Steps:
+  - StepId: k1-release-closure
+    Conditions:
+    - Kind: 1
+      TargetId: k1-carrier
+      SignalId: closure-released
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: k1-open-lid
+    Conditions:
+    - Kind: 1
+      TargetId: k1-carrier
+      SignalId: lid-fully-opened
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: k1-extract-mask
+    Conditions:
+    - Kind: 1
+      TargetId: k1-mask
+      SignalId: mask-extracted
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: k1-bring-to-face
+    Conditions:
+    - Kind: 1
+      TargetId: k1-mask
+      SignalId: mask-on-face
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: k1-seat-straps
+    Conditions:
+    - Kind: 1
+      TargetId: k1-mask
+      SignalId: mask-worn
+      ExpectedValue: 1
+      HoldSeconds: 1

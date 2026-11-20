@@ -1,0 +1,377 @@
+{
+  "method": "Direct YAML fixed layout; no Unity execution; no automatic placement",
+  "sourceScene": "Assets/A/Scenes/A_Sandbox.unity",
+  "environmentPrefab": "Assets/B/Prefabs/TrainingEnvironment/B_BarracksShell.prefab",
+  "environmentGuid": "c330cbe6e23f408c88beb68bf67b80ee",
+  "stations": [
+    {
+      "course": "AED",
+      "transformFileID": 1315754241,
+      "position": [
+        -0.55,
+        0,
+        -7.6
+      ],
+      "yaw": 0
+    },
+    {
+      "course": "Tourniquet",
+      "transformFileID": 1228828097,
+      "position": [
+        -2.8,
+        0,
+        -2.8
+      ],
+      "yaw": 90
+    },
+    {
+      "course": "PressureBandage",
+      "transformFileID": 1565377059,
+      "position": [
+        2.8,
+        0,
+        -2.8
+      ],
+      "yaw": 270
+    }
+  ],
+  "practiceBackOffset": 0,
+  "corridors": [
+    {
+      "name": "Entry",
+      "rectXZ": [
+        -0.1,
+        -1.2,
+        2.05,
+        -0.45
+      ]
+    },
+    {
+      "name": "EntryRight",
+      "rectXZ": [
+        0.35,
+        -2.6,
+        1.05,
+        -1.2
+      ]
+    },
+    {
+      "name": "Centre",
+      "rectXZ": [
+        -0.75,
+        -4.9,
+        0.75,
+        -2.6
+      ]
+    },
+    {
+      "name": "Cross",
+      "rectXZ": [
+        -3.5,
+        -5.15,
+        3.5,
+        -4.75
+      ]
+    },
+    {
+      "name": "WestReturn",
+      "rectXZ": [
+        -3.5,
+        -8.55,
+        -2.05,
+        -5.05
+      ]
+    },
+    {
+      "name": "EastReturn",
+      "rectXZ": [
+        2.05,
+        -8.55,
+        3.5,
+        -5.05
+      ]
+    },
+    {
+      "name": "Rear",
+      "rectXZ": [
+        -3.5,
+        -8.95,
+        3.5,
+        -8.3
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "source": "Assets/A/Models/Wall/Textures/Wall_BaseColor.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Textures/Wall_BaseColor.png",
+      "sourceGuid": "15bbcfc64ec2660459c69b05fc0c20b2",
+      "destinationGuid": "0c24009faba547d0ab13baea81542d95",
+      "sourceSha256": "316dec0fee7559a608ea21233a7a8511d57caed8729d1e4a886086e5b0e16ad9"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_1x2.644x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_1x2.644x0.2.asset",
+      "sourceGuid": "18a654b54288738459a32855a658a123",
+      "destinationGuid": "755140ab7dbe48a9a8ebf205516d4dbb",
+      "sourceSha256": "f3e88fca34dac0c5835c3df91fc8ae3c475142296b511e056bcca6f02f61789d"
+    },
+    {
+      "source": "Assets/A/Models/Window/Materials/WindowGlass.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Window/WindowGlass.mat",
+      "sourceGuid": "1b8471d28371c3940b88f92325712a8a",
+      "destinationGuid": "444f0b11d54044aba5d61570e49a1cf4",
+      "sourceSha256": "b81d76f47d65f6516efa2d741699c58905414e428cacf51988e09170878d44f6"
+    },
+    {
+      "source": "Assets/A/Models/CeilingPanel/Materials/CeilingPanel_Emitter.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/CeilingPanel/CeilingPanel_Emitter.mat",
+      "sourceGuid": "29e3f2d2b08126846a765404a438368d",
+      "destinationGuid": "90dba32ea42a47b9ba0ae3ded4f13918",
+      "sourceSha256": "d96d341e107fe24cee83d61af4eee00b3367c9adb116351f9d627c981df31960"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Textures/Wall_Normal.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Textures/Wall_Normal.png",
+      "sourceGuid": "3757616b77309f64c807ea983ea48998",
+      "destinationGuid": "e625a90aa42f4b518c91dd4f897c7e35",
+      "sourceSha256": "4bc4642533ee0480694803effd775b3ee02cbaed7710e2c9ec50193621c3c343"
+    },
+    {
+      "source": "Assets/A/Models/Ceiling/Materials/Ceiling.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Ceiling/Ceiling.mat",
+      "sourceGuid": "3c0b1be660e89604b9159475fb5349a0",
+      "destinationGuid": "bcc3a7420e8244fa93cf36a7035fa22b",
+      "sourceSha256": "838e4a1614994f2037be826931e5e833fa672bd9d1e7c8f44ac19b1126d9f6d6"
+    },
+    {
+      "source": "Assets/A/Models/Door/sage_glass_door.fbx",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Door/sage_glass_door.fbx",
+      "sourceGuid": "427b2376998029b4282158f505db0915",
+      "destinationGuid": "64ab5afbec834b2193233285f96475cd",
+      "sourceSha256": "e7981e69d3eb80b3451842d03540c9f506f2b439f10da03eac5aec8c3204101f"
+    },
+    {
+      "source": "Assets/A/Models/Ceiling/Meshes/CeilingGrid.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Ceiling/Meshes/CeilingGrid.asset",
+      "sourceGuid": "4b9bbb0dcc4859c45bd22b7c97b1680b",
+      "destinationGuid": "0bc55c270a9549b7863c8fd91ab5acd5",
+      "sourceSha256": "55207e70243b6adf415a27b089641910dabc7310453e8c50df5d8bc00949b846"
+    },
+    {
+      "source": "Assets/A/Models/CeilingPanel/CeilingPanel.fbx",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/CeilingPanel/CeilingPanel.fbx",
+      "sourceGuid": "5064cabed5f1d624b8749ca920ec6eba",
+      "destinationGuid": "4f7d36ec135a4e94875fd614bd14948c",
+      "sourceSha256": "21dba82b2d8865b5973ef3996be4df0e986f841ff4567fa15eaad21ac10a5572"
+    },
+    {
+      "source": "Assets/A/Models/Window/Textures/Window_Normal.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Window/Textures/Window_Normal.png",
+      "sourceGuid": "5c4f02c8d881fcd4086d50d4b852e19e",
+      "destinationGuid": "c42ab0ca4f084b68ba120e12295ac5e9",
+      "sourceSha256": "d78c783afbfdf6a7564b6e1f36d4452d3963ffb1e8375fd82f963acdbc8f4520"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_4.692x2.644x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_4.692x2.644x0.2.asset",
+      "sourceGuid": "60e7e4663750f87499750b0927eb02d4",
+      "destinationGuid": "fa46c0621cba4c719c76eb4567d51b75",
+      "sourceSha256": "5b6df722de43af1295dcec258f10e02c001ac85a8e6163fb54e9a3be8ae02c66"
+    },
+    {
+      "source": "Assets/A/Models/Floor/Textures/Floor_Normal.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Floor/Textures/Floor_Normal.png",
+      "sourceGuid": "6e730580d3b61704ea580b2b8588dccf",
+      "destinationGuid": "8a131148d3d6445b9468c9d34bb44a3a",
+      "sourceSha256": "a2c4d97a43e19e1373592b0762f3c39aac5c78a19621d37501c279270bfa4805"
+    },
+    {
+      "source": "Assets/A/Models/Window/Materials/Window.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Window/Window.mat",
+      "sourceGuid": "7c1bf684214f1034d9cd0e754dfceb7a",
+      "destinationGuid": "d010d18cc2244c58a0e3cc8344d2b487",
+      "sourceSha256": "f1401eca557994ff58cd1e64d3fde5384b01d6f3c49dc42b40ff404fe8d0ce9c"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_1.69x1x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_1.69x1x0.2.asset",
+      "sourceGuid": "a99a236d73122cb4cbcf44bd325993c8",
+      "destinationGuid": "690f7da02ad240e29b2e514bf6e016bf",
+      "sourceSha256": "f3a66262f1191f1bf1951261e4016226e3b8a8ad06254a058c55e42816cdecda"
+    },
+    {
+      "source": "Assets/A/Models/Floor/Textures/Floor_BaseColor.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Floor/Textures/Floor_BaseColor.png",
+      "sourceGuid": "aebdfdcfb47117e4faa48d8b5266d751",
+      "destinationGuid": "608331c50c4941a29f1def6720978773",
+      "sourceSha256": "a2038476bcdb53916c53b487f557fbfe2c3294027ed76b69f68065ea6b4f60f2"
+    },
+    {
+      "source": "Assets/A/Models/Window/Textures/Window_MetallicSmoothness.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Window/Textures/Window_MetallicSmoothness.png",
+      "sourceGuid": "b14977edc74b45148b5b92e1a3ffbb8e",
+      "destinationGuid": "9a04e50988a0495091002de542960787",
+      "sourceSha256": "a118d3d524d17bfe53d972b04584bc23337eae6f80a10d0c989cd0290a00d4fa"
+    },
+    {
+      "source": "Assets/A/Models/Window/Window.fbx",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Window/Window.fbx",
+      "sourceGuid": "b8b026865a2ce5641b9e5ccf7a3bb3c9",
+      "destinationGuid": "d9f8ff0b805f41d3a52d756aed3e3f98",
+      "sourceSha256": "2edee83ea7c66d44da8a7e6a19bcc9cd727f24aab44822f3480a26570c7b458a"
+    },
+    {
+      "source": "Assets/A/Prefabs/Window.prefab",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Prefabs/Window.prefab",
+      "sourceGuid": "bab837073b4b57c469bd9dd1b49362a8",
+      "destinationGuid": "6bf50f7b760f4624b13ded289682d791",
+      "sourceSha256": "2314612dd8ddc13248ed27329415d0e371dc0f165f7e175e53f7aa32a2dea962"
+    },
+    {
+      "source": "Assets/A/Models/Window/Textures/Window_BaseColor.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Window/Textures/Window_BaseColor.png",
+      "sourceGuid": "bf34283d999296d4ab79a0565037f9b0",
+      "destinationGuid": "ef7d5f8b1a1b445b93436e81c3840c16",
+      "sourceSha256": "364a310f27b4ba017e0fd0a03f562d3874fe312aa9d2eef218eced030f7beaa3"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_1.69x0.344x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_1.69x0.344x0.2.asset",
+      "sourceGuid": "bf6c0d501c264e243984e4176b5dd04e",
+      "destinationGuid": "fc6aceb1453b419b8133c81870ffff64",
+      "sourceSha256": "6bc6e5694258e95042756f86b94517deab451ed834c713ba3c2ea43ed9a11977"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Materials/Wall.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Wall/Wall.mat",
+      "sourceGuid": "cc1b48fbfca90274cba63fabcf573a63",
+      "destinationGuid": "e52301352606470fb66d47fa320b91b8",
+      "sourceSha256": "94358833d003570e5b21fd4353881f3ee8d9e521de64db59e6ec7b0479083d38"
+    },
+    {
+      "source": "Assets/A/Models/Floor/Materials/Floor.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Floor/Floor.mat",
+      "sourceGuid": "ccca770c3db6b1c4cae20ab3d542dc26",
+      "destinationGuid": "1ac00760c3894988accae78e2adc0815",
+      "sourceSha256": "06a813d49cd4339ce8b18aa34aa09bc398d51d2603fc38a6c2326337f8a34924"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_1.2x0.8x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_1.2x0.8x0.2.asset",
+      "sourceGuid": "d0126d4ecb53598438dde7128aaefe35",
+      "destinationGuid": "bfa16e0026be4b68bed00eb7889efcba",
+      "sourceSha256": "83a4b71919ff7a5f5927e0ddbf00141177d7e45445046def8401dc20baae86cf"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_0.2x2.644x9.84.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_0.2x2.644x9.84.asset",
+      "sourceGuid": "d24687c34f5e770449c86d325d8dd824",
+      "destinationGuid": "37e1cad79b7849d48302dd3b717e1643",
+      "sourceSha256": "ad183aba2ba58e8416cc1bbb06f997cecb9e1a2113044c84349a7665325edb21"
+    },
+    {
+      "source": "Assets/A/Models/Ceiling/Materials/CeilingJoint.mat",
+      "destination": "Assets/B/Materials/TrainingEnvironment/Barracks/Ceiling/CeilingJoint.mat",
+      "sourceGuid": "dc278ab3f80194a42885488c03c33ddd",
+      "destinationGuid": "831b650a29da4b29bc8010f3181f222b",
+      "sourceSha256": "275f471645bfbedd1e2a035a027c72ef47de98d2fb5dcaf9f7f0b6a08c0e40d6"
+    },
+    {
+      "source": "Assets/A/Models/Ceiling/CeilingTile.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Ceiling/CeilingTile.png",
+      "sourceGuid": "f4bd0a36697560b45839d3328a8037be",
+      "destinationGuid": "d298ea0f2e7544a0ac65b04ee90bf073",
+      "sourceSha256": "f8da370dd9e46bc2e999c82d4ebc884a428103406ddea7d92cff7d156fa4edd9"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Meshes/WallBox_3.02x2.644x0.2.asset",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Meshes/WallBox_3.02x2.644x0.2.asset",
+      "sourceGuid": "fc542f0d8bccc8b428efceacba50946e",
+      "destinationGuid": "c08d59a362154ff3a62382ef60b27c74",
+      "sourceSha256": "ccd2fc9973aed03252dcbbcdf5655418d9782f93fa11683c9eb361007dfe97ca"
+    },
+    {
+      "source": "Assets/A/Models/Wall/Textures/Wall_MetallicSmoothness.png",
+      "destination": "Assets/B/Models/TrainingEnvironment/Barracks/Wall/Textures/Wall_MetallicSmoothness.png",
+      "sourceGuid": "fde7e12ddfc33714b90ad4e07e2e6320",
+      "destinationGuid": "35a22d4b34a749abbdb6978d6137595e",
+      "sourceSha256": "1345e695c794926eb8270858f3cc07cf2acca9c3524d25e7ff95441cd20c28a9"
+    }
+  ],
+  "sourceHashes": {
+    "Assets/A/Models/Wall/Textures/Wall_BaseColor.png": "316dec0fee7559a608ea21233a7a8511d57caed8729d1e4a886086e5b0e16ad9",
+    "Assets/A/Models/Wall/Textures/Wall_BaseColor.png.meta": "9f397357071c28457ad906e1d0c14e8ddd8fe791f6e468757217f6fa0bc7c6d6",
+    "Assets/A/Models/Wall/Meshes/WallBox_1x2.644x0.2.asset": "f3e88fca34dac0c5835c3df91fc8ae3c475142296b511e056bcca6f02f61789d",
+    "Assets/A/Models/Wall/Meshes/WallBox_1x2.644x0.2.asset.meta": "078e8bf69a41d46e3109cc2a2b0cfee0cf8faf3880292eef64da4968da5835b9",
+    "Assets/A/Models/Window/Materials/WindowGlass.mat": "b81d76f47d65f6516efa2d741699c58905414e428cacf51988e09170878d44f6",
+    "Assets/A/Models/Window/Materials/WindowGlass.mat.meta": "60418d8f407e7043515c706b71f0ce9d961d17e8ae6dbfae3b2cc06a7b13fbf4",
+    "Assets/A/Models/CeilingPanel/Materials/CeilingPanel_Emitter.mat": "d96d341e107fe24cee83d61af4eee00b3367c9adb116351f9d627c981df31960",
+    "Assets/A/Models/CeilingPanel/Materials/CeilingPanel_Emitter.mat.meta": "8dcd1ff88f348d941f09f183f6048e617da78c737021e6566934bcc7f845fea3",
+    "Assets/A/Models/Wall/Textures/Wall_Normal.png": "4bc4642533ee0480694803effd775b3ee02cbaed7710e2c9ec50193621c3c343",
+    "Assets/A/Models/Wall/Textures/Wall_Normal.png.meta": "ca5ca7438274bb80baff185c81541bfef73cd40b9348a04a585e3606ea3ce0a4",
+    "Assets/A/Models/Ceiling/Materials/Ceiling.mat": "838e4a1614994f2037be826931e5e833fa672bd9d1e7c8f44ac19b1126d9f6d6",
+    "Assets/A/Models/Ceiling/Materials/Ceiling.mat.meta": "ec046d7b84acb3f6a1680ef2161e756e71d8636f4e9c33f15b4f9a28d02b7332",
+    "Assets/A/Models/Door/sage_glass_door.fbx": "e7981e69d3eb80b3451842d03540c9f506f2b439f10da03eac5aec8c3204101f",
+    "Assets/A/Models/Door/sage_glass_door.fbx.meta": "1d6cc346da2480ed96ad215fecb48bf0165ee94159f8f8a9a30992cf3de57ccf",
+    "Assets/A/Models/Ceiling/Meshes/CeilingGrid.asset": "55207e70243b6adf415a27b089641910dabc7310453e8c50df5d8bc00949b846",
+    "Assets/A/Models/Ceiling/Meshes/CeilingGrid.asset.meta": "b51234f2afe6d11958d317249576dcf390a3a0232222742d739139d484dec08d",
+    "Assets/A/Models/CeilingPanel/CeilingPanel.fbx": "21dba82b2d8865b5973ef3996be4df0e986f841ff4567fa15eaad21ac10a5572",
+    "Assets/A/Models/CeilingPanel/CeilingPanel.fbx.meta": "fd01e0d1ccbef980f1e3f23aa3f55858e4719ab30cc129f6adab18058ea71e92",
+    "Assets/A/Models/Window/Textures/Window_Normal.png": "d78c783afbfdf6a7564b6e1f36d4452d3963ffb1e8375fd82f963acdbc8f4520",
+    "Assets/A/Models/Window/Textures/Window_Normal.png.meta": "4857731b59b23baba76c6a96e5a89ba7363206728bb36231545a8789ecc51848",
+    "Assets/A/Models/Wall/Meshes/WallBox_4.692x2.644x0.2.asset": "5b6df722de43af1295dcec258f10e02c001ac85a8e6163fb54e9a3be8ae02c66",
+    "Assets/A/Models/Wall/Meshes/WallBox_4.692x2.644x0.2.asset.meta": "d72ade909c852d370559994c17c079b9f67db2aa1b63fbe5d8f09167ae8008a8",
+    "Assets/A/Models/Floor/Textures/Floor_Normal.png": "a2c4d97a43e19e1373592b0762f3c39aac5c78a19621d37501c279270bfa4805",
+    "Assets/A/Models/Floor/Textures/Floor_Normal.png.meta": "420b6c85007c9ae97c54678be9a458e5340972a1d6daf9c099b89ca9195b8944",
+    "Assets/A/Models/Window/Materials/Window.mat": "f1401eca557994ff58cd1e64d3fde5384b01d6f3c49dc42b40ff404fe8d0ce9c",
+    "Assets/A/Models/Window/Materials/Window.mat.meta": "815b55233a2c3e5f93cda288aea20b3d310758ac25fad69c8fc4f56e87f28207",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.69x1x0.2.asset": "f3a66262f1191f1bf1951261e4016226e3b8a8ad06254a058c55e42816cdecda",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.69x1x0.2.asset.meta": "85e4dd4c4fdf01f19d4231b047aa731261e1598d1c8968241dd566128018b35a",
+    "Assets/A/Models/Floor/Textures/Floor_BaseColor.png": "a2038476bcdb53916c53b487f557fbfe2c3294027ed76b69f68065ea6b4f60f2",
+    "Assets/A/Models/Floor/Textures/Floor_BaseColor.png.meta": "5f9b491fa467c034e89e70a3bfecda042860c598c67574d8d5edebd3ce80a544",
+    "Assets/A/Models/Window/Textures/Window_MetallicSmoothness.png": "a118d3d524d17bfe53d972b04584bc23337eae6f80a10d0c989cd0290a00d4fa",
+    "Assets/A/Models/Window/Textures/Window_MetallicSmoothness.png.meta": "2d45b6a489b2828e6939618c6ed3ce9bc087022c3799e7d4efb8eadd2654bbeb",
+    "Assets/A/Models/Window/Window.fbx": "2edee83ea7c66d44da8a7e6a19bcc9cd727f24aab44822f3480a26570c7b458a",
+    "Assets/A/Models/Window/Window.fbx.meta": "e6dd4fc755a0221e5002a7dc01a7ede390c942b892d369acc8f8543fd30e8feb",
+    "Assets/A/Prefabs/Window.prefab": "2314612dd8ddc13248ed27329415d0e371dc0f165f7e175e53f7aa32a2dea962",
+    "Assets/A/Prefabs/Window.prefab.meta": "c8137091e1b27da17919774ab0981b58697591002d788ab0900b3726155d5d32",
+    "Assets/A/Models/Window/Textures/Window_BaseColor.png": "364a310f27b4ba017e0fd0a03f562d3874fe312aa9d2eef218eced030f7beaa3",
+    "Assets/A/Models/Window/Textures/Window_BaseColor.png.meta": "ab371bdacf44af8fe564b0e55d9107c25d35b0735dc6d8469e1aee5cdf64a12d",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.69x0.344x0.2.asset": "6bc6e5694258e95042756f86b94517deab451ed834c713ba3c2ea43ed9a11977",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.69x0.344x0.2.asset.meta": "3486f80fc4038a19df2d0fe4ea9b8aced54ef3b4a3acc15392e7b7d0464aa63a",
+    "Assets/A/Models/Wall/Materials/Wall.mat": "94358833d003570e5b21fd4353881f3ee8d9e521de64db59e6ec7b0479083d38",
+    "Assets/A/Models/Wall/Materials/Wall.mat.meta": "0d0c10dce7d8a9234f3860164a8970f46ac6f1286290f11edb3c7374000ea92d",
+    "Assets/A/Models/Floor/Materials/Floor.mat": "06a813d49cd4339ce8b18aa34aa09bc398d51d2603fc38a6c2326337f8a34924",
+    "Assets/A/Models/Floor/Materials/Floor.mat.meta": "471f2145bd8378865633ca325367d298723b7026cf013d3ecd42cc805184c2f7",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.2x0.8x0.2.asset": "83a4b71919ff7a5f5927e0ddbf00141177d7e45445046def8401dc20baae86cf",
+    "Assets/A/Models/Wall/Meshes/WallBox_1.2x0.8x0.2.asset.meta": "f378f42c7a985f7f3b4aa52f44b4216423e8aa4301207e2cd18fc00d31ec3dbc",
+    "Assets/A/Models/Wall/Meshes/WallBox_0.2x2.644x9.84.asset": "ad183aba2ba58e8416cc1bbb06f997cecb9e1a2113044c84349a7665325edb21",
+    "Assets/A/Models/Wall/Meshes/WallBox_0.2x2.644x9.84.asset.meta": "5917fe6db8309fa3705b1cb570d3ff45e7262a4c358a6d4a639e0f2c35928748",
+    "Assets/A/Models/Ceiling/Materials/CeilingJoint.mat": "275f471645bfbedd1e2a035a027c72ef47de98d2fb5dcaf9f7f0b6a08c0e40d6",
+    "Assets/A/Models/Ceiling/Materials/CeilingJoint.mat.meta": "aaea444966548f79f0a04c59b5d6e86a8846887ee73096cdf7728a340bc0cde5",
+    "Assets/A/Models/Ceiling/CeilingTile.png": "f8da370dd9e46bc2e999c82d4ebc884a428103406ddea7d92cff7d156fa4edd9",
+    "Assets/A/Models/Ceiling/CeilingTile.png.meta": "56a332aa3a9a0cf18a0dd8d0cb3138439bf552ce751ac258968b500b6dae573d",
+    "Assets/A/Models/Wall/Meshes/WallBox_3.02x2.644x0.2.asset": "ccd2fc9973aed03252dcbbcdf5655418d9782f93fa11683c9eb361007dfe97ca",
+    "Assets/A/Models/Wall/Meshes/WallBox_3.02x2.644x0.2.asset.meta": "b71d6c3ac0e24a31e92db4e2f2ef3fe57fee43f3eb57b9c0514bcaac25bc27b4",
+    "Assets/A/Models/Wall/Textures/Wall_MetallicSmoothness.png": "1345e695c794926eb8270858f3cc07cf2acca9c3524d25e7ff95441cd20c28a9",
+    "Assets/A/Models/Wall/Textures/Wall_MetallicSmoothness.png.meta": "6b851f54aa5cd61803a5822fdf90f5fe785dfc1f83aec36db5174f8de82e327d",
+    "Assets/A/Scenes/A_Sandbox.unity": "c964e09005a1f9abe8ad754131ce9f4e51eb41fd6d5c406b7c59ec5fa709a88f"
+  },
+  "changedSceneFileIDs": [
+    411133228,
+    698231831,
+    837957615,
+    1134639754,
+    1168228159,
+    1220096312,
+    1228828097,
+    1315754241,
+    1471954432,
+    1565377059,
+    1882244401,
+    2009958414
+  ],
+  "practicePose": "Original PracticeAnchor local positions and rotations preserved",
+  "stationSignLocalYaw": 180
+}

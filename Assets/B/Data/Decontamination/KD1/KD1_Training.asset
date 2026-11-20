@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459822cc25c34b4f821d45146380729e, type: 3}
+  m_Name: KD1_Training
+  m_EditorClassIdentifier: MilTrainSimVR.B.Training::MilTrainSimVR.B.Training.TrainingDefinition
+  TrainingId: kd1-decontamination-practice
+  Steps:
+  - StepId: kd1-open
+    Conditions:
+    - Kind: 1
+      TargetId: kd1-course
+      SignalId: outer-opened
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: kd1-prepare-pad
+    Conditions:
+    - Kind: 1
+      TargetId: kd1-course
+      SignalId: pad-out
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: kd1-fit-pad
+    Conditions:
+    - Kind: 1
+      TargetId: kd1-course
+      SignalId: pad-fitted
+      ExpectedValue: 1
+      HoldSeconds: 1
+  - StepId: kd1-touch-areas
+    Conditions:
+    - Kind: 1
+      TargetId: kd1-course
+      SignalId: areas-done
+      ExpectedValue: 1
+      HoldSeconds: 1

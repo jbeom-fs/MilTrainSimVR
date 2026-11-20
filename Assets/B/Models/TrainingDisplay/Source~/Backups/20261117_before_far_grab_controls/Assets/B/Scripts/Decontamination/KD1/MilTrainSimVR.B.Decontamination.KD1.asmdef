@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.Decontamination.KD1",
+    "rootNamespace": "MilTrainSimVR.B.Decontamination.KD1",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

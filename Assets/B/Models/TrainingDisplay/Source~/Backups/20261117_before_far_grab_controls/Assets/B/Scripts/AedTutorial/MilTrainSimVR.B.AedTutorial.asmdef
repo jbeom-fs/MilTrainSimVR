@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.AedTutorial",
+    "rootNamespace": "MilTrainSimVR.B.AedTutorial",
+    "references": ["MilTrainSimVR.B.Training", "MilTrainSimVR.B.TrainingUI", "Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

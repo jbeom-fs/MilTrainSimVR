@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.CommonMenu.Hub",
+    "rootNamespace": "MilTrainSimVR.B.CommonMenu",
+    "references": ["MilTrainSimVR.B.CommonMenu", "MilTrainSimVR.A.Common"]
+}

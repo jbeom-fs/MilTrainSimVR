@@ -1,0 +1,130 @@
+{
+  "01_Upper": {
+    "triangles": 18352,
+    "uv_area": 0.3996000988638323,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 57616,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.011843739077448845,
+      0.011843749321997166,
+      0.987189769744873,
+      0.9796870350837708
+    ],
+    "object": "GAME_Upper"
+  },
+  "02_Lower": {
+    "triangles": 2706,
+    "uv_area": 0.5031120834696167,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 6942,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.011843749321997166,
+      0.011843751184642315,
+      0.968595564365387,
+      0.9856532216072083
+    ],
+    "object": "GAME_Lower"
+  },
+  "03_PushRod": {
+    "triangles": 328,
+    "uv_area": 0.24910900670267205,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 495,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9921724796295166,
+      0.992115318775177
+    ],
+    "object": "Gun_Part_1 | Mesh"
+  },
+  "04_GasRod": {
+    "triangles": 5144,
+    "uv_area": 0.5059072050999691,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 13504,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9921859502792358,
+      0.9921315312385559
+    ],
+    "object": "COMPARE | Silver_Rod_ShaftOnly_v06_export"
+  },
+  "05_BoltAssembly": {
+    "triangles": 6290,
+    "uv_area": 0.5878308773688977,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 19845,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9921798706054688,
+      0.9920912981033325
+    ],
+    "object": "COMPARE | Housing_CylindricalDisplayNeck001"
+  },
+  "06_GasRegulator": {
+    "triangles": 1058,
+    "uv_area": 0.6904730765444695,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 2374,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9921719431877136,
+      0.9921849966049194
+    ],
+    "object": "GAME_Regulator"
+  },
+  "07_Selector": {
+    "triangles": 320,
+    "uv_area": 0.6505317267610053,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 676,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9792823195457458,
+      0.9921800494194031
+    ],
+    "object": "Gun_Part_6 | Selector"
+  },
+  "08_ChargingHandle": {
+    "triangles": 2898,
+    "uv_area": 0.5517802897589335,
+    "flipped_triangles": 0,
+    "collapsed_triangles": 0,
+    "overlap_pairs": 0,
+    "tested_intersection_pairs": 8350,
+    "orientation_adjustment_max_uv": 0.0,
+    "bounds": [
+      0.0078125,
+      0.0078125,
+      0.9921819567680359,
+      0.992172360420227
+    ],
+    "object": "Gun_Part_2 | Mesh"
+  }
+}

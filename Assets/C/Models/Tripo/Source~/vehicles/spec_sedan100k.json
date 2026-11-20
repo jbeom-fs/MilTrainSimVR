@@ -1,0 +1,19 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/Sedan_orig.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_basecolor.jpg",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_normal.png",
+  "metallic": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_metallic.jpg",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_roughness.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/sedan100k",
+ "name": "Sedan100k",
+ "target_tris": 100000,
+ "planar_deg": 1.0,
+ "hide_remove": false,
+ "tex_res": 4096,
+ "cage": 0.002,
+ "ray": 0.012,
+ "bake_margin": 48,
+ "bake_samples": 16
+}

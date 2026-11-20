@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.BleedingControl.PressureBandage",
+    "rootNamespace": "MilTrainSimVR.B.BleedingControl.PressureBandage",
+    "references": ["MilTrainSimVR.B.Interaction", "Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

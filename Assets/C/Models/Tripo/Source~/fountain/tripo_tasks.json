@@ -1,0 +1,7 @@
+{
+  "note": "11/16 사용자 사진 두 장(ref1, ref2)의 분수 — 조형물 · 꽃잎 모양 수반만(목재 데크 뺌). 크레딧 75 = 참고 이미지 5 + 수반 모양 고친 이미지 5 + 3D 60 + FBX 5",
+  "reference_image_1": {"task_id": "28f9b93d-8d25-4164-8007-890144215c03", "model": "seedream_v5 (image-to-image 기본)", "inputs": ["ref1.png", "ref2.png"], "output": "gen1.png"},
+  "reference_image_2": {"task_id": "84800b32-1ce6-41b6-8f1a-c89252571417", "inputs": ["gen1.png", "ref1.png", "ref2.png"], "output": "fountain_ref.png", "change": "수반 윤곽만 둥근 네 잎(클로버) 모양으로"},
+  "image_to_model": {"task_id": "e90dab1a-100a-4394-a26d-096ecbd7197f", "model": "H3.1 (v3.1-20260211)", "params": {"geometry_quality": "detailed", "texture_quality": "detailed", "face_limit": 50000, "pbr": true}},
+  "convert_fbx": {"task_id": "21190e65-57e2-4a8f-b0fd-cfae6bccf50b"}
+}

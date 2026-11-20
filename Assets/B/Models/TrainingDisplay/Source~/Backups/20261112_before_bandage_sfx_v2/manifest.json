@@ -1,0 +1,37 @@
+{
+  "source": "Docs\\B\\AudioPreview\\1112_SFX_v2\\BandageWrap_Loop_v2.wav",
+  "expected_sha256": "b9e3e593141a9ea18607741e9b5e10ec8badc554b384b09000337a44678d36a4",
+  "v1_guid": "ee9d288fb6364367987a0b896c44b3cb",
+  "v2_guid": "dbc1ab2090bf490ea5d9c250ade4a20e",
+  "measurements": {
+    "gain_db": 6.000024422231361,
+    "max_quantization_residual_lsb": 0.501846154865234,
+    "peak_db": -20.00212083742674,
+    "rms_db": -34.43962033300906,
+    "dc": 0.0,
+    "clip_samples": 0,
+    "seam_lsb": 2,
+    "duration_seconds": 2.6
+  },
+  "preserved_sha256": {
+    "Assets/B/Audio/TrainingSfx/BandageWrap_Loop_v1.wav": "9266cc20ee365c9d97ab281536d645472b3b4e72a5b2420eba074a865a9ae496",
+    "Assets/B/Audio/TrainingSfx/BandageWrap_Loop_v1.wav.meta": "7201b26a3c5e4ea66f7ceb539d3805618065f1ff020874b92a79082a9410c78a",
+    "Assets/B/Audio/TrainingSfx/TrainingComplete_v1.wav": "73db07a5c72348f517ef9fd027ffa92cd608e595c11d3c42781df9ad4ae21196",
+    "Assets/B/Audio/TrainingSfx/TrainingComplete_v1.wav.meta": "5d5c46aafbea4484c8dd2c30cdb5208a37b120528bdd937f8ac4306a07c54393",
+    "Assets/B/Audio/TrainingSfx/UI_Click_v1.wav": "247040181673a3e8355329062c4fe1031a292c0cde049b8bb196240c79b60faf",
+    "Assets/B/Audio/TrainingSfx/UI_Click_v1.wav.meta": "6859bc8cf0628b15925533958cce4d214278d3b8cef5be71d867d38c247624ed",
+    "Docs/B/AGENTS.md": "acc164c74dd287a7222c98f97f0a34ec0c3a5b86588b312b0d08be056eefadaa",
+    "Assets/B/Scene/B_CBRN.unity": "bbfceb43aa1454121a5c0895999dd5ee0469be9c820ede8e242b01c14f97b4a5",
+    "Assets/B/Scripts/TrainingField/BandageWrapSfx.cs": "61caf9d36afbbbc0b75ea8a75f3feb43c91dae66b9267927e25a648a8c9b1731",
+    "Assets/B/Scripts/TrainingField/TrainingFieldSfx.cs": "95eb3c2b18360a3cce766e3a1257ffa7f8734c2aeb55a0ae44dc3edb8627b7ac",
+    "Assets/B/Scripts/TrainingField/TrainingFieldCoordinator.cs": "dbd1e9d6ab3f508d75811f1147852773dda674462283a86517485501da473f91",
+    "Docs/B/AudioPreview/1112_SFX_v2/BandageWrap_Loop_v2.wav": "b9e3e593141a9ea18607741e9b5e10ec8badc554b384b09000337a44678d36a4",
+    "Docs/B/AudioPreview/1112_SFX_v2/README.md": "c70d43755008d16197db90f03c8c1efac88df13ccb358585c95822521f4312a8"
+  },
+  "modified_before_sha256": {
+    "Assets/B/Scene/B_FirstAid.unity": "abc5fc2533e3847f66d5e2d669f81594f4d8fe3d762d71071df94ed85b51c1db",
+    "Assets/B/Editor/TrainingField/TrainingFieldSetup.cs": "0ad88a1acf5c455df90e8c77d168e5fa047da6514483724ec22b40fcb8001c5a",
+    "Docs/B/1112_B_교육효과음_적용기록.md": "f4d1761a676c1bebfc87675302e7173b913c2712094e7cd6fc168e2f55d4f600"
+  },
+  "git_status_before": " M Assets/B/Editor/TrainingField/TrainingFieldSetup.cs\n M Assets/B/Scene/B_CBRN.unity\n M Assets/B/Scene/B_FirstAid.unity\n M Assets/B/Scripts/TrainingField/TrainingFieldCoordinator.cs\n M Docs/B/AGENTS.md\n?? Assets/B/Audio.meta\n?? Assets/B/Audio/\n?? Assets/B/Models/TrainingDisplay/Source~/Backups/20261112_before_bandage_sfx_v2/\n?? Assets/B/Models/TrainingDisplay/Source~/Backups/20261112_before_training_sfx/\n?? Assets/B/Scripts/TrainingField/BandageWrapSfx.cs\n?? Assets/B/Scripts/TrainingField/BandageWrapSfx.cs.meta\n?? Assets/B/Scripts/TrainingField/TrainingFieldSfx.cs\n?? Assets/B/Scripts/TrainingField/TrainingFieldSfx.cs.meta\n?? \"Docs/B/1112_B_\\352\\265\\220\\354\\234\\241\\355\\232\\250\\352\\263\\274\\354\\235\\214_\\354\\240\\201\\354\\232\\251\\352\\270\\260\\353\\241\\235.md\"\n?? Docs/B/AudioPreview/\n"
+}

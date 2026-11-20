@@ -1,0 +1,449 @@
+{
+  "version": "2026-11-04-h5",
+  "equivalent_contract_checks_passed": true,
+  "raw_blender_import_parent_local_check_passed": false,
+  "unity_user_execution": "미확인",
+  "source_report": "JacketDeformFixReport.json",
+  "protected_meta_sha256": {
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Pickup.fbx.meta": "b7f899001a241fe7261451ff2be42d2d86ab2fdddb747c657b20cbb722916903",
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Worn.fbx.meta": "88f8d0973a4c4e11609295cfd4b6986a77f2c75c3a2824fb6db66f6dfdfc59f0",
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures.meta": "ebadfb069f9e9dd05f39b05b44eb6b7b1d62e974db9fe75a952bd6a7d56c7cd0"
+  },
+  "files": {
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Pickup.fbx": {
+      "sha256": "90a5e78430f742d55efbe0d0297a1c57f9b5552e4c8a322f6e5eb89f10240e8a",
+      "bytes": 977964
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Worn.fbx": {
+      "sha256": "2e86d4641cd3553e03f6d5f78b2204bf9706c0b16b38a13acb24103bee238d4d",
+      "bytes": 2368332
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\audit_jacket_materials.py": {
+      "sha256": "c39ea056329a7eaa614c1186ccc9adf0feb289922b2d9948d3e3c7c6635ab5d0",
+      "bytes": 2023
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\FBX_Roundtrip_Review.blend": {
+      "sha256": "2eb3e05c0537d1f5ccb621f791a7bcdff8cba04622da4f959dd847551742e3b0",
+      "bytes": 2569533
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\FBXRawParentAudit.json": {
+      "sha256": "b50686dc751bb1ed5d348cb23ab8802218055f74ad3ce71a3b04f9aea3c396c6",
+      "bytes": 4242
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\finalize_jacket_review.py": {
+      "sha256": "8d6df1df0695754024279c9a6eb8e70fb250f1aa6a31dc66262dd92696a753c0",
+      "bytes": 20140
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\inspect_fbx_parent.py": {
+      "sha256": "b2887152b01b6830e47966b216224ebaf5b57c81a7dde6e75b98c84e53ff1ea6",
+      "bytes": 1113
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_candidate_render.log": {
+      "sha256": "c82a2615291acfc13e0d1b061c1ff895c8a3e542921e8488396e16d989005fca",
+      "bytes": 2726
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_candidate_render.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_contract_audit.log": {
+      "sha256": "3100ff9aab936973dc3131e0793225528c49b2920f4820bce43e0e2d0adc7553",
+      "bytes": 2640
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_contract_audit.py": {
+      "sha256": "adaa32b4b025981c986895191deb3867690f89a2b9f7209dd7ab5c3fa2f9c865",
+      "bytes": 7611
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_contract_audit.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_deform_fix.log": {
+      "sha256": "c86dea10e300dfecf1fa4ffecd578290bafacba8bdafb058db678e88b13e85b9",
+      "bytes": 9063
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_deform_fix.py": {
+      "sha256": "e5d2a38825233e6dad3dfc4ff32d23db7981753ba81afeced847c82351eae3c5",
+      "bytes": 42671
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_elbow_render.log": {
+      "sha256": "f66e93d561074b56bcaddea1cebddba60b91c32ae1f77bc13cb4e355c6caeb97",
+      "bytes": 1707
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_elbow_render.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_final_delivery.log": {
+      "sha256": "c53a7301176dd99cddaeee0e349262b3dafa2bb470dd39539e263bb9ecbfba0c",
+      "bytes": 9320
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_final_delivery.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_final_review.log": {
+      "sha256": "8443c846f89b1cec1e1dd2b4048bf09e3545f26d199915fb592de71cda70f653",
+      "bytes": 482
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_final_review.py": {
+      "sha256": "ca676839b29fa47bc5b2857ea29437e71aced9492b98d797fbf670cc6c45b4a6",
+      "bytes": 20141
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\jacket_final_review.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketContractAudit.json": {
+      "sha256": "06598fc4f0a7f164125ee1e6acf5e0cc2f2b95f469d9a47d46f91cdf9fa8de6b",
+      "bytes": 173900
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketDeformFixExperiments.json": {
+      "sha256": "10607b395bddfa986f74e5e2bb06e1c727d1cb8a2f547b2c5b2c8e62a856123b",
+      "bytes": 70000
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketDeformFixH4Report.json": {
+      "sha256": "d23466844112b17528a411eade9c380b66d262199cb97815eb5b56c1ad53f100",
+      "bytes": 260543
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketDeformFixReport.json": {
+      "sha256": "87ca5da84690403292cf4bfcb6eda54ad4daca571e12e76083b385837e8810bd",
+      "bytes": 384495
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketExternalChangeObservations.json": {
+      "sha256": "939ff9c841e8e474d69a0a5639442da0fceece0197ff2c2e290e861fe1f25a66",
+      "bytes": 1084
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketFinalReview.json": {
+      "sha256": "1cba512d4c3d3401175e3c2a7c99e117d8996d573ac5adbfd5e56d473522a01f",
+      "bytes": 51680
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketMaterialAudit.json": {
+      "sha256": "e5dd49969d63b12a8f9f7b1a6021c0be99c354e8cad16404a5c6dc81840623d4",
+      "bytes": 26494
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\normalize_roundtrip_review.py": {
+      "sha256": "347908583ad1e2f6c515caf82f1ff9ce583f4fda8261d277f0c8a7ab21223322",
+      "bytes": 5201
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Baseline_ElbowBend_BackElbowLeft.png": {
+      "sha256": "8cb0368de40d0c55dd7eb6a9dc642ae398c6306f137ac407785cc2a651b6d3ec",
+      "bytes": 808765
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Baseline_ElbowBend_BackElbowRight.png": {
+      "sha256": "8ce4a43bfeaebab57d04f93c1b81cb4e2c069335baa6fa9f62e6bc4a3a15714d",
+      "bytes": 806993
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Candidate_ContactSheet.jpg": {
+      "sha256": "26efcac926e47c1493d0d40e8ca8b6c17d4e158f9749ad25986bcaaf76cf569c",
+      "bytes": 212528
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ArmsDown_ArmpitL.png": {
+      "sha256": "682f9828d80101d3517167b72ecbe54b1f466c2b934ef441818589813c66fba2",
+      "bytes": 827227
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ArmsDown_Front.png": {
+      "sha256": "f592b06ad9639fcb3ea87250fa36006a0f412941d0a896b70167ffa38f263861",
+      "bytes": 686789
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ArmsDown_SideL.png": {
+      "sha256": "8a339a1cf3fe1968205224eb1a48da7a3e4438b52a0dfa76adb250b9b05182be",
+      "bytes": 793380
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ArmsDown_SideR.png": {
+      "sha256": "12ed87e80efcb6fc24fb55bf50c7f4a84736f38d0ed56aef80a31c3b028d49e5",
+      "bytes": 774020
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ArmsDown_ThreeQuarter.png": {
+      "sha256": "7eac3567237ef83a544c7b707a0d42c6b62d208239ffd27a2727b3393fb55cb6",
+      "bytes": 680511
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ElbowBend_BackElbowLeft.png": {
+      "sha256": "a2835bf1e1829a1303767ae90fab26de3ca2dcfecca94a6d655873331fcc869c",
+      "bytes": 849907
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ElbowBend_BackElbowRight.png": {
+      "sha256": "c810397bab0ae02582be94c9215214f2af0dd2e8ad7e95d7f3cbdaeaa03b3f54",
+      "bytes": 762706
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ElbowBend_Front.png": {
+      "sha256": "14ade26d7d75c774405da78c39ec836b901abc2e700f6c780ce79f2334151d48",
+      "bytes": 683249
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_ElbowBend_ThreeQuarter.png": {
+      "sha256": "aac9dd5f2e93d44ec05c96f85b47e2fd593ea571320d3cb5e87e944f3bc5e810",
+      "bytes": 680908
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToChest_ArmpitL.png": {
+      "sha256": "7186ec4876a6b5eef63b651f62b9f380eb8a8d55105bf6fe5d5f6bcf952f6da8",
+      "bytes": 822931
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToChest_Front.png": {
+      "sha256": "d84f7897d2c1c98bedb1ce9b5fd1d5795a6a1331b22ca49fd4393b02973cc10f",
+      "bytes": 665242
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToChest_SideL.png": {
+      "sha256": "9ad910dc0f24900d86928cc7e6256d2c2ac5024b082ce2f131287819619164c7",
+      "bytes": 875259
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToChest_SideR.png": {
+      "sha256": "cf3593496568d2910de2cec30228dbfaae70e4ae16cd3691ccbdf65fb3b93c3a",
+      "bytes": 843039
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToChest_ThreeQuarter.png": {
+      "sha256": "1807e337238744ba6688500e8444552ed4b094268f9fe67f544f2524cde44261",
+      "bytes": 665682
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToWaist_Front.png": {
+      "sha256": "328333e67aed5bae2bbeff55a7eec83aa9b00eb8ba866eb15f69746d742b0a2b",
+      "bytes": 669746
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_HandToWaist_ThreeQuarter.png": {
+      "sha256": "21011ffb2e8f37bb09174d5c67296f38552c170c125fd93783d922b1a3fc630c",
+      "bytes": 665891
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_LightBend_ArmpitL.png": {
+      "sha256": "c60b8ca4f783b39c6362126e95b2e4b8a0d746822414529c3e519929a7578cc7",
+      "bytes": 790037
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_LightBend_Front.png": {
+      "sha256": "19deb97245898fbdcd6f1b484c6e3c6422c4212f7c05f0b28d05f85a4e042775",
+      "bytes": 687041
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_LightBend_SideL.png": {
+      "sha256": "70d88e14c1a47bdeebe88e6332d39c0186808b1be62dc30cdb46b5a39f3063b4",
+      "bytes": 857722
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_LightBend_SideR.png": {
+      "sha256": "c41b7caa58c2ff6a354a5e4e6caa01778e808cbee2762adfc6ec17ec80e2a9e7",
+      "bytes": 826865
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_LightBend_ThreeQuarter.png": {
+      "sha256": "11414249faf26c7536322c7b44db1f42cefafb518be19d287343a9006919f283",
+      "bytes": 677808
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_Rest_Front.png": {
+      "sha256": "2b794cdee70b884b72046e11f3bdb48fea5c4a296cf0059971c4a1e911cba4ff",
+      "bytes": 674355
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_TorsoTwist_Front.png": {
+      "sha256": "38e346d6b08e9fd055407bfbb764fbf6b88e61076ae8050821ace9c10e338d03",
+      "bytes": 680177
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_TorsoTwist_SideL.png": {
+      "sha256": "72305ad41ebd39afe20d8fade8a2f21d4b92009acf8b21142d3045b09d83b7f2",
+      "bytes": 797738
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_TorsoTwist_SideR.png": {
+      "sha256": "68cc6eb12ed2489683a7866e419f82831436f7ca0e59fc78f8b344bd17c4d40b",
+      "bytes": 824853
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Compare3_TorsoTwist_ThreeQuarter.png": {
+      "sha256": "a2797579b8c2e813874f360e7f6f2eaa7004c26b6c685e5c95fe88d66216e4b8",
+      "bytes": 704098
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ArmsDown_ArmpitL.png": {
+      "sha256": "8fcd8903d03cf3741dfe3f29750850cc8aee9fd3f7768543472f99eca9d05592",
+      "bytes": 878955
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ArmsDown_Front.png": {
+      "sha256": "52317e46cdf84b97629ad8b3aede6d5e46ecb1dde308335360882ebcc7d12800",
+      "bytes": 807891
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ArmsDown_SideL.png": {
+      "sha256": "6b6b217ff7417c3c5f10359ecd5e3de3a7d850cb8c212e70fea0214a478e95ad",
+      "bytes": 837235
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ArmsDown_SideR.png": {
+      "sha256": "14a7949fa42cbd91eb3319889e75c23da66116676bdd1e46e7243ea2cbbea117",
+      "bytes": 845093
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ArmsDown_ThreeQuarter.png": {
+      "sha256": "f7b3bc8fadece9c9929c242cf688bf8139227b585cb72dfbc5e30df028392dff",
+      "bytes": 805505
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ElbowBend_BackElbowLeft.png": {
+      "sha256": "732558b1620824d3340c2adad594bcf77fc3657adebe237bdf61f9e853cf3a85",
+      "bytes": 807583
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ElbowBend_BackElbowRight.png": {
+      "sha256": "fecb83b102925bb51e52d2839dc67d24fe1d5ab0fae21e950e29f40864a34861",
+      "bytes": 808048
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ElbowBend_Front.png": {
+      "sha256": "88c43813ac7925b1f199ba92800a5eb9aba6e5f26ae4abda53755399ef08a313",
+      "bytes": 798109
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_ElbowBend_ThreeQuarter.png": {
+      "sha256": "d164b503236fad240086cd221a35501e98d8f8a05e13ed2cafb35a7962ca7144",
+      "bytes": 801311
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToChest_ArmpitL.png": {
+      "sha256": "169b9d9594269298998043304d57ca7d8f7574b41d4adeb9db1827c14e0453c3",
+      "bytes": 867727
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToChest_Front.png": {
+      "sha256": "3eb590431394938f9bad571831f70a9caad719ee9748c93b13475405a44e44c2",
+      "bytes": 794976
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToChest_SideL.png": {
+      "sha256": "5e9b206f618e7b4bc3f0edebb23c0448e779c7b6dfa6c17c009a2790bc4aef43",
+      "bytes": 845967
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToChest_SideR.png": {
+      "sha256": "ffe57e4eb0aa40a186715da75b2458427497b4ed7b8669ef84dcadc618d332b0",
+      "bytes": 846814
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToChest_ThreeQuarter.png": {
+      "sha256": "fbbcc70f31044911318ca9575469116c2dba6c1e7541803b74674bf5e6e37f6c",
+      "bytes": 793892
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToWaist_Front.png": {
+      "sha256": "ff9caeaff2a45d0f5b4a065f68c9f8bce77c24517e464a37cf2459bc18c496ae",
+      "bytes": 795404
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_HandToWaist_ThreeQuarter.png": {
+      "sha256": "c123ac16222179ac631872b82c996577673cbcb4c2275b00001978ce6b6d13db",
+      "bytes": 794372
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_LightBend_ArmpitL.png": {
+      "sha256": "fb3a0c8fb296e01a52fe4c170dec18e8b3ac1a5881eb7f677d6421c4c936a4a3",
+      "bytes": 863779
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_LightBend_Front.png": {
+      "sha256": "4a780b4cd5f151d0d198bd37b6cc9f1a770f4659a0d1bcffbe233f1fe5e59f5d",
+      "bytes": 811755
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_LightBend_SideL.png": {
+      "sha256": "7f4bb1cd6410bf637d592bbe9105a538be21b592fcfe559005caab071b931dd6",
+      "bytes": 857483
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_LightBend_SideR.png": {
+      "sha256": "5090b3be398226c905df86a682f8b5f0261cb2580cdc9c1b6cfee13db3bdab41",
+      "bytes": 861566
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_LightBend_ThreeQuarter.png": {
+      "sha256": "bcf37c96391e12607212a7d13e9fbfd135faeed3e5ba3283892777b7a0389593",
+      "bytes": 805344
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_Overview.jpg": {
+      "sha256": "0b8216caa417cdfae57e91ef0728c6d64584331b2c1dbbeccbb161da4076862c",
+      "bytes": 418194
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_Rest_Front.png": {
+      "sha256": "3ee12be08a0a2e3372dd66960d3d9b8ca5bf68b82837496d1d76a483e8382ed8",
+      "bytes": 803790
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_TorsoTwist_Front.png": {
+      "sha256": "5f6b7509c9d2cf3ed5cc288d9002ed721af18a70c86e1778c61c0c7ef779d1b8",
+      "bytes": 805808
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_TorsoTwist_SideL.png": {
+      "sha256": "80af62651af007b4f15da33f9c51c72bbd31b11c1566c7300e6a7ddced813c0d",
+      "bytes": 832903
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_TorsoTwist_SideR.png": {
+      "sha256": "0a26d7781dcfdfe47ffae5e992042b72c7d3a69e574c3362f252ed6ecd9b3f64",
+      "bytes": 860944
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\Final_TorsoTwist_ThreeQuarter.png": {
+      "sha256": "aacc34a5e38a7456566af9f9f20895dac758c77e0ca9682a766c8936ba2f6ee5",
+      "bytes": 813520
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\H4_ElbowBend_BackElbowLeft.png": {
+      "sha256": "923ce6ca9c5937bd12a11468003346b4b30c6c06aaa5c9a3f0d84ef15e76c026",
+      "bytes": 807235
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\H4_ElbowBend_BackElbowRight.png": {
+      "sha256": "d4ffe460f50493d0ae0ffab3080f2c421988ca30d4f9d01a2e171d39ad1030b2",
+      "bytes": 808205
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_ArmsDown_SideL.png": {
+      "sha256": "c5ffbd305526f486bbcba2a2e36a76540370a75dbc8c53edb9ebd33a7e38ac47",
+      "bytes": 837345
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_ElbowBend_ThreeQuarter.png": {
+      "sha256": "f9776614f677e107f7c22210046a3e0fc4b8cc4c9fd4b78cbd0f4adfe7f73943",
+      "bytes": 801223
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_HandToChest_SideR.png": {
+      "sha256": "d561823999974eb87f199f6a4f361be3dc6fc9f04a46e02d0118b26d48210d18",
+      "bytes": 846815
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_LightBend_ArmpitL.png": {
+      "sha256": "3bacd28ffb4065f9797df74e88703f2adf85b71ba75c3ef3d27ff3568cd02e81",
+      "bytes": 863714
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_LightBend_SideL.png": {
+      "sha256": "f038beab49f83115165742a08ac7a1dc3f4f62dde8bfaa3cd6ddc8e5a64e0735",
+      "bytes": 857360
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h5_local_clearance_3mm_Rest_Front.png": {
+      "sha256": "d0f4efc9e1d06ef469aa8f5e4ca1b3a79a1694594c5f286716f77f086404c6ab",
+      "bytes": 803903
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_ArmsDown_SideL.png": {
+      "sha256": "e21989b37312d22c160c2949c48f4df86a930f313ffc749691e245e7876dbb14",
+      "bytes": 837393
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_ElbowBend_ThreeQuarter.png": {
+      "sha256": "f615b84e88ca4a59768953da16cae716906d97d899a8bf158c1e411c885df30b",
+      "bytes": 800981
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_HandToChest_SideR.png": {
+      "sha256": "575c4d5e8a43034ada832097ffac3519329d8f16a7a07562fcb7074a214d295c",
+      "bytes": 846302
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_LightBend_ArmpitL.png": {
+      "sha256": "80cf7f5905ced7644bc94a8c99996dc4c0419fd1f7fbe67d1a9299b9e69fa09f",
+      "bytes": 863560
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_LightBend_SideL.png": {
+      "sha256": "5ee945496531f3466c82ae746850ef822fe9efef3c461f4a12e63f867eb2ef0a",
+      "bytes": 857170
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\h7_elbow_weights_Rest_Front.png": {
+      "sha256": "a788906190014ce890dbd2ddf397fde6b657b27615b93d06b4708e57be897d40",
+      "bytes": 803871
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\RawImportBeforeNormalization.blend": {
+      "sha256": "02ad2ee94812288fc4670d010d97f54435965323b3259352bdab1f4e284c6581",
+      "bytes": 2568808
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Previews\\JacketDeformFix\\FinalReview\\UnityScopeStartHashes.json": {
+      "sha256": "de8428f6e0bc8b4c9f0fc727c9b469293b3cdd133650f4c1d5d93e0c202925b1",
+      "bytes": 5152
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\ProtectiveClothing.blend": {
+      "sha256": "08cfe9e9a4a722aa58b0857368b9321d1436ba6da6870aa11fb55ef6493bdacf",
+      "bytes": 38719809
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\README_Model.md": {
+      "sha256": "01bd75f4bb6b17ddcd8e28e8c3546c2b52cf06086e18a534d1f483419725026f",
+      "bytes": 53262
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\render_jacket_elbow_review.py": {
+      "sha256": "61e59d53fc51012ac4ad240da5efc204a1a94cfdde2f6510553b46718938d142",
+      "bytes": 1187
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\verify_jacket_delivery.py": {
+      "sha256": "905afa7c0a6aba2d62dd2f7a46ae94a15083a76511a2da11a7cbb9ddac1cb80f",
+      "bytes": 7694
+    },
+    "Docs\\B\\1104_보호장비_미비작업3건_수정기록.md": {
+      "sha256": "32ccdecb7db3e57c8d1aa6dbb7fb2b296b7568e541a1e6f463f81ee26052e5de",
+      "bytes": 34128
+    }
+  },
+  "checks": {
+    "artifact_hashes_match_review": true,
+    "pickup_and_meta_match_start": true,
+    "unity_scope_hashes_unchanged": false,
+    "external_scene_changes_preserved": true,
+    "material_image_visibility_identical": true,
+    "raw_blender_parent_local_check_passed": false,
+    "raw_fbx_hierarchy_passed": true,
+    "normalized_inspection_passed": true,
+    "source_and_uv_contract_passed": true
+  }
+}

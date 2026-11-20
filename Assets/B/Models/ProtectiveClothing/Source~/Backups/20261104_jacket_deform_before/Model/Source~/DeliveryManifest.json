@@ -1,0 +1,327 @@
+{
+  "ProtectiveClothing_Pickup.fbx": {
+    "bytes": 1002364,
+    "sha256": "427e1a51a27c86f3d8ffe7c08018a7b67cb586f64ba473e1c7dc2c6ecc075771"
+  },
+  "ProtectiveClothing_Worn.fbx": {
+    "bytes": 1632124,
+    "sha256": "6d50c7be3a6faecfc300ddf455d39bc0cf229d45d5d7c485c5a0ebbe8cc2c793"
+  },
+  "Source~/ActualAnchorManifest_Upgrade.json": {
+    "bytes": 8506,
+    "sha256": "759468fa92995c409911f9196d602c8f76f40bc6b6312481b0f5336c59da71ca"
+  },
+  "Source~/AnchorManifest.json": {
+    "bytes": 8506,
+    "sha256": "759468fa92995c409911f9196d602c8f76f40bc6b6312481b0f5336c59da71ca"
+  },
+  "Source~/BoundsComparison.csv": {
+    "bytes": 6247,
+    "sha256": "f168a047beb0ea12005cca00a19fdbb378a5be6b40cd3aa2fb65f160a73875a1"
+  },
+  "Source~/build_protective_clothing.py": {
+    "bytes": 20576,
+    "sha256": "82847f45519180b9425c9091e5adb1c1949336c32611b15ca1706691e32570ac"
+  },
+  "Source~/ColliderRecommendations.json": {
+    "bytes": 3805,
+    "sha256": "f2e82e3f5d0323e6bf4ff15e721759e73cffe50bb4a474279a6f2d8082473257"
+  },
+  "Source~/FBX_Roundtrip_Review.blend": {
+    "bytes": 2241860,
+    "sha256": "1b80b8d1830ccfa59882f5f2086c850fafcb32f910caef1a904b367a45fc59ee"
+  },
+  "Source~/finalize_documentation.py": {
+    "bytes": 17448,
+    "sha256": "fbb845f843d00364c6d84dc1d072b1a87a4065550c9274bfbd10ab409bdf36b7"
+  },
+  "Source~/FitAdjustments.json": {
+    "bytes": 112,
+    "sha256": "c4c0918dbd35e26500998477c563546415fa8fdb10e1f1c13d317d37d55bd042"
+  },
+  "Source~/inspect_pose.py": {
+    "bytes": 1384,
+    "sha256": "00a26f63753d1e3989f1fed8b49b95d74c43c81b8820bca83717984e4fe6a2c1"
+  },
+  "Source~/inspect_reference.py": {
+    "bytes": 1472,
+    "sha256": "f024f8c1e6e154ca66ed807f3c4c010a5b55c6386f17326e5eb7832fee551e6a"
+  },
+  "Source~/make_textures.py": {
+    "bytes": 1789,
+    "sha256": "bc5b9499f5ea14748042bfc7e4a0e25b61bf917e158ceef8214502e8ca374cdb"
+  },
+  "Source~/MeshNamePreservation.json": {
+    "bytes": 1197,
+    "sha256": "dbdd9ba8cc65dcb0932976821005bcba87ae64bb087e662002aad36652eed194"
+  },
+  "Source~/MeshStatistics.json": {
+    "bytes": 9787,
+    "sha256": "1e0df8b2d7fa9aef32426089def3fd0263e4b860407bee5bd7f441e08ee6687c"
+  },
+  "Source~/OriginalAssetHashes.json": {
+    "bytes": 615,
+    "sha256": "04caa058e874e7003c0b0b0c1d488dc81d34206dd5c9354ac49b55237e9bbc76"
+  },
+  "Source~/PoseInspection.json": {
+    "bytes": 69898,
+    "sha256": "1dfd62b65bd4f6fb53dbe97f00601cdbd6051593a0cbce007a7826e5b1ee2c80"
+  },
+  "Source~/ProtectiveClothing.blend": {
+    "bytes": 38527640,
+    "sha256": "10f8a2602ce06db4c5deb6c1d3a8dc02451d18ecae2e930eac6fbefe3996d0e9"
+  },
+  "Source~/README_Model.md": {
+    "bytes": 20797,
+    "sha256": "5bf9490126ab7bb5164c809703187c4df431b634502efd834e003d8f3b91d78a"
+  },
+  "Source~/ReferenceInspection.json": {
+    "bytes": 28002,
+    "sha256": "dbbfe8758fb070081c718e8ce395f502540b2cde38fc4a7703a27576171d08ad"
+  },
+  "Source~/UpgradeBackupPath.txt": {
+    "bytes": 120,
+    "sha256": "e1e6c78c41bf735969c5153c002c90ea5e2df42548ab55e001d9a7202ec239bb"
+  },
+  "Source~/UpgradeBaseline.json": {
+    "bytes": 63384,
+    "sha256": "5ec73417b96b2b0f083dab8c718531d6ce1e924855eef15dbff0e04a3163df00"
+  },
+  "Source~/UpgradeStatistics.json": {
+    "bytes": 10899,
+    "sha256": "ce5346180ccee4aa6ee721b3ded50df08b767d8e8fe9a31817f80ca72ddf046f"
+  },
+  "Source~/UpgradeValidation.json": {
+    "bytes": 23180,
+    "sha256": "8ef097ee46f4a518c8d291b31305a9778f0438f2a8d2566f65779e12961eca60"
+  },
+  "Source~/upgrade_documentation.py": {
+    "bytes": 26892,
+    "sha256": "679f050f27450b885a629dfd1633a265835b5614622c3289819d6fe4d7ccf3f7"
+  },
+  "Source~/upgrade_inspect.py": {
+    "bytes": 3043,
+    "sha256": "04d10ac58ee333bffb938ae380dce62348823fbf4e74da88528844feb1625a6b"
+  },
+  "Source~/upgrade_material_image.py": {
+    "bytes": 1504,
+    "sha256": "8675f32e4aaca79d356ae06761b1e7e80f49d238ab9545f4aedef1f014c0bda2"
+  },
+  "Source~/upgrade_model.py": {
+    "bytes": 26329,
+    "sha256": "918c533e012b8d5391690b98e24d250e38807042f7792eb33cb67cb65aaee99f"
+  },
+  "Source~/upgrade_render.py": {
+    "bytes": 2874,
+    "sha256": "5db1990d875e1f2543407c3f44bf0440c9f9877e459fd19f18945540d99a8d41"
+  },
+  "Source~/upgrade_textures.py": {
+    "bytes": 2892,
+    "sha256": "cbe321a243a066e00aaace66b753c39ae50295822728ed3f118f5297444e0171"
+  },
+  "Source~/upgrade_validate.py": {
+    "bytes": 9493,
+    "sha256": "8c1008a58ecad09c8e685a3e5a32c8176ca57486ce23e8853f48ba675756982f"
+  },
+  "Source~/validate_exports.py": {
+    "bytes": 6683,
+    "sha256": "953616b24a515cf1b40d088b1acef537aa50245b0e983c5c45c8cca0255334b7"
+  },
+  "Source~/ValidationReport.json": {
+    "bytes": 23180,
+    "sha256": "8ef097ee46f4a518c8d291b31305a9778f0438f2a8d2566f65779e12961eca60"
+  },
+  "Textures/PC_BaseColor_2K.png": {
+    "bytes": 1616066,
+    "sha256": "d35fce2d555ed7206e7d246a6e3b55f60eb0cab117aea0fee63a129c61f590b0"
+  },
+  "Textures/PC_Normal_1K.png": {
+    "bytes": 30226,
+    "sha256": "6dbed2c1233d34670cb1ef14e502a0f780f1337e5801f3261fd916d7dbe74c5d"
+  },
+  "Textures/PC_Roughness_1K.png": {
+    "bytes": 229066,
+    "sha256": "4da668bfcf1555686816d6c4fbc177b3c0b4909bec5e7b069d3a8cfac9cab3a9"
+  },
+  "Source~/Previews/Ankle_L.png": {
+    "bytes": 1325750,
+    "sha256": "9aba28f04e5325422891242250362d6a2b0ce91b886ae0d24e3b5b7be0118e43"
+  },
+  "Source~/Previews/Ankle_R.png": {
+    "bytes": 1313115,
+    "sha256": "5500ad2cd24ecc0596b7ddedb0c7977d862e4b19bcb3c0621f144340c5a07b84"
+  },
+  "Source~/Previews/Components_Separated.png": {
+    "bytes": 1348284,
+    "sha256": "c64e08953709e1af6d17b9e8c8c1c894e8bff6e9ea1cced988274582c46a1047"
+  },
+  "Source~/Previews/Hood_Close.png": {
+    "bytes": 1289080,
+    "sha256": "8242c5888f0b9ce6bb85a47a876d68b605b11578586af096b705ac4bac6101c9"
+  },
+  "Source~/Previews/Pickup_All.png": {
+    "bytes": 1324043,
+    "sha256": "01904514cef2fee21171115744baf6ab596181643ece93c7b9344a19a13311c2"
+  },
+  "Source~/Previews/Review_ContactSheet.jpg": {
+    "bytes": 257261,
+    "sha256": "c54bde21ee946dcbafc063b702539ea739d6cee7e733bc66f43b529853cfeb30"
+  },
+  "Source~/Previews/Worn_Back.png": {
+    "bytes": 1349956,
+    "sha256": "1e15070e751fff56ef855d9f5911e1dcd33153f1ea34b013ccd26972fc743a7e"
+  },
+  "Source~/Previews/Worn_Front.png": {
+    "bytes": 1365826,
+    "sha256": "c95cd466d15b3988ee02f4bb6a179398beabc5355ad9ef9181bb871f0903a260"
+  },
+  "Source~/Previews/Worn_Left.png": {
+    "bytes": 1308698,
+    "sha256": "8719ffbeb7282256efeb38d24649e17cd326290dd7ed848f2d80f94be12f4519"
+  },
+  "Source~/Previews/Worn_Right.png": {
+    "bytes": 1303539,
+    "sha256": "3bdb4d1089e3e52a7c9b623163902e1fe200d2b4e2956b379ba56ff01694824d"
+  },
+  "Source~/Previews/Worn_ThreeQuarter.png": {
+    "bytes": 1354278,
+    "sha256": "c46c2094a4ef347ad905d909aa5b8ed5f81057ec507506eadf54d889ba0efb5f"
+  },
+  "Source~/Previews/Wrist_L.png": {
+    "bytes": 1238123,
+    "sha256": "c69e606efc113f2f473af0f0440dd96f6607861a332ff8fdad55cdc1290784dc"
+  },
+  "Source~/Previews/Wrist_R.png": {
+    "bytes": 1229413,
+    "sha256": "55c17159bf7aae4b20bd1f5f74529b82d5ea41a01d1d94c3e52c164da07b6a01"
+  },
+  "Source~/ReferenceImages/ImageGen_Prompt.txt": {
+    "bytes": 1344,
+    "sha256": "8a71cf40dc198ab1a83ef8ef2b6cbae61d7f656532bc4fe187548e6a02fda8b6"
+  },
+  "Source~/ReferenceImages/Reference_01.png": {
+    "bytes": 62577,
+    "sha256": "a54cfd433dad26e00c127f91864fb6e28f7375d42fd27c0b1010043a5558290b"
+  },
+  "Source~/ReferenceImages/Reference_02.png": {
+    "bytes": 29328,
+    "sha256": "646c29821c101614749f10449028131770e3dd0514a7e6645446e31eb4f83970"
+  },
+  "Source~/ReferenceImages/Reference_03.png": {
+    "bytes": 29581,
+    "sha256": "6e14d00a5cd80b59424e9cd1764bccacef73d2164a9471c36b24de61e6f0b9d7"
+  },
+  "Source~/ReferenceImages/Reference_04.png": {
+    "bytes": 219809,
+    "sha256": "a058cee7231170ed28a5210ebbbd315eb2ffed5cc30afe20818adf8bb5d94cb7"
+  },
+  "Source~/ReferenceImages/Woodland_Generated_Master.png": {
+    "bytes": 1823445,
+    "sha256": "2407f80053cff9050eb17fc14f5b28a95003d03e0b124cf54e0ca1f74d5e89af"
+  },
+  "Source~/Previews/Before/Ankle_L.png": {
+    "bytes": 1306994,
+    "sha256": "bc5feb1174a09dab6b8702911175a1083f7e4fb199d69d550c0578c918d115a1"
+  },
+  "Source~/Previews/Before/Ankle_R.png": {
+    "bytes": 1317173,
+    "sha256": "b79488c930ad0b74704b8371a7775287667c520b602bb511e01c2cac12ab9f2f"
+  },
+  "Source~/Previews/Before/Components_Separated.png": {
+    "bytes": 1249569,
+    "sha256": "c168745a5a5860574e257f1437154af4301fe161ac4e96523b5dd14f18b9d28d"
+  },
+  "Source~/Previews/Before/Hood_Close.png": {
+    "bytes": 1192865,
+    "sha256": "7afa6445070d537e1cc718d80eaeebbe9f162b107fe3a1c8bf49302caa193113"
+  },
+  "Source~/Previews/Before/Pickup_All.png": {
+    "bytes": 1286355,
+    "sha256": "9c6ad037a24f50b31bf542938ebd83d5e9e43203d1b91b7672c99f6a7549276a"
+  },
+  "Source~/Previews/Before/Worn_Back.png": {
+    "bytes": 1256874,
+    "sha256": "2729280e09ec6f591a7a0a02b75036d46afbf37b5e655d2a4c375f3a540aa9ea"
+  },
+  "Source~/Previews/Before/Worn_Front.png": {
+    "bytes": 1260811,
+    "sha256": "9edcdc70a875629d1b079d8a79112d7ab78035de35a656a904ef628b3e74105c"
+  },
+  "Source~/Previews/Before/Worn_Left.png": {
+    "bytes": 1236122,
+    "sha256": "cc421ae370720ee35a52222cc2533dd5372ae0aa828c91597e4317f910ad9e92"
+  },
+  "Source~/Previews/Before/Worn_Right.png": {
+    "bytes": 1243960,
+    "sha256": "806933b30b757def15e637f4e33f337c2999add902612fe1ca4dbc5fd8b8673d"
+  },
+  "Source~/Previews/Before/Worn_ThreeQuarter.png": {
+    "bytes": 1248060,
+    "sha256": "6705f0b59505193fd16f4b6d13c01f6d88a767bd370dc57bddae1030ff6e24c8"
+  },
+  "Source~/Previews/Before/Wrist_L.png": {
+    "bytes": 1195592,
+    "sha256": "5db5882bd787d30e88e5936cb7d16dc4c248c1fba7022b1715e3de6674e0e0cc"
+  },
+  "Source~/Previews/Before/Wrist_R.png": {
+    "bytes": 1186774,
+    "sha256": "96781836b7aeed6bd7bed41fd463f7ef4a36839128d166a3c4c9ecedf8a87b58"
+  },
+  "Source~/Previews/Comparison/Ankle_L_Before_After.jpg": {
+    "bytes": 101222,
+    "sha256": "57ae66c049fce798d12f3cc0a231257d5f39c78ccb8f42c75a2218e989d73ff5"
+  },
+  "Source~/Previews/Comparison/Ankle_R_Before_After.jpg": {
+    "bytes": 102103,
+    "sha256": "dbc3f23c445b20f4dffb4cd597e02d79f78f438d51f4d5acf07857ab85e1c721"
+  },
+  "Source~/Previews/Comparison/Before_After_Overview.jpg": {
+    "bytes": 265265,
+    "sha256": "ea2a01a5ec17d606f5f30379e68606513f2244b335e440d6a740ff2c46f64a4f"
+  },
+  "Source~/Previews/Comparison/Components_Separated_Before_After.jpg": {
+    "bytes": 108072,
+    "sha256": "7f8202eba3525ff0ab48a3c684d270a88e1df3768c2371b81c71a946d257d469"
+  },
+  "Source~/Previews/Comparison/Hood_Close_Before_After.jpg": {
+    "bytes": 103066,
+    "sha256": "2e0fa1e70a8cc6c353c6459c4ee561326b3d8b1e48f4c64694ab949acc5a8962"
+  },
+  "Source~/Previews/Comparison/Pickup_All_Before_After.jpg": {
+    "bytes": 95362,
+    "sha256": "ef9dd7f6b52e7f658521e61244ec9683e0ef11eb3e82be0cd8c0c8064e77ab1c"
+  },
+  "Source~/Previews/Comparison/Worn_Back_Before_After.jpg": {
+    "bytes": 98642,
+    "sha256": "6f2fa12cbfe2af66b11f7f1df5ab09bc89361b3c15866446336104c48d284b34"
+  },
+  "Source~/Previews/Comparison/Worn_Front_Before_After.jpg": {
+    "bytes": 103437,
+    "sha256": "3b4f023c480dd638b95bf2f09e7bf6fd63cf91551f5566668a96d55dd99c8c5c"
+  },
+  "Source~/Previews/Comparison/Worn_Left_Before_After.jpg": {
+    "bytes": 79861,
+    "sha256": "197a48cf799498fb66820520bb2c56161788f710369da8e59b4883594e8f24d8"
+  },
+  "Source~/Previews/Comparison/Worn_Right_Before_After.jpg": {
+    "bytes": 81912,
+    "sha256": "9c61580eaa176def4825f61a1eb91f951a0695f30bc54753c1441eb39c27f7bb"
+  },
+  "Source~/Previews/Comparison/Worn_ThreeQuarter_Before_After.jpg": {
+    "bytes": 106887,
+    "sha256": "918c02052a7336d54fe87b32e97ca6e646f035c1f27627b47e280c19b3790ee6"
+  },
+  "Source~/Previews/Comparison/Wrist_L_Before_After.jpg": {
+    "bytes": 67302,
+    "sha256": "d247229ba601b9faad4c204570a569c33689856612490bc3f445071cf8062580"
+  },
+  "Source~/Previews/Comparison/Wrist_R_Before_After.jpg": {
+    "bytes": 68548,
+    "sha256": "8cadf66128e6ada610d1959c3b5c4695f8390a252dce529f3843856795a3938f"
+  },
+  "Assets/B/Materials/ProtectiveClothing/PC_MetallicSmoothness_1K.png": {
+    "bytes": 338528,
+    "sha256": "4981604fdbc6920a38f0097b52ae19196e60232fd444df38cdd1cf341e33f979",
+    "relative_to": "project_root"
+  }
+}

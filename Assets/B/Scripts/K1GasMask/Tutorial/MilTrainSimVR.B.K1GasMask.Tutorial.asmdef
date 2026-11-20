@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.K1GasMask.Tutorial",
+    "rootNamespace": "MilTrainSimVR.B.K1GasMask.Tutorial",
+    "references": ["MilTrainSimVR.B.TrainingUI", "MilTrainSimVR.B.K1GasMask", "MilTrainSimVR.B.Training", "Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit"]
+}

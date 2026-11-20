@@ -1,0 +1,639 @@
+{
+  "source": "ProtectiveClothing.blend",
+  "fit_method": "Clothing vertices nearest reference surface signed normal; diagnostic only, not proof of watertight containment. Original reference normals used.",
+  "fit": {
+    "Jacket_Worn": {
+      "samples": 3918,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.0031043372182466555,
+      "worst_samples": []
+    },
+    "Trousers_Worn": {
+      "samples": 2916,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.013589911628514528,
+      "worst_samples": []
+    },
+    "Glove_L_Worn": {
+      "samples": 1512,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.00516225618775934,
+      "worst_samples": []
+    },
+    "Overboot_L_Worn": {
+      "samples": 900,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.0036570160438031962,
+      "worst_samples": []
+    },
+    "Glove_R_Worn": {
+      "samples": 1528,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.004778696107678115,
+      "worst_samples": []
+    },
+    "Overboot_R_Worn": {
+      "samples": 900,
+      "samples_inside_reference_over_1mm": 0,
+      "deepest_signed_distance_m": 0.003619822971359099,
+      "worst_samples": []
+    }
+  },
+  "roundtrip": {
+    "Worn": {
+      "passed": true,
+      "object_count": 13,
+      "mesh_count": 6,
+      "errors": [],
+      "details": {
+        "Attach_Glove_L_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 2.3096799850463867e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Glove_L_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 3014,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.421438694000244e-07,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Glove_R_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 2.3096799850463867e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Glove_R_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 3046,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.421438694000244e-07,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Jacket_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 2.1047890186309814e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Jacket_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 7816,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.4959444999694824e-07,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Overboot_L_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Overboot_L_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1790,
+          "triangles_match": true,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Overboot_R_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Overboot_R_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1790,
+          "triangles_match": true,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Trousers_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Trousers_Worn": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 5836,
+          "triangles_match": true,
+          "max_vertex_error_m": 1.6391277313232422e-07,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "ProtectiveClothing_Worn": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "no_reference_rig_camera_light": true,
+      "fbx_global_settings": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "FrontAxis": 2,
+        "FrontAxisSign": 1,
+        "CoordAxis": 0,
+        "CoordAxisSign": 1,
+        "UnitScaleFactor": 100.0,
+        "OriginalUnitScaleFactor": 100.0
+      }
+    },
+    "Pickup": {
+      "passed": true,
+      "object_count": 19,
+      "mesh_count": 6,
+      "errors": [],
+      "details": {
+        "Attach_Glove_L_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Glove_L_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Glove_L_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 3016,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.686345013103164e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Glove_R_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Glove_R_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Glove_R_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 3048,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.686345013103164e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Jacket_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Jacket_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Jacket_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1440,
+          "triangles_match": true,
+          "max_vertex_error_m": 2.686345013103164e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Overboot_L_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Overboot_L_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Overboot_L_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1790,
+          "triangles_match": true,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Overboot_R_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Overboot_R_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Overboot_R_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 1790,
+          "triangles_match": true,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "Attach_Trousers_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Grip_Trousers_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "Trousers_Pickup": {
+          "type": "MESH",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "triangles": 940,
+          "triangles_match": true,
+          "max_vertex_error_m": 3.003425064207477e-08,
+          "uv_layers": 1,
+          "material_slots": 1
+        },
+        "ProtectiveClothing_Pickup": {
+          "type": "EMPTY",
+          "matrix_max_abs_error": 1.6292068494294654e-07,
+          "parent_matches": true,
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "no_reference_rig_camera_light": true,
+      "fbx_global_settings": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "FrontAxis": 2,
+        "FrontAxisSign": 1,
+        "CoordAxis": 0,
+        "CoordAxisSign": 1,
+        "UnitScaleFactor": 100.0,
+        "OriginalUnitScaleFactor": 100.0
+      }
+    }
+  },
+  "original_hashes": {
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Mannequin\\Mannequin.fbx": {
+      "expected": "09c62c3f9da9cf6b60963650249d5cb6d2e908f57048fef334d7a5b108c71e0d",
+      "actual": "09c62c3f9da9cf6b60963650249d5cb6d2e908f57048fef334d7a5b108c71e0d",
+      "unchanged": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\K1_GasMask.fbx": {
+      "expected": "d7a7e3ad39989dbc172791ef9fddc53c45cab1397c733fbfb5e17fd864721f33",
+      "actual": "d7a7e3ad39989dbc172791ef9fddc53c45cab1397c733fbfb5e17fd864721f33",
+      "unchanged": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_K1_Tutorial.unity": {
+      "expected": "4755662e389b211ebca9bab9c45d42a4c06b215e715bcc840a5c440b9680f569",
+      "actual": "4755662e389b211ebca9bab9c45d42a4c06b215e715bcc840a5c440b9680f569",
+      "unchanged": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\K1GasMask\\MirrorAvatar\\K1UserAvatar.cs": {
+      "expected": "fd9c82140d9b751ce9c0510cfb628b526402ced405da991a4000f1ed869bb49a",
+      "actual": "fd9c82140d9b751ce9c0510cfb628b526402ced405da991a4000f1ed869bb49a",
+      "unchanged": true
+    }
+  },
+  "mesh_health": {
+    "Jacket_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.002087031762076502,
+        3.1885908577722245e-05,
+        0.0001685569265641821,
+        3.128330922663733e-05,
+        9.340823362513631e-05,
+        0.00016856795064965988,
+        3.128556244291755e-05,
+        9.34124537821379e-05,
+        2.6399523486967786e-05,
+        2.640266668170927e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Trousers_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.0017044868700727227,
+        6.424226354810139e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Glove_L_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.0001260891857193986,
+        4.422506149737155e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Overboot_L_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00038786965150809416,
+        3.5206119190907735e-05,
+        3.171095638698773e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Glove_R_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00012613340125729639,
+        4.422982707434165e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Overboot_R_Worn": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00038916801962848624,
+        3.4958629330598505e-05,
+        3.171096622208343e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Jacket_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.0005694811298487442,
+        2.0620927349076137e-05,
+        0.0005694813190473269,
+        0.0024801741754341324,
+        2.06209713198291e-05,
+        0.002346686303175978,
+        0.0024801747287170883,
+        5.643095608694656e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Trousers_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.002416814536121213,
+        0.0002957188945629241,
+        0.0022638860263608333,
+        9.50162489958489e-06,
+        0.0024168141325359676
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Glove_L_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00012607566525267103,
+        4.423704468455488e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 8,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Glove_R_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00012614017989269014,
+        4.4237046598283314e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 8,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Overboot_L_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.00038787000663050654,
+        3.171093210697208e-05,
+        3.520526241255576e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    },
+    "Overboot_R_Pickup": {
+      "spatial_duplicate_faces_1um": 0,
+      "closed_island_signed_volumes_m3": [
+        0.0003891681535434603,
+        3.171092105431974e-05,
+        3.495906614385073e-05
+      ],
+      "inward_closed_islands": 0,
+      "boundary_edges": 4,
+      "nonmanifold_nonboundary_edges": 0,
+      "degenerate_faces": 0
+    }
+  }
+}

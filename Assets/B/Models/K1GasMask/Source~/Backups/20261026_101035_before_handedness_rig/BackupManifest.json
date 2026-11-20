@@ -1,0 +1,32 @@
+{
+  "K1_GasMask.fbx": {
+    "backup": "K1_GasMask.fbx",
+    "sha256": "3c6fbe6aadbf0c4ff2ece9f3921e1ea613a474d19094b730baea39309aacb3f4",
+    "bytes": 1141164
+  },
+  "K1_GasMask_Collision.fbx": {
+    "backup": "K1_GasMask_Collision.fbx",
+    "sha256": "85bab5055e6d841c57342bf35f6da837c84516e8582d7cf359028519b7bf1206",
+    "bytes": 19980
+  },
+  "Source~/K1_GasMask.blend": {
+    "backup": "K1_GasMask.blend",
+    "sha256": "ee600774ee3485e7216d4f91ad0c5f024385547df2c4bf8f1642f9cba7db828d",
+    "bytes": 527099
+  },
+  "Source~/README_Import.md": {
+    "backup": "README_Import.md",
+    "sha256": "de563b095997c45840c15dff1c14ed0a1b47ce48a0c639a25c2c89d399b0980c",
+    "bytes": 17538
+  },
+  "Source~/References.md": {
+    "backup": "References.md",
+    "sha256": "7fa81a9ec5246240d7faf07feb44b509ced33c2fca8e70e0a8b68f691d971bfe",
+    "bytes": 2769
+  },
+  "Source~/K1_Validation.json": {
+    "backup": "K1_Validation.json",
+    "sha256": "51f73853e3cef73fb5c935437e4af3d9f9c905f316096a51ba92bb7759ced6d7",
+    "bytes": 37195
+  }
+}

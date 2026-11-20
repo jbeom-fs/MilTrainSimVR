@@ -1,0 +1,8 @@
+﻿path,center_x,center_y,center_z,size_x,size_y,size_z,world_size_x,world_size_y,world_size_z,triangles
+Tourniquet_Model/Part_Band/Visual,0.0,0.0,0.0,0.1224,0.1224,0.038,0.1224,0.1224,0.038,4480
+Tourniquet_Model/Part_Body/Visual,-0.00975,0.007975,0.0,0.1215,0.04755,0.049,0.1215,0.04755,0.049,2680
+Tourniquet_Model/Pivot_WindlassAxis/Part_Windlass/Visual,0.0,0.0,0.0,0.11,0.0125235,0.0116877,0.11,0.0125235,0.0116877,2684
+Tourniquet_Model/Part_WindlassClip/Visual,-0.0,-0.0041864,0.00075,0.018,0.0298728,0.0235,0.0268626,0.0298728,0.0288758,756
+Tourniquet_Model/Part_SecuringStrap/Visual,0.0,0.002,0.022,0.024,0.0049,0.044,0.024,0.0049,0.044,576
+Tourniquet_Model/Part_TimeLabel/Visual,0.0,-0.0005209,-0.0,0.022,0.0030167,0.032,0.022,0.0030167,0.032,416
+Tourniquet_Model/Part_Band/Pivot_BandEnd/Visual,0.0,-0.0098957,-0.0501137,0.036,0.0264889,0.1004818,0.102765,0.024,0.036,1536

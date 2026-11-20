@@ -1,0 +1,6 @@
+{
+    "name": "MilTrainSimVR.B.Training.Tests",
+    "references": ["MilTrainSimVR.B.Training"],
+    "includePlatforms": ["Editor"],
+    "optionalUnityReferences": ["TestAssemblies"]
+}

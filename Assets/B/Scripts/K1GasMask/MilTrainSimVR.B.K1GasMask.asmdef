@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.K1GasMask",
+    "rootNamespace": "MilTrainSimVR.B.K1GasMask",
+    "references": ["MilTrainSimVR.B.Interaction", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

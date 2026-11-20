@@ -1,0 +1,10 @@
+{
+    "name": "MilTrainSimVR.A.Rifle",
+    "rootNamespace": "MilTrainSimVR.A.Rifle",
+    "references": [
+        "MilTrainSimVR.A.Common",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem"
+    ]
+}

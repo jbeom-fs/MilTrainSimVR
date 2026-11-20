@@ -1,0 +1,62 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5B3DAD5A8033A233A3EB68B5E343C6BE37C077D6E69633E4F45A4C414A460082",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\1104_보호장비_미비작업3건_수정기록.md"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "59B58F5FD0BA981B85C85E4F2C35E3D9C5C1380A3CC635FA49858C595F5FC588",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\FBX_Roundtrip_Review.blend"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D0C14AAEDDA7AA3218AE063C81D70A9FFED05C2DE82CDB242ED970C3E14E2C96",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\JacketDeformFixExperiments.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D23466844112B17528A411EADE9C380B66D262199CB97815EB5B56C1AD53F100",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\JacketDeformFixReport.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "C86DEA10E300DFECF1FA4FFECD578290BAFACBA8BDAFB058DB678E88B13E85B9",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\jacket_deform_fix.log"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "0EE76BEA511BA95087EEFF08D8A629FBDE4C2B2C8F1D278780FD8FA0F4A270DA",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\jacket_deform_fix.py"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "463F049A881A62B8875025D746792660AEB591CEDFBBFA55D37DD70C4CA2F68B",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing.blend"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "90A5E78430F742D55EFBE0D0297A1C57F9B5552E4C8A322F6E5EB89F10240E8A",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Pickup.fbx"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B7F899001A241FE7261451FF2BE42D2D86AB2FDDDB747C657B20CBB722916903",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Pickup.fbx.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E29A21AA86FC5772A0367B58EA036515917B4CF86D55E1F03405A73EE2E0B315",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Worn.fbx"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "88F8D0973A4C4E11609295CFD4B6986A77F2C75C3A2824FB6DB66F6DFDFC59F0",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Worn.fbx.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "D7B15757CF506991BCEAB9359D5EC3383C7AEDC6028B1A0649F00A55AC400819",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\README_Model.md"
+    }
+]

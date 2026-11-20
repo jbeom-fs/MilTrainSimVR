@@ -1,0 +1,19 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/watch/orig/Watch_orig.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/watch/orig/tripo_model_basecolor.jpg",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/watch/orig/tripo_model_normal.jpg",
+  "metallic": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/watch/orig/tripo_model_metallic.jpg",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/watch/orig/tripo_model_roughness.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/watch",
+ "name": "Watch",
+ "target_tris": 12000,
+ "planar_deg": 2.0,
+ "hide_remove": false,
+ "tex_res": 2048,
+ "cage": 0.008,
+ "ray": 0.02,
+ "bake_margin": 24,
+ "bake_samples": 16
+}

@@ -1,0 +1,16 @@
+{
+    "name": "MilTrainSimVR.A.Editor",
+    "rootNamespace": "MilTrainSimVR.A.EditorTools",
+    "references": [
+        "MilTrainSimVR.A.Assembly",
+        "MilTrainSimVR.A.Common",
+        "MilTrainSimVR.A.Range",
+        "MilTrainSimVR.A.Rifle",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ]
+}

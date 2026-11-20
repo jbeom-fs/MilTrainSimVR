@@ -1,0 +1,90 @@
+{
+  "tool": "Blender native FBX importer + explicit RH->Unity LH X-reflection audit; no Unity operations",
+  "handedness_audit": "positions_U=H@positions_F; rotations_U=H@rotations_F@H. H=diag(-1,1,1). Unity importer result remains user-unverified.",
+  "mesh_count": 7,
+  "empty_count": 12,
+  "triangles": 13128,
+  "world_min_unity_m": [
+    -0.15099996328353882,
+    -0.06120000034570694,
+    -0.024500003084540367
+  ],
+  "world_max_unity_m": [
+    0.06120000034570694,
+    0.10126174986362457,
+    0.08099999278783798
+  ],
+  "maximum_bound_roundtrip_error_m": 4.986362457659599e-08,
+  "windlass_axis_world_axes_unity": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      -7.549790126404332e-08
+    ],
+    [
+      0.0,
+      7.549790126404332e-08,
+      1.0
+    ]
+  ],
+  "band_end_world_axes_unity": [
+    [
+      1.9470718370939721e-07,
+      7.549790126404332e-08,
+      1.0
+    ],
+    [
+      -0.25449338555336,
+      0.9670745134353638,
+      -2.3460405174091647e-08
+    ],
+    [
+      -0.9670745134353638,
+      -0.25449338555336,
+      2.0751006957198115e-07
+    ]
+  ],
+  "time_surface_world_axes_unity": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.9966999888420105,
+      -0.08117327094078064
+    ],
+    [
+      0.0,
+      0.08117327094078064,
+      0.9966999888420105
+    ]
+  ],
+  "root_scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "limb_position_unity": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "all_faces_triangles": true,
+  "root_children": [
+    "Part_Band",
+    "Part_Body",
+    "Part_SecuringStrap",
+    "Part_TimeLabel",
+    "Part_WindlassClip",
+    "Pivot_WindlassAxis",
+    "Point_Grab",
+    "Point_LimbAttach"
+  ]
+}

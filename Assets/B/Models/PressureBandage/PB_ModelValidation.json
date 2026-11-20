@@ -1,0 +1,1514 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "unit_system": "METRIC",
+  "unit_scale": 1.0,
+  "meshes": {
+    "PB_DressingPad": {
+      "vertices": 96,
+      "edges": 192,
+      "faces": 98,
+      "triangles": 188,
+      "dimensions_m": [
+        0.1,
+        0.1,
+        0.004
+      ],
+      "origin_world_m": [
+        0.075,
+        0.18000001,
+        0.015
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 3.954674818212222e-05,
+      "min_normal_z": -1.0,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Dressing"
+      ],
+      "modifiers": 0
+    },
+    "PB_BandageRoll": {
+      "vertices": 1538,
+      "edges": 3136,
+      "faces": 1600,
+      "triangles": 3072,
+      "dimensions_m": [
+        0.06,
+        0.08,
+        0.06
+      ],
+      "origin_world_m": [
+        0.27000001,
+        0.18000001,
+        0.045
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 0.00022361613557627047,
+      "min_normal_z": -0.998795,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Bandage"
+      ],
+      "modifiers": 0
+    },
+    "PB_BandageStrip": {
+      "vertices": 505,
+      "edges": 904,
+      "faces": 400,
+      "triangles": 800,
+      "dimensions_m": [
+        1.0,
+        0.08,
+        0.0
+      ],
+      "origin_world_m": [
+        0.0,
+        -0.02,
+        0.015
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 208,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 0.0,
+      "min_normal_z": 1.0,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Bandage"
+      ],
+      "modifiers": 0,
+      "stations": 101,
+      "station_spacing_minmax_m": [
+        0.01,
+        0.01
+      ]
+    },
+    "PB_WrapStrip": {
+      "vertices": 505,
+      "edges": 904,
+      "faces": 400,
+      "triangles": 800,
+      "dimensions_m": [
+        1.0,
+        0.08,
+        0.0
+      ],
+      "origin_world_m": [
+        0.0,
+        -0.2,
+        0.015
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 208,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 0.0,
+      "min_normal_z": 1.0,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Bandage"
+      ],
+      "modifiers": 0,
+      "stations": 101,
+      "station_spacing_minmax_m": [
+        0.01,
+        0.01
+      ]
+    },
+    "PB_BandageEnd": {
+      "vertices": 35,
+      "edges": 58,
+      "faces": 24,
+      "triangles": 48,
+      "dimensions_m": [
+        0.06,
+        0.08,
+        0.0
+      ],
+      "origin_world_m": [
+        0.47999999,
+        0.18000001,
+        0.015
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 20,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 0.0,
+      "min_normal_z": 1.0,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Bandage"
+      ],
+      "modifiers": 0,
+      "stations": 7,
+      "station_spacing_minmax_m": [
+        0.01,
+        0.01
+      ]
+    },
+    "PB_FixingTape": {
+      "vertices": 40,
+      "edges": 60,
+      "faces": 22,
+      "triangles": 76,
+      "dimensions_m": [
+        0.1,
+        0.025,
+        0.0003
+      ],
+      "origin_world_m": [
+        0.72000003,
+        0.18000001,
+        0.015
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_excluding_boundary": 0,
+      "loose_vertices": 0,
+      "duplicate_vertices": 0,
+      "duplicate_faces": 0,
+      "zero_area_faces": 0,
+      "signed_volume_m3": 7.488738164008314e-07,
+      "min_normal_z": -1.0,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "MAT_PB_Tape"
+      ],
+      "modifiers": 0
+    }
+  },
+  "anchors": {
+    "Anchor_DressingGrab": {
+      "parent": "PB_DressingPad",
+      "local_position_m": [
+        0.038,
+        0.0,
+        0.008
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Edge grasp above top, distinct from pivot and press"
+    },
+    "Anchor_DressingContact": {
+      "parent": "PB_DressingPad",
+      "local_position_m": [
+        0.0,
+        0.0,
+        -0.002
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Contact face center; outward normal -Z"
+    },
+    "Anchor_DressingPress": {
+      "parent": "PB_DressingPad",
+      "local_position_m": [
+        0.0,
+        0.0,
+        0.002
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Top face center; outward normal +Z"
+    },
+    "Anchor_RollGrab": {
+      "parent": "PB_BandageRoll",
+      "local_position_m": [
+        0.0,
+        -0.012,
+        0.018
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Cloth body grasp offset from rotation pivot"
+    },
+    "Anchor_RollAxis": {
+      "parent": "PB_BandageRoll",
+      "local_position_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Axis center; local +Y is roll axis"
+    },
+    "Anchor_RollExit": {
+      "parent": "PB_BandageRoll",
+      "local_position_m": [
+        0.0,
+        0.0,
+        -0.03
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Tangent exit center; tangent +X; width +Y; surface normal +Z"
+    },
+    "Anchor_StripStart": {
+      "parent": "PB_BandageStrip",
+      "local_position_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Start edge center"
+    },
+    "Anchor_StripEnd": {
+      "parent": "PB_BandageStrip",
+      "local_position_m": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "End edge center"
+    },
+    "Anchor_WrapStart": {
+      "parent": "PB_WrapStrip",
+      "local_position_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Wrap template start edge center"
+    },
+    "Anchor_WrapEnd": {
+      "parent": "PB_WrapStrip",
+      "local_position_m": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Wrap template end edge center"
+    },
+    "Anchor_EndGrab": {
+      "parent": "PB_BandageEnd",
+      "local_position_m": [
+        0.052,
+        0.0,
+        0.008
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Free end grasp, above cloth"
+    },
+    "Anchor_EndFix": {
+      "parent": "PB_BandageEnd",
+      "local_position_m": [
+        0.04,
+        0.0,
+        0.0
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Fixing zone center on cloth surface"
+    },
+    "Anchor_TapeGrab": {
+      "parent": "PB_FixingTape",
+      "local_position_m": [
+        0.038,
+        0.0,
+        0.005
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Edge grasp above adhesive strip"
+    },
+    "Anchor_TapeContact": {
+      "parent": "PB_FixingTape",
+      "local_position_m": [
+        0.0,
+        0.0,
+        -0.00015
+      ],
+      "local_rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "role": "Adhesive contact side -Z"
+    }
+  },
+  "materials": {
+    "MAT_PB_Dressing": {
+      "roughness": 0.8799999952316284,
+      "two_sided_in_blender": true,
+      "images": [
+        {
+          "file": "//Textures\\PB_Dressing_BaseColor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "sRGB",
+          "exists": true
+        },
+        {
+          "file": "//Textures\\PB_Dressing_Normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "Non-Color",
+          "exists": true
+        }
+      ]
+    },
+    "MAT_PB_Bandage": {
+      "roughness": 0.8799999952316284,
+      "two_sided_in_blender": true,
+      "images": [
+        {
+          "file": "//Textures\\PB_Bandage_BaseColor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "sRGB",
+          "exists": true
+        },
+        {
+          "file": "//Textures\\PB_Bandage_Normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "Non-Color",
+          "exists": true
+        }
+      ]
+    },
+    "MAT_PB_Tape": {
+      "roughness": 0.6399999856948853,
+      "two_sided_in_blender": true,
+      "images": [
+        {
+          "file": "//Textures\\PB_Tape_BaseColor.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "sRGB",
+          "exists": true
+        },
+        {
+          "file": "//Textures\\PB_Tape_Normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "color_space": "Non-Color",
+          "exists": true
+        }
+      ]
+    }
+  },
+  "totals": {
+    "meshes": 6,
+    "anchors": 14,
+    "vertices": 2719,
+    "faces": 2544,
+    "triangles": 4984
+  },
+  "fbx_imported_objects": 20,
+  "fbx_imported_types": [
+    "EMPTY",
+    "EMPTY",
+    "MESH",
+    "EMPTY",
+    "EMPTY",
+    "EMPTY",
+    "MESH",
+    "EMPTY",
+    "EMPTY",
+    "MESH",
+    "EMPTY",
+    "EMPTY",
+    "EMPTY",
+    "MESH",
+    "EMPTY",
+    "EMPTY",
+    "MESH",
+    "EMPTY",
+    "EMPTY",
+    "MESH"
+  ],
+  "roundtrip": {
+    "PB_DressingPad": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 1.7096809301619942e-08,
+      "triangles": 188,
+      "material_names": [
+        "MAT_PB_Dressing"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "PB_BandageRoll": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 1.666000493116826e-08,
+      "triangles": 3072,
+      "material_names": [
+        "MAT_PB_Bandage"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "PB_BandageStrip": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 6.51925802230835e-09,
+      "triangles": 800,
+      "material_names": [
+        "MAT_PB_Bandage"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "PB_WrapStrip": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 6.51925802230835e-09,
+      "triangles": 800,
+      "material_names": [
+        "MAT_PB_Bandage"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "PB_BandageEnd": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 6.51925802230835e-09,
+      "triangles": 48,
+      "material_names": [
+        "MAT_PB_Bandage"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "PB_FixingTape": {
+      "found": true,
+      "type": "MESH",
+      "parent": null,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07,
+      "max_vertex_error_m": 1.862645149230957e-09,
+      "triangles": 76,
+      "material_names": [
+        "MAT_PB_Tape"
+      ],
+      "uv_layers": [
+        "UV0"
+      ]
+    },
+    "Anchor_DressingGrab": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_DressingPad",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_DressingContact": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_DressingPad",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_DressingPress": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_DressingPad",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_RollGrab": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageRoll",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_RollAxis": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageRoll",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_RollExit": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageRoll",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_StripStart": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageStrip",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_StripEnd": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageStrip",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_WrapStart": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_WrapStrip",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_WrapEnd": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_WrapStrip",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_EndGrab": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageEnd",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_EndFix": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_BandageEnd",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_TapeGrab": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_FixingTape",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    },
+    "Anchor_TapeContact": {
+      "found": true,
+      "type": "EMPTY",
+      "parent": "PB_FixingTape",
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "world_origin_error_m": 0.0,
+      "matrix_max_error": 1.6292068494294654e-07
+    }
+  },
+  "tolerance_m": 2e-06,
+  "unity_verified": false,
+  "roundtrip_pass": true,
+  "fbx_file": {
+    "version": 7400,
+    "global_settings": {
+      "UpAxis": [
+        1
+      ],
+      "UpAxisSign": [
+        1
+      ],
+      "FrontAxis": [
+        2
+      ],
+      "FrontAxisSign": [
+        1
+      ],
+      "CoordAxis": [
+        0
+      ],
+      "CoordAxisSign": [
+        1
+      ],
+      "OriginalUpAxis": [
+        -1
+      ],
+      "OriginalUpAxisSign": [
+        1
+      ],
+      "UnitScaleFactor": [
+        100.0
+      ],
+      "OriginalUnitScaleFactor": [
+        100.0
+      ],
+      "AmbientColor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "DefaultCamera": [
+        "Producer Perspective"
+      ],
+      "TimeMode": [
+        11
+      ],
+      "TimeSpanStart": [
+        0
+      ],
+      "TimeSpanStop": [
+        46186158000
+      ],
+      "CustomFrameRate": [
+        24.0
+      ]
+    },
+    "model_transforms": [
+      {
+        "name": "Anchor_DressingContact\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.0,
+            -0.0020000003278255463
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Contact face center; outward normal -Z"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_DressingGrab\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.03800000250339508,
+            0.0,
+            0.00800000037997961
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Edge grasp above top, distinct from pivot and press"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_DressingPress\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.0,
+            0.0019999993965029716
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Top face center; outward normal +Z"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_EndFix\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.03999999165534973,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Fixing zone center on cloth surface"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_EndGrab\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0520000159740448,
+            0.0,
+            0.00800000037997961
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Free end grasp, above cloth"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_RollAxis\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Axis center; local +Y is roll axis"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_RollExit\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.0,
+            -0.029999999329447746
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Tangent exit center; tangent +X; width +Y; surface normal +Z"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_RollGrab\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            -0.01199999451637268,
+            0.017999999225139618
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Cloth body grasp offset from rotation pivot"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_StripEnd\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "End edge center"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_StripStart\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Start edge center"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_TapeContact\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.0,
+            -0.00014999974519014359
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Adhesive contact side -Z"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_TapeGrab\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            0.03799998760223389,
+            0.0,
+            0.004999999888241291
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Edge grasp above adhesive strip"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_WrapEnd\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "Lcl Translation": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Wrap template end edge center"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "Anchor_WrapStart\u0000\u0001Model",
+        "kind": "Null",
+        "properties": {
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "role": [
+            "Wrap template start edge center"
+          ],
+          "coordinate_basis": [
+            "Parent local Blender XYZ; meters"
+          ]
+        }
+      },
+      {
+        "name": "PB_BandageEnd\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.47999998927116394,
+            0.014999999664723873,
+            -0.18000000715255737
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "surface": [
+            "Single surface, +Z normal; two-sided material required in Unity"
+          ],
+          "uv_tile_m": [
+            0.08
+          ],
+          "length_segments": [
+            6
+          ],
+          "width_segments": [
+            4
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.47999998927116394,
+            0.18000000715255737,
+            0.014999999664723873
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      },
+      {
+        "name": "PB_BandageRoll\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.27000001072883606,
+            0.04500000178813934,
+            -0.18000000715255737
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.27000001072883606,
+            0.18000000715255737,
+            0.04500000178813934
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      },
+      {
+        "name": "PB_BandageStrip\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.014999999664723873,
+            0.019999999552965164
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "surface": [
+            "Single surface, +Z normal; two-sided material required in Unity"
+          ],
+          "uv_tile_m": [
+            0.08
+          ],
+          "length_segments": [
+            100
+          ],
+          "width_segments": [
+            4
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.0,
+            -0.019999999552965164,
+            0.014999999664723873
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      },
+      {
+        "name": "PB_DressingPad\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.07500000298023224,
+            0.014999999664723873,
+            -0.18000000715255737
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.07500000298023224,
+            0.18000000715255737,
+            0.014999999664723873
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      },
+      {
+        "name": "PB_FixingTape\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.7200000286102295,
+            0.014999999664723873,
+            -0.18000000715255737
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.7200000286102295,
+            0.18000000715255737,
+            0.014999999664723873
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      },
+      {
+        "name": "PB_WrapStrip\u0000\u0001Model",
+        "kind": "Mesh",
+        "properties": {
+          "Lcl Translation": [
+            0.0,
+            0.014999999664723873,
+            0.20000000298023224
+          ],
+          "Lcl Rotation": [
+            -90.00000933466734,
+            0.0,
+            0.0
+          ],
+          "DefaultAttributeIndex": [
+            0
+          ],
+          "InheritType": [
+            1
+          ],
+          "surface": [
+            "Single surface, +Z normal; two-sided material required in Unity"
+          ],
+          "uv_tile_m": [
+            0.08
+          ],
+          "length_segments": [
+            100
+          ],
+          "width_segments": [
+            4
+          ],
+          "status": [
+            "Generic modeling dimensions; actual product unspecified"
+          ],
+          "preview_location_m": [
+            0.0,
+            -0.20000000298023224,
+            0.014999999664723873
+          ],
+          "reset_note": [
+            "Duplicate source mesh for runtime deformation; preserve original positions and visibility"
+          ]
+        }
+      }
+    ],
+    "texture_references": [
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Bandage_BaseColor.png"
+        ]
+      },
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Bandage_Normal.png"
+        ]
+      },
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Dressing_BaseColor.png"
+        ]
+      },
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Dressing_Normal.png"
+        ]
+      },
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Tape_BaseColor.png"
+        ]
+      },
+      {
+        "RelativeFilename": [
+          "Textures\\PB_Tape_Normal.png"
+        ]
+      }
+    ]
+  },
+  "roundtrip_max_vertex_error_m": 1.7096809301619942e-08,
+  "normal_consistency": {
+    "PB_DressingPad": {
+      "inconsistent_manifold_edge_winding": 0
+    },
+    "PB_BandageRoll": {
+      "inconsistent_manifold_edge_winding": 0
+    },
+    "PB_BandageStrip": {
+      "inconsistent_manifold_edge_winding": 0
+    },
+    "PB_WrapStrip": {
+      "inconsistent_manifold_edge_winding": 0
+    },
+    "PB_BandageEnd": {
+      "inconsistent_manifold_edge_winding": 0
+    },
+    "PB_FixingTape": {
+      "inconsistent_manifold_edge_winding": 0
+    }
+  }
+}

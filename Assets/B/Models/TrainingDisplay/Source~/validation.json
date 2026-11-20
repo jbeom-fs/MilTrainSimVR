@@ -1,0 +1,3417 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "units": "meters; Blender unit scale 1; all object scales 1",
+  "coordinates": "Blender (X,Y,Z) = target (X,-Z,Y); target UI plane XY Z=0, front -Z, rear +Z",
+  "materials_linear_rgb": true,
+  "models": {
+    "AED": {
+      "file": "Display_AED_720x460.fbx",
+      "screen_m": [
+        0.72,
+        0.46
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.464
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.2460000067949295,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.2460000067949295,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.492000013589859,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_AED_720x460_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001094549476585189,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001361178731860261,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.2460000067949295,
+              -0.000500018591992557
+            ],
+            "max": [
+              0.37599998712539673,
+              0.2460000067949295,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.492000013589859,
+              0.07050002634059638
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_AED_720x460_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0010945494765851893,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_AED_720x460_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.001361178731860261,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_AED_720x460_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_AED_720x460_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_AED_720x460_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_AED_720x460_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.2460000067949295,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.2460000067949295,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "TQ": {
+      "file": "Display_TQ_720x640.fbx",
+      "screen_m": [
+        0.72,
+        0.64
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.644
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.335999995470047,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.335999995470047,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.671999990940094,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_TQ_720x640_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001498393338302476,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0015627346489006197,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.335999995470047,
+              -0.000500025344081223
+            ],
+            "max": [
+              0.37599998712539673,
+              0.335999995470047,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.671999990940094,
+              0.07050003309268504
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_TQ_720x640_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.001498393338302476,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_TQ_720x640_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0015627346489006197,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_TQ_720x640_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_TQ_720x640_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_TQ_720x640_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_TQ_720x640_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.335999995470047,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.335999995470047,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "PB": {
+      "file": "Display_PB_720x600.fbx",
+      "screen_m": [
+        0.72,
+        0.6
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.604
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.3160000145435333,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.3160000145435333,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.6320000290870667,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_PB_720x600_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0014086503359284554,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001517946021022891,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.3160000145435333,
+              -0.0005000238306820393
+            ],
+            "max": [
+              0.37599998712539673,
+              0.3160000145435333,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.6320000290870667,
+              0.07050003157928586
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_PB_720x600_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0014086503359284554,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_PB_720x600_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.001517946021022891,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_PB_720x600_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_PB_720x600_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_PB_720x600_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PB_720x600_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.3160000145435333,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.3160000145435333,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "K1": {
+      "file": "Display_K1_720x480.fbx",
+      "screen_m": [
+        0.72,
+        0.48
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.484
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.25600001215934753,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.25600001215934753,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.5120000243186951,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_K1_720x480_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001139421028759692,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0013835739379353346,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.25600001215934753,
+              -0.0005000193486921489
+            ],
+            "max": [
+              0.37599998712539673,
+              0.25600001215934753,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.5120000243186951,
+              0.07050002709729597
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            },
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_K1_720x480_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0011394210287596922,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_K1_720x480_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0013835739379353346,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_K1_720x480_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_K1_720x480_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_K1_720x480_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_K1_720x480_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.25600001215934753,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.25600001215934753,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "PC": {
+      "file": "Display_PC_720x520.fbx",
+      "screen_m": [
+        0.72,
+        0.52
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.524
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.2759999930858612,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.2759999930858612,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.5519999861717224,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_PC_720x520_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0012291640340232172,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0014283634397299105,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.2759999930858612,
+              -0.0005000208620913327
+            ],
+            "max": [
+              0.37599998712539673,
+              0.2759999930858612,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.5519999861717224,
+              0.07050002861069515
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_PC_720x520_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0012291640340232172,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_PC_720x520_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0014283634397299105,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_PC_720x520_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_PC_720x520_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_PC_720x520_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_PC_720x520_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.2759999930858612,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.2759999930858612,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "KD1": {
+      "file": "Display_KD1_720x440.fbx",
+      "screen_m": [
+        0.72,
+        0.44
+      ],
+      "opening_nominal_m": [
+        0.724,
+        0.444
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.23600000143051147,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.23600000143051147,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7519999742507935,
+            0.47200000286102295,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_KD1_720x440_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0010496779070896143,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.001338782658754571,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.37599998712539673,
+              -0.23600000143051147,
+              -0.0005000178352929652
+            ],
+            "max": [
+              0.37599998712539673,
+              0.23600000143051147,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7519999742507935,
+              0.47200000286102295,
+              0.07050002558389679
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_KD1_720x440_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0010496779070896143,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_KD1_720x440_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.001338782658754571,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_KD1_720x440_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_KD1_720x440_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_KD1_720x440_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_KD1_720x440_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.37599998712539673,
+            -0.23600000143051147,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.37599998712539673,
+            0.23600000143051147,
+            0.07000000029802322
+          ]
+        }
+      }
+    },
+    "Entrance": {
+      "file": "Display_Entrance_760x560.fbx",
+      "screen_m": [
+        0.76,
+        0.56
+      ],
+      "opening_nominal_m": [
+        0.764,
+        0.5640000000000001
+      ],
+      "frame_width_m": 0.014,
+      "case_depth_including_cover_m": 0.043,
+      "origin_target_m": [
+        0,
+        0,
+        0
+      ],
+      "wall_contact_z_m": 0.07,
+      "source": {
+        "bounds_unity_m": {
+          "min": [
+            -0.3959999978542328,
+            -0.29600000381469727,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.3959999978542328,
+            0.29600000381469727,
+            0.07000000029802322
+          ],
+          "size": [
+            0.7919999957084656,
+            0.5920000076293945,
+            0.07050000032177195
+          ]
+        },
+        "part_count": 4,
+        "triangles": 916,
+        "material_count": 2,
+        "materials": [
+          {
+            "name": "TrainingDisplay_MatteBlackCase",
+            "base_color_linear_rgba": [
+              0.017999999225139618,
+              0.020999999716877937,
+              0.024000000208616257,
+              1.0
+            ],
+            "metallic": 0.15000000596046448,
+            "roughness": 0.7200000286102295
+          },
+          {
+            "name": "TrainingDisplay_MatteBracketMetal",
+            "base_color_linear_rgba": [
+              0.06499999761581421,
+              0.07500000298023224,
+              0.0820000022649765,
+              1.0
+            ],
+            "metallic": 0.800000011920929,
+            "roughness": 0.6800000071525574
+          }
+        ],
+        "parts": [
+          {
+            "name": "Display_Entrance_760x560_Backplate",
+            "triangles": 108,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0013894502022151146,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_FrameCase",
+            "triangles": 480,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 0.0015179442866760952,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBlackCase"
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_WallBracket_L",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784579249556714e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_WallBracket_R",
+            "triangles": 164,
+            "nonmanifold_edges": 0,
+            "boundary_edges": 0,
+            "loose_vertices": 0,
+            "duplicate_vertices": 0,
+            "duplicate_faces": 0,
+            "signed_volume_m3": 4.5784578972790874e-05,
+            "outward_normal_recalculation_changes": 0,
+            "identity_transform": true,
+            "origin_blender_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_blender_deg": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "materials": [
+              "TrainingDisplay_MatteBracketMetal"
+            ]
+          }
+        ],
+        "surface_rectangle_intrusions_z_le_0": 0,
+        "oblique_60deg_keepout_intersections": 0,
+        "duplicate_faces_across_parts": 0,
+        "positive_volume_aabb_overlaps": []
+      },
+      "roundtrip": {
+        "geometry_and_material_assignment_equal_10um": true,
+        "stats": {
+          "bounds_unity_m": {
+            "min": [
+              -0.3959999978542328,
+              -0.29600000381469727,
+              -0.0005000223754905164
+            ],
+            "max": [
+              0.3959999978542328,
+              0.29600000381469727,
+              0.07000000774860382
+            ],
+            "size": [
+              0.7919999957084656,
+              0.5920000076293945,
+              0.07050003012409434
+            ]
+          },
+          "part_count": 4,
+          "triangles": 916,
+          "material_count": 2,
+          "materials": [
+            {
+              "name": "TrainingDisplay_MatteBlackCase",
+              "base_color_linear_rgba": [
+                0.017999999225139618,
+                0.020999999716877937,
+                0.024000000208616257,
+                1.0
+              ],
+              "metallic": 0.15000000596046448,
+              "roughness": 0.7200000286102295
+            },
+            {
+              "name": "TrainingDisplay_MatteBracketMetal",
+              "base_color_linear_rgba": [
+                0.06499999761581421,
+                0.07500000298023224,
+                0.0820000022649765,
+                1.0
+              ],
+              "metallic": 0.800000011920929,
+              "roughness": 0.6800000071525574
+            }
+          ],
+          "parts": [
+            {
+              "name": "Display_Entrance_760x560_Backplate",
+              "triangles": 108,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0013894502022151146,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_Entrance_760x560_FrameCase",
+              "triangles": 480,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 0.0015179442866760952,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBlackCase"
+              ]
+            },
+            {
+              "name": "Display_Entrance_760x560_WallBracket_L",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.578457924955673e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            },
+            {
+              "name": "Display_Entrance_760x560_WallBracket_R",
+              "triangles": 164,
+              "nonmanifold_edges": 0,
+              "boundary_edges": 0,
+              "loose_vertices": 0,
+              "duplicate_vertices": 0,
+              "duplicate_faces": 0,
+              "signed_volume_m3": 4.5784578972790847e-05,
+              "outward_normal_recalculation_changes": 0,
+              "identity_transform": false,
+              "origin_blender_m": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "rotation_blender_deg": [
+                89.999995674289,
+                -0.0,
+                0.0
+              ],
+              "scale": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "materials": [
+                "TrainingDisplay_MatteBracketMetal"
+              ]
+            }
+          ],
+          "surface_rectangle_intrusions_z_le_0": 0,
+          "oblique_60deg_keepout_intersections": 0,
+          "duplicate_faces_across_parts": 0,
+          "positive_volume_aabb_overlaps": []
+        }
+      },
+      "raw_fbx": {
+        "version": 7400,
+        "object_types": {
+          "Geometry": 4,
+          "Model": 4,
+          "Material": 2
+        },
+        "nodes": [
+          {
+            "name": "Display_Entrance_760x560_Backplate",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_FrameCase",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_WallBracket_L",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "name": "Display_Entrance_760x560_WallBracket_R",
+            "type": "Mesh",
+            "translation": [
+              0,
+              0,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "settings": {
+          "UpAxis": [
+            1
+          ],
+          "UpAxisSign": [
+            1
+          ],
+          "FrontAxis": [
+            2
+          ],
+          "FrontAxisSign": [
+            1
+          ],
+          "CoordAxis": [
+            0
+          ],
+          "CoordAxisSign": [
+            1
+          ],
+          "UnitScaleFactor": [
+            100.0
+          ]
+        },
+        "bounds_m": {
+          "min": [
+            -0.3959999978542328,
+            -0.29600000381469727,
+            -0.0005000000237487257
+          ],
+          "max": [
+            0.3959999978542328,
+            0.29600000381469727,
+            0.07000000029802322
+          ]
+        }
+      }
+    }
+  }
+}

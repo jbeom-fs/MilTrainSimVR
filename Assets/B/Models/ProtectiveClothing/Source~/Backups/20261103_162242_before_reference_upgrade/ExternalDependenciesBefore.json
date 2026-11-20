@@ -1,0 +1,82 @@
+{
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_Shared.mat": {
+    "sha256": "3d3cd7fea2439205205c1c428ddf198fbd8774bcdfa7c66744761661359e60b1",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_Shared.mat.meta": {
+    "sha256": "afe4114b125a16e5f6da4c83642bec1fe95681d078f5c5fbde86fd4a25ebf619",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_MetallicSmoothness_1K.png": {
+    "sha256": "c129e54d030708c0b15cb017bd57f51ca978f856601a3443eafdef01741480ac",
+    "intentional_image_update": true
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_MetallicSmoothness_1K.png.meta": {
+    "sha256": "9149fb7da52decefd59985a09b5d414d57e22d082be46c9ac78d2f22d7c8c359",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef": {
+    "sha256": "ebb62bfccaea61936795c15e032792861e73e8643034403ba806390e7a93d918",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef.meta": {
+    "sha256": "09668169f32194a398f19b79e09adaf22712f74ba811126f798967fb8e1e9494",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs": {
+    "sha256": "8147ab832f2d6ab8c0b267a2315c32138b1897375492082d3f3430c314b03aeb",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs.meta": {
+    "sha256": "05c8db43ba673e910f9325161ef9417a372baa3368b4d4b40d028d4d7466892a",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs": {
+    "sha256": "c0c2afe40afcc4660b4615edc64a20e6711f15e409c4ec2e072234f9d6f23dfb",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs.meta": {
+    "sha256": "09150e166b0bff76b3449287e4e18d6a639a8560e44b06fff7b3d6c96604aaf8",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs": {
+    "sha256": "21c2fa0cbabe84ad897ac7771061f08d8a81d95308259f5e6bb79af6490e6f26",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs.meta": {
+    "sha256": "e9f9cada4a704f63f63c364013cc46ecd7b644086fc7d410e5c3d5b1ba9b4be5",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs": {
+    "sha256": "0cf07e05334acd07cf7b5865759d1fb4146a58e1087b3ec7d208e91854c747b9",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs.meta": {
+    "sha256": "503d6c6be443daabde6d7b617c8d052b7995b0e12cca94eac1a788ef85476317",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs": {
+    "sha256": "492fc06b44d0ab6479ed53315b08e796e03cfff5e7604e7b4fd2831ba2f779b3",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs.meta": {
+    "sha256": "eec9c5b7e83a9c1b987cd913c130191ccf49ccb7934cd778b69e3fb18a06abb2",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs": {
+    "sha256": "05bba764d03ea5e7384429a054a7290f4cbad65db8c821e24d6cb86acd107f70",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs.meta": {
+    "sha256": "ccf9776210cbd2486f4485c8a8854114adb2c50d0d6532addf3229d688019b91",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity": {
+    "sha256": "a15bb094ee2a7cb18d44aaae20c1737f5a124c75e09dcbaaefae205f917f0888",
+    "intentional_image_update": false
+  },
+  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity.meta": {
+    "sha256": "8db4fbb5bfe03593500aefeceb33489dbc9e84596a3c7f89172d48fe2261470c",
+    "intentional_image_update": false
+  }
+}

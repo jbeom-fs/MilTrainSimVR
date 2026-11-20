@@ -1,0 +1,5711 @@
+[
+  {
+    "scene": "Assets/B/Scene/B_FirstAid.unity",
+    "canvases": [
+      {
+        "name": "Canvas",
+        "path": "StationsRoot/Station_AED/Content/Canvas",
+        "rect_fileID": 148117081,
+        "line": 2262,
+        "size": {
+          "x": 720,
+          "y": 460
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_TQ_StatusBoard",
+        "path": "StationsRoot/Station_Tourniquet/FieldUI/Blocker_1_TQ_StatusBoard",
+        "rect_fileID": 150925987,
+        "line": 2324,
+        "size": {
+          "x": 720,
+          "y": 640
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_3_ShockButtonCanvas",
+        "path": "StationsRoot/Station_AED/FieldUI/Blocker_3_ShockButtonCanvas",
+        "rect_fileID": 352679751,
+        "line": 5381,
+        "size": {
+          "x": 100,
+          "y": 100
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.00060000014,
+          "y": 0.00060000014,
+          "z": 0.00060000014
+        }
+      },
+      {
+        "name": "Blocker_2_PowerButtonCanvas",
+        "path": "StationsRoot/Station_AED/FieldUI/Blocker_2_PowerButtonCanvas",
+        "rect_fileID": 410432069,
+        "line": 5828,
+        "size": {
+          "x": 100,
+          "y": 100
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.00060000014,
+          "y": 0.00060000014,
+          "z": 0.00060000014
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_PressureBandage/FieldUI/FieldPanel",
+        "rect_fileID": 622207879,
+        "line": 9704,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_PB_StatusBoard",
+        "path": "StationsRoot/Station_PressureBandage/FieldUI/Blocker_1_PB_StatusBoard",
+        "rect_fileID": 660164462,
+        "line": 10639,
+        "size": {
+          "x": 720,
+          "y": 600
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.0010000002,
+          "y": 0.001,
+          "z": 0.0010000002
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_AED/FieldUI/FieldPanel",
+        "rect_fileID": 679670014,
+        "line": 10795,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Label",
+        "path": "StationsRoot/Station_Tourniquet/Content/TQ_Training/TQ_PlacementPreview/Label",
+        "rect_fileID": 956551141,
+        "line": 14247,
+        "size": {
+          "x": 320,
+          "y": 110
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_Canvas",
+        "path": "StationsRoot/Station_AED/FieldUI/Blocker_1_Canvas",
+        "rect_fileID": 1022900707,
+        "line": 14827,
+        "size": {
+          "x": 720,
+          "y": 460
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "TQ_StatusBoard",
+        "path": "StationsRoot/Station_Tourniquet/Content/TQ_Training/TQ_StatusBoard",
+        "rect_fileID": 1092347600,
+        "line": 16515,
+        "size": {
+          "x": 720,
+          "y": 640
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "PB_StatusBoard",
+        "path": "StationsRoot/Station_PressureBandage/Content/PB_Training/PB_StatusBoard",
+        "rect_fileID": 1163176302,
+        "line": 17458,
+        "size": {
+          "x": 720,
+          "y": 600
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "EntranceBoard",
+        "path": "EntryAnchor/EntranceBoard",
+        "rect_fileID": 1168228159,
+        "line": 17814,
+        "size": {
+          "x": 760,
+          "y": 560
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_Tourniquet/FieldUI/FieldPanel",
+        "rect_fileID": 1345008650,
+        "line": 21288,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "ExitBoard",
+        "path": "ExitAnchor/ExitBoard",
+        "rect_fileID": 2009958414,
+        "line": 29958,
+        "size": {
+          "x": 520,
+          "y": 260
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      }
+    ],
+    "boards": [
+      {
+        "name": "Canvas",
+        "path": "StationsRoot/Station_AED/Content/Canvas",
+        "rect_fileID": 148117081,
+        "line": 2262,
+        "size": {
+          "x": 720,
+          "y": 460
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "StartPanel",
+            "rect_fileID": 94110661,
+            "line": 1302,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -230.0
+              ],
+              [
+                360.0,
+                230.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/TitleText",
+            "rect_fileID": 1586941184,
+            "line": 24257,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                160.0
+              ],
+              [
+                330.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/GoalText",
+            "rect_fileID": 1677448040,
+            "line": 25810,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                72.0
+              ],
+              [
+                330.0,
+                152.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton",
+            "rect_fileID": 1083829474,
+            "line": 16195,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -202.0
+              ],
+              [
+                130.0,
+                -138.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton/Text (TMP)",
+            "rect_fileID": 459929810,
+            "line": 7184,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -202.0
+              ],
+              [
+                130.0,
+                -138.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Ready",
+            "rect_fileID": 2054803188,
+            "line": 31001,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                0.0
+              ],
+              [
+                330.0,
+                64.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel",
+            "rect_fileID": 174917773,
+            "line": 2996,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -230.0
+              ],
+              [
+                360.0,
+                230.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/InstructionText",
+            "rect_fileID": 1925833511,
+            "line": 29140,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -118.0
+              ],
+              [
+                340.0,
+                32.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps",
+            "rect_fileID": 414649554,
+            "line": 6089,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -230.0
+              ],
+              [
+                360.0,
+                230.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_1",
+            "rect_fileID": 588876595,
+            "line": 9316,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -335.0,
+                170.0
+              ],
+              [
+                -175.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_1/Label",
+            "rect_fileID": 187130011,
+            "line": 3192,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -333.0,
+                170.0
+              ],
+              [
+                -177.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_2",
+            "rect_fileID": 1392915786,
+            "line": 22153,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -165.0,
+                170.0
+              ],
+              [
+                -5.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_2/Label",
+            "rect_fileID": 841037447,
+            "line": 12871,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -163.0,
+                170.0
+              ],
+              [
+                -7.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_3",
+            "rect_fileID": 393735201,
+            "line": 5506,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                5.0,
+                170.0
+              ],
+              [
+                165.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_3/Label",
+            "rect_fileID": 277417494,
+            "line": 4309,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                7.0,
+                170.0
+              ],
+              [
+                163.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_4",
+            "rect_fileID": 559416265,
+            "line": 9059,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                175.0,
+                170.0
+              ],
+              [
+                335.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Steps/Box_4/Label",
+            "rect_fileID": 1625858932,
+            "line": 24781,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                177.0,
+                170.0
+              ],
+              [
+                333.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/StepLine",
+            "rect_fileID": 82862382,
+            "line": 1165,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                122.0
+              ],
+              [
+                340.0,
+                162.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "GuidePanel/Purpose",
+            "rect_fileID": 1978171664,
+            "line": 29495,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                40.0
+              ],
+              [
+                340.0,
+                114.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion",
+            "rect_fileID": 828249580,
+            "line": 12497,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -230.0
+              ],
+              [
+                360.0,
+                230.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Title",
+            "rect_fileID": 445636207,
+            "line": 6427,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                160.0
+              ],
+              [
+                330.0,
+                210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Note",
+            "rect_fileID": 1607845785,
+            "line": 24607,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -98.0
+              ],
+              [
+                330.0,
+                152.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "RetryButton",
+            "rect_fileID": 1642109388,
+            "line": 25240,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -200.0
+              ],
+              [
+                -140.0,
+                -140.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "RetryButton/Text (TMP)",
+            "rect_fileID": 769420999,
+            "line": 11725,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -200.0
+              ],
+              [
+                -140.0,
+                -140.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "TQ_StatusBoard",
+        "path": "StationsRoot/Station_Tourniquet/Content/TQ_Training/TQ_StatusBoard",
+        "rect_fileID": 1092347600,
+        "line": 16515,
+        "size": {
+          "x": 720,
+          "y": 640
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1678546588,
+            "line": 25947,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Notice",
+            "rect_fileID": 622330131,
+            "line": 9790,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -310.0
+              ],
+              [
+                340.0,
+                -218.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel",
+            "rect_fileID": 397980515,
+            "line": 5717,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel/Title",
+            "rect_fileID": 549123675,
+            "line": 8556,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                212.0
+              ],
+              [
+                340.0,
+                252.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel/Instruction",
+            "rect_fileID": 294033052,
+            "line": 4583,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -48.0
+              ],
+              [
+                340.0,
+                122.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel/Status",
+            "rect_fileID": 1077974593,
+            "line": 15936,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -96.0
+              ],
+              [
+                340.0,
+                -56.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel/Detail",
+            "rect_fileID": 818330672,
+            "line": 12203,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -204.0
+              ],
+              [
+                340.0,
+                -104.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "OperationPanel/Purpose",
+            "rect_fileID": 1838181753,
+            "line": 27619,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                130.0
+              ],
+              [
+                340.0,
+                204.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel",
+            "rect_fileID": 573308236,
+            "line": 9270,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Title",
+            "rect_fileID": 708009831,
+            "line": 10966,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                250.0
+              ],
+              [
+                330.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Description",
+            "rect_fileID": 1996321041,
+            "line": 29769,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                162.0
+              ],
+              [
+                330.0,
+                242.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Ready",
+            "rect_fileID": 46595089,
+            "line": 547,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                90.0
+              ],
+              [
+                330.0,
+                154.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton",
+            "rect_fileID": 2116995021,
+            "line": 31428,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -210.0
+              ],
+              [
+                130.0,
+                -146.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton/Label",
+            "rect_fileID": 1799809692,
+            "line": 27095,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -210.0
+              ],
+              [
+                130.0,
+                -146.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel",
+            "rect_fileID": 1904482594,
+            "line": 28588,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/Title",
+            "rect_fileID": 256802875,
+            "line": 4017,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                212.0
+              ],
+              [
+                340.0,
+                252.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/Description",
+            "rect_fileID": 1864805307,
+            "line": 27756,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                128.0
+              ],
+              [
+                340.0,
+                204.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/ItemsLeft",
+            "rect_fileID": 1877841950,
+            "line": 27981,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                20.0
+              ],
+              [
+                -10.0,
+                120.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/ItemsRight",
+            "rect_fileID": 1213647951,
+            "line": 18764,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                10.0,
+                20.0
+              ],
+              [
+                340.0,
+                120.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/Result",
+            "rect_fileID": 394198731,
+            "line": 5582,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -92.0
+              ],
+              [
+                340.0,
+                12.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/ConfirmButton",
+            "rect_fileID": 346201408,
+            "line": 5261,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                140.0,
+                -208.0
+              ],
+              [
+                340.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "FinalCheckPanel/ConfirmButton/Label",
+            "rect_fileID": 51675417,
+            "line": 684,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                140.0,
+                -208.0
+              ],
+              [
+                340.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel",
+            "rect_fileID": 776873773,
+            "line": 11760,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Title",
+            "rect_fileID": 1777161808,
+            "line": 26694,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                250.0
+              ],
+              [
+                330.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/SummaryLeft",
+            "rect_fileID": 1087044985,
+            "line": 16371,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                112.0
+              ],
+              [
+                -10.0,
+                242.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/SummaryRight",
+            "rect_fileID": 429300778,
+            "line": 6153,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                10.0,
+                112.0
+              ],
+              [
+                330.0,
+                242.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Time",
+            "rect_fileID": 1923528791,
+            "line": 28903,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                64.0
+              ],
+              [
+                330.0,
+                104.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Note",
+            "rect_fileID": 941761940,
+            "line": 14110,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -34.0
+              ],
+              [
+                330.0,
+                56.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/RetryButton",
+            "rect_fileID": 1648770771,
+            "line": 25279,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -208.0
+              ],
+              [
+                -140.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/RetryButton/Label",
+            "rect_fileID": 162140940,
+            "line": 2595,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -208.0
+              ],
+              [
+                -140.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps",
+            "rect_fileID": 868925916,
+            "line": 13292,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -320.0
+              ],
+              [
+                360.0,
+                320.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_1",
+            "rect_fileID": 273281072,
+            "line": 4233,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                260.0
+              ],
+              [
+                -235.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_1/Label",
+            "rect_fileID": 1323533131,
+            "line": 21089,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -338.0,
+                260.0
+              ],
+              [
+                -237.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_2",
+            "rect_fileID": 1160824622,
+            "line": 17377,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -225.0,
+                260.0
+              ],
+              [
+                -120.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_2/Label",
+            "rect_fileID": 1044107869,
+            "line": 14908,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -223.0,
+                260.0
+              ],
+              [
+                -122.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_3",
+            "rect_fileID": 1405204152,
+            "line": 22498,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -110.0,
+                260.0
+              ],
+              [
+                -5.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_3/Label",
+            "rect_fileID": 2050895046,
+            "line": 30773,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -108.0,
+                260.0
+              ],
+              [
+                -7.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_4",
+            "rect_fileID": 1239831237,
+            "line": 19458,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                5.0,
+                260.0
+              ],
+              [
+                110.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_4/Label",
+            "rect_fileID": 207370619,
+            "line": 3329,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                7.0,
+                260.0
+              ],
+              [
+                108.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_5",
+            "rect_fileID": 1657369591,
+            "line": 25399,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                120.0,
+                260.0
+              ],
+              [
+                225.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_5/Label",
+            "rect_fileID": 1196332194,
+            "line": 18137,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                122.0,
+                260.0
+              ],
+              [
+                223.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_6",
+            "rect_fileID": 1887467849,
+            "line": 28240,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                235.0,
+                260.0
+              ],
+              [
+                340.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_6/Label",
+            "rect_fileID": 1901495603,
+            "line": 28416,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                237.0,
+                260.0
+              ],
+              [
+                338.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "PB_StatusBoard",
+        "path": "StationsRoot/Station_PressureBandage/Content/PB_Training/PB_StatusBoard",
+        "rect_fileID": 1163176302,
+        "line": 17458,
+        "size": {
+          "x": 720,
+          "y": 600
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1908341028,
+            "line": 28631,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Notice",
+            "rect_fileID": 1381766985,
+            "line": 21464,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -300.0,
+                338.0
+              ],
+              [
+                300.0,
+                382.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": true
+          },
+          {
+            "path": "Practice",
+            "rect_fileID": 1520434412,
+            "line": 23815,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Instruction",
+            "rect_fileID": 1587370090,
+            "line": 24394,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                12.0
+              ],
+              [
+                340.0,
+                102.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Status",
+            "rect_fileID": 1902764992,
+            "line": 28453,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -300.0,
+                45.0
+              ],
+              [
+                300.0,
+                195.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Bandage",
+            "rect_fileID": 1164899154,
+            "line": 17677,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -300.0,
+                -50.0
+              ],
+              [
+                300.0,
+                40.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Progress",
+            "rect_fileID": 1741639502,
+            "line": 26440,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -300.0,
+                -86.0
+              ],
+              [
+                300.0,
+                -54.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/History",
+            "rect_fileID": 448975356,
+            "line": 6753,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -300.0,
+                -117.0
+              ],
+              [
+                300.0,
+                -87.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check",
+            "rect_fileID": 1214783716,
+            "line": 18899,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check/Card",
+            "rect_fileID": 719747890,
+            "line": 11103,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                -200.0
+              ],
+              [
+                350.0,
+                -40.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check/CheckTitle",
+            "rect_fileID": 602380978,
+            "line": 9477,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -78.0
+              ],
+              [
+                340.0,
+                -44.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check/CheckItems",
+            "rect_fileID": 104482362,
+            "line": 1381,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -196.0
+              ],
+              [
+                340.0,
+                -86.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check/CheckButton",
+            "rect_fileID": 654245591,
+            "line": 10339,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                140.0,
+                -270.0
+              ],
+              [
+                340.0,
+                -210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Check/CheckButton/Label",
+            "rect_fileID": 1949559525,
+            "line": 29216,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                140.0,
+                -270.0
+              ],
+              [
+                340.0,
+                -210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/StepProgress",
+            "rect_fileID": 1234348847,
+            "line": 19321,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -36.0
+              ],
+              [
+                340.0,
+                4.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Purpose",
+            "rect_fileID": 1071528360,
+            "line": 15586,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                110.0
+              ],
+              [
+                340.0,
+                184.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start",
+            "rect_fileID": 1944480319,
+            "line": 29175,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Title",
+            "rect_fileID": 1537580411,
+            "line": 23860,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                230.0
+              ],
+              [
+                330.0,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Description",
+            "rect_fileID": 1388564730,
+            "line": 22016,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                42.0
+              ],
+              [
+                330.0,
+                222.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Ready",
+            "rect_fileID": 1299118584,
+            "line": 20278,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -30.0
+              ],
+              [
+                330.0,
+                34.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/StartButton",
+            "rect_fileID": 1232966568,
+            "line": 19201,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -272.0
+              ],
+              [
+                130.0,
+                -208.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/StartButton/Label",
+            "rect_fileID": 431058809,
+            "line": 6390,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -272.0
+              ],
+              [
+                130.0,
+                -208.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion",
+            "rect_fileID": 314903724,
+            "line": 4992,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Title",
+            "rect_fileID": 761613930,
+            "line": 11304,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                230.0
+              ],
+              [
+                330.0,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Summary",
+            "rect_fileID": 1829928560,
+            "line": 27269,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -28.0
+              ],
+              [
+                330.0,
+                222.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Note",
+            "rect_fileID": 1222061178,
+            "line": 18972,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -126.0
+              ],
+              [
+                330.0,
+                -36.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/RetryButton",
+            "rect_fileID": 1660964951,
+            "line": 25476,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -270.0
+              ],
+              [
+                -140.0,
+                -210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/RetryButton/Label",
+            "rect_fileID": 1064183974,
+            "line": 15541,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -270.0
+              ],
+              [
+                -140.0,
+                -210.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps",
+            "rect_fileID": 799938314,
+            "line": 11957,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -300.0
+              ],
+              [
+                360.0,
+                300.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_1",
+            "rect_fileID": 1173822132,
+            "line": 17904,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.00001499999996,
+                240.0
+              ],
+              [
+                -251.42858499999997,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_1/Label",
+            "rect_fileID": 304499342,
+            "line": 4820,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -338.00001499999996,
+                240.0
+              ],
+              [
+                -253.42858499999997,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_2",
+            "rect_fileID": 1074901649,
+            "line": 15860,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -241.42856500000002,
+                240.0
+              ],
+              [
+                -152.857135,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_2/Label",
+            "rect_fileID": 1714430213,
+            "line": 26212,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -239.42856500000002,
+                240.0
+              ],
+              [
+                -154.857135,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_3",
+            "rect_fileID": 1832164689,
+            "line": 27406,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -142.857145,
+                240.0
+              ],
+              [
+                -54.285715,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_3/Label",
+            "rect_fileID": 1492473802,
+            "line": 23551,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -140.857145,
+                240.0
+              ],
+              [
+                -56.285715,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_4",
+            "rect_fileID": 1426542380,
+            "line": 22574,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -44.285715,
+                240.0
+              ],
+              [
+                44.285715,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_4/Label",
+            "rect_fileID": 930305247,
+            "line": 13888,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -42.285715,
+                240.0
+              ],
+              [
+                42.285715,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_5",
+            "rect_fileID": 1199068003,
+            "line": 18274,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                54.285715,
+                240.0
+              ],
+              [
+                142.857145,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_5/Label",
+            "rect_fileID": 307025357,
+            "line": 4957,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                56.285715,
+                240.0
+              ],
+              [
+                140.857145,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_6",
+            "rect_fileID": 1600019165,
+            "line": 24531,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                152.857135,
+                240.0
+              ],
+              [
+                241.42856500000002,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_6/Label",
+            "rect_fileID": 1971940960,
+            "line": 29453,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                154.857135,
+                240.0
+              ],
+              [
+                239.42856500000002,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_7",
+            "rect_fileID": 1512329,
+            "line": 140,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                251.42858499999997,
+                240.0
+              ],
+              [
+                340.00001499999996,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/Box_7/Label",
+            "rect_fileID": 114111628,
+            "line": 1900,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                253.42858499999997,
+                240.0
+              ],
+              [
+                338.00001499999996,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Steps/StepLine",
+            "rect_fileID": 1461318890,
+            "line": 22710,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                192.0
+              ],
+              [
+                340.0,
+                232.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "EntranceBoard",
+        "path": "EntryAnchor/EntranceBoard",
+        "rect_fileID": 1168228159,
+        "line": 17814,
+        "size": {
+          "x": 760,
+          "y": 560
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1200171054,
+            "line": 18350,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -380.0,
+                -280.0
+              ],
+              [
+                380.0,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Title",
+            "rect_fileID": 2026490734,
+            "line": 30057,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                206.0
+              ],
+              [
+                350.0,
+                266.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Description",
+            "rect_fileID": 500625523,
+            "line": 7818,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                140.0
+              ],
+              [
+                350.0,
+                200.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Guide",
+            "rect_fileID": 113286472,
+            "line": 1663,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                52.0
+              ],
+              [
+                350.0,
+                132.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Stations",
+            "rect_fileID": 903959515,
+            "line": 13651,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -280.0,
+                -115.0
+              ],
+              [
+                280.0,
+                35.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Move",
+            "rect_fileID": 170781434,
+            "line": 2959,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                -245.0
+              ],
+              [
+                350.0,
+                -155.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "scene": "Assets/B/Scene/B_CBRN.unity",
+    "canvases": [
+      {
+        "name": "PC_Board",
+        "path": "StationsRoot/Station_ProtectiveClothing/Content/PC_Equipment/PC_Board",
+        "rect_fileID": 298678964,
+        "line": 3884,
+        "size": {
+          "x": 640,
+          "y": 300
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "EntranceBoard",
+        "path": "EntryAnchor/EntranceBoard",
+        "rect_fileID": 308075628,
+        "line": 4516,
+        "size": {
+          "x": 760,
+          "y": 560
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "KD1_CourseBoard",
+        "path": "StationsRoot/Station_KD1/Content/KD1_Course/KD1_CourseBoard",
+        "rect_fileID": 329719721,
+        "line": 5063,
+        "size": {
+          "x": 720,
+          "y": 440
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "PC_TutorialBoard",
+        "path": "StationsRoot/Station_ProtectiveClothing/Content/PC_Equipment/PC_TutorialBoard",
+        "rect_fileID": 505148367,
+        "line": 9017,
+        "size": {
+          "x": 720,
+          "y": 520
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "ExitBoard",
+        "path": "ExitAnchor/ExitBoard",
+        "rect_fileID": 678102519,
+        "line": 12672,
+        "size": {
+          "x": 520,
+          "y": 260
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "K1_GuideBoard",
+        "path": "StationsRoot/Station_K1GasMask/Content/K1_Training/K1_GuideBoard",
+        "rect_fileID": 724585205,
+        "line": 13324,
+        "size": {
+          "x": 720,
+          "y": 480
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "KD1_Board",
+        "path": "StationsRoot/Station_KD1/Content/KD1_Equipment/KD1_Board",
+        "rect_fileID": 748098902,
+        "line": 14103,
+        "size": {
+          "x": 640,
+          "y": 300
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_PC_TutorialBoard",
+        "path": "StationsRoot/Station_ProtectiveClothing/FieldUI/Blocker_1_PC_TutorialBoard",
+        "rect_fileID": 1065894362,
+        "line": 18327,
+        "size": {
+          "x": 720,
+          "y": 520
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_KD1_CourseBoard",
+        "path": "StationsRoot/Station_KD1/FieldUI/Blocker_1_KD1_CourseBoard",
+        "rect_fileID": 1126418576,
+        "line": 19494,
+        "size": {
+          "x": 720,
+          "y": 440
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.0009999999,
+          "y": 0.001,
+          "z": 0.0009999999
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_K1GasMask/FieldUI/FieldPanel",
+        "rect_fileID": 1491589689,
+        "line": 25688,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "Blocker_1_K1_GuideBoard",
+        "path": "StationsRoot/Station_K1GasMask/FieldUI/Blocker_1_K1_GuideBoard",
+        "rect_fileID": 1593397999,
+        "line": 27514,
+        "size": {
+          "x": 720,
+          "y": 480
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.0009999999,
+          "y": 0.001,
+          "z": 0.0009999999
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_ProtectiveClothing/FieldUI/FieldPanel",
+        "rect_fileID": 1718692946,
+        "line": 29438,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      },
+      {
+        "name": "FieldPanel",
+        "path": "StationsRoot/Station_KD1/FieldUI/FieldPanel",
+        "rect_fileID": 1885285422,
+        "line": 32040,
+        "size": {
+          "x": 460,
+          "y": 330
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        }
+      }
+    ],
+    "boards": [
+      {
+        "name": "EntranceBoard",
+        "path": "EntryAnchor/EntranceBoard",
+        "rect_fileID": 308075628,
+        "line": 4516,
+        "size": {
+          "x": 760,
+          "y": 560
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 816385290,
+            "line": 14663,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -380.0,
+                -280.0
+              ],
+              [
+                380.0,
+                280.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Title",
+            "rect_fileID": 1503397867,
+            "line": 25911,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                206.0
+              ],
+              [
+                350.0,
+                266.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Description",
+            "rect_fileID": 1998608855,
+            "line": 33436,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                140.0
+              ],
+              [
+                350.0,
+                200.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Guide",
+            "rect_fileID": 118798456,
+            "line": 1846,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                52.0
+              ],
+              [
+                350.0,
+                132.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Stations",
+            "rect_fileID": 1223959838,
+            "line": 21113,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -280.0,
+                -115.0
+              ],
+              [
+                280.0,
+                35.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Move",
+            "rect_fileID": 981631501,
+            "line": 17527,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -350.0,
+                -245.0
+              ],
+              [
+                350.0,
+                -155.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "KD1_CourseBoard",
+        "path": "StationsRoot/Station_KD1/Content/KD1_Course/KD1_CourseBoard",
+        "rect_fileID": 329719721,
+        "line": 5063,
+        "size": {
+          "x": 720,
+          "y": 440
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1166392327,
+            "line": 20163,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -220.0
+              ],
+              [
+                360.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel",
+            "rect_fileID": 1804870941,
+            "line": 30931,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -220.0
+              ],
+              [
+                360.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Title",
+            "rect_fileID": 575741656,
+            "line": 10617,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                145.0
+              ],
+              [
+                330.0,
+                195.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Description",
+            "rect_fileID": 550422354,
+            "line": 10206,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                30.0
+              ],
+              [
+                330.0,
+                140.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Note",
+            "rect_fileID": 656483284,
+            "line": 11909,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -30.0
+              ],
+              [
+                330.0,
+                30.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Ready",
+            "rect_fileID": 1679143715,
+            "line": 28819,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -105.0
+              ],
+              [
+                330.0,
+                -45.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton",
+            "rect_fileID": 1541089488,
+            "line": 26778,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -192.0
+              ],
+              [
+                130.0,
+                -128.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton/Label",
+            "rect_fileID": 2024798447,
+            "line": 34000,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -192.0
+              ],
+              [
+                130.0,
+                -128.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel",
+            "rect_fileID": 976173833,
+            "line": 17380,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -220.0
+              ],
+              [
+                360.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_1",
+            "rect_fileID": 1304316392,
+            "line": 22622,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -335.0,
+                165.0
+              ],
+              [
+                -175.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_1/Label",
+            "rect_fileID": 882047149,
+            "line": 15272,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -333.0,
+                165.0
+              ],
+              [
+                -177.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_2",
+            "rect_fileID": 2134359734,
+            "line": 35858,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -165.0,
+                165.0
+              ],
+              [
+                -5.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_2/Label",
+            "rect_fileID": 919086550,
+            "line": 16448,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -163.0,
+                165.0
+              ],
+              [
+                -7.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_3",
+            "rect_fileID": 1543809580,
+            "line": 26898,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                5.0,
+                165.0
+              ],
+              [
+                165.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_3/Label",
+            "rect_fileID": 1817507657,
+            "line": 30973,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                7.0,
+                165.0
+              ],
+              [
+                163.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_4",
+            "rect_fileID": 955136787,
+            "line": 17164,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                175.0,
+                165.0
+              ],
+              [
+                335.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Step_4/Label",
+            "rect_fileID": 1286914653,
+            "line": 22033,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                177.0,
+                165.0
+              ],
+              [
+                333.0,
+                205.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/StepLine",
+            "rect_fileID": 664987722,
+            "line": 12080,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                115.0
+              ],
+              [
+                340.0,
+                155.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Purpose",
+            "rect_fileID": 2042996083,
+            "line": 34255,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                57.0
+              ],
+              [
+                340.0,
+                113.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Action",
+            "rect_fileID": 132021783,
+            "line": 2441,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -35.0
+              ],
+              [
+                340.0,
+                55.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Hint",
+            "rect_fileID": 1776309155,
+            "line": 30301,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -93.0
+              ],
+              [
+                340.0,
+                -37.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/Progress",
+            "rect_fileID": 1868971001,
+            "line": 31532,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -188.0
+              ],
+              [
+                -70.0,
+                -132.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/RestartButton",
+            "rect_fileID": 2077271730,
+            "line": 35180,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                80.0,
+                -190.0
+              ],
+              [
+                300.0,
+                -130.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "PracticePanel/RestartButton/Label",
+            "rect_fileID": 2001940601,
+            "line": 33631,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                80.0,
+                -190.0
+              ],
+              [
+                300.0,
+                -130.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel",
+            "rect_fileID": 1970171332,
+            "line": 33088,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -220.0
+              ],
+              [
+                360.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Title",
+            "rect_fileID": 560375940,
+            "line": 10343,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                140.0
+              ],
+              [
+                330.0,
+                190.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Summary",
+            "rect_fileID": 959887157,
+            "line": 17240,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                30.0
+              ],
+              [
+                330.0,
+                130.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Count",
+            "rect_fileID": 1205382379,
+            "line": 20839,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -30.0
+              ],
+              [
+                330.0,
+                20.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/Note",
+            "rect_fileID": 1215530466,
+            "line": 20976,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -90.0
+              ],
+              [
+                330.0,
+                -40.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/RetryButton",
+            "rect_fileID": 1846462674,
+            "line": 31111,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -192.0
+              ],
+              [
+                130.0,
+                -128.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletionPanel/RetryButton/Label",
+            "rect_fileID": 931738407,
+            "line": 16732,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -192.0
+              ],
+              [
+                130.0,
+                -128.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "PC_TutorialBoard",
+        "path": "StationsRoot/Station_ProtectiveClothing/Content/PC_Equipment/PC_TutorialBoard",
+        "rect_fileID": 505148367,
+        "line": 9017,
+        "size": {
+          "x": 720,
+          "y": 520
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1135564349,
+            "line": 19575,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -260.0
+              ],
+              [
+                360.0,
+                260.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow",
+            "rect_fileID": 446267841,
+            "line": 8616,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -260.0
+              ],
+              [
+                360.0,
+                260.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box1",
+            "rect_fileID": 584004823,
+            "line": 10911,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                200.0
+              ],
+              [
+                -235.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box1/Label",
+            "rect_fileID": 1714430213,
+            "line": 29326,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -338.0,
+                200.0
+              ],
+              [
+                -237.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box2",
+            "rect_fileID": 1339549460,
+            "line": 23086,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -225.0,
+                200.0
+              ],
+              [
+                -120.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box2/Label",
+            "rect_fileID": 1492473802,
+            "line": 25874,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -223.0,
+                200.0
+              ],
+              [
+                -122.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box3",
+            "rect_fileID": 1487905736,
+            "line": 25612,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -110.0,
+                200.0
+              ],
+              [
+                -5.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box3/Label",
+            "rect_fileID": 930305247,
+            "line": 16695,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -108.0,
+                200.0
+              ],
+              [
+                -7.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box4",
+            "rect_fileID": 422449948,
+            "line": 7702,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                5.0,
+                200.0
+              ],
+              [
+                110.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box4/Label",
+            "rect_fileID": 307025357,
+            "line": 4479,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                7.0,
+                200.0
+              ],
+              [
+                108.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box5",
+            "rect_fileID": 545898369,
+            "line": 10096,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                120.0,
+                200.0
+              ],
+              [
+                225.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box5/Label",
+            "rect_fileID": 1971940960,
+            "line": 33230,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                122.0,
+                200.0
+              ],
+              [
+                223.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box6",
+            "rect_fileID": 1386789106,
+            "line": 23680,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                235.0,
+                200.0
+              ],
+              [
+                340.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/Box6/Label",
+            "rect_fileID": 114111628,
+            "line": 1809,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                237.0,
+                200.0
+              ],
+              [
+                338.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StepRow/StepLine",
+            "rect_fileID": 610055067,
+            "line": 10987,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                152.0
+              ],
+              [
+                340.0,
+                192.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start",
+            "rect_fileID": 1854176882,
+            "line": 31229,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -260.0
+              ],
+              [
+                360.0,
+                260.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Title",
+            "rect_fileID": 1981845115,
+            "line": 33299,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                190.0
+              ],
+              [
+                330.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Description",
+            "rect_fileID": 430831102,
+            "line": 8141,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                32.0
+              ],
+              [
+                330.0,
+                182.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Controls",
+            "rect_fileID": 710523323,
+            "line": 13073,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -36.0
+              ],
+              [
+                330.0,
+                24.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/Ready",
+            "rect_fileID": 2044304495,
+            "line": 34392,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -108.0
+              ],
+              [
+                330.0,
+                -44.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/StartButton",
+            "rect_fileID": 1362610873,
+            "line": 23226,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -232.0
+              ],
+              [
+                130.0,
+                -168.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Start/StartButton/Label",
+            "rect_fileID": 733154963,
+            "line": 13688,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -232.0
+              ],
+              [
+                130.0,
+                -168.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice",
+            "rect_fileID": 1267752288,
+            "line": 21698,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -260.0
+              ],
+              [
+                360.0,
+                260.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Instruction",
+            "rect_fileID": 757057943,
+            "line": 14230,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -38.0
+              ],
+              [
+                340.0,
+                62.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Status",
+            "rect_fileID": 110479979,
+            "line": 1572,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -122.0
+              ],
+              [
+                340.0,
+                -46.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Practice/Purpose",
+            "rect_fileID": 304499340,
+            "line": 4242,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                70.0
+              ],
+              [
+                340.0,
+                144.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion",
+            "rect_fileID": 1942042612,
+            "line": 32658,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -260.0
+              ],
+              [
+                360.0,
+                260.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Title",
+            "rect_fileID": 1118343248,
+            "line": 19099,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                190.0
+              ],
+              [
+                330.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Summary",
+            "rect_fileID": 632410653,
+            "line": 11124,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -68.0
+              ],
+              [
+                330.0,
+                182.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/Note",
+            "rect_fileID": 1945164324,
+            "line": 32699,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -136.0
+              ],
+              [
+                330.0,
+                -76.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/RetryButton",
+            "rect_fileID": 903911183,
+            "line": 15805,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -230.0
+              ],
+              [
+                -140.0,
+                -170.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "Completion/RetryButton/Label",
+            "rect_fileID": 92033118,
+            "line": 1298,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -230.0
+              ],
+              [
+                -140.0,
+                -170.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      },
+      {
+        "name": "K1_GuideBoard",
+        "path": "StationsRoot/Station_K1GasMask/Content/K1_Training/K1_GuideBoard",
+        "rect_fileID": 724585205,
+        "line": 13324,
+        "size": {
+          "x": 720,
+          "y": 480
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "scale": {
+          "x": 0.001,
+          "y": 0.001,
+          "z": 0.001
+        },
+        "elements": [
+          {
+            "path": "Background",
+            "rect_fileID": 1524913744,
+            "line": 26565,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -240.0
+              ],
+              [
+                360.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel",
+            "rect_fileID": 41391676,
+            "line": 528,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -240.0
+              ],
+              [
+                360.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Title",
+            "rect_fileID": 64640702,
+            "line": 887,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                170.0
+              ],
+              [
+                330.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Description",
+            "rect_fileID": 1803866940,
+            "line": 30796,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                82.0
+              ],
+              [
+                330.0,
+                162.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton",
+            "rect_fileID": 1769147078,
+            "line": 30181,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -212.0
+              ],
+              [
+                130.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/StartButton/Label",
+            "rect_fileID": 1029478255,
+            "line": 18053,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -130.0,
+                -212.0
+              ],
+              [
+                130.0,
+                -148.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "StartPanel/Ready",
+            "rect_fileID": 444900086,
+            "line": 8480,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                10.0
+              ],
+              [
+                330.0,
+                74.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel",
+            "rect_fileID": 1723756040,
+            "line": 29522,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -240.0
+              ],
+              [
+                360.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Course",
+            "rect_fileID": 1338310217,
+            "line": 22828,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                152.0
+              ],
+              [
+                190.0,
+                192.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/StepCount",
+            "rect_fileID": 1471850994,
+            "line": 25323,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -174.0
+              ],
+              [
+                340.0,
+                -134.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress",
+            "rect_fileID": 1932847586,
+            "line": 32593,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -240.0
+              ],
+              [
+                360.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_1",
+            "rect_fileID": 867707477,
+            "line": 15196,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                180.0
+              ],
+              [
+                -212.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_1/Label",
+            "rect_fileID": 77271909,
+            "line": 1161,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -338.0,
+                180.0
+              ],
+              [
+                -214.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_2",
+            "rect_fileID": 1425638374,
+            "line": 24730,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -202.0,
+                180.0
+              ],
+              [
+                -74.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_2/Label",
+            "rect_fileID": 1432874883,
+            "line": 24870,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -200.0,
+                180.0
+              ],
+              [
+                -76.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_3",
+            "rect_fileID": 1401873539,
+            "line": 24158,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -64.0,
+                180.0
+              ],
+              [
+                64.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_3/Label",
+            "rect_fileID": 2097945390,
+            "line": 35595,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -62.0,
+                180.0
+              ],
+              [
+                62.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_4",
+            "rect_fileID": 1455604188,
+            "line": 25007,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                74.0,
+                180.0
+              ],
+              [
+                202.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_4/Label",
+            "rect_fileID": 520106019,
+            "line": 9288,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                76.0,
+                180.0
+              ],
+              [
+                200.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_5",
+            "rect_fileID": 491740460,
+            "line": 8912,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                212.0,
+                180.0
+              ],
+              [
+                340.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Progress/Segment_5/Label",
+            "rect_fileID": 1538347922,
+            "line": 26640,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                214.0,
+                180.0
+              ],
+              [
+                338.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/StepTitle",
+            "rect_fileID": 1163412748,
+            "line": 20026,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                132.0
+              ],
+              [
+                340.0,
+                172.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Instruction",
+            "rect_fileID": 2008964840,
+            "line": 33773,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -48.0
+              ],
+              [
+                340.0,
+                42.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Hint",
+            "rect_fileID": 420104593,
+            "line": 7531,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -126.0
+              ],
+              [
+                340.0,
+                -56.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "ProgressPanel/Purpose",
+            "rect_fileID": 403048631,
+            "line": 7171,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                50.0
+              ],
+              [
+                340.0,
+                124.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel",
+            "rect_fileID": 1332800248,
+            "line": 22786,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -360.0,
+                -240.0
+              ],
+              [
+                360.0,
+                240.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/Title",
+            "rect_fileID": 937329774,
+            "line": 16869,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                170.0
+              ],
+              [
+                330.0,
+                220.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/Mark",
+            "rect_fileID": 1717590435,
+            "line": 29363,
+            "activeSelf": 0,
+            "bounds_ui_units": [
+              [
+                -60.0,
+                134.0
+              ],
+              [
+                60.0,
+                140.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/Body",
+            "rect_fileID": 1395748807,
+            "line": 23984,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -58.0
+              ],
+              [
+                330.0,
+                162.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/Source",
+            "rect_fileID": 1956453355,
+            "line": 33019,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -330.0,
+                -126.0
+              ],
+              [
+                330.0,
+                -66.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/RetryButton",
+            "rect_fileID": 5576772,
+            "line": 262,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -210.0
+              ],
+              [
+                -140.0,
+                -150.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          },
+          {
+            "path": "CompletePanel/RetryButton/Label",
+            "rect_fileID": 326697639,
+            "line": 5024,
+            "activeSelf": 1,
+            "bounds_ui_units": [
+              [
+                -340.0,
+                -210.0
+              ],
+              [
+                -140.0,
+                -150.0
+              ]
+            ],
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "outside_canvas": false
+          }
+        ]
+      }
+    ]
+  }
+]

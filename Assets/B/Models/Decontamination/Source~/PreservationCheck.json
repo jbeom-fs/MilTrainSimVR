@@ -1,0 +1,26 @@
+{
+  "checked_files": 1402,
+  "changed_existing_files": [],
+  "missing_existing_files": [],
+  "scope": "Existing Assets/B, Packages, ProjectSettings, Docs/B files from pre-production baseline",
+  "new_output_files": [
+    "DC_Applicator.fbx",
+    "DC_CollectionBin.fbx",
+    "DC_KitCase.fbx",
+    "Source~\\Decontamination_Prototype.blend",
+    "Source~\\PreservationBaseline.json",
+    "Source~\\PreviewGeometry.json",
+    "Source~\\README_Delivery.md",
+    "Source~\\ReuseInspection.json",
+    "Source~\\ValidationReport.json",
+    "Source~\\Previews\\01_Overview.png",
+    "Source~\\Previews\\02_Case_Closed.png",
+    "Source~\\Previews\\03_Case_Open_WithTool.png",
+    "Source~\\Previews\\04_Applicator_Grip.png",
+    "Source~\\Previews\\05_Applicator_Contact.png",
+    "Source~\\Previews\\06_CollectionBin_Interior.png",
+    "Source~\\Previews\\07_CollectionBin_ToolFit.png",
+    "Source~\\Previews\\08_Pivots_Anchors.png"
+  ],
+  "status": "PASS"
+}

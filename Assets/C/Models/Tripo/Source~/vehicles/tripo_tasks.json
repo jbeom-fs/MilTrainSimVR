@@ -1,0 +1,29 @@
+{
+ "_note": "원본 FBX(약 52 MB, <name>/<Name>_orig.fbx)는 커밋하지 않는다. 다시 필요하면 아래 task id 로 Tripo 에서 받는다. 한 대 = 그림 5 + H3.1 모델 30 + FBX 변환 5 크레딧 (2026-11-10)",
+ "common": {
+  "image_model": "seedream_v4",
+  "make": "tripo make <image> --model H3.1 -p pbr=true --then convert:fbx",
+  "build": "vehicle_build.sh <name> <Name> <model.fbx> <work dir>  (10만 삼각형 · 4K 굽기, 약 15 ~ 25 분)"
+ },
+ "sedan": {
+  "image_task": "7e8dac73-53bd-4ebb-a941-8467181f9a22",
+  "model_task": "f68ba345-e83e-42d4-807d-9f3a3066724e",
+  "convert_task": "5b691657-5e49-421a-8f2b-fb3f8a64a2e6",
+  "prefab": {"name": "C_Vehicle_Sedan_White", "real_m": "4.35 x 1.72 (거울 포함 1.96) x 1.49", "holder_scale": [4.35, 4.12, 4.2]}
+ },
+ "van": {
+  "image_task": "a97ccb46-5e7e-466c-93b6-f3af6c276663",
+  "model_task": "c4940167-086b-41c0-9320-5a04d11ec618",
+  "convert_task": "f2c3622d-222b-4978-a39e-f543c2fef628",
+  "prompt": "A modern mid-size passenger van, a people carrier with a short sloping hood and a long boxy body, realistic. Clean white satin paint, generic unbranded design with a plain smooth grille and no badges or lettering. Dark tinted windows that hide the interior, a sliding side door, black tires on simple silver wheels, clear headlights, red tail lights, blank white license plates with nothing printed on them. All doors, hood and tailgate closed, wheels pointing straight, parked and empty. About 5.2 m long, 1.9 m wide and 1.95 m tall. Single vehicle, the whole vehicle in frame, three-quarter front view from slightly above eye level, soft even studio lighting, plain light grey background.",
+  "prefab": {"name": "C_Vehicle_Van_White", "real_m": "4.85 x 1.80 (거울 포함 2.17) x 1.92", "height": 1.92, "front_is_high_end": false, "fix_length_height_width": [1.059, 1, 0.968]}
+ },
+ "truck": {
+  "image_task": "cea80505-b5e3-4e1b-90a6-4f0bb3b3584a",
+  "image_task_discarded": "d62c3e31-5ae8-4f0a-8dc9-516911847a49 (경트럭 비율 · 앞 범퍼에 빨간 등 — 프롬프트에 짐칸 길이와 앞 방향지시등을 적어 다시 뽑음)",
+  "model_task": "3334e258-302d-453b-94ff-065671483198",
+  "convert_task": "8583bdbf-60a1-4669-b113-26800cb4f339",
+  "prompt": "A one-ton cab-over light truck of the kind common in South Korea, realistic. Short flat-nosed single cab with one door per side; the driver sits above the front wheels and there is no hood. Behind the cab a long, low, empty steel flatbed about twice as long as the cab, with short drop sides and a tailgate, carrying nothing. Plain medium blue paint on cab and bed, generic unbranded design with a blank front panel. Clear headlights with small amber turn signals beside them, a plain black front bumper carrying only a blank white license plate, black side mirrors, red tail lights at the rear. Dark tinted windows that hide the interior, black tires on plain steel wheels. Doors closed, wheels pointing straight, parked and empty. About 5.1 m long, 1.75 m wide and 2.0 m tall. Single vehicle, whole vehicle in frame, three-quarter front view from slightly above eye level showing the full length of the bed, soft even studio lighting, plain light grey background.",
+  "prefab": {"name": "C_Vehicle_Truck_Blue", "real_m": "4.80 x 1.74 (거울 포함 2.06) x 2.00", "height": 2.0, "front_is_high_end": true, "fix_length_height_width": [1.06, 1, 1.03]}
+ }
+}

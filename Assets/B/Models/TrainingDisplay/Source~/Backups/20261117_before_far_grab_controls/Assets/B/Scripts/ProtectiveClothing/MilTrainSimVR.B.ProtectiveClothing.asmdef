@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.ProtectiveClothing",
+    "rootNamespace": "MilTrainSimVR.B.ProtectiveClothing",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

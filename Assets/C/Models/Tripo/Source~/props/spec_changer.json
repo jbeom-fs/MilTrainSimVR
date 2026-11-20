@@ -1,0 +1,168 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/coin_changer_machine_3d_model/coin_changer_machine_3d_model.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/coin_changer_machine_3d_model/coin_changer_machine_3d_model.fbm/coin_changer_machine_3d_model_basecolor.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/changer",
+ "name": "Coin_Changer",
+ "target_tris": 1500,
+ "planar_deg": 4,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "decals": [
+  {
+   "type": "plate",
+   "rect": [
+    -0.1233,
+    -0.0445,
+    0.753,
+    0.769
+   ]
+  },
+  {
+   "type": "text",
+   "text": "지폐 투입구",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.0112,
+   "center": [
+    -0.084,
+    0.7608
+   ],
+   "color": [
+    0.3,
+    0.31,
+    0.33
+   ]
+  },
+  {
+   "type": "plate",
+   "rect": [
+    -0.147,
+    -0.0208,
+    0.739,
+    0.7515
+   ]
+  },
+  {
+   "type": "plate",
+   "rect": [
+    0.0518,
+    0.1443,
+    0.7565,
+    0.78
+   ]
+  },
+  {
+   "type": "text",
+   "text": "사용 방법",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.016,
+   "center": [
+    0.098,
+    0.7683
+   ],
+   "color": [
+    0.99,
+    0.99,
+    0.99
+   ]
+  },
+  {
+   "type": "text",
+   "text": "① 지폐를 넣으세요",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.012,
+   "center": [
+    0.098,
+    0.734
+   ],
+   "color": [
+    0.3,
+    0.31,
+    0.33
+   ]
+  },
+  {
+   "type": "text",
+   "text": "② 코인이 나와요",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.012,
+   "center": [
+    0.098,
+    0.714
+   ],
+   "color": [
+    0.3,
+    0.31,
+    0.33
+   ]
+  },
+  {
+   "type": "text",
+   "text": "천 원 · 오천 원 · 만 원",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.01,
+   "center": [
+    0.098,
+    0.695
+   ],
+   "color": [
+    0.42,
+    0.43,
+    0.45
+   ]
+  },
+  {
+   "type": "plate",
+   "rect": [
+    -0.1233,
+    -0.042,
+    0.5055,
+    0.5355
+   ]
+  },
+  {
+   "type": "text",
+   "text": "코인 반환 버튼",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.0112,
+   "center": [
+    -0.0828,
+    0.5268
+   ],
+   "color": [
+    0.3,
+    0.31,
+    0.33
+   ]
+  },
+  {
+   "type": "plate",
+   "rect": [
+    -0.077,
+    0.0768,
+    0.3255,
+    0.3515
+   ]
+  },
+  {
+   "type": "text",
+   "text": "▼ 코인 나오는 곳 ▼",
+   "font": "C:/Windows/Fonts/malgunbd.ttf",
+   "height": 0.0128,
+   "center": [
+    0.0,
+    0.3383
+   ],
+   "color": [
+    0.3,
+    0.62,
+    0.8
+   ]
+  }
+ ],
+ "uv_front_boost": 3.0,
+ "bake_samples": 64
+}

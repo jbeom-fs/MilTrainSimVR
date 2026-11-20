@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.CommonMenu",
+    "rootNamespace": "MilTrainSimVR.B.CommonMenu",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI", "Unity.InputSystem", "Unity.XR.CoreUtils", "Unity.XR.Interaction.Toolkit"]
+}

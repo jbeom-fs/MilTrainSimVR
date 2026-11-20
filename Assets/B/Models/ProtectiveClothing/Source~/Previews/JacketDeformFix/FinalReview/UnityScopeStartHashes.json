@@ -1,0 +1,102 @@
+﻿[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EBB62BFCCAEA61936795C15E032792861E73E8643034403BA806390E7A93D918",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "09668169F32194A398F19B79E09ADAF22712F74BA811126F798967FB8E1E9494",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "3F4877B5601D37CCAC04A3DCCFD82EDE7A36355B8366BA30706BDBAA148B10C9",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "05C8DB43BA673E910F9325161EF9417A372BAA3368B4D4B40D028D4D7466892A",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "5E4CEC97A7C9ECA89B94A926FA2775A712D1CEF75F9D8E8CB5F8C4B8880ACC7D",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "09150E166B0BFF76B3449287E4E18D6A639A8560E44B06FFF7B3D6C96604AAF8",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "250B89907C8BD94AA6B42A0603BEE49DE0EF23E34389235242BAF427244E57D3",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingMirror.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E469A89030A0072B67F64971D26DD0D61A4EF31931661C9A75E00819F35D4A6A",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingMirror.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B0CB4F794B05F4F696C723A52145B40D1D7A5AB0981923181F1F5AB9A86385B2",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "E9F9CADA4A704F63F63C364013CC46ECD7B644086FC7D410E5C3D5B1BA9B4BE5",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A7F07CE004CCDA21012983EAA9CE72844EBACA7E81AF5B453F7B7FBFE56FDE9F",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "503D6C6BE443DAABDE6D7B617C8D052B7995B0E12CCA94EAC1A788EF85476317",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "492FC06B44D0AB6479ED53315B08E796E03CFFF5E7604E7B4FD2831BA2F779B3",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EEC9C5B7E83A9C1B987CD913C130191CCF49CCB7934CD778B69E3FB18A06ABB2",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "EC36D556B296018013073DF1253E181DD5DE4C0EF71FEF4F7BD2AEF3E6B69745",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingUserBody.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "9D1C4B9F45947C7880937BF25B802F70981F2F94B8E75DD9D08032FAF2432972",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingUserBody.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "4B3C5E82147679C2EAA1F06909C917B0892142172091C48C30861B4435BE9649",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "CCF9776210CBD2486F4485C8A8854114ADB2C50D0D6532ADDF3229D688019B91",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs.meta"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "A15BB094EE2A7CB18D44AAAE20C1737F5A124C75E09DCBAAEFAE205F917F0888",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8DB4FBB5BFE03593500AEFECEB33489DBC9E84596A3C7F89172D48FE2261470C",
+        "Path":  "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity.meta"
+    }
+]

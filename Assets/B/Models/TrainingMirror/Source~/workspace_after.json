@@ -1,0 +1,6 @@
+{
+  "outside_delivery_changed_paths": [],
+  "baseline_files": 4303,
+  "after_files": 4303,
+  "method": "git tracked + nonignored untracked inventory; file size and mtime_ns; no Unity execution"
+}

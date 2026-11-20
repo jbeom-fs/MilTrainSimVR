@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.K1GasMask.MirrorAvatar",
+    "rootNamespace": "MilTrainSimVR.B.K1GasMask.MirrorAvatar",
+    "references": ["MilTrainSimVR.B.K1GasMask.Tutorial", "Unity.TextMeshPro", "Unity.InputSystem"]
+}

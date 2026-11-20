@@ -1,0 +1,648 @@
+{
+ "input": "Backups\\20261103_userwear_before\\Model\\Source~\\ProtectiveClothing.blend",
+ "blender": "5.2.1 LTS",
+ "removal": {
+  "Jacket_Worn": {
+   "triangles_before": 19282,
+   "triangles_after": 14170,
+   "removed_islands": [
+    {
+     "what": "olive shoulder cape",
+     "faces": 2304,
+     "min": [
+      -0.296,
+      -0.158,
+      1.3884
+     ],
+     "max": [
+      0.2961,
+      0.204,
+      1.5331
+     ]
+    },
+    {
+     "what": "cape hem stitch",
+     "faces": 128,
+     "min": [
+      -0.297,
+      -0.159,
+      1.3896
+     ],
+     "max": [
+      0.297,
+      0.205,
+      1.5279
+     ]
+    },
+    {
+     "what": "olive hood-to-cape neck join",
+     "faces": 1024,
+     "min": [
+      -0.1245,
+      -0.0861,
+      1.5195
+     ],
+     "max": [
+      0.125,
+      0.1272,
+      1.562
+     ]
+    },
+    {
+     "what": "olive hood",
+     "faces": 1512,
+     "min": [
+      -0.1159,
+      -0.143,
+      1.54
+     ],
+     "max": [
+      0.1166,
+      0.107,
+      1.8031
+     ]
+    },
+    {
+     "what": "hood face binding stitch",
+     "faces": 144,
+     "min": [
+      -0.0885,
+      -0.145,
+      1.5455
+     ],
+     "max": [
+      0.0885,
+      -0.145,
+      1.7545
+     ]
+    }
+   ]
+  },
+  "Jacket_Pickup": {
+   "triangles_before": 8028,
+   "triangles_after": 7136,
+   "removed_islands": [
+    {
+     "what": "folded olive hood",
+     "faces": 892,
+     "min": [
+      -0.1365,
+      0.067,
+      0.0695
+     ],
+     "max": [
+      0.1365,
+      0.135,
+      0.0931
+     ]
+    }
+   ]
+  }
+ },
+ "neckline": {
+  "cut_height_m": 1.5241,
+  "centre_xy_m": [
+   0.0013,
+   0.0166
+  ],
+  "opening_radius_m": [
+   0.0777,
+   0.152
+  ],
+  "collar": "camo stand collar from 12.5 mm below the cut to 10.5 mm above it, rolled 6 mm inside, 1.8 mm cloth, clamped 4 mm off the neck skin; thread stitch line 9-10 mm below the cut",
+  "jacket_triangles_after_collar": 16330
+ },
+ "skeleton": {
+  "object": "PC_Armature",
+  "parent": "ProtectiveClothing_Worn",
+  "bones": 65,
+  "deform_groups_of_reference_body": 52,
+  "rest_matrix_world_equals_mannequin_armature": true
+ },
+ "skinning": {
+  "Jacket": {
+   "bones": [
+    "Hips",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "LeftShoulder",
+    "Neck",
+    "RightArm",
+    "RightForeArm",
+    "RightHand",
+    "RightShoulder",
+    "Spine",
+    "Spine1",
+    "Spine2"
+   ],
+   "vertices": 8354,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  },
+  "Trousers": {
+   "bones": [
+    "Hips",
+    "LeftFoot",
+    "LeftLeg",
+    "LeftUpLeg",
+    "RightFoot",
+    "RightLeg",
+    "RightUpLeg"
+   ],
+   "vertices": 6138,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  },
+  "Glove_L": {
+   "bones": [
+    "LeftForeArm",
+    "LeftHand",
+    "LeftHandIndex1",
+    "LeftHandIndex2",
+    "LeftHandIndex3",
+    "LeftHandMiddle1",
+    "LeftHandMiddle2",
+    "LeftHandMiddle3",
+    "LeftHandPinky1",
+    "LeftHandPinky2",
+    "LeftHandPinky3",
+    "LeftHandRing1",
+    "LeftHandRing2",
+    "LeftHandRing3",
+    "LeftHandThumb1",
+    "LeftHandThumb2",
+    "LeftHandThumb3"
+   ],
+   "vertices": 3724,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  },
+  "Glove_R": {
+   "bones": [
+    "RightForeArm",
+    "RightHand",
+    "RightHandIndex1",
+    "RightHandIndex2",
+    "RightHandIndex3",
+    "RightHandMiddle1",
+    "RightHandMiddle2",
+    "RightHandMiddle3",
+    "RightHandPinky1",
+    "RightHandPinky2",
+    "RightHandPinky3",
+    "RightHandRing1",
+    "RightHandRing2",
+    "RightHandRing3",
+    "RightHandThumb1",
+    "RightHandThumb2",
+    "RightHandThumb3"
+   ],
+   "vertices": 3724,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  },
+  "Overboot_L": {
+   "bones": [
+    "LeftFoot",
+    "LeftLeg",
+    "LeftToeBase"
+   ],
+   "vertices": 2142,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  },
+  "Overboot_R": {
+   "bones": [
+    "RightFoot",
+    "RightLeg",
+    "RightToeBase"
+   ],
+   "vertices": 2142,
+   "vertices_without_body_weight": 0,
+   "missing_bones": [],
+   "max_influences": 4
+  }
+ },
+ "skinning_method": "Data Transfer (nearest face interpolated) of the reference body Ch36 weights, then per part: jacket = hips, spine, neck, shoulders, arms, hands (legs to hips, head to neck, fingers to hand); trousers = hips, spine, legs, feet (upper body to spine, toes to foot); gloves = own forearm, hand and fingers; overboots = own leg, foot and toe base; jacket and trousers smoothed twice; at most 4 influences, normalized.",
+ "rest_pose_skin_error_m": {
+  "Jacket": 2.4755668231600746e-07,
+  "Trousers": 1.2377834115800373e-07,
+  "Glove_L": 3.0082728316221265e-07,
+  "Glove_R": 3.7763493947607836e-07,
+  "Overboot_L": 5.3726900748371916e-08,
+  "Overboot_R": 7.300048299977713e-08
+ },
+ "contract": {
+  "objects_checked": 32,
+  "problems": [],
+  "max_matrix_difference": 0.0,
+  "objects_added": [
+   "PC_Armature"
+  ],
+  "objects_removed": [],
+  "attach_worn_world_m": {
+   "Jacket": [
+    0.0,
+    -0.025,
+    1.29
+   ],
+   "Trousers": [
+    0.0,
+    -0.025,
+    0.965
+   ],
+   "Glove_L": [
+    0.675,
+    0.035,
+    1.422
+   ],
+   "Glove_R": [
+    -0.675,
+    0.035,
+    1.422
+   ],
+   "Overboot_L": [
+    0.15,
+    0.031,
+    0.105
+   ],
+   "Overboot_R": [
+    -0.15,
+    0.031,
+    0.105
+   ]
+  }
+ },
+ "triangles": {
+  "Glove_L_Pickup": [
+   7444,
+   7444
+  ],
+  "Glove_L_Worn": [
+   7444,
+   7444
+  ],
+  "Glove_R_Pickup": [
+   7444,
+   7444
+  ],
+  "Glove_R_Worn": [
+   7444,
+   7444
+  ],
+  "Jacket_Pickup": [
+   8028,
+   7136
+  ],
+  "Jacket_Worn": [
+   19282,
+   16330
+  ],
+  "Overboot_L_Pickup": [
+   4264,
+   4264
+  ],
+  "Overboot_L_Worn": [
+   4264,
+   4264
+  ],
+  "Overboot_R_Pickup": [
+   4264,
+   4264
+  ],
+  "Overboot_R_Worn": [
+   4264,
+   4264
+  ],
+  "Trousers_Pickup": [
+   3574,
+   3574
+  ],
+  "Trousers_Worn": [
+   12192,
+   12192
+  ]
+ },
+ "export": {
+  "worn": "MESH, EMPTY, ARMATURE (deform bones only, no leaf bones, no animation)",
+  "pickup": "MESH, EMPTY (no rig)",
+  "settings": "Global Scale 1, apply_unit_scale, FBX_SCALE_UNITS, -Z forward, Y up, space transform not baked"
+ },
+ "pose_review": {
+  "poses": {
+   "ArmsDown": "both upper arms aimed down and slightly out from the T pose",
+   "ElbowBend": "arms down and out, forearms forward (controller holding)",
+   "TorsoTwist": "arms down, Spine/Spine1/Spine2 10 deg each about the vertical (30 deg)",
+   "LightBend": "arms down and forward, spine 20 deg forward, thighs 20 deg forward, knees 35 deg"
+  },
+  "metrics": {
+   "ArmsDown": {
+    "Jacket": {
+     "sampled_vertices": 2785,
+     "inside_body_over_5mm": 16,
+     "inside_body_over_5mm_ratio": 0.0057,
+     "min_signed_distance_mm": -14.27,
+     "edge_stretch_p99": 1.332,
+     "edge_stretch_max": 2.173,
+     "edges_over_1_5x": 65
+    },
+    "Trousers": {
+     "sampled_vertices": 2046,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 9.9,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_L": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.28,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_R": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.24,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_L": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.26,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_R": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.25,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    }
+   },
+   "ElbowBend": {
+    "Jacket": {
+     "sampled_vertices": 2785,
+     "inside_body_over_5mm": 2,
+     "inside_body_over_5mm_ratio": 0.0007,
+     "min_signed_distance_mm": -8.78,
+     "edge_stretch_p99": 1.415,
+     "edge_stretch_max": 2.585,
+     "edges_over_1_5x": 143
+    },
+    "Trousers": {
+     "sampled_vertices": 2046,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 9.9,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_L": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.17,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_R": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.23,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_L": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.26,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_R": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.25,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    }
+   },
+   "TorsoTwist": {
+    "Jacket": {
+     "sampled_vertices": 2785,
+     "inside_body_over_5mm": 20,
+     "inside_body_over_5mm_ratio": 0.0072,
+     "min_signed_distance_mm": -14.68,
+     "edge_stretch_p99": 1.37,
+     "edge_stretch_max": 4.06,
+     "edges_over_1_5x": 109
+    },
+    "Trousers": {
+     "sampled_vertices": 2046,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 9.9,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_L": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.28,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_R": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.24,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_L": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.26,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_R": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.25,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    }
+   },
+   "LightBend": {
+    "Jacket": {
+     "sampled_vertices": 2785,
+     "inside_body_over_5mm": 25,
+     "inside_body_over_5mm_ratio": 0.009,
+     "min_signed_distance_mm": -18.5,
+     "edge_stretch_p99": 1.372,
+     "edge_stretch_max": 3.15,
+     "edges_over_1_5x": 91
+    },
+    "Trousers": {
+     "sampled_vertices": 2046,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 9.9,
+     "edge_stretch_p99": 1.297,
+     "edge_stretch_max": 1.704,
+     "edges_over_1_5x": 14
+    },
+    "Glove_L": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.28,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Glove_R": {
+     "sampled_vertices": 1242,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 0.24,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_L": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.26,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    },
+    "Overboot_R": {
+     "sampled_vertices": 714,
+     "inside_body_over_5mm": 0,
+     "inside_body_over_5mm_ratio": 0.0,
+     "min_signed_distance_mm": 3.25,
+     "edge_stretch_p99": 1.0,
+     "edge_stretch_max": 1.0,
+     "edges_over_1_5x": 0
+    }
+   }
+  },
+  "note": "Deformation review only (both armatures posed alike, reference body for penetration). Not a pass of fit or comfort."
+ },
+ "roundtrip": {
+  "worn": {
+   "objects": 14,
+   "missing": [],
+   "parent_mismatch": [
+    "Jacket_Worn",
+    "Trousers_Worn",
+    "Glove_L_Worn",
+    "Overboot_L_Worn",
+    "Glove_R_Worn",
+    "Overboot_R_Worn"
+   ],
+   "max_matrix_difference": 3.5762786865234375e-07,
+   "deform_bones_expected": 65,
+   "bones_imported": 52,
+   "deform_bones_not_reimported": [
+    "mixamorig1:HeadTop_End",
+    "mixamorig1:LeftHandIndex4",
+    "mixamorig1:LeftHandMiddle4",
+    "mixamorig1:LeftHandPinky4",
+    "mixamorig1:LeftHandRing4",
+    "mixamorig1:LeftHandThumb4",
+    "mixamorig1:LeftToe_End",
+    "mixamorig1:RightHandIndex4",
+    "mixamorig1:RightHandMiddle4",
+    "mixamorig1:RightHandPinky4",
+    "mixamorig1:RightHandRing4",
+    "mixamorig1:RightHandThumb4",
+    "mixamorig1:RightToe_End"
+   ],
+   "weighted_bones_not_reimported": [],
+   "max_bone_head_difference_m": 1.5613822253521774e-06,
+   "Jacket": {
+    "vertices": 8354,
+    "armature_modifier": true,
+    "groups": 13
+   },
+   "Trousers": {
+    "vertices": 6138,
+    "armature_modifier": true,
+    "groups": 7
+   },
+   "Glove_L": {
+    "vertices": 3724,
+    "armature_modifier": true,
+    "groups": 17
+   },
+   "Glove_R": {
+    "vertices": 3724,
+    "armature_modifier": true,
+    "groups": 17
+   },
+   "Overboot_L": {
+    "vertices": 2142,
+    "armature_modifier": true,
+    "groups": 3
+   },
+   "Overboot_R": {
+    "vertices": 2142,
+    "armature_modifier": true,
+    "groups": 3
+   },
+   "max_rest_vertex_difference_m": 2.285012442371226e-06,
+   "max_weight_difference": 0.023962438106536865,
+   "max_posed_vertex_difference_ElbowBend_m": 0.0016015587605082344,
+   "armature_modifiers_to_PC_Armature": true,
+   "parent_mismatch_note": "Blender FBX importer parents skinned meshes to the imported armature. The exporter (io_scene_fbx export_fbx_bin.py, connections: a mesh whose parent is not its armature keeps its OO connection to that parent) writes <Component>_Worn under ProtectiveClothing_Worn; world matrices agree (max_matrix_difference). Unity keeps the FBX node hierarchy."
+  },
+  "pickup": {
+   "objects": 19,
+   "problems": [],
+   "max_matrix_difference": 1.6292068494294654e-07,
+   "armatures": []
+  }
+ },
+ "seconds": 82.6
+}

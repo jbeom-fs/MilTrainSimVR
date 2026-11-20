@@ -1,0 +1,19 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/van/Van_orig.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/van/tripo_model_basecolor.jpg",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/van/tripo_model_normal.png",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/van/tripo_model_roughness.jpg",
+  "metallic": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/van/tripo_model_metallic.jpg"
+ },
+ "out_dir": "C:/Users/leesn/AppData/Local/Temp/claude/28213761c82ff9e9/fd0f780c-958c-467e-a45e-15486246a889/scratchpad/tripo/van_100k",
+ "name": "Van100k",
+ "target_tris": 100000,
+ "planar_deg": 1.0,
+ "hide_remove": false,
+ "tex_res": 4096,
+ "cage": 0.002,
+ "ray": 0.012,
+ "bake_margin": 48,
+ "bake_samples": 16
+}

@@ -1,0 +1,494 @@
+{
+  "Jacket_Worn": {
+    "triangles": 19282,
+    "vertices": 9896,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.6781191825866699,
+        0.6781550645828247
+      ],
+      [
+        -0.19956612586975098,
+        0.20499999821186066
+      ],
+      [
+        0.9413583278656006,
+        1.803072452545166
+      ]
+    ],
+    "boundary_edges": 468,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 7816,
+    "bounds_before_m": [
+      [
+        -0.6779999732971191,
+        0.6779999732971191
+      ],
+      [
+        -0.20100000500679016,
+        0.15108703076839447
+      ],
+      [
+        0.9427392482757568,
+        1.5240000486373901
+      ]
+    ]
+  },
+  "Trousers_Worn": {
+    "triangles": 12192,
+    "vertices": 6138,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.2131877839565277,
+        0.21325108408927917
+      ],
+      [
+        -0.18363329768180847,
+        0.13164889812469482
+      ],
+      [
+        0.22941933572292328,
+        1.0036193132400513
+      ]
+    ],
+    "boundary_edges": 68,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 5836,
+    "bounds_before_m": [
+      [
+        -0.2135309875011444,
+        0.21355046331882477
+      ],
+      [
+        -0.17595350742340088,
+        0.12865880131721497
+      ],
+      [
+        0.22994539141654968,
+        1.003000020980835
+      ]
+    ]
+  },
+  "Glove_L_Worn": {
+    "triangles": 7444,
+    "vertices": 3724,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        0.600810706615448,
+        0.8917976021766663
+      ],
+      [
+        -0.05439455062150955,
+        0.10445604473352432
+      ],
+      [
+        1.3516558408737183,
+        1.4919999837875366
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 3014,
+    "bounds_before_m": [
+      [
+        0.6318849921226501,
+        0.8983802795410156
+      ],
+      [
+        -0.060851652175188065,
+        0.09863699972629547
+      ],
+      [
+        1.345114827156067,
+        1.4817160367965698
+      ]
+    ]
+  },
+  "Glove_R_Worn": {
+    "triangles": 7444,
+    "vertices": 3724,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.8917979001998901,
+        -0.600810706615448
+      ],
+      [
+        -0.05435202270746231,
+        0.10445604473352432
+      ],
+      [
+        1.3516827821731567,
+        1.4919999837875366
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 3046,
+    "bounds_before_m": [
+      [
+        -0.898210883140564,
+        -0.6318849921226501
+      ],
+      [
+        -0.06094052642583847,
+        0.09863699972629547
+      ],
+      [
+        1.345011591911316,
+        1.4817160367965698
+      ]
+    ]
+  },
+  "Overboot_L_Worn": {
+    "triangles": 4264,
+    "vertices": 2142,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        0.04399999976158142,
+        0.25099998712539673
+      ],
+      [
+        -0.20200000703334808,
+        0.15800000727176666
+      ],
+      [
+        0.006000000052154064,
+        0.2930000126361847
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 1790,
+    "bounds_before_m": [
+      [
+        0.041996099054813385,
+        0.250855952501297
+      ],
+      [
+        -0.19834092259407043,
+        0.15679532289505005
+      ],
+      [
+        0.005984801799058914,
+        0.29100000858306885
+      ]
+    ]
+  },
+  "Overboot_R_Worn": {
+    "triangles": 4264,
+    "vertices": 2142,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.25099998712539673,
+        -0.04399999976158142
+      ],
+      [
+        -0.20200000703334808,
+        0.15800000727176666
+      ],
+      [
+        0.006000000052154064,
+        0.2930000126361847
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 1790,
+    "bounds_before_m": [
+      [
+        -0.250855952501297,
+        -0.041996099054813385
+      ],
+      [
+        -0.19834092259407043,
+        0.15679532289505005
+      ],
+      [
+        0.005984801333397627,
+        0.29100000858306885
+      ]
+    ]
+  },
+  "Jacket_Pickup": {
+    "triangles": 8028,
+    "vertices": 4032,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.17000000178813934,
+        0.17000000178813934
+      ],
+      [
+        -0.14000000059604645,
+        0.14000000059604645
+      ],
+      [
+        0.0,
+        0.10019662976264954
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 1440,
+    "bounds_before_m": [
+      [
+        -0.17478111386299133,
+        0.17478111386299133
+      ],
+      [
+        -0.14000000059604645,
+        0.14000000059604645
+      ],
+      [
+        0.0,
+        0.101500004529953
+      ]
+    ]
+  },
+  "Trousers_Pickup": {
+    "triangles": 3574,
+    "vertices": 1800,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.14499999582767487,
+        0.14499999582767487
+      ],
+      [
+        -0.1599999964237213,
+        0.1599999964237213
+      ],
+      [
+        0.0,
+        0.0885164886713028
+      ]
+    ],
+    "boundary_edges": 8,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 940,
+    "bounds_before_m": [
+      [
+        -0.14499999582767487,
+        0.14499999582767487
+      ],
+      [
+        -0.1599999964237213,
+        0.1599999964237213
+      ],
+      [
+        0.0,
+        0.0885000079870224
+      ]
+    ]
+  },
+  "Glove_L_Pickup": {
+    "triangles": 7444,
+    "vertices": 3724,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.07942530512809753,
+        0.07942530512809753
+      ],
+      [
+        -0.14549344778060913,
+        0.14549344778060913
+      ],
+      [
+        0.0,
+        0.14034414291381836
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 3016,
+    "bounds_before_m": [
+      [
+        -0.07974433153867722,
+        0.07974433153867722
+      ],
+      [
+        -0.13324764370918274,
+        0.13324764370918274
+      ],
+      [
+        0.0,
+        0.13760121166706085
+      ]
+    ]
+  },
+  "Glove_R_Pickup": {
+    "triangles": 7444,
+    "vertices": 3724,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.07940403372049332,
+        0.07940403372049332
+      ],
+      [
+        -0.14549356698989868,
+        0.14549362659454346
+      ],
+      [
+        0.0,
+        0.14031720161437988
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 3048,
+    "bounds_before_m": [
+      [
+        -0.07978875935077667,
+        0.07978875935077667
+      ],
+      [
+        -0.1331629455089569,
+        0.1331629455089569
+      ],
+      [
+        0.0,
+        0.13770444691181183
+      ]
+    ]
+  },
+  "Overboot_L_Pickup": {
+    "triangles": 4264,
+    "vertices": 2142,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.10349999368190765,
+        0.10349999368190765
+      ],
+      [
+        -0.18000000715255737,
+        0.18000000715255737
+      ],
+      [
+        0.0,
+        0.28700000047683716
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 1790,
+    "bounds_before_m": [
+      [
+        -0.1044299304485321,
+        0.1044299304485321
+      ],
+      [
+        -0.17756812274456024,
+        0.17756812274456024
+      ],
+      [
+        0.0,
+        0.28501519560813904
+      ]
+    ]
+  },
+  "Overboot_R_Pickup": {
+    "triangles": 4264,
+    "vertices": 2142,
+    "material_slots": 1,
+    "materials": [
+      "PC_Shared"
+    ],
+    "bounds_m": [
+      [
+        -0.10349999368190765,
+        0.10349999368190765
+      ],
+      [
+        -0.18000000715255737,
+        0.18000000715255737
+      ],
+      [
+        0.0,
+        0.28700000047683716
+      ]
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_nonboundary_edges": 0,
+    "degenerate_faces": 0,
+    "negative_scale": false,
+    "triangles_before": 1790,
+    "bounds_before_m": [
+      [
+        -0.1044299304485321,
+        0.1044299304485321
+      ],
+      [
+        -0.17756812274456024,
+        0.17756812274456024
+      ],
+      [
+        0.0,
+        0.28501519560813904
+      ]
+    ]
+  }
+}

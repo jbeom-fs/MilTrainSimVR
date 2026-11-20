@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.Interaction",
+    "rootNamespace": "MilTrainSimVR.B.Interaction",
+    "references": ["MilTrainSimVR.B.CommonMenu", "MilTrainSimVR.A.Common","Unity.XR.Interaction.Toolkit", "Unity.InputSystem", "Unity.XR.CoreUtils"]
+}

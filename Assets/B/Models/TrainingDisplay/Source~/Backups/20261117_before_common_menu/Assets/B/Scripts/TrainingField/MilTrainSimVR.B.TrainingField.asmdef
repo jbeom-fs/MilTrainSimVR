@@ -1,0 +1,24 @@
+{
+    "name": "MilTrainSimVR.B.TrainingField",
+    "rootNamespace": "MilTrainSimVR.B.TrainingField",
+    "references": [
+        "MilTrainSimVR.B.Training",
+        "MilTrainSimVR.B.TrainingUI",
+        "MilTrainSimVR.B.AedTutorial",
+        "MilTrainSimVR.B.BleedingControl.Tourniquet",
+        "MilTrainSimVR.B.BleedingControl.Tourniquet.Tutorial",
+        "MilTrainSimVR.B.BleedingControl.PressureBandage",
+        "MilTrainSimVR.B.BleedingControl.PressureBandage.Tutorial",
+        "MilTrainSimVR.B.K1GasMask",
+        "MilTrainSimVR.B.K1GasMask.Tutorial",
+        "MilTrainSimVR.B.ProtectiveClothing",
+        "MilTrainSimVR.B.ProtectiveClothing.Tutorial",
+        "MilTrainSimVR.B.Decontamination.KD1",
+        "MilTrainSimVR.B.Decontamination.KD1.Tutorial",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "Unity.XR.Interaction.Toolkit",
+        "Unity.XR.CoreUtils",
+        "Unity.InputSystem"
+    ]
+}

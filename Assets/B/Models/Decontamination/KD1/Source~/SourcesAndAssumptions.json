@@ -1,0 +1,51 @@
+{
+  "primary_article": {
+    "url": "https://demaclub.tistory.com/2851",
+    "publisher": "Defense Media Agency, Republic of Korea",
+    "published": "2015-10-28",
+    "photographer_caption": "Lee Kyung-won",
+    "scope": "Historical 2015 visual evidence, not all current issue variants"
+  },
+  "images": [
+    {
+      "file": "DEMA_2015_Outer.jpg",
+      "url": "https://t1.daumcdn.net/cfile/tistory/2609314B563094E503",
+      "observed": [
+        "Flexible outer envelope",
+        "Yellow insignia and product name",
+        "Four pads stated"
+      ],
+      "not_reproduced": [
+        "Historical 2002.08 date",
+        "Lot, stock number, manufacturer serialization"
+      ]
+    },
+    {
+      "file": "DEMA_2015_Packets.jpg",
+      "url": "https://t1.daumcdn.net/cfile/tistory/25052B4B563094E907",
+      "observed": [
+        "Four individually sealed flat packets",
+        "Peripheral seal and small side notches",
+        "Yellow opposite arrows and external-use label"
+      ]
+    },
+    {
+      "file": "DEMA_2015_HandFit.jpg",
+      "url": "https://t1.daumcdn.net/cfile/tistory/2646AB4F563095BD2F",
+      "observed": [
+        "Dark thin pad",
+        "Broad dorsal hand retention structure",
+        "Visible edge finish, fingers exposed"
+      ]
+    }
+  ],
+  "user_attachment_1": "Olive color and print arrangement referenced from in-chat image, no local original file supplied. No unreadable small text reconstructed.",
+  "assumptions": [
+    "All dimensions from photo proportions and original mannequin hand, not official measurements",
+    "Top 9mm removed seal and open mouth are demonstration assumptions",
+    "Unseen sleeve attachment, reverse and inner material structure simplified",
+    "Packed pose is a static flattened display; no cloth, rig or fold sequence simulated"
+  ],
+  "print_policy": "Only visible military/product/quantity/external-use text and observed packet arrows. No fabricated stock, lot or date. Insignia redrawn approximately, not an official vector master.",
+  "photo_usage": "Downloaded references kept unmodified under Source~/References, never projected onto game meshes"
+}

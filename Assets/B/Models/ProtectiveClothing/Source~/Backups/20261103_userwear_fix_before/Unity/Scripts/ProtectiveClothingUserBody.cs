@@ -1,0 +1,555 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem.XR;
+using UnityEngine.Rendering;
+
+namespace MilTrainSimVR.B.ProtectiveClothing
+{
+    // The user's own body for protective clothing wearing, on the mannequin rig. Only the head (HMD camera) and both hands
+    // (controllers) are tracked inputs; the trunk, legs and feet are ESTIMATED, not measured: the body turns toward the head's
+    // heading, the hips shift so the avatar's eye point lands on the HMD (lean and crouch within limits), elbows and knees come
+    // from a two-bone solve with fixed bend hints, and the feet stay on the floor where the standing pose puts them. Nothing here
+    // measures the user's real body or the real fit of a garment.
+    //
+    // Same estimation as the K1 mirror avatar (K1UserAvatar, which this copies instead of using, so K1 is neither changed nor
+    // needed): single writer of the rig, rest pose reset before every solve, solved in LateUpdate (order 40, before the equipment's
+    // wear judgement at 50) and again right before rendering. Reads the XR Origin only and never moves the camera, controllers or
+    // origin. A lost input holds its last valid pose and blends back when tracking returns, so nothing jumps to the origin.
+    //
+    // Worn model: a skinned copy of the six worn meshes (ProtectiveClothing_Worn.fbx, PC_Armature with the mannequin's bone names
+    // and rest pose) under the mannequin model. Each worn skeleton bone follows the mannequin bone of the same name with the
+    // fixed offset they have in the saved bind pose, so the worn meshes deform with the estimated body (no cloth simulation).
+    // Showing or hiding a worn mesh belongs to ProtectiveClothingEquipment only.
+    //
+    // Display: the mannequin skin is hidden from the HMD camera only (the mirror and other cameras see it), so no head or face
+    // covers the view. Worn parts are drawn in the HMD (look down to see the jacket and trousers; gloves follow the hands),
+    // except the jacket and trousers while the HMD is beyond the body's reach (crouch or lean past the limits), so the camera
+    // never looks out from inside them. While a glove is worn, that hand's controller model is not drawn (the glove is the hand).
+    //
+    // Wear zones: one point and radius per part, under the rig bones (chest front, waist front, each palm, an overboot zone in
+    // front of each thigh: an easy-reach area, not the feet; the worn overboot is shown on the estimated foot).
+    [DefaultExecutionOrder(40)]
+    [DisallowMultipleComponent]
+    public sealed class ProtectiveClothingUserBody : MonoBehaviour
+    {
+        [Serializable]
+        public struct Limb
+        {
+            public Transform upper;
+            public Transform lower;
+            public Transform end;
+            [Tooltip("Arms: middle finger root (aim of the hand). Legs: toe base.")]
+            public Transform aim;
+            [Tooltip("Arms: index finger root (thumb side of the aim). Legs: unused.")]
+            public Transform side;
+        }
+
+        [Serializable]
+        public struct WearZone
+        {
+            [Tooltip("Zone centre, a child of a rig bone (moves with the estimated body).")]
+            public Transform point;
+            [Tooltip("Zone radius (m, world): the held pickup's Attach point within it wears the part. Development handling value.")]
+            public float radius;
+        }
+
+        // Kept with its last valid pose; blends from it back to the live pose after a loss.
+        sealed class PoseSource
+        {
+            Pose held;
+            float blend = 1f;
+            bool lost;
+
+            public bool HasPose { get; private set; }
+            public Pose Output { get; private set; }
+            // Tracked now and not blending back from a held pose.
+            public bool Settled => HasPose && !lost && blend >= 1f;
+
+            public void Sample(Transform source, TrackedPoseDriver driver, float blendTime, float deltaTime)
+            {
+                if (source == null || ProtectiveClothingTracking.Of(driver) != ProtectiveClothingHandTracking.Tracked)
+                {
+                    if (HasPose && !lost)
+                    {
+                        lost = true;
+                        held = Output;
+                    }
+                    return;
+                }
+
+                var live = new Pose(source.position, source.rotation);
+                if (!HasPose)
+                {
+                    Output = live;
+                    HasPose = true;
+                    return;
+                }
+
+                if (lost)
+                {
+                    lost = false;
+                    blend = 0f;
+                }
+
+                if (blend < 1f && blendTime > 0f)
+                {
+                    blend = Mathf.Min(1f, blend + deltaTime / blendTime);
+                    Output = new Pose(Vector3.Lerp(held.position, live.position, blend), Quaternion.Slerp(held.rotation, live.rotation, blend));
+                }
+                else
+                {
+                    blend = 1f;
+                    Output = live;
+                }
+            }
+        }
+
+        // Fixed bend hints in the body frame (m): elbows down, out and back; knees forward. Not tracked data.
+        static readonly Vector3 ElbowHint = new Vector3(0.3f, -0.6f, -0.3f);
+        static readonly Vector3 KneeHint = new Vector3(0f, 0f, 0.6f);
+        const float MaxLift = 0.15f;
+        static readonly int PartCount = Enum.GetValues(typeof(ProtectiveClothingPart)).Length;
+
+        [Header("Tracked inputs (XR Origin, read only)")]
+        [SerializeField] Transform head;
+        [SerializeField] TrackedPoseDriver headDriver;
+        [SerializeField] Transform leftController;
+        [SerializeField] TrackedPoseDriver leftDriver;
+        [SerializeField] Transform rightController;
+        [SerializeField] TrackedPoseDriver rightDriver;
+
+        [Header("Rig (mannequin bones, set by the protective clothing setup)")]
+        [Tooltip("Mannequin model instance under this object (bind pose saved); scaled at start so its eye point reaches the standing eye height.")]
+        [SerializeField] Transform model;
+        [SerializeField] Transform hips;
+        [SerializeField] Transform headBone;
+        [SerializeField] Limb leftArm;
+        [SerializeField] Limb rightArm;
+        [SerializeField] Limb leftLeg;
+        [SerializeField] Limb rightLeg;
+
+        [Header("Worn model and display")]
+        [Tooltip("The six skinned worn meshes, in ProtectiveClothingPart order (inside the worn model instance under the mannequin model).")]
+        [SerializeField] SkinnedMeshRenderer[] wornSkins = Array.Empty<SkinnedMeshRenderer>();
+        [Tooltip("The mannequin skin: never drawn in the HMD camera.")]
+        [SerializeField] Renderer[] bodyRenderers = Array.Empty<Renderer>();
+        [Tooltip("Left controller model renderers: not drawn while the left glove is worn.")]
+        [SerializeField] Renderer[] leftControllerModel = Array.Empty<Renderer>();
+        [Tooltip("Right controller model renderers: not drawn while the right glove is worn.")]
+        [SerializeField] Renderer[] rightControllerModel = Array.Empty<Renderer>();
+        [Tooltip("HMD farther than this (m) from the body's eye point (beyond the crouch / lean limits): the jacket and trousers are not drawn in the HMD.")]
+        [SerializeField] float firstPersonClearance = 0.1f;
+
+        [Header("Wear zones (ProtectiveClothingPart order)")]
+        [SerializeField] WearZone[] zones = Array.Empty<WearZone>();
+
+        [Header("Alignment (adjustable)")]
+        [Tooltip("Point between the eyes in the head bone's local space; it is placed on the HMD camera.")]
+        [SerializeField] Vector3 eyeOffset;
+        [Tooltip("User's standing eye height above the floor (m). The mannequin is scaled uniformly to it at start.")]
+        [SerializeField] float standingEyeHeight = 1.6f;
+        [Tooltip("Floor height in world space (m); the feet stand on it.")]
+        [SerializeField] float floorHeight;
+        [Tooltip("Upper and lower arm length factor after scaling (1 = mannequin proportions).")]
+        [SerializeField, Range(0.8f, 1.25f)] float armLengthScale = 1f;
+        [Tooltip("Right wrist in the right controller's local space (m); mirrored in x for the left hand.")]
+        [SerializeField] Vector3 wristOffset = new Vector3(0f, -0.02f, -0.08f);
+        [Tooltip("Extra right hand rotation on the controller frame (Euler, deg); mirrored for the left hand.")]
+        [SerializeField] Vector3 handRotationOffset;
+        [Tooltip("Seconds for the body to turn toward the head's heading.")]
+        [SerializeField] float bodyTurnTime = 0.3f;
+        [Tooltip("Seconds to blend from a held pose back to live tracking after a loss.")]
+        [SerializeField] float trackingBlendTime = 0.25f;
+        [Tooltip("Largest hip drop for crouching (m).")]
+        [SerializeField] float maxCrouch = 0.6f;
+        [Tooltip("Largest horizontal hip shift for leaning (m).")]
+        [SerializeField] float maxLean = 0.3f;
+
+        readonly PoseSource headPose = new PoseSource();
+        readonly PoseSource leftPose = new PoseSource();
+        readonly PoseSource rightPose = new PoseSource();
+        bool ready;
+        bool subscribed;
+        bool beyondReach;
+        Camera headCamera;
+        Transform[] driven = Array.Empty<Transform>();
+        Quaternion[] restRotations = Array.Empty<Quaternion>();
+        Vector3 hipsRestPosition;
+        Vector3[] armRestPositions = Array.Empty<Vector3>();
+        Quaternion headRelative;
+        Vector3 eyeRest;
+        Quaternion leftHandRelative;
+        Quaternion rightHandRelative;
+        Vector3 leftFootRest;
+        Vector3 rightFootRest;
+        Quaternion leftFootRelative;
+        Quaternion rightFootRelative;
+        float bodyYaw;
+        bool hasYaw;
+        // Worn skeleton bones (parents first) and the mannequin bone each follows, with the bind pose offset.
+        Transform[] followers = Array.Empty<Transform>();
+        Transform[] leaders = Array.Empty<Transform>();
+        Vector3[] followPositions = Array.Empty<Vector3>();
+        Quaternion[] followRotations = Array.Empty<Quaternion>();
+
+        public bool IsValid => ready;
+        public Transform Model => model;
+        public Transform Head => head;
+        public TrackedPoseDriver HeadDriver => headDriver;
+        public TrackedPoseDriver LeftDriver => leftDriver;
+        public TrackedPoseDriver RightDriver => rightDriver;
+        public IReadOnlyList<SkinnedMeshRenderer> WornSkins => wornSkins;
+        public IReadOnlyList<WearZone> Zones => zones;
+        public Transform ZonePoint(ProtectiveClothingPart part) => zones[(int)part].point;
+        public float ZoneRadius(ProtectiveClothingPart part) => zones[(int)part].radius;
+
+        // The zone of this part follows live tracking now: the head is tracked and settled (the body is placed from it), and for a
+        // glove also the target hand. Read at the moment of the call.
+        public ProtectiveClothingHandTracking ZoneTracking(ProtectiveClothingPart part)
+        {
+            if (!ready)
+                return ProtectiveClothingHandTracking.Missing;
+            if (ProtectiveClothingTracking.Of(headDriver) != ProtectiveClothingHandTracking.Tracked || !headPose.Settled)
+                return ProtectiveClothingHandTracking.NotTracked;
+            var hand = part == ProtectiveClothingPart.GloveLeft ? leftPose : part == ProtectiveClothingPart.GloveRight ? rightPose : null;
+            var driver = part == ProtectiveClothingPart.GloveLeft ? leftDriver : part == ProtectiveClothingPart.GloveRight ? rightDriver : null;
+            if (hand != null && (ProtectiveClothingTracking.Of(driver) != ProtectiveClothingHandTracking.Tracked || !hand.Settled))
+                return ProtectiveClothingHandTracking.NotTracked;
+            return ProtectiveClothingHandTracking.Tracked;
+        }
+
+        // Head tracking alone (the trunk, legs and zones are estimated from it).
+        public bool HeadTracked => ready && ProtectiveClothingTracking.Of(headDriver) == ProtectiveClothingHandTracking.Tracked && headPose.Settled;
+
+        void Awake()
+        {
+            ready = TryValidate(out var error);
+            if (!ready)
+            {
+                Debug.LogError("[ProtectiveClothing] " + error + " Body stays in its rest pose; wearing is blocked.", this);
+                return;
+            }
+
+            headCamera = head.GetComponent<Camera>();
+            foreach (var r in bodyRenderers)
+            {
+                // The HMD camera never draws it, so skinning must not depend on that camera's visibility.
+                if (r is SkinnedMeshRenderer skinned)
+                    skinned.updateWhenOffscreen = true;
+            }
+            foreach (var skin in wornSkins)
+                skin.updateWhenOffscreen = true;
+
+            if (!CaptureFollowers(out error))
+            {
+                ready = false;
+                Debug.LogError("[ProtectiveClothing] " + error + " Body stays in its rest pose; wearing is blocked.", this);
+                return;
+            }
+
+            // Uniform scale so the rest eye point is standingEyeHeight above this object (the floor point). The worn model is
+            // under the mannequin model, so it scales with it.
+            var eyeHeight = transform.InverseTransformPoint(headBone.TransformPoint(eyeOffset)).y;
+            if (eyeHeight > 0.1f)
+                model.localScale *= standingEyeHeight / eyeHeight;
+            else
+                Debug.LogError($"[ProtectiveClothing] Rest eye height {eyeHeight:F3} m is not usable; body scale unchanged.", this);
+
+            CaptureRest();
+        }
+
+        void OnEnable()
+        {
+            if (!ready || subscribed)
+                return;
+            RenderPipelineManager.beginCameraRendering += OnBeginCamera;
+            Application.onBeforeRender += OnBeforeRender;
+            subscribed = true;
+        }
+
+        void OnDisable()
+        {
+            if (!subscribed)
+                return;
+            RenderPipelineManager.beginCameraRendering -= OnBeginCamera;
+            Application.onBeforeRender -= OnBeforeRender;
+            subscribed = false;
+            SetHmdView(false);
+            SetHidden(leftControllerModel, false);
+            SetHidden(rightControllerModel, false);
+        }
+
+        void LateUpdate()
+        {
+            if (!ready)
+                return;
+            Solve(Time.deltaTime);
+            // Display policy read from what is shown (the equipment owns showing the worn meshes).
+            SetHidden(leftControllerModel, wornSkins[(int)ProtectiveClothingPart.GloveLeft].gameObject.activeInHierarchy);
+            SetHidden(rightControllerModel, wornSkins[(int)ProtectiveClothingPart.GloveRight].gameObject.activeInHierarchy);
+        }
+
+        // Latest XR poses for this frame's cameras; time-based smoothing advances only in LateUpdate.
+        void OnBeforeRender() => Solve(0f);
+
+        void OnBeginCamera(ScriptableRenderContext _, Camera renderingCamera) => SetHmdView(renderingCamera == headCamera);
+
+        void SetHmdView(bool hmd)
+        {
+            SetHidden(bodyRenderers, hmd);
+            var torsoHidden = hmd && beyondReach;
+            SetHidden(wornSkins[(int)ProtectiveClothingPart.Jacket], torsoHidden);
+            SetHidden(wornSkins[(int)ProtectiveClothingPart.Trousers], torsoHidden);
+        }
+
+        static void SetHidden(Renderer[] renderers, bool hidden)
+        {
+            foreach (var r in renderers)
+                SetHidden(r, hidden);
+        }
+
+        static void SetHidden(Renderer r, bool hidden)
+        {
+            if (r != null && r.forceRenderingOff != hidden)
+                r.forceRenderingOff = hidden;
+        }
+
+        public bool TryValidate(out string error)
+        {
+            var problems = new List<string>();
+            if (head == null || headDriver == null || leftController == null || leftDriver == null || rightController == null || rightDriver == null)
+                problems.Add("head or controller inputs missing");
+            if (model == null || hips == null || headBone == null || !LimbValid(leftArm, true) || !LimbValid(rightArm, true)
+                || !LimbValid(leftLeg, false) || !LimbValid(rightLeg, false))
+                problems.Add("rig bones missing");
+            else if (!model.IsChildOf(transform) || !hips.IsChildOf(model) || !headBone.IsChildOf(hips))
+                problems.Add("rig bones not under this body's model");
+            if (head != null && (head.IsChildOf(transform) || transform.IsChildOf(head)))
+                problems.Add("body must not contain or sit under the HMD camera");
+            if (head != null && head.GetComponent<Camera>() == null)
+                problems.Add("head has no camera");
+            if (wornSkins == null || wornSkins.Length != PartCount || Array.Exists(wornSkins, s => s == null || model == null || !s.transform.IsChildOf(model)))
+                problems.Add($"{PartCount} worn skinned meshes under the model required");
+            if (bodyRenderers == null || bodyRenderers.Length == 0 || Array.Exists(bodyRenderers, r => r == null))
+                problems.Add("mannequin renderers missing");
+            if (zones == null || zones.Length != PartCount)
+                problems.Add($"{PartCount} wear zones required");
+            else
+            {
+                for (var i = 0; i < zones.Length; i++)
+                {
+                    if (zones[i].point == null || model == null || !zones[i].point.IsChildOf(model))
+                        problems.Add($"zone {(ProtectiveClothingPart)i} point missing or not on the rig");
+                    else if (float.IsNaN(zones[i].radius) || float.IsInfinity(zones[i].radius) || zones[i].radius <= 0f)
+                        problems.Add($"zone {(ProtectiveClothingPart)i} radius (finite, above zero)");
+                }
+            }
+            if (standingEyeHeight <= 0.5f || bodyTurnTime < 0f || trackingBlendTime < 0f || maxCrouch < 0f || maxLean < 0f || firstPersonClearance <= 0f)
+                problems.Add("alignment settings out of range");
+
+            error = problems.Count > 0 ? $"ProtectiveClothingUserBody '{name}': {string.Join(", ", problems)}." : null;
+            return error == null;
+        }
+
+        static bool LimbValid(Limb limb, bool arm) =>
+            limb.upper != null && limb.lower != null && limb.end != null && limb.aim != null && (!arm || limb.side != null);
+
+        // Each worn skeleton bone used by a worn mesh follows the mannequin bone of the same name. The offset is read now, while
+        // both rigs are in the saved bind pose (the setup saves the mannequin bones at the skinned mesh's bind pose and leaves the
+        // worn skeleton at its imported rest; menu 2 checks both).
+        bool CaptureFollowers(out string error)
+        {
+            var mannequinBones = new Dictionary<string, Transform>();
+            foreach (var r in bodyRenderers)
+            {
+                if (!(r is SkinnedMeshRenderer skin))
+                    continue;
+                foreach (var bone in skin.bones)
+                {
+                    if (bone != null)
+                        mannequinBones[bone.name] = bone;
+                }
+            }
+            var set = new HashSet<Transform>();
+            var missing = new List<string>();
+            foreach (var skin in wornSkins)
+            {
+                foreach (var bone in skin.bones)
+                {
+                    if (bone == null)
+                        missing.Add(skin.name + ": empty bone");
+                    else if (!mannequinBones.ContainsKey(bone.name))
+                        missing.Add(bone.name);
+                    else
+                        set.Add(bone);
+                }
+            }
+            if (missing.Count > 0)
+            {
+                error = "Worn bones without a mannequin bone of the same name: " + string.Join(", ", missing);
+                return false;
+            }
+            var list = new List<Transform>(set);
+            list.Sort((a, b) => Depth(a).CompareTo(Depth(b)));
+            followers = list.ToArray();
+            leaders = new Transform[followers.Length];
+            followPositions = new Vector3[followers.Length];
+            followRotations = new Quaternion[followers.Length];
+            for (var i = 0; i < followers.Length; i++)
+            {
+                var leader = mannequinBones[followers[i].name];
+                leaders[i] = leader;
+                followPositions[i] = leader.InverseTransformPoint(followers[i].position);
+                followRotations[i] = Quaternion.Inverse(leader.rotation) * followers[i].rotation;
+            }
+            error = null;
+            return true;
+        }
+
+        static int Depth(Transform t)
+        {
+            var depth = 0;
+            for (var p = t.parent; p != null; p = p.parent)
+                depth++;
+            return depth;
+        }
+
+        void CaptureRest()
+        {
+            driven = new[]
+            {
+                hips, headBone, leftArm.upper, leftArm.lower, leftArm.end, rightArm.upper, rightArm.lower, rightArm.end,
+                leftLeg.upper, leftLeg.lower, leftLeg.end, rightLeg.upper, rightLeg.lower, rightLeg.end
+            };
+            restRotations = new Quaternion[driven.Length];
+            for (var i = 0; i < driven.Length; i++)
+                restRotations[i] = driven[i].localRotation;
+            hipsRestPosition = hips.localPosition;
+            armRestPositions = new[] { leftArm.lower.localPosition, leftArm.end.localPosition, rightArm.lower.localPosition, rightArm.end.localPosition };
+
+            var inverseRoot = Quaternion.Inverse(transform.rotation);
+            headRelative = inverseRoot * headBone.rotation;
+            eyeRest = transform.InverseTransformPoint(headBone.TransformPoint(eyeOffset));
+            leftHandRelative = HandRelative(leftArm);
+            rightHandRelative = HandRelative(rightArm);
+            leftFootRest = transform.InverseTransformPoint(leftLeg.end.position);
+            rightFootRest = transform.InverseTransformPoint(rightLeg.end.position);
+            leftFootRelative = inverseRoot * leftLeg.end.rotation;
+            rightFootRelative = inverseRoot * rightLeg.end.rotation;
+        }
+
+        // Hand rotation relative to its aim frame (aim = toward the middle finger root, up = toward the index side).
+        // The controller frame plays that aim frame: +z forward along the grip, +y up on the thumb side.
+        static Quaternion HandRelative(Limb arm) =>
+            Quaternion.Inverse(Quaternion.LookRotation(arm.aim.position - arm.end.position, arm.side.position - arm.aim.position)) * arm.end.rotation;
+
+        void Solve(float deltaTime)
+        {
+            if (!ready)
+                return;
+
+            headPose.Sample(head, headDriver, trackingBlendTime, deltaTime);
+            leftPose.Sample(leftController, leftDriver, trackingBlendTime, deltaTime);
+            rightPose.Sample(rightController, rightDriver, trackingBlendTime, deltaTime);
+            if (!headPose.HasPose)
+            {
+                FollowWorn();
+                return;
+            }
+
+            for (var i = 0; i < driven.Length; i++)
+                driven[i].localRotation = restRotations[i];
+            hips.localPosition = hipsRestPosition;
+            leftArm.lower.localPosition = armRestPositions[0] * armLengthScale;
+            leftArm.end.localPosition = armRestPositions[1] * armLengthScale;
+            rightArm.lower.localPosition = armRestPositions[2] * armLengthScale;
+            rightArm.end.localPosition = armRestPositions[3] * armLengthScale;
+
+            // Body heading follows the head's heading; looking straight up or down keeps the last heading.
+            var eye = headPose.Output;
+            var heading = Vector3.ProjectOnPlane(eye.rotation * Vector3.forward, Vector3.up);
+            if (heading.sqrMagnitude > 1e-4f)
+            {
+                var targetYaw = Mathf.Atan2(heading.x, heading.z) * Mathf.Rad2Deg;
+                if (!hasYaw || bodyTurnTime <= 0f)
+                    bodyYaw = targetYaw;
+                else if (deltaTime > 0f)
+                    bodyYaw = Mathf.LerpAngle(bodyYaw, targetYaw, 1f - Mathf.Exp(-deltaTime / bodyTurnTime));
+                hasYaw = true;
+            }
+
+            // Stand on the floor under the eye point, then turn the head and shift the hips so the eye point meets the HMD.
+            var bodyRotation = Quaternion.Euler(0f, bodyYaw, 0f);
+            var eyeFlat = bodyRotation * new Vector3(eyeRest.x, 0f, eyeRest.z);
+            transform.SetPositionAndRotation(new Vector3(eye.position.x - eyeFlat.x, floorHeight, eye.position.z - eyeFlat.z), bodyRotation);
+            headBone.rotation = eye.rotation * headRelative;
+            var offset = eye.position - headBone.TransformPoint(eyeOffset);
+            var lean = Vector3.ClampMagnitude(Vector3.ProjectOnPlane(offset, Vector3.up), maxLean);
+            hips.position += lean + Vector3.up * Mathf.Clamp(offset.y, -maxCrouch, MaxLift);
+
+            SolveArm(leftArm, leftPose, leftHandRelative, -1f);
+            SolveArm(rightArm, rightPose, rightHandRelative, 1f);
+            SolveLeg(leftLeg, leftFootRest, leftFootRelative);
+            SolveLeg(rightLeg, rightFootRest, rightFootRelative);
+            beyondReach = Vector3.Distance(eye.position, headBone.TransformPoint(eyeOffset)) > firstPersonClearance;
+            FollowWorn();
+        }
+
+        void FollowWorn()
+        {
+            for (var i = 0; i < followers.Length; i++)
+            {
+                var leader = leaders[i];
+                followers[i].SetPositionAndRotation(leader.TransformPoint(followPositions[i]), leader.rotation * followRotations[i]);
+            }
+        }
+
+        // Without any valid pose of that controller yet, the arm keeps its rest pose.
+        void SolveArm(Limb arm, PoseSource source, Quaternion handRelative, float side)
+        {
+            if (!source.HasPose)
+                return;
+
+            var controller = source.Output;
+            var wrist = controller.position + controller.rotation * new Vector3(wristOffset.x * side, wristOffset.y, wristOffset.z);
+            var hint = arm.upper.position + transform.rotation * new Vector3(ElbowHint.x * side, ElbowHint.y, ElbowHint.z);
+            SolveTwoBone(arm.upper, arm.lower, arm.end, wrist, hint);
+            var extra = side > 0f ? Quaternion.Euler(handRotationOffset)
+                : Quaternion.Euler(handRotationOffset.x, -handRotationOffset.y, -handRotationOffset.z);
+            arm.end.rotation = controller.rotation * extra * handRelative;
+        }
+
+        void SolveLeg(Limb leg, Vector3 footRest, Quaternion footRelative)
+        {
+            SolveTwoBone(leg.upper, leg.lower, leg.end, transform.TransformPoint(footRest), leg.upper.position + transform.rotation * KneeHint);
+            leg.end.rotation = transform.rotation * footRelative;
+        }
+
+        // Analytic two-bone chain: a (shoulder/hip), b (elbow/knee), c (wrist/ankle); bends toward the hint, clamps the reach.
+        static void SolveTwoBone(Transform a, Transform b, Transform c, Vector3 target, Vector3 hint)
+        {
+            var root = a.position;
+            var upperLength = Vector3.Distance(root, b.position);
+            var lowerLength = Vector3.Distance(b.position, c.position);
+            var toTarget = target - root;
+            var distance = toTarget.magnitude;
+            if (upperLength < 1e-5f || lowerLength < 1e-5f || distance < 1e-5f)
+                return;
+
+            var direction = toTarget / distance;
+            distance = Mathf.Clamp(distance, Mathf.Abs(upperLength - lowerLength) + 1e-4f, upperLength + lowerLength - 1e-4f);
+            var bend = Vector3.ProjectOnPlane(hint - root, direction);
+            if (bend.sqrMagnitude < 1e-8f)
+                bend = Vector3.ProjectOnPlane(b.position - root, direction);
+            if (bend.sqrMagnitude < 1e-8f)
+                return;
+
+            bend.Normalize();
+            var cos = Mathf.Clamp((upperLength * upperLength + distance * distance - lowerLength * lowerLength) / (2f * upperLength * distance), -1f, 1f);
+            var elbow = root + direction * (upperLength * cos) + bend * (upperLength * Mathf.Sqrt(1f - cos * cos));
+            a.rotation = Quaternion.FromToRotation(b.position - root, elbow - root) * a.rotation;
+            b.rotation = Quaternion.FromToRotation(c.position - b.position, root + direction * distance - b.position) * b.rotation;
+        }
+    }
+}

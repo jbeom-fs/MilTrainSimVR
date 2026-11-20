@@ -1,0 +1,134 @@
+{
+  "ProtectiveClothing_Pickup.fbx": {
+    "bytes": 441292,
+    "sha256": "4a2c7e856ff4dffdb31c2a7f2a5b1ffa0a779f792ef31710a232b1a0e407fc8b"
+  },
+  "ProtectiveClothing_Worn.fbx": {
+    "bytes": 804364,
+    "sha256": "ceb3e7819bd2c15bd390a1ab066ae904a2f7782c7f997e3113dd6e39e9ee88d3"
+  },
+  "Source~/AnchorManifest.json": {
+    "bytes": 8506,
+    "sha256": "759468fa92995c409911f9196d602c8f76f40bc6b6312481b0f5336c59da71ca"
+  },
+  "Source~/build_protective_clothing.py": {
+    "bytes": 20576,
+    "sha256": "82847f45519180b9425c9091e5adb1c1949336c32611b15ca1706691e32570ac"
+  },
+  "Source~/FBX_Roundtrip_Review.blend": {
+    "bytes": 858101,
+    "sha256": "fa29d6962692ab5441869ced7d658d2b5faf38fb4122d21de20bfd12771331fc"
+  },
+  "Source~/finalize_documentation.py": {
+    "bytes": 17448,
+    "sha256": "fbb845f843d00364c6d84dc1d072b1a87a4065550c9274bfbd10ab409bdf36b7"
+  },
+  "Source~/FitAdjustments.json": {
+    "bytes": 112,
+    "sha256": "c4c0918dbd35e26500998477c563546415fa8fdb10e1f1c13d317d37d55bd042"
+  },
+  "Source~/inspect_pose.py": {
+    "bytes": 1384,
+    "sha256": "00a26f63753d1e3989f1fed8b49b95d74c43c81b8820bca83717984e4fe6a2c1"
+  },
+  "Source~/inspect_reference.py": {
+    "bytes": 1472,
+    "sha256": "f024f8c1e6e154ca66ed807f3c4c010a5b55c6386f17326e5eb7832fee551e6a"
+  },
+  "Source~/make_textures.py": {
+    "bytes": 1789,
+    "sha256": "bc5b9499f5ea14748042bfc7e4a0e25b61bf917e158ceef8214502e8ca374cdb"
+  },
+  "Source~/MeshStatistics.json": {
+    "bytes": 6292,
+    "sha256": "2f7450f4dc6df90a5f7ecbfd3bead7d6a4db874b2ebd3f198c3cfa5ab4cbe5ad"
+  },
+  "Source~/OriginalAssetHashes.json": {
+    "bytes": 615,
+    "sha256": "04caa058e874e7003c0b0b0c1d488dc81d34206dd5c9354ac49b55237e9bbc76"
+  },
+  "Source~/PoseInspection.json": {
+    "bytes": 69898,
+    "sha256": "1dfd62b65bd4f6fb53dbe97f00601cdbd6051593a0cbce007a7826e5b1ee2c80"
+  },
+  "Source~/ProtectiveClothing.blend": {
+    "bytes": 37314212,
+    "sha256": "086f5d87cc47bda3c66cf7494ed17eb84e3fa3af31552356ee2087b832326c72"
+  },
+  "Source~/README_Model.md": {
+    "bytes": 15975,
+    "sha256": "e65b193a6161078ee7b706e366b650710b3d35920a2e632a579cbea6bec914e0"
+  },
+  "Source~/ReferenceInspection.json": {
+    "bytes": 28002,
+    "sha256": "dbbfe8758fb070081c718e8ce395f502540b2cde38fc4a7703a27576171d08ad"
+  },
+  "Source~/validate_exports.py": {
+    "bytes": 6683,
+    "sha256": "953616b24a515cf1b40d088b1acef537aa50245b0e983c5c45c8cca0255334b7"
+  },
+  "Source~/ValidationReport.json": {
+    "bytes": 18467,
+    "sha256": "2b2e062452df8e5b354866ee4dd5bcd61753b3ff084ab4739311f28878511722"
+  },
+  "Textures/PC_BaseColor_2K.png": {
+    "bytes": 1996083,
+    "sha256": "4f15d80aad4e4c9e93294bf815476a1699567e28859f8fa8148ca6e506ab8a6e"
+  },
+  "Textures/PC_Normal_1K.png": {
+    "bytes": 5660,
+    "sha256": "9acb7f1d7ccbbd47864f3afa4ac17654c5a3fe43500d608101781b125a7c6d9d"
+  },
+  "Textures/PC_Roughness_1K.png": {
+    "bytes": 3173,
+    "sha256": "52ed6dcd4d025405591fdfd14a451d57d5f2b77c574eeaaabb86fbd592a8f80f"
+  },
+  "Source~/Previews/Ankle_L.png": {
+    "bytes": 1306805,
+    "sha256": "41ba7aadb1c771083539233f5db5e838694974433179403201af5f517bd95d5a"
+  },
+  "Source~/Previews/Ankle_R.png": {
+    "bytes": 1317095,
+    "sha256": "24b158185b81667348082c43846512045fb937d891e17fe8bda7cde4af37a615"
+  },
+  "Source~/Previews/Components_Separated.png": {
+    "bytes": 1249540,
+    "sha256": "171688c4e74baeaa271c12627789348bda08ae76af580e05abf163917823d2b1"
+  },
+  "Source~/Previews/Pickup_All.png": {
+    "bytes": 1285833,
+    "sha256": "19d41f2254bff0ca9eda54ab607e88a0632bc278a7a5d62cbb6b3fd7cc4a11de"
+  },
+  "Source~/Previews/Review_ContactSheet.jpg": {
+    "bytes": 192744,
+    "sha256": "9e54ce7bc4788f10aab925331d0e3fe4715aed44a941e5c356ac3f2fd19cf677"
+  },
+  "Source~/Previews/Worn_Back.png": {
+    "bytes": 1256716,
+    "sha256": "fe2b4c4866b977340583a8124164a9b86e76c9bf2dad92e2e0ef6f4d7bf9f95d"
+  },
+  "Source~/Previews/Worn_Front.png": {
+    "bytes": 1261045,
+    "sha256": "1f955213080d3d295ae2b5845cf4ead7b27d536b2e7954d72cc62dbe00d079b1"
+  },
+  "Source~/Previews/Worn_Left.png": {
+    "bytes": 1236111,
+    "sha256": "d54b2ce5d9912b10c51c5602fdd75ac3daa535b2316e028b10f70d5bd29640b1"
+  },
+  "Source~/Previews/Worn_Right.png": {
+    "bytes": 1243681,
+    "sha256": "9b3c206913e90b24c1a49aeae455cdc75752cdb3a132a805d693b8c0882da710"
+  },
+  "Source~/Previews/Worn_ThreeQuarter.png": {
+    "bytes": 1248118,
+    "sha256": "c1cf3dd0bcc9064206c577af066aff7504ed06587e87237858343ceee3abc01a"
+  },
+  "Source~/Previews/Wrist_L.png": {
+    "bytes": 1196168,
+    "sha256": "0e6c4f1779192d3d4845f6ef23876a189c2a7bd8b83b50ce22aeb3321e9e873b"
+  },
+  "Source~/Previews/Wrist_R.png": {
+    "bytes": 1192229,
+    "sha256": "0993bf510280643cdef93bc9b540cb71970fa23702e4481e6dfb168688ece72a"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version": "2026-11-04-worn-node-fix",
+  "raw_fbx_fail_1_fixed": true,
+  "raw_fbx_fail_5_fixed": true,
+  "h5_source_contract_and_pose_preserved": true,
+  "generic_meta_and_guid_preserved": true,
+  "raw_blender_parent_local_direct_check_passed": false,
+  "normalized_review_equivalent_contract_passed": true,
+  "unity_user_execution": "미확인",
+  "files": {
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Pickup.fbx": {
+      "sha256": "90a5e78430f742d55efbe0d0297a1c57f9b5552e4c8a322f6e5eb89f10240e8a",
+      "bytes": 977964
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Pickup.fbx.meta": {
+      "sha256": "b7f899001a241fe7261451ff2be42d2d86ab2fdddb747c657b20cbb722916903",
+      "bytes": 2861
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Worn.fbx": {
+      "sha256": "037fdfed090dbf2e3642aa7511c0ea9c8a109228820d0ac6de5853036e244566",
+      "bytes": 2367820
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Worn.fbx.meta": {
+      "sha256": "fea2f4f41ca82005883ce9a14f7f861fef72fba9332d6461e7eecbc94b938c48",
+      "bytes": 2861
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\AnchorManifest.json": {
+      "sha256": "759468fa92995c409911f9196d602c8f76f40bc6b6312481b0f5336c59da71ca",
+      "bytes": 8506
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\FBX_Roundtrip_Review.blend": {
+      "sha256": "8b2554f3cfa138b624f3c5e1cab1522ba2c17909d89a3ef0ec05457a591db9c5",
+      "bytes": 1941936
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\finalize_worn_node_documentation.py": {
+      "sha256": "d467d1ce9d3bcf48f667e299bec3a527daac86d46c685e46bd9515191046567c",
+      "bytes": 14843
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketDeformFixReport.json": {
+      "sha256": "07c693a45baaebefd36011c729876a449baf063b39990a5e6efeb8f5ff05ddd9",
+      "bytes": 545502
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\JacketFinalReview.json": {
+      "sha256": "2c2abe9de62465c0b5541b04303dba02132959972a5aac490fd030c0e40a3d3b",
+      "bytes": 65638
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\ProtectiveClothing.blend": {
+      "sha256": "3702ac2d17d0743454fda36b5a6014f1493ed8249a7bb256293f5786f719cfcf",
+      "bytes": 38722164
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\README_Model.md": {
+      "sha256": "371e438648a841ff4474d040e1e19ec90bf137b96f5dc3e63fb4d4714ff437d6",
+      "bytes": 64270
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\worn_node_fix.py": {
+      "sha256": "29a9ade85650f5736ce6af161e30c309910cb66d131c77f2a4f9d494882c855f",
+      "bytes": 27915
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Candidate_NormalizedReview.blend": {
+      "sha256": "e2928d5aeb7c004c9e18267bc07da369d4454b756416ee0dcfbe66de3ec4e483",
+      "bytes": 1941833
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Candidate_RawImport.blend": {
+      "sha256": "dedc003316e6810189bc487d018e844159e75b9f4460a4c6c726426f1ce2dd32",
+      "bytes": 1941950
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Candidate_Worn.fbx": {
+      "sha256": "b36516a33a4ef8d860dadeb4d32d142cae8d1a151e5a563c9b18bf4f81186ff2",
+      "bytes": 2367852
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\ExporterSourceAtDelivery.py.txt": {
+      "sha256": "c12e61e199b2c2c15a38ad9e1fa4729e7a18aaba999bea84081d53c631f75b95",
+      "bytes": 25606
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Final_NormalizedReview.blend": {
+      "sha256": "5efca2cf07c2dfc1000ee94ef13e0a9addd89a85cbc9e124c8e86c344904e1a3",
+      "bytes": 1941812
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\H5PoseReference.npz": {
+      "sha256": "108d33788c8f0eefa183dd4d6cf07acc18d01d56e9242dadee4ae3e31ab1298f",
+      "bytes": 2175064
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\H5SourceContract.json": {
+      "sha256": "177cec1fa197259ab75f2c09c5ac50cc4d78aed46ca0074ae2c69cdf2fba096d",
+      "bytes": 243795
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\ProtectedScopeStartHashes.json": {
+      "sha256": "e55dff09038aef182eac66e90dadcb3f3e5a40bf3898deb1c0f9ec5280ed1e0a",
+      "bytes": 68663
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Reproduced_NormalizedReview.blend": {
+      "sha256": "158f00812384dfca99ae4a7395544ea441f55c0782b0dfb28e0655a315ce2aa6",
+      "bytes": 1941916
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Reproduced_RawImport.blend": {
+      "sha256": "2df27964f5dcfe891c12ff8bdf16148f0ec4ebc752a4d46caf2f777e7d9a8c02",
+      "bytes": 1941977
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Reproduced_Worn.fbx": {
+      "sha256": "016537291901f4cfa73ffa1d97a60621be5c1ed45bd13c178dca1456179d5568",
+      "bytes": 2367852
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\reproduction_check.log": {
+      "sha256": "434204f0677351c092f825edf9566fe45b63f78fc30e676576546f6137d23b55",
+      "bytes": 1616
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\ReproductionCheck.json": {
+      "sha256": "af7ee81b08eee48f6c64c4ebfa966c4f18c9229a6f076bd1d9a82011c8a2203d",
+      "bytes": 13596
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\ReproductionCheck_PreCanonicalPropertyEncoding.json": {
+      "sha256": "12733bd420a1a407c56b5ef7fa53d82195c98242c735d8f3b30e0afa8c4d01a6",
+      "bytes": 13435
+    },
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\WornNodeFixReport.json": {
+      "sha256": "e0f3d242db866063872df730c64627c902d3d8b94e4b2583d1a7ab983e298352",
+      "bytes": 369573
+    }
+  }
+}

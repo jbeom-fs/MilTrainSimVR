@@ -1,0 +1,5848 @@
+{
+  "version": 1,
+  "created": "2026-10-26",
+  "status": "프로젝트 추정 크기의 K1 휴대주머니. Blender 수치·FBX 왕복 확인. 실물 규격·Unity/VR 미검증.",
+  "design_sources": [
+    {
+      "url": "https://kruschiki.com/products/south-korean-rokmc-k1-gas-masks",
+      "role": "사용자 지정 제품 페이지. 치수 자료로 사용하지 않음."
+    },
+    {
+      "url": "https://kruschiki.com/cdn/shop/files/20251023KoreanK1GasMask1.jpg?v=1761254900",
+      "role": "국방색 넓은 덮개, 둥근 봉제 모서리, 직사각 천 주머니와 측면 보조 주머니의 외형 참고. 임시 원본 사진 열람만 수행."
+    }
+  ],
+  "observed_design": [
+    "국방색 단색 천",
+    "넓은 덮개/큰 봉제 패널",
+    "둥근 모서리와 약한 천 주름",
+    "측면의 부수기재 주머니 실루엣"
+  ],
+  "assumptions": [
+    "실측 치수 없음. K1 원본의 가정 크기(안면 폭 약0.18m)를 유지한 수납 공간에서 가방 치수를 도출함.",
+    "어깨끈·보조 끈 후면 경로와 네 단순 고리는 기능 연결용 추정. 해당 사진에서 후면 배치와 고리 상세는 확인되지 않음.",
+    "덮개 연결부는 후면 상단의 봉제 힌지로 단순화.",
+    "잠금 종류와 개수 미확인. Part_Closure_Flap/Body는 한 쌍의 단순 천 탭/대응 패치이며 똑딱이·벨크로·버클 확인품이 아님.",
+    "지퍼, 플라스틱 퀵버클, MOLLE 구조 추가 없음.",
+    "보조 주머니는 고정 닫힌 외형, 내부 칸막이는 생략.",
+    "인쇄·제조연도·군 표장 복제 없음.",
+    "수납 끈은 기존 4구간 리그의 관절식 근사와 의도된 접합 겹침을 유지. 실제 직물 물리/재질 두께 접촉 검증 아님."
+  ],
+  "conventions": {
+    "unit": "metres; Blender Metric Unit Scale=1.0",
+    "space": "Carrier root space equals Blender scene space at root identity; each K1 bone matrix is K1 armature space",
+    "matrix": "row-major 4x4 arrays, translation in last column; column-vector multiplication",
+    "quaternion": "WXYZ. Convert ordering when using Unity APIs.",
+    "blender_axes": {
+      "right": "+X (bag coordinate width)",
+      "front": "-Y",
+      "up": "+Z",
+      "exit": "+Z"
+    },
+    "unity_target_axes": {
+      "front": "+Z",
+      "up": "+Y",
+      "exit": "+Y",
+      "verified": false
+    },
+    "pose_retarget": "Convert coordinate basis and rig object transforms first. D=sourcePose*inverse(sourceRest); targetPose=D*targetRest. Convert to target parent-relative transform afterwards. Blender Euler/basis delta is not Unity localRotation.",
+    "object_scale": "K1 and carrier root/mesh scale=(1,1,1). Mask rigid parts were neither resized nor deformed."
+  },
+  "dimensions": {
+    "unit": "m",
+    "measured_real_product": false,
+    "bag_body_bounds": {
+      "min": [
+        -0.14708755910396576,
+        -0.11615225672721863,
+        0.0
+      ],
+      "max": [
+        0.14697368443012238,
+        0.11586599051952362,
+        0.2540000081062317
+      ],
+      "size": [
+        0.29406124353408813,
+        0.23201824724674225,
+        0.2540000081062317
+      ]
+    },
+    "body_and_closed_flap_bounds": {
+      "min": [
+        -0.14984723925590515,
+        -0.1291235089302063,
+        0.0
+      ],
+      "max": [
+        0.14984723925590515,
+        0.11586599051952362,
+        0.2680604159832001
+      ],
+      "size": [
+        0.2996944785118103,
+        0.24498949944972992,
+        0.2680604159832001
+      ]
+    },
+    "body_with_accessory_hardware_bounds": {
+      "min": [
+        -0.15414723753929138,
+        -0.1291235089302063,
+        0.0
+      ],
+      "max": [
+        0.1998472362756729,
+        0.13935989141464233,
+        0.2680604159832001
+      ],
+      "size": [
+        0.3539944738149643,
+        0.26848340034484863,
+        0.2680604159832001
+      ]
+    },
+    "whole_assembly_with_draped_straps_bounds": {
+      "min": [
+        -0.15414723753929138,
+        -0.1291235089302063,
+        -0.19009999930858612
+      ],
+      "max": [
+        0.1998472362756729,
+        0.24312351644039154,
+        0.2680604159832001
+      ],
+      "size": [
+        0.3539944738149643,
+        0.37224702537059784,
+        0.4581604152917862
+      ]
+    },
+    "nominal_internal_size_xyz": [
+      0.2836944807171822,
+      0.2222470316886902,
+      0.24999999737739564
+    ],
+    "guaranteed_rectangular_internal_size_xyz": [
+      0.27769448071718217,
+      0.2162470316886902,
+      0.24999999737739564
+    ],
+    "opening_plane": {
+      "center": [
+        0,
+        0,
+        0.25399999737739565
+      ],
+      "normal_out": [
+        0,
+        0,
+        1
+      ],
+      "width_x": 0.2836944807171822,
+      "depth_y": 0.2222470316886902,
+      "rounded_corner_radius": 0.003,
+      "guaranteed_rectangular_width_x": 0.27769448071718217,
+      "guaranteed_rectangular_depth_y": 0.2162470316886902
+    },
+    "stored_K1_bounds": {
+      "min": [
+        -0.13384723663330078,
+        -0.10312351584434509,
+        0.01199999451637268
+      ],
+      "max": [
+        0.13384723663330078,
+        0.09251749515533447,
+        0.2459999918937683
+      ],
+      "size": [
+        0.26769447326660156,
+        0.19564101099967957,
+        0.23399999737739563
+      ]
+    },
+    "design_clearance_m": 0.008,
+    "conservative_corner_allowance_m": 0.003,
+    "guaranteed_envelope_clearance_to_rounded_walls_at_least_m": 0.005,
+    "actual_envelope_axis_gaps_m": {
+      "left": 0.008000003725290306,
+      "right": 0.008000003725290306,
+      "front": 0.008000000000000007,
+      "back": 0.018606020689010627,
+      "floor": 0.00799999451637268,
+      "top": 0.008000005483627337
+    },
+    "note": "단단한 부품을 포함한 K1 전체를 Scale 1로 수납. 5~10mm는 최소 여유 설계 목표이며 모든 표면의 간격이 일률적으로 8mm인 것은 아니다. 실측값 아님."
+  },
+  "budget": {
+    "render_triangles": 4076,
+    "render_meshes": 8,
+    "shared_materials": 1,
+    "rig_bones": 4,
+    "max_vertex_bone_influences": 2,
+    "weight_sum_max_error": 2.9802322387695312e-08,
+    "collision_meshes": 8,
+    "collision_triangles": 96,
+    "collision_reference_bones": 4,
+    "excludes": "K1 working reference and collision proxies excluded from render budget"
+  },
+  "parts": [
+    {
+      "name": "Part_BagBody",
+      "triangles": 1024,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": ""
+    },
+    {
+      "name": "Part_BagFlap",
+      "triangles": 1076,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [
+        "FlapBase",
+        "FlapMid",
+        "FlapTip"
+      ],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": ""
+    },
+    {
+      "name": "Part_Closure_Flap",
+      "triangles": 320,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [
+        "FlapTip"
+      ],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": "Provisional cloth tab only; actual fastening type/count unconfirmed"
+    },
+    {
+      "name": "Part_Closure_Body",
+      "triangles": 320,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": "Provisional landing/retaining patch; no assertion of snap, hook-loop or buckle"
+    },
+    {
+      "name": "Part_ShoulderStrap",
+      "triangles": 228,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": ""
+    },
+    {
+      "name": "Part_StabilizerStrap",
+      "triangles": 148,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": ""
+    },
+    {
+      "name": "Part_Hardware",
+      "triangles": 640,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": "Simple inferred attachment loops; exact rear hardware not visible in supplied bag photograph"
+    },
+    {
+      "name": "Part_AccessoryPocket",
+      "triangles": 320,
+      "parent": "Carrier_Visuals",
+      "materials": [
+        "MAT_K1_Carrier_Atlas"
+      ],
+      "skin_bones": [],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "structure": "Fixed side accessory pouch silhouette; internal divisions and closure omitted"
+    }
+  ],
+  "mesh_health": [
+    {
+      "name": "Part_BagBody",
+      "vertices": 514,
+      "triangles": 1024,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0013179965913521561,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_BagFlap",
+      "vertices": 540,
+      "triangles": 1076,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00037401166916494155,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_Closure_Flap",
+      "vertices": 162,
+      "triangles": 320,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 4.752869053168973e-06,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_Closure_Body",
+      "vertices": 162,
+      "triangles": 320,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 9.045806216978457e-06,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_ShoulderStrap",
+      "vertices": 116,
+      "triangles": 228,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 5.889246622319572e-05,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_StabilizerStrap",
+      "vertices": 76,
+      "triangles": 148,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 1.567577575825001e-05,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_Hardware",
+      "vertices": 320,
+      "triangles": 640,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 8.857167902907496e-07,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "Part_AccessoryPocket",
+      "vertices": 162,
+      "triangles": 320,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0008576982197365601,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 1
+    },
+    {
+      "name": "COL_BagFloor",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0002522010356463981,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_BagWall_L",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00022224749174524269,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_BagWall_R",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00022224749174524269,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_BagWall_Front",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0002836945313735337,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_BagWall_Back",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0002836945313735337,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_FlapBase",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00010886854434206725,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_FlapMid",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00010049304556599491,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    },
+    {
+      "name": "COL_FlapTip",
+      "vertices": 8,
+      "triangles": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00013525283495897328,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": 1,
+      "material_slots": 0
+    }
+  ],
+  "rig": {
+    "bones": [
+      {
+        "name": "BagRoot",
+        "parent": null,
+        "deform": false,
+        "head_armature_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "tail_armature_m": [
+          0.0,
+          0.0,
+          0.03500000014901161
+        ],
+        "rest_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "axis_x_armature": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "axis_y_armature": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "axis_z_armature": [
+          0.0,
+          -1.0,
+          0.0
+        ]
+      },
+      {
+        "name": "FlapBase",
+        "parent": "BagRoot",
+        "deform": true,
+        "head_armature_m": [
+          0.0,
+          0.11512351781129837,
+          0.2554999887943268
+        ],
+        "tail_armature_m": [
+          0.0,
+          -0.009284935891628265,
+          0.2554999887943268
+        ],
+        "rest_matrix_rows": [
+          [
+            -1.0,
+            0.0,
+            8.742277657347586e-08,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.11512351781129837
+          ],
+          [
+            8.742277657347586e-08,
+            0.0,
+            1.0,
+            0.2554999887943268
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "axis_x_armature": [
+          -1.0,
+          0.0,
+          8.742277657347586e-08
+        ],
+        "axis_y_armature": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "axis_z_armature": [
+          8.742277657347586e-08,
+          0.0,
+          1.0
+        ]
+      },
+      {
+        "name": "FlapMid",
+        "parent": "FlapBase",
+        "deform": true,
+        "head_armature_m": [
+          0.0,
+          -0.009284935891628265,
+          0.2554999887943268
+        ],
+        "tail_armature_m": [
+          0.0,
+          -0.12412351369857788,
+          0.2394999861717224
+        ],
+        "rest_matrix_rows": [
+          [
+            -1.0,
+            1.7763568394002505e-15,
+            8.662564141559415e-07,
+            0.0
+          ],
+          [
+            -1.1953741818615526e-07,
+            -0.9904332160949707,
+            -0.13799312710762024,
+            -0.009284935891628265
+          ],
+          [
+            8.579690415899677e-07,
+            -0.13799312710762024,
+            0.9904332160949707,
+            0.2554999887943268
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "axis_x_armature": [
+          -1.0,
+          -1.1953741818615526e-07,
+          8.579690415899677e-07
+        ],
+        "axis_y_armature": [
+          1.7763568394002505e-15,
+          -0.9904332160949707,
+          -0.13799312710762024
+        ],
+        "axis_z_armature": [
+          8.662564141559415e-07,
+          -0.13799312710762024,
+          0.9904332160949707
+        ]
+      },
+      {
+        "name": "FlapTip",
+        "parent": "FlapMid",
+        "deform": true,
+        "head_armature_m": [
+          0.0,
+          -0.12412351369857788,
+          0.2394999861717224
+        ],
+        "tail_armature_m": [
+          0.0,
+          -0.12412351369857788,
+          0.07849998772144318
+        ],
+        "rest_matrix_rows": [
+          [
+            1.0,
+            -1.1368683772161603e-13,
+            -4.888534022029489e-12,
+            2.0596471674281288e-16
+          ],
+          [
+            4.860112312599085e-12,
+            1.4901161193847656e-08,
+            1.0,
+            -0.12412351369857788
+          ],
+          [
+            5.684341886080802e-14,
+            -0.9999999403953552,
+            5.960464477539063e-08,
+            0.2394999861717224
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "axis_x_armature": [
+          1.0,
+          4.860112312599085e-12,
+          5.684341886080802e-14
+        ],
+        "axis_y_armature": [
+          -1.1368683772161603e-13,
+          1.4901161193847656e-08,
+          -0.9999999403953552
+        ],
+        "axis_z_armature": [
+          -4.888534022029489e-12,
+          1.0,
+          5.960464477539063e-08
+        ]
+      }
+    ],
+    "opening_poses": {
+      "0": {
+        "name": "Closed",
+        "bones": {
+          "BagRoot": {
+            "parent": null,
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.7071067690849304,
+              0.7071067690849304,
+              0.0,
+              0.0
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapBase": {
+            "parent": "BagRoot",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.2554999887943268,
+              -0.11512351781129837
+            ],
+            "parent_local_rotation_wxyz": [
+              3.0908619663705394e-08,
+              3.0908619663705394e-08,
+              0.7071067690849304,
+              0.7071067690849304
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapMid": {
+            "parent": "FlapBase",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                1.7763568394002505e-15,
+                8.662564141559415e-07,
+                0.0
+              ],
+              [
+                -1.1953741818615526e-07,
+                -0.9904332160949707,
+                -0.13799312710762024,
+                -0.009284935891628265
+              ],
+              [
+                8.579690415899677e-07,
+                -0.13799312710762024,
+                0.9904332160949707,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                -5.329070094684278e-15,
+                8.662564141559415e-07,
+                1.4210854715202004e-14
+              ],
+              [
+                -1.1953743239700998e-07,
+                -0.9904331564903259,
+                -0.13799311220645905,
+                -0.009284934028983116
+              ],
+              [
+                8.579690984333865e-07,
+                -0.13799311220645905,
+                0.9904331564903259,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              -1.4210854715202004e-14,
+              0.12440845370292664,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.9976054430007935,
+              -0.06916217505931854,
+              -3.8848435224281275e-07,
+              3.2979261987975406e-08
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "blender_basis_position_m": [
+              -1.4210854715202004e-14,
+              -1.862645149230957e-09,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              -2.8421712818535796e-14,
+              -3.552713678800501e-15
+            ],
+            "blender_basis_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999999403953552
+            ]
+          },
+          "FlapTip": {
+            "parent": "FlapMid",
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                -1.1368683772161603e-13,
+                -4.888534022029489e-12,
+                2.0596471674281288e-16
+              ],
+              [
+                4.860112312599085e-12,
+                1.4901161193847656e-08,
+                1.0,
+                -0.12412351369857788
+              ],
+              [
+                5.684341886080802e-14,
+                -0.9999999403953552,
+                5.960464477539063e-08,
+                0.2394999861717224
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                -5.684340869641265e-14,
+                -4.881428594671888e-12,
+                1.646912417367901e-15
+              ],
+              [
+                4.881428160991019e-12,
+                -7.450584149637507e-09,
+                1.0,
+                -0.12412352114915848
+              ],
+              [
+                -3.4198984325960786e-20,
+                -0.9999998807907104,
+                3.725290653733282e-08,
+                0.23949997127056122
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              8.123050199333477e-15,
+              0.11594784259796143,
+              -3.5390257835388184e-08
+            ],
+            "parent_local_rotation_wxyz": [
+              3.2671482586010825e-07,
+              2.843539732566569e-07,
+              -0.7543185949325562,
+              0.6565085649490356
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999998807907104,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              -1.1946119007205658e-14,
+              1.4901161193847656e-08,
+              -1.4901161193847656e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              -3.725292518907963e-09,
+              3.553035974836931e-15,
+              -2.842169587787685e-14
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0000001192092896
+            ]
+          }
+        }
+      },
+      "0.25": {
+        "name": "Opening_0.25",
+        "bones": {
+          "BagRoot": {
+            "parent": null,
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.7071067690849304,
+              0.7071067690849304,
+              0.0,
+              0.0
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapBase": {
+            "parent": "BagRoot",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                4.535259989779661e-08,
+                -0.8549118638038635,
+                0.5187732577323914,
+                0.11512351781129837
+              ],
+              [
+                7.473876451058459e-08,
+                0.5187732577323914,
+                0.8549118638038635,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.2554999887943268,
+              -0.11512351781129837
+            ],
+            "parent_local_rotation_wxyz": [
+              3.809131854382031e-08,
+              2.144146371563238e-08,
+              0.8714279532432556,
+              0.4905235469341278
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9630451202392578,
+              0.26934006810188293,
+              0.0,
+              -2.3546457228462714e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapMid": {
+            "parent": "FlapBase",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                1.7763568394002505e-15,
+                8.662564141559415e-07,
+                0.0
+              ],
+              [
+                -1.1953741818615526e-07,
+                -0.9904332160949707,
+                -0.13799312710762024,
+                -0.009284935891628265
+              ],
+              [
+                8.579690415899677e-07,
+                -0.13799312710762024,
+                0.9904332160949707,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                1.4210854715202004e-14,
+                8.662564141559415e-07,
+                2.5816452925084277e-14
+              ],
+              [
+                3.9419151676156616e-07,
+                -0.8904649615287781,
+                0.45505189895629883,
+                0.008765249513089657
+              ],
+              [
+                7.71370821439632e-07,
+                0.45505189895629883,
+                0.8904649615287781,
+                0.3200397789478302
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              -2.2763339607365096e-14,
+              0.12440846860408783,
+              -1.862645149230957e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              0.9993342161178589,
+              -0.03648436442017555,
+              -3.8915752043067187e-07,
+              1.7397196572233042e-08
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              2.2351741790771484e-08,
+              2.9802322387695312e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9994646310806274,
+              0.03271912783384323,
+              1.421846615326603e-14,
+              -2.8343144720111013e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapTip": {
+            "parent": "FlapMid",
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                -1.1368683772161603e-13,
+                -4.888534022029489e-12,
+                2.0596471674281288e-16
+              ],
+              [
+                4.860112312599085e-12,
+                1.4901161193847656e-08,
+                1.0,
+                -0.12412351369857788
+              ],
+              [
+                5.684341886080802e-14,
+                -0.9999999403953552,
+                5.960464477539063e-08,
+                0.2394999861717224
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                -4.004457355988311e-14,
+                -4.881646302468123e-12,
+                1.5518363571703948e-14
+              ],
+              [
+                3.220605206133431e-12,
+                -0.7660443782806396,
+                0.6427875757217407,
+                -0.09448223561048508
+              ],
+              [
+                -3.5885567521015682e-12,
+                -0.6427874565124512,
+                -0.7660444378852844,
+                0.37280207872390747
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              3.421962962556896e-14,
+              0.11594783514738083,
+              3.725290298461914e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              3.6103494949202286e-07,
+              2.3927591996653064e-07,
+              -0.8335568904876709,
+              0.5524337291717529
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999997615814209,
+              0.9999998211860657
+            ],
+            "blender_basis_position_m": [
+              -1.1945956376879785e-14,
+              -2.9802322387695312e-08,
+              -2.9802322387695312e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9914448857307434,
+              -0.13052618503570557,
+              2.0491737850298307e-14,
+              6.02053509043271e-13
+            ],
+            "blender_basis_scale": [
+              1.0,
+              0.9999998807907104,
+              0.9999998807907104
+            ]
+          }
+        }
+      },
+      "0.5": {
+        "name": "PartiallyOpen",
+        "bones": {
+          "BagRoot": {
+            "parent": null,
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.7071067690849304,
+              0.7071067690849304,
+              0.0,
+              0.0
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapBase": {
+            "parent": "BagRoot",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                7.105427357601002e-15,
+                8.74227694680485e-08,
+                0.0
+              ],
+              [
+                7.75449535694861e-08,
+                -0.46174848079681396,
+                0.887010931968689,
+                0.11512351036071777
+              ],
+              [
+                4.0367339693148097e-08,
+                0.887010931968689,
+                0.46174848079681396,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.2554999887943268,
+              -0.11512351036071777
+            ],
+            "parent_local_rotation_wxyz": [
+              4.245870854902023e-08,
+              1.0389579863101517e-08,
+              0.971342146396637,
+              0.23768579959869385
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              7.450580596923828e-09,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.8549118638038635,
+              0.5187733173370361,
+              0.0,
+              -4.535259989779661e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapMid": {
+            "parent": "FlapBase",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                1.7763568394002505e-15,
+                8.662564141559415e-07,
+                0.0
+              ],
+              [
+                -1.1953741818615526e-07,
+                -0.9904332160949707,
+                -0.13799312710762024,
+                -0.009284935891628265
+              ],
+              [
+                8.579690415899677e-07,
+                -0.13799312710762024,
+                0.9904332160949707,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                7.105427357601002e-15,
+                8.662563004691037e-07,
+                -1.3326879272986154e-14
+              ],
+              [
+                7.653430316167942e-07,
+                -0.46841907501220703,
+                0.8835063576698303,
+                0.057678114622831345
+              ],
+              [
+                4.0577100435257307e-07,
+                0.8835063576698303,
+                0.46841907501220703,
+                0.36585161089897156
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              1.5547325322236467e-14,
+              0.12440842390060425,
+              7.450580596923828e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              0.9999929070472717,
+              -0.003767577465623617,
+              -3.894140832017001e-07,
+              1.7965287035792699e-09
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "blender_basis_position_m": [
+              1.4210854715202004e-14,
+              -2.9802322387695312e-08,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.997859001159668,
+              0.06540312618017197,
+              1.0347228275749392e-14,
+              -5.6655871105704136e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999999403953552
+            ]
+          },
+          "FlapTip": {
+            "parent": "FlapMid",
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                -1.1368683772161603e-13,
+                -4.888534022029489e-12,
+                2.0596471674281288e-16
+              ],
+              [
+                4.860112312599085e-12,
+                1.4901161193847656e-08,
+                1.0,
+                -0.12412351369857788
+              ],
+              [
+                5.684341886080802e-14,
+                -0.9999999403953552,
+                5.960464477539063e-08,
+                0.2394999861717224
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                1.2710102068047568e-14,
+                -4.830132387806385e-12,
+                -2.4448613299881197e-14
+              ],
+              [
+                -8.448847090697376e-13,
+                -0.9848076105117798,
+                -0.1736483871936798,
+                0.00336593110114336
+              ],
+              [
+                -4.7544880359129404e-12,
+                0.17364847660064697,
+                -0.9848076105117798,
+                0.4682922661304474
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              1.1339297827529099e-15,
+              0.11594783514738083,
+              -3.026798367500305e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              3.8917769984436745e-07,
+              1.9010381890893768e-07,
+              -0.8985327482223511,
+              0.4389065206050873
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999998807907104
+            ],
+            "blender_basis_position_m": [
+              -1.1945739536445288e-14,
+              0.0,
+              -2.9802322387695312e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9659258127212524,
+              -0.2588191032409668,
+              1.9697739329937493e-14,
+              1.2497108382858446e-12
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      },
+      "0.75": {
+        "name": "Opening_0.75",
+        "bones": {
+          "BagRoot": {
+            "parent": null,
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.7071067690849304,
+              0.7071067690849304,
+              0.0,
+              0.0
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapBase": {
+            "parent": "BagRoot",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                1.4210854715202004e-14,
+                8.742276236262114e-08,
+                0.0
+              ],
+              [
+                8.723558408973986e-08,
+                0.06540326774120331,
+                0.9978589415550232,
+                0.11512351781129837
+              ],
+              [
+                -5.717723183806811e-09,
+                0.9978589415550232,
+                -0.06540326774120331,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.2554999887943268,
+              -0.11512351781129837
+            ],
+            "parent_local_rotation_wxyz": [
+              4.3687972350880955e-08,
+              -1.4301928530358055e-09,
+              0.9994646310806274,
+              -0.03271915018558502
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.6835922598838806,
+              0.7298641204833984,
+              0.0,
+              -6.3806737671257e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapMid": {
+            "parent": "FlapBase",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                1.7763568394002505e-15,
+                8.662564141559415e-07,
+                0.0
+              ],
+              [
+                -1.1953741818615526e-07,
+                -0.9904332160949707,
+                -0.13799312710762024,
+                -0.009284935891628265
+              ],
+              [
+                8.579690415899677e-07,
+                -0.13799312710762024,
+                0.9904332160949707,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                2.842170943040401e-14,
+                8.662562436256849e-07,
+                -1.114027557811044e-14
+              ],
+              [
+                8.59673093600577e-07,
+                0.12305209040641785,
+                0.9924001097679138,
+                0.12326022237539291
+              ],
+              [
+                -1.0659466198603695e-07,
+                0.9924001097679138,
+                -0.12305209040641785,
+                0.3796420693397522
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              1.2028453997810565e-14,
+              0.12440842390060425,
+              -9.313225746154785e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              0.9995808005332947,
+              0.028953351080417633,
+              -3.8925352896512777e-07,
+              -1.3806095822133102e-08
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999997615814209,
+              0.9999997615814209
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              -1.4901161193847656e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9951847195625305,
+              0.09801720082759857,
+              -2.9451704882397026e-14,
+              -8.490801661764635e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              0.9999997615814209,
+              0.9999997615814209
+            ]
+          },
+          "FlapTip": {
+            "parent": "FlapMid",
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                -1.1368683772161603e-13,
+                -4.888534022029489e-12,
+                2.0596471674281288e-16
+              ],
+              [
+                4.860112312599085e-12,
+                1.4901161193847656e-08,
+                1.0,
+                -0.12412351369857788
+              ],
+              [
+                5.684341886080802e-14,
+                -0.9999999403953552,
+                5.960464477539063e-08,
+                0.2394999861717224
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                9.179180852914026e-14,
+                -4.794244862216246e-12,
+                -1.9791012904023242e-14
+              ],
+              [
+                -4.3131093314940916e-12,
+                -0.49999964237213135,
+                -0.866025447845459,
+                0.13752783834934235
+              ],
+              [
+                -2.4157975966887513e-12,
+                0.866025447845459,
+                -0.4999997615814209,
+                0.49470871686935425
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              9.132871867621739e-15,
+              0.11594786494970322,
+              -7.450580596923828e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              4.1066149947255326e-07,
+              1.3767902373729157e-07,
+              -0.9481344819068909,
+              0.3178695738315582
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999999403953552,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              -1.1946173217314282e-14,
+              4.656612873077393e-10,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9238795638084412,
+              -0.3826834559440613,
+              2.1680563838362768e-14,
+              1.839294775513034e-12
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0000001192092896
+            ]
+          }
+        }
+      },
+      "1": {
+        "name": "FullyOpen",
+        "bones": {
+          "BagRoot": {
+            "parent": null,
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "parent_local_rotation_wxyz": [
+              0.7071067690849304,
+              0.7071067690849304,
+              0.0,
+              0.0
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          "FlapBase": {
+            "parent": "BagRoot",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.742277657347586e-08,
+                0.0
+              ],
+              [
+                0.0,
+                -1.0,
+                0.0,
+                0.11512351781129837
+              ],
+              [
+                8.742277657347586e-08,
+                0.0,
+                1.0,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                7.105427357601002e-15,
+                8.74227694680485e-08,
+                0.0
+              ],
+              [
+                7.161255410892409e-08,
+                0.573576807975769,
+                0.8191521763801575,
+                0.11512351781129837
+              ],
+              [
+                -5.0143668772761885e-08,
+                0.8191521763801575,
+                -0.573576807975769,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              0.0,
+              0.2554999887943268,
+              -0.11512351781129837
+            ],
+            "parent_local_rotation_wxyz": [
+              4.168828482420395e-08,
+              -1.3144272337228813e-08,
+              0.9537169337272644,
+              -0.3007059097290039
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0000003576278687,
+              1.0000003576278687
+            ],
+            "blender_basis_position_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.4617484509944916,
+              0.887010931968689,
+              -8.010529495587268e-15,
+              -7.754493935863138e-08
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0000003576278687,
+              1.0000003576278687
+            ]
+          },
+          "FlapMid": {
+            "parent": "FlapBase",
+            "rest_armature_matrix_rows": [
+              [
+                -1.0,
+                1.7763568394002505e-15,
+                8.662564141559415e-07,
+                0.0
+              ],
+              [
+                -1.1953741818615526e-07,
+                -0.9904332160949707,
+                -0.13799312710762024,
+                -0.009284935891628265
+              ],
+              [
+                8.579690415899677e-07,
+                -0.13799312710762024,
+                0.9904332160949707,
+                0.2554999887943268
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                -1.0,
+                0.0,
+                8.662562436256849e-07,
+                -4.1865386923520004e-16
+              ],
+              [
+                6.430628900488955e-07,
+                0.6700159311294556,
+                0.7423471212387085,
+                0.18648134171962738
+              ],
+              [
+                -5.804055831504229e-07,
+                0.7423471212387085,
+                -0.6700159311294556,
+                0.35740944743156433
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              6.191813385527777e-15,
+              0.12440846860408783,
+              7.450580596923828e-09
+            ],
+            "parent_local_rotation_wxyz": [
+              0.9980982542037964,
+              0.06164316087961197,
+              -3.8867617035975854e-07,
+              -2.9393898870466728e-08
+            ],
+            "parent_local_scale": [
+              1.0,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "blender_basis_position_m": [
+              1.4210854715202004e-14,
+              0.0,
+              1.4901161193847656e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.9914448857307434,
+              0.13052618503570557,
+              2.7323195789241694e-14,
+              -1.1306914871056506e-07
+            ],
+            "blender_basis_scale": [
+              1.0,
+              0.9999998807907104,
+              0.9999998807907104
+            ]
+          },
+          "FlapTip": {
+            "parent": "FlapMid",
+            "rest_armature_matrix_rows": [
+              [
+                1.0,
+                -1.1368683772161603e-13,
+                -4.888534022029489e-12,
+                2.0596471674281288e-16
+              ],
+              [
+                4.860112312599085e-12,
+                1.4901161193847656e-08,
+                1.0,
+                -0.12412351369857788
+              ],
+              [
+                5.684341886080802e-14,
+                -0.9999999403953552,
+                5.960464477539063e-08,
+                0.2394999861717224
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "pose_armature_matrix_rows": [
+              [
+                1.0,
+                5.62310614737882e-15,
+                -4.766473240408464e-12,
+                -1.236431950205584e-14
+              ],
+              [
+                -4.535196003463415e-12,
+                0.3420203626155853,
+                -0.939693033695221,
+                0.26416829228401184
+              ],
+              [
+                1.6752574804809739e-12,
+                0.9396929740905762,
+                0.3420203626155853,
+                0.44348302483558655
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ]
+            ],
+            "parent_local_position_m": [
+              3.3680601574858846e-14,
+              0.1159479022026062,
+              2.9802322387695312e-08
+            ],
+            "parent_local_rotation_wxyz": [
+              4.25118713565098e-07,
+              8.289850939036114e-08,
+              -0.9815133213996887,
+              0.19139380753040314
+            ],
+            "parent_local_scale": [
+              1.0,
+              1.0,
+              1.0000001192092896
+            ],
+            "blender_basis_position_m": [
+              -1.1945956376879785e-14,
+              0.0,
+              -5.960464477539063e-08
+            ],
+            "blender_basis_rotation_wxyz": [
+              0.8660253882408142,
+              -0.4999999701976776,
+              3.108445236778799e-14,
+              2.432377433150834e-12
+            ],
+            "blender_basis_scale": [
+              1.0,
+              1.0000001192092896,
+              1.000000238418579
+            ]
+          }
+        }
+      }
+    },
+    "drive": "BagRoot fixed. FlapBase/Mid/Tip have relative bend contributions about carrier X: -125t/-15t/-60t degrees. Use recorded rest/pose matrices to retarget; do not assign Blender Euler values directly to Unity.",
+    "root_hinge_line_motion_m": 3.0719530773294423e-08,
+    "body_motion_m": 0.0,
+    "constraints": 0,
+    "drivers": 0,
+    "animation_clips": 0,
+    "cloth_soft_body": false,
+    "hinge_surface_crosssection_rotation_motion_m": 0.0026610540080767137,
+    "hinge_note": "봉제 힌지 중심선은 고정. 두께 3mm의 단면 표면 정점은 열림에 따라 회전하므로 최대 약2.66mm 이동."
+  },
+  "anchors": [
+    {
+      "name": "Anchor_BagMount",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.11512351781129837
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.12999999523162842
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          0.0,
+          0.11512351781129837,
+          0.12999999523162842
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.11512351781129837
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.12999999523162842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Neutral rear-center mount reference; no wearer waist position assumed"
+    },
+    {
+      "name": "Anchor_FlapGrab",
+      "parent": "K1_CarrierRig",
+      "parent_type": "BONE",
+      "parent_bone": "FlapTip",
+      "local_matrix_rows": [
+        [
+          1.0,
+          4.909849870421423e-12,
+          -2.8421065685364094e-14,
+          -2.9052498254356074e-14
+        ],
+        [
+          -2.8421433297663203e-14,
+          7.549790126404332e-08,
+          -1.0000001192092896,
+          -0.04199999198317528
+        ],
+        [
+          -4.909849870421423e-12,
+          1.0,
+          7.549790836947068e-08,
+          -0.006999991834163666
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          1.0164395367051604e-20,
+          -0.13112351298332214,
+          0.12049999088048935
+        ],
+        "rotation_wxyz": [
+          1.0,
+          -3.029837003509783e-08,
+          1.9185296255309903e-19,
+          -1.4210746294984755e-14
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            2.8421275749535013e-14,
+            2.842198048094713e-14,
+            1.0164395367051604e-20
+          ],
+          [
+            -2.842170943040401e-14,
+            1.0,
+            8.294849607182186e-08,
+            -0.13112351298332214
+          ],
+          [
+            2.8421213069096916e-14,
+            -3.8244987621283144e-08,
+            1.0,
+            0.12049999088048935
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        2.8421275749535013e-14,
+        1.0,
+        -3.8244987621283144e-08
+      ],
+      "axis_z_world": [
+        2.842198048094713e-14,
+        8.294849607182186e-08,
+        1.0
+      ],
+      "meaning": "Moving flap grip candidate; hand offset unverified"
+    },
+    {
+      "name": "Anchor_ClosureGrab",
+      "parent": "K1_CarrierRig",
+      "parent_type": "BONE",
+      "parent_bone": "FlapTip",
+      "local_matrix_rows": [
+        [
+          1.0,
+          4.909849870421423e-12,
+          -2.8421065685364094e-14,
+          -3.3138043090824576e-14
+        ],
+        [
+          -2.8421433297663203e-14,
+          7.549790126404332e-08,
+          -1.0000001192092896,
+          -0.0279999952763319
+        ],
+        [
+          -4.909849870421423e-12,
+          1.0,
+          7.549790836947068e-08,
+          -0.007999993860721588
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          4.404571325722362e-20,
+          -0.13212351500988007,
+          0.10649999231100082
+        ],
+        "rotation_wxyz": [
+          1.0,
+          -3.029837003509783e-08,
+          1.9185296255309903e-19,
+          -1.4210746294984755e-14
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            2.8421275749535013e-14,
+            2.842198048094713e-14,
+            4.404571325722362e-20
+          ],
+          [
+            -2.842170943040401e-14,
+            1.0,
+            8.294849607182186e-08,
+            -0.13212351500988007
+          ],
+          [
+            2.8421213069096916e-14,
+            -3.8244987621283144e-08,
+            1.0,
+            0.10649999231100082
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        2.8421275749535013e-14,
+        1.0,
+        -3.8244987621283144e-08
+      ],
+      "axis_z_world": [
+        2.842198048094713e-14,
+        8.294849607182186e-08,
+        1.0
+      ],
+      "meaning": "Moving provisional closure cloth tab; exact real fastening unconfirmed"
+    },
+    {
+      "name": "Anchor_MaskStored",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.027167078107595444
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.029876485466957092
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.1289999932050705
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          -0.027167078107595444,
+          0.029876485466957092,
+          0.1289999932050705
+        ],
+        "rotation_wxyz": [
+          0.7071067690849304,
+          0.7071067690849304,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.027167078107595444
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.029876485466957092
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.1289999932050705
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        7.549790126404332e-08,
+        1.0
+      ],
+      "axis_z_world": [
+        0.0,
+        -1.0,
+        7.549790126404332e-08
+      ],
+      "meaning": "Align K1 Anchor_FaceFit with this frame, not the K1 root directly"
+    },
+    {
+      "name": "Anchor_MaskPickup",
+      "parent": "MaskInteractionFrame",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          0.2380361557006836,
+          0.7357171773910522,
+          -0.634081244468689,
+          -0.042111944407224655
+        ],
+        [
+          -0.9712562561035156,
+          0.18031008541584015,
+          -0.1554010808467865,
+          -0.026066789403557777
+        ],
+        [
+          -8.931734463146768e-09,
+          0.6528464555740356,
+          0.7574902772903442,
+          0.09457673132419586
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          -0.0692790225148201,
+          0.003809696063399315,
+          0.22357672452926636
+        ],
+        "rotation_wxyz": [
+          0.737535834312439,
+          0.273968905210495,
+          -0.21493235230445862,
+          -0.5786069631576538
+        ],
+        "scale": [
+          0.9999999403953552,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            0.2380361557006836,
+            0.7357171773910522,
+            -0.634081244468689,
+            -0.0692790225148201
+          ],
+          [
+            -0.9712562561035156,
+            0.18031008541584015,
+            -0.1554010808467865,
+            0.003809696063399315
+          ],
+          [
+            -8.931734463146768e-09,
+            0.6528464555740356,
+            0.7574902772903442,
+            0.22357672452926636
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.7357171773910522,
+        0.18031008541584015,
+        0.6528464555740356
+      ],
+      "axis_z_world": [
+        -0.634081244468689,
+        -0.1554010808467865,
+        0.7574902772903442
+      ],
+      "meaning": "Upper rubber surface +1mm from actual Facepiece triangle; follows MaskInteractionFrame. Bind frame to actual K1 root in Unity after pickup. Hand accessibility unverified."
+    },
+    {
+      "name": "Anchor_ExitPlane",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2540000081062317
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          0.0,
+          0.0,
+          0.2540000081062317
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.2540000081062317
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Mouth center; local +Z is extraction up; X width and Y depth are opening axes"
+    },
+    {
+      "name": "Anchor_ExtractEnd",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.027167078107595444
+        ],
+        [
+          0.0,
+          7.549790126404332e-08,
+          -1.0,
+          0.029876485466957092
+        ],
+        [
+          0.0,
+          1.0,
+          7.549790126404332e-08,
+          0.3889999985694885
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          -0.027167078107595444,
+          0.029876485466957092,
+          0.3889999985694885
+        ],
+        "rotation_wxyz": [
+          0.7071067690849304,
+          0.7071067690849304,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.027167078107595444
+          ],
+          [
+            0.0,
+            7.549790126404332e-08,
+            -1.0,
+            0.029876485466957092
+          ],
+          [
+            0.0,
+            1.0,
+            7.549790126404332e-08,
+            0.3889999985694885
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        7.549790126404332e-08,
+        1.0
+      ],
+      "axis_z_world": [
+        0.0,
+        -1.0,
+        7.549790126404332e-08
+      ],
+      "meaning": "K1 FaceFit reference after full vertical extraction; complete geometry must clear mouth"
+    },
+    {
+      "name": "Anchor_StrapAttach_A",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.14584724605083466
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.1381235122680664
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2160000056028366
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          -0.14584724605083466,
+          0.1381235122680664,
+          0.2160000056028366
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.14584724605083466
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.1381235122680664
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.2160000056028366
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Inferred attachment reference; fixed to body, exact rear layout unconfirmed"
+    },
+    {
+      "name": "Anchor_StrapAttach_B",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.14584724605083466
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.1381235122680664
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.2160000056028366
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          0.14584724605083466,
+          0.1381235122680664,
+          0.2160000056028366
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.14584724605083466
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.1381235122680664
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.2160000056028366
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Inferred attachment reference; fixed to body, exact rear layout unconfirmed"
+    },
+    {
+      "name": "Anchor_StabilizerAttach_A",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.14584724605083466
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.12712351977825165
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.052000001072883606
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          -0.14584724605083466,
+          0.12712351977825165,
+          0.052000001072883606
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            -0.14584724605083466
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.12712351977825165
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.052000001072883606
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Inferred attachment reference; fixed to body, exact rear layout unconfirmed"
+    },
+    {
+      "name": "Anchor_StabilizerAttach_B",
+      "parent": "Carrier_Anchors",
+      "parent_type": "OBJECT",
+      "parent_bone": "",
+      "local_matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.14584724605083466
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.12712351977825165
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.052000001072883606
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world": {
+        "position_m": [
+          0.14584724605083466,
+          0.12712351977825165,
+          0.052000001072883606
+        ],
+        "rotation_wxyz": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.14584724605083466
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.12712351977825165
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.052000001072883606
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "axis_y_world": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "axis_z_world": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "meaning": "Inferred attachment reference; fixed to body, exact rear layout unconfirmed"
+    }
+  ],
+  "pickup_frame": {
+    "name": "MaskInteractionFrame",
+    "parent": "K1_Carrier_Root",
+    "parent_type": "OBJECT",
+    "parent_bone": "",
+    "local_matrix_rows": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.027167078107595444
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.029876485466957092
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.1289999932050705
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "world": {
+      "position_m": [
+        -0.027167078107595444,
+        0.029876485466957092,
+        0.1289999932050705
+      ],
+      "rotation_wxyz": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "matrix_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.027167078107595444
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.029876485466957092
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.1289999932050705
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "axis_y_world": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "axis_z_world": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "meaning": ""
+  },
+  "textures": {
+    "resolution": [
+      2048,
+      2048
+    ],
+    "material": "MAT_K1_Carrier_Atlas",
+    "opaque": true,
+    "BaseColor": {
+      "file": "Textures/BaseColor.png",
+      "colorspace": "sRGB",
+      "description": "Procedural olive cloth weave and seam color variation. No printed marks or baked flap shadows."
+    },
+    "Normal": {
+      "file": "Textures/Normal.png",
+      "colorspace": "linear data",
+      "convention": "tangent space OpenGL +Y",
+      "description": "Analytic UV height-field weave and stitch ridges rasterized to tangent normals; not high-poly geometry bake."
+    },
+    "MetallicSmoothness": {
+      "file": "Textures/MetallicSmoothness.png",
+      "colorspace": "linear data",
+      "channels": {
+        "R": "Metallic",
+        "A": "Smoothness=1-Roughness"
+      },
+      "cloth_metallic": 0,
+      "hardware_metallic": 0.45
+    },
+    "AO": {
+      "file": "Textures/AO.png",
+      "colorspace": "linear data",
+      "channel": "G",
+      "description": "Subtle procedural micro-cavity approximation only; no pose-dependent flap occlusion baked. Not a ray-traced scene AO bake.",
+      "range_G_8bit": [
+        240,
+        255
+      ]
+    },
+    "uv_sharing": "UV0 on every render mesh. Body outer/inner, flap faces occupy atlas regions. Straps, accessory pouch and seam caps intentionally reuse cloth regions; hardware uses metallic strip at U .95~.99.",
+    "FBX_base_normal_verified": true,
+    "URP_manual_connections": [
+      "MetallicSmoothness R/A",
+      "AO G",
+      "Opaque URP Lit; Normal texture type Normal map"
+    ]
+  },
+  "collision": {
+    "proxies": [
+      {
+        "name": "COL_BagFloor",
+        "parent": "K1_Carrier_Collision_Root",
+        "parent_type": "OBJECT",
+        "parent_bone": "",
+        "local_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "axis_z_world": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_BagWall_L",
+        "parent": "K1_Carrier_Collision_Root",
+        "parent_type": "OBJECT",
+        "parent_bone": "",
+        "local_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "axis_z_world": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_BagWall_R",
+        "parent": "K1_Carrier_Collision_Root",
+        "parent_type": "OBJECT",
+        "parent_bone": "",
+        "local_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "axis_z_world": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_BagWall_Front",
+        "parent": "K1_Carrier_Collision_Root",
+        "parent_type": "OBJECT",
+        "parent_bone": "",
+        "local_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "axis_z_world": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_BagWall_Back",
+        "parent": "K1_Carrier_Collision_Root",
+        "parent_type": "OBJECT",
+        "parent_bone": "",
+        "local_matrix_rows": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "axis_z_world": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_FlapBase",
+        "parent": "K1_CarrierCollisionRig",
+        "parent_type": "BONE",
+        "parent_bone": "FlapBase",
+        "local_matrix_rows": [
+          [
+            -1.0,
+            8.742277657347586e-08,
+            8.742277657347586e-08,
+            -2.2336518412657824e-08
+          ],
+          [
+            -8.742277657347586e-08,
+            -1.0,
+            7.64274186065882e-15,
+            -0.009284935891628265
+          ],
+          [
+            8.742277657347586e-08,
+            0.0,
+            1.0,
+            -0.2554999887943268
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            0.0,
+            -1.9527205339633837e-15
+          ],
+          "rotation_wxyz": [
+            1.0,
+            3.82137093032941e-15,
+            0.0,
+            4.371138828673793e-08
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              -8.742277657347586e-08,
+              0.0,
+              0.0
+            ],
+            [
+              8.742277657347586e-08,
+              1.0,
+              -7.64274186065882e-15,
+              0.0
+            ],
+            [
+              0.0,
+              7.64274186065882e-15,
+              1.0,
+              -1.9527205339633837e-15
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          -8.742277657347586e-08,
+          1.0,
+          7.64274186065882e-15
+        ],
+        "axis_z_world": [
+          0.0,
+          -7.64274186065882e-15,
+          1.0
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_FlapMid",
+        "parent": "K1_CarrierCollisionRig",
+        "parent_type": "BONE",
+        "parent_bone": "FlapMid",
+        "local_matrix_rows": [
+          [
+            -1.0,
+            -2.0612387174878677e-07,
+            8.459055038656516e-07,
+            -2.203210129891886e-07
+          ],
+          [
+            8.742277657347586e-08,
+            -0.9904332160949707,
+            -0.13799312710762024,
+            -0.08988668024539948
+          ],
+          [
+            8.662565278427792e-07,
+            -0.13799312710762024,
+            0.9904332160949707,
+            -0.254336953163147
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            -7.450580596923828e-09,
+            -1.30385160446167e-08
+          ],
+          "rotation_wxyz": [
+            1.0,
+            -7.450581485102248e-09,
+            6.031826149666131e-09,
+            -4.3293216123174716e-08
+          ],
+          "scale": [
+            1.0,
+            0.9999999403953552,
+            0.9999999403953552
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              8.658643935177679e-08,
+              1.2063651411153842e-08,
+              0.0
+            ],
+            [
+              -8.658641803549472e-08,
+              0.9999999403953552,
+              1.4901161193847656e-08,
+              -7.450580596923828e-09
+            ],
+            [
+              -1.2063651411153842e-08,
+              -1.4901161193847656e-08,
+              0.9999999403953552,
+              -1.30385160446167e-08
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          8.658643935177679e-08,
+          0.9999999403953552,
+          -1.4901161193847656e-08
+        ],
+        "axis_z_world": [
+          1.2063651411153842e-08,
+          1.4901161193847656e-08,
+          0.9999999403953552
+        ],
+        "meaning": ""
+      },
+      {
+        "name": "COL_FlapTip",
+        "parent": "K1_CarrierCollisionRig",
+        "parent_type": "BONE",
+        "parent_bone": "FlapTip",
+        "local_matrix_rows": [
+          [
+            1.0,
+            4.909849870421423e-12,
+            -2.8421065685364094e-14,
+            6.17867194040167e-13
+          ],
+          [
+            -2.8421433297663203e-14,
+            7.549790126404332e-08,
+            -1.0000001192092896,
+            0.07850001752376556
+          ],
+          [
+            -4.909849870421423e-12,
+            1.0,
+            7.549790836947068e-08,
+            0.12412352114915848
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "world": {
+          "position_m": [
+            0.0,
+            -5.848709849765044e-10,
+            0.0
+          ],
+          "rotation_wxyz": [
+            1.0,
+            -3.029837003509783e-08,
+            1.9185296255309903e-19,
+            -1.4210746294984755e-14
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "matrix_rows": [
+            [
+              1.0,
+              2.8421275749535013e-14,
+              2.842198048094713e-14,
+              0.0
+            ],
+            [
+              -2.842170943040401e-14,
+              1.0,
+              8.294849607182186e-08,
+              -5.848709849765044e-10
+            ],
+            [
+              2.8421213069096916e-14,
+              -3.8244987621283144e-08,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "axis_y_world": [
+          2.8421275749535013e-14,
+          1.0,
+          -3.8244987621283144e-08
+        ],
+        "axis_z_world": [
+          2.842198048094713e-14,
+          8.294849607182186e-08,
+          1.0
+        ],
+        "meaning": ""
+      }
+    ],
+    "convex_checks": [
+      {
+        "name": "COL_BagFloor",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_BagWall_L",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_BagWall_R",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_BagWall_Front",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_BagWall_Back",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_FlapBase",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_FlapMid",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      },
+      {
+        "name": "COL_FlapTip",
+        "max_outside_plane_m": 0.0,
+        "convex_with_tolerance": true
+      }
+    ],
+    "design": "5 separated closed boxes: floor, left/right/front/back walls. Mouth is empty. 3 separate closed flap boxes are rigid BONE children of corresponding flap bones.",
+    "binding": "COL_ names do not create Unity Colliders. Bind primitive or Convex MeshCollider shapes to corresponding render bones. Collision FBX skeleton is a matching reference hierarchy, not an additional independent runtime controller.",
+    "flap_approximation": "Three rigid slabs approximate the skinned cloth flap; they do not exactly cover blend regions."
+  },
+  "checks": {
+    "mouth_ray_checks": [
+      {
+        "xy_m": [
+          -0.11347779228687288,
+          -0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.003999978303909302
+      },
+      {
+        "xy_m": [
+          -0.11347779228687288,
+          0
+        ],
+        "first_body_hit_z_m": 0.0040000081062316895
+      },
+      {
+        "xy_m": [
+          -0.11347779228687288,
+          0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.003999978303909302
+      },
+      {
+        "xy_m": [
+          0,
+          -0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.0040000081062316895
+      },
+      {
+        "xy_m": [
+          0,
+          0
+        ],
+        "first_body_hit_z_m": 0.0040000081062316895
+      },
+      {
+        "xy_m": [
+          0,
+          0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.0040000081062316895
+      },
+      {
+        "xy_m": [
+          0.11347779228687288,
+          -0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.003999978303909302
+      },
+      {
+        "xy_m": [
+          0.11347779228687288,
+          0
+        ],
+        "first_body_hit_z_m": 0.0040000081062316895
+      },
+      {
+        "xy_m": [
+          0.11347779228687288,
+          0.08889881267547609
+        ],
+        "first_body_hit_z_m": 0.003999978303909302
+      }
+    ],
+    "flap_opening_samples": [
+      {
+        "opening": 0.0,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.025,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.05,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.075,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.1,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.125,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.15,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.175,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.2,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.225,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.25,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.275,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.3,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.325,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.35,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.375,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.4,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.425,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.45,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.475,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.5,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.525,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.55,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.575,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.6,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.625,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.65,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.675,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.7,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.725,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.75,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.775,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.8,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.825,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.85,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.875,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.9,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.925,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.95,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 0.975,
+        "mask_triangle_contacts": 0
+      },
+      {
+        "opening": 1.0,
+        "mask_triangle_contacts": 0
+      }
+    ],
+    "fixed_flap_body_contacts": "Only closed first-row hinge seam contacts permitted; tested 41 opening samples with no contacts outside hinge seam. Shoulder/stabilizer/accessory do not block opening.",
+    "extraction_samples": 81,
+    "extraction_contact_pairs": 0,
+    "method": "Actual evaluated triangle BVH intersections, plus internal envelope/rounded-corner guarantees and downward mouth ray checks. Not an AABB-only claim.",
+    "no_continuous_proof": true,
+    "no_hand_access_test": true,
+    "source_mask_overlap": {
+      "part": "Original Attach_P_LD fixed free-tail geometry versus Part_FilterCanister",
+      "rest_triangle_contact_pairs": 75,
+      "existed_before_storage_pose": true,
+      "changed": false,
+      "limitation": "본래 K1 꼬리/정화통 겹침은 가방 간섭과 별개. 꼬리 전용 변형 본 또는 해당 Key/형상 재검토가 향후 필요. 기존 원본은 수정하지 않음."
+    },
+    "temporary_FBX_QA_scene_removed": true,
+    "mouth_open_rays": 9,
+    "hinge_centerline_motion_m": 3.0719530773294423e-08
+  },
+  "roundtrip": {
+    "render_meshes": 8,
+    "render_bones": 4,
+    "collision_meshes": 8,
+    "collision_bones": 4,
+    "bone_hierarchy_equal": true,
+    "mesh_max_errors_m": {
+      "Part_BagBody": 5.3726900748371916e-08,
+      "Part_BagFlap": 6.495265578539184e-08,
+      "Part_Closure_Flap": 4.879454857643595e-08,
+      "Part_Closure_Body": 2.6863450374185958e-08,
+      "Part_ShoulderStrap": 4.2146848510894035e-08,
+      "Part_StabilizerStrap": 4.0978193283081055e-08,
+      "Part_Hardware": 4.2146848510894035e-08,
+      "Part_AccessoryPocket": 3.003425057343598e-08,
+      "COL_BagFloor": 1.816079020500183e-08,
+      "COL_BagWall_L": 5.3726900748371916e-08,
+      "COL_BagWall_R": 5.3726900748371916e-08,
+      "COL_BagWall_Front": 5.3726900748371916e-08,
+      "COL_BagWall_Back": 5.3726900748371916e-08,
+      "COL_FlapBase": 3.0719530773294423e-08,
+      "COL_FlapMid": 3.0719530773294423e-08,
+      "COL_FlapTip": 6.495265578539184e-08
+    },
+    "weight_max_error": 0.0,
+    "uv_corner_max_error": 0.0,
+    "opening_mesh_comparisons": [
+      {
+        "opening": 0,
+        "mesh": "Part_BagBody",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_BagFlap",
+        "max_error_m": 6.664001874625317e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_Closure_Flap",
+        "max_error_m": 5.372690074837467e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_Closure_Body",
+        "max_error_m": 2.6863450374185958e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_ShoulderStrap",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_StabilizerStrap",
+        "max_error_m": 4.0978193283081055e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_Hardware",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "Part_AccessoryPocket",
+        "max_error_m": 3.003425057343598e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_BagBody",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_BagFlap",
+        "max_error_m": 1.4901161193847656e-07
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_Closure_Flap",
+        "max_error_m": 1.4675941767984784e-07
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_Closure_Body",
+        "max_error_m": 2.6863450374185958e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_ShoulderStrap",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_StabilizerStrap",
+        "max_error_m": 4.0978193283081055e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_Hardware",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "Part_AccessoryPocket",
+        "max_error_m": 3.003425057343598e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_BagBody",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_BagFlap",
+        "max_error_m": 9.424321830774485e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_Closure_Flap",
+        "max_error_m": 1.2013700229374393e-07
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_Closure_Body",
+        "max_error_m": 2.6863450374185958e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_ShoulderStrap",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_StabilizerStrap",
+        "max_error_m": 4.0978193283081055e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_Hardware",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "Part_AccessoryPocket",
+        "max_error_m": 3.003425057343598e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_BagBody",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_BagFlap",
+        "max_error_m": 1.8128044993574084e-07
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_Closure_Flap",
+        "max_error_m": 1.2489448945403256e-07
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_Closure_Body",
+        "max_error_m": 2.6863450374185958e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_ShoulderStrap",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_StabilizerStrap",
+        "max_error_m": 4.0978193283081055e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_Hardware",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "Part_AccessoryPocket",
+        "max_error_m": 3.003425057343598e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_BagBody",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_BagFlap",
+        "max_error_m": 2.3276357876976296e-07
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_Closure_Flap",
+        "max_error_m": 2.32763578769763e-07
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_Closure_Body",
+        "max_error_m": 2.6863450374185958e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_ShoulderStrap",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_StabilizerStrap",
+        "max_error_m": 4.0978193283081055e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_Hardware",
+        "max_error_m": 4.2146848510894035e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "Part_AccessoryPocket",
+        "max_error_m": 3.003425057343598e-08
+      }
+    ],
+    "moving_anchor_comparisons": [
+      {
+        "opening": 0,
+        "anchor": "Anchor_BagMount",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_FlapGrab",
+        "max_position_error_m": 1.0536712127725394e-07,
+        "max_matrix_component_error": 3.5762786865234375e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_ClosureGrab",
+        "max_position_error_m": 1.0667607980429942e-07,
+        "max_matrix_component_error": 3.5762786865234375e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_MaskStored",
+        "max_position_error_m": 2.0489096641540527e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_MaskPickup",
+        "max_position_error_m": 3.5390257835388184e-08,
+        "max_matrix_component_error": 1.5823773846790345e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_ExitPlane",
+        "max_position_error_m": 4.138185653505562e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_ExtractEnd",
+        "max_position_error_m": 6.332993507385254e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_StrapAttach_A",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_StrapAttach_B",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_StabilizerAttach_A",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0,
+        "anchor": "Anchor_StabilizerAttach_B",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_BagMount",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_FlapGrab",
+        "max_position_error_m": 1.6049041769312034e-07,
+        "max_matrix_component_error": 5.960464477539062e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_ClosureGrab",
+        "max_position_error_m": 1.6049041769312778e-07,
+        "max_matrix_component_error": 5.960464477539062e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_MaskStored",
+        "max_position_error_m": 2.0489096641540527e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_MaskPickup",
+        "max_position_error_m": 3.5390257835388184e-08,
+        "max_matrix_component_error": 1.5823773846790345e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_ExitPlane",
+        "max_position_error_m": 4.138185653505562e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_ExtractEnd",
+        "max_position_error_m": 6.332993507385254e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_StrapAttach_A",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_StrapAttach_B",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_StabilizerAttach_A",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.25,
+        "anchor": "Anchor_StabilizerAttach_B",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_BagMount",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_FlapGrab",
+        "max_position_error_m": 1.4057727354850822e-07,
+        "max_matrix_component_error": 5.513429641723633e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_ClosureGrab",
+        "max_position_error_m": 1.7377590819733993e-07,
+        "max_matrix_component_error": 5.513429641723633e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_MaskStored",
+        "max_position_error_m": 2.0489096641540527e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_MaskPickup",
+        "max_position_error_m": 3.5390257835388184e-08,
+        "max_matrix_component_error": 1.5823773846790345e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_ExitPlane",
+        "max_position_error_m": 4.138185653505562e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_ExtractEnd",
+        "max_position_error_m": 6.332993507385254e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_StrapAttach_A",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_StrapAttach_B",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_StabilizerAttach_A",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.5,
+        "anchor": "Anchor_StabilizerAttach_B",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_BagMount",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_FlapGrab",
+        "max_position_error_m": 1.0745380149676272e-07,
+        "max_matrix_component_error": 8.344650268554688e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_ClosureGrab",
+        "max_position_error_m": 1.1372817696986495e-07,
+        "max_matrix_component_error": 8.344650268554688e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_MaskStored",
+        "max_position_error_m": 2.0489096641540527e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_MaskPickup",
+        "max_position_error_m": 3.5390257835388184e-08,
+        "max_matrix_component_error": 1.5823773846790345e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_ExitPlane",
+        "max_position_error_m": 4.138185653505562e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_ExtractEnd",
+        "max_position_error_m": 6.332993507385254e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_StrapAttach_A",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_StrapAttach_B",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_StabilizerAttach_A",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 0.75,
+        "anchor": "Anchor_StabilizerAttach_B",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_BagMount",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_FlapGrab",
+        "max_position_error_m": 1.88486436615496e-07,
+        "max_matrix_component_error": 4.172325134277344e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_ClosureGrab",
+        "max_position_error_m": 1.884864366154992e-07,
+        "max_matrix_component_error": 4.172325134277344e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_MaskStored",
+        "max_position_error_m": 2.0489096641540527e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_MaskPickup",
+        "max_position_error_m": 3.5390257835388184e-08,
+        "max_matrix_component_error": 1.5823773846790345e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_ExitPlane",
+        "max_position_error_m": 4.138185653505562e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_ExtractEnd",
+        "max_position_error_m": 6.332993507385254e-08,
+        "max_matrix_component_error": 1.9470719081482457e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_StrapAttach_A",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_StrapAttach_B",
+        "max_position_error_m": 4.2146848510894035e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_StabilizerAttach_A",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      },
+      {
+        "opening": 1,
+        "anchor": "Anchor_StabilizerAttach_B",
+        "max_position_error_m": 2.6863450374185958e-08,
+        "max_matrix_component_error": 1.6292068494294654e-07
+      }
+    ],
+    "collision_opening_comparisons": [
+      {
+        "opening": 0,
+        "mesh": "COL_BagFloor",
+        "max_error_m": 1.816079020500183e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_BagWall_L",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_BagWall_R",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_BagWall_Front",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_BagWall_Back",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_FlapBase",
+        "max_error_m": 4.470348358154297e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_FlapMid",
+        "max_error_m": 6.749358375368058e-08
+      },
+      {
+        "opening": 0,
+        "mesh": "COL_FlapTip",
+        "max_error_m": 1.0536712127723508e-07
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_BagFloor",
+        "max_error_m": 1.816079020500183e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_BagWall_L",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_BagWall_R",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_BagWall_Front",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_BagWall_Back",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_FlapBase",
+        "max_error_m": 9.581766014992879e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_FlapMid",
+        "max_error_m": 9.657056180250437e-08
+      },
+      {
+        "opening": 0.25,
+        "mesh": "COL_FlapTip",
+        "max_error_m": 1.2377834115800373e-07
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_BagFloor",
+        "max_error_m": 1.816079020500183e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_BagWall_L",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_BagWall_R",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_BagWall_Front",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_BagWall_Back",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_FlapBase",
+        "max_error_m": 1.1403283376257097e-07
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_FlapMid",
+        "max_error_m": 1.5169984058102476e-07
+      },
+      {
+        "opening": 0.5,
+        "mesh": "COL_FlapTip",
+        "max_error_m": 2.791374339079448e-07
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_BagFloor",
+        "max_error_m": 1.816079020500183e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_BagWall_L",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_BagWall_R",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_BagWall_Front",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_BagWall_Back",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_FlapBase",
+        "max_error_m": 1.043081283569336e-07
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_FlapMid",
+        "max_error_m": 7.598131170262075e-08
+      },
+      {
+        "opening": 0.75,
+        "mesh": "COL_FlapTip",
+        "max_error_m": 2.5636927089222153e-07
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_BagFloor",
+        "max_error_m": 1.816079020500183e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_BagWall_L",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_BagWall_R",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_BagWall_Front",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_BagWall_Back",
+        "max_error_m": 5.3726900748371916e-08
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_FlapBase",
+        "max_error_m": 1.3818768405162847e-07
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_FlapMid",
+        "max_error_m": 1.3328003749250113e-07
+      },
+      {
+        "opening": 1,
+        "mesh": "COL_FlapTip",
+        "max_error_m": 2.5288109106536417e-07
+      }
+    ],
+    "unit_object_scales": true,
+    "render_material_slots": {
+      "Part_AccessoryPocket": 1,
+      "Part_BagBody": 1,
+      "Part_Closure_Body": 1,
+      "Part_Hardware": 1,
+      "Part_ShoulderStrap": 1,
+      "Part_StabilizerStrap": 1,
+      "Part_Closure_Flap": 1,
+      "Part_BagFlap": 1
+    },
+    "render_materials": 1,
+    "moving_anchor_bone_parents": {
+      "Anchor_FlapGrab": "FlapTip",
+      "Anchor_ClosureGrab": "FlapTip"
+    },
+    "pickup_parent": "MaskInteractionFrame",
+    "render_object_types": [
+      "ARMATURE",
+      "EMPTY",
+      "MESH"
+    ],
+    "textures": [
+      "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1Carrier\\Textures\\BaseColor.png",
+      "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1Carrier\\Textures\\Normal.png"
+    ],
+    "method": "Separate Blender scene reimport. Imported bone rest axes accounted for with deformation matrix retargeting; no Unity execution.",
+    "collision_proxy_bone_parents": {
+      "COL_FlapBase": "FlapBase",
+      "COL_FlapMid": "FlapMid",
+      "COL_FlapTip": "FlapTip"
+    },
+    "collision_proxy_modifiers": {
+      "COL_BagFloor": [],
+      "COL_BagWall_L": [],
+      "COL_BagWall_R": [],
+      "COL_BagWall_Front": [],
+      "COL_BagWall_Back": [],
+      "COL_FlapBase": [],
+      "COL_FlapMid": [],
+      "COL_FlapTip": []
+    }
+  },
+  "export": {
+    "use_selection": true,
+    "global_scale": 1,
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_ALL",
+    "object_types": [
+      "ARMATURE",
+      "EMPTY",
+      "MESH"
+    ],
+    "use_space_transform": true,
+    "bake_space_transform": false,
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "use_mesh_modifiers": false,
+    "use_mesh_modifiers_render": false,
+    "use_triangles": true,
+    "use_tspace": true,
+    "mesh_smooth_type": "OFF",
+    "bake_anim": false,
+    "add_leaf_bones": false,
+    "use_armature_deform_only": false,
+    "use_custom_props": true,
+    "path_mode": "RELATIVE",
+    "embed_textures": false
+  },
+  "files": [
+    "K1_Carrier.fbx",
+    "K1_Carrier_Collision.fbx",
+    "Textures/BaseColor.png",
+    "Textures/Normal.png",
+    "Textures/MetallicSmoothness.png",
+    "Textures/AO.png",
+    "Source~/K1_Carrier.blend",
+    "Source~/K1_StoragePose.json",
+    "Source~/K1_Carrier_Metadata.json"
+  ],
+  "preservation": {
+    "original_unsaved_scene": "Preserved as Scene with Cube/Camera/Light in the dedicated blend.",
+    "reference_collection": "REFERENCE_K1_WorkingCopy_NOT_EXPORT, copied from protected K1 source; excluded from both FBX files.",
+    "original_K1_files_unmodified": true,
+    "Unity_code_prefab_scene_mat_meta_changes_by_agent": false,
+    "preview_render_screenshot_generated": false,
+    "only_generated_images": "The four explicitly requested texture maps. No prompt document saved.",
+    "protected_K1_file_count": 51,
+    "protected_K1_changed_files": []
+  },
+  "unity_execution": false,
+  "unity_followup": [
+    "고정장치 해제",
+    "덮개 열림 상태 및 열림 전 방독면 잡기 제한",
+    "K1 잡기·추출",
+    "전체 형상이 입구를 지난 완전 이탈 판정",
+    "수납 자세에서 착용 준비 자세 전환",
+    "다시하기 시 K1 수납·덮개·본 자세 초기화"
+  ],
+  "unverified": [
+    "실물 치수·후면 고정부·내부 구조",
+    "Unity importer axes/scale and material appearance",
+    "actual Quest2+Link controller reach, hand offsets, HMD fit",
+    "runtime grasp/release/closure/complete-extraction/retry logic",
+    "fold-to-loose transition interpolation and its full interference trajectory",
+    "approved military storage/donning procedure"
+  ]
+}

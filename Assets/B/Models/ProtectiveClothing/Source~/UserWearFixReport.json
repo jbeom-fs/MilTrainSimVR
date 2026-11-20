@@ -1,0 +1,1105 @@
+{
+ "input": "Backups\\20261103_userwear_fix_before\\Model\\Source~\\ProtectiveClothing.blend",
+ "mode": "final",
+ "tuning": {
+  "underarm_target_m": 0.007,
+  "underarm_share": 0.8,
+  "underarm_abs_x_m": [
+   0.22,
+   0.4
+  ],
+  "underarm_full_effect_to_abs_x_m": 0.28,
+  "underarm_max_clearance_m": 0.045,
+  "underarm_max_step_m": 0.025,
+  "global_passes": 2,
+  "elbow_blend_passes": 10
+ },
+ "metrics_before": {
+  "ArmsDown": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 16,
+    "inside_body_over_5mm_ratio": 0.0057,
+    "min_signed_distance_mm": -14.27,
+    "edge_stretch_p99": 1.332,
+    "edge_stretch_max": 2.173,
+    "edges_over_1_5x": 65,
+    "edges_5mm_plus_max": 2.156,
+    "edges_5mm_plus_over_1_5x": 61,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -14.3,
+     "sleeveR_upper": -14.2
+    },
+    "inside_against_body_part": {
+     "torso": 16
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 26,
+     "armpit_shoulderR": 14,
+     "sideL": 4,
+     "sideR": 4,
+     "sleeveL_upper": 13,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "ElbowBend": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 2,
+    "inside_body_over_5mm_ratio": 0.0007,
+    "min_signed_distance_mm": -8.78,
+    "edge_stretch_p99": 1.415,
+    "edge_stretch_max": 2.585,
+    "edges_over_1_5x": 143,
+    "edges_5mm_plus_max": 2.585,
+    "edges_5mm_plus_over_1_5x": 137,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -8.8,
+     "sleeveR_upper": -8.5
+    },
+    "inside_against_body_part": {
+     "torso": 2
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 24,
+     "armpit_shoulderR": 13,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 54,
+     "sleeveL_upper": 8,
+     "sleeveR_fore": 34,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.17,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "HandToChest": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 13,
+    "inside_body_over_5mm_ratio": 0.0047,
+    "min_signed_distance_mm": -12.13,
+    "edge_stretch_p99": 1.532,
+    "edge_stretch_max": 3.611,
+    "edges_over_1_5x": 298,
+    "edges_5mm_plus_max": 2.464,
+    "edges_5mm_plus_over_1_5x": 290,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -10.6,
+     "sleeveR_fore": -8.8,
+     "sleeveR_upper": -12.1
+    },
+    "inside_against_body_part": {
+     "arm": 8,
+     "torso": 5
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 42,
+     "armpit_shoulderR": 28,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 76,
+     "sleeveL_upper": 29,
+     "sleeveR_fore": 92,
+     "sleeveR_upper": 25
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -2.21,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.91,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "HandToWaist": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 5,
+    "inside_body_over_5mm_ratio": 0.0018,
+    "min_signed_distance_mm": -9.66,
+    "edge_stretch_p99": 1.475,
+    "edge_stretch_max": 3.007,
+    "edges_over_1_5x": 206,
+    "edges_5mm_plus_max": 2.234,
+    "edges_5mm_plus_over_1_5x": 200,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -9.2,
+     "sleeveR_upper": -9.7
+    },
+    "inside_against_body_part": {
+     "arm": 1,
+     "torso": 4
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 32,
+     "armpit_shoulderR": 17,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 60,
+     "sleeveL_upper": 16,
+     "sleeveR_fore": 59,
+     "sleeveR_upper": 16
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.67,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.33,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "TorsoTwist": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 20,
+    "inside_body_over_5mm_ratio": 0.0072,
+    "min_signed_distance_mm": -14.68,
+    "edge_stretch_p99": 1.37,
+    "edge_stretch_max": 4.06,
+    "edges_over_1_5x": 109,
+    "edges_5mm_plus_max": 2.156,
+    "edges_5mm_plus_over_1_5x": 69,
+    "inside_by_region_min_mm": {
+     "armpit_shoulderL": -6.0,
+     "sideL": -6.1,
+     "sideR": -5.5,
+     "sleeveL_upper": -14.7,
+     "sleeveR_upper": -12.8
+    },
+    "inside_against_body_part": {
+     "arm": 4,
+     "torso": 16
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 27,
+     "armpit_shoulderR": 14,
+     "front": 30,
+     "sideL": 13,
+     "sideR": 6,
+     "sleeveL_upper": 15,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "LightBend": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 25,
+    "inside_body_over_5mm_ratio": 0.009,
+    "min_signed_distance_mm": -18.5,
+    "edge_stretch_p99": 1.372,
+    "edge_stretch_max": 3.15,
+    "edges_over_1_5x": 91,
+    "edges_5mm_plus_max": 2.236,
+    "edges_5mm_plus_over_1_5x": 75,
+    "inside_by_region_min_mm": {
+     "sideL": -14.7,
+     "sideR": -15.3,
+     "sleeveL_upper": -18.5,
+     "sleeveR_upper": -14.8
+    },
+    "inside_against_body_part": {
+     "arm": 5,
+     "torso": 20
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 31,
+     "armpit_shoulderR": 17,
+     "back": 4,
+     "front": 12,
+     "sideL": 4,
+     "sideR": 4,
+     "sleeveL_upper": 15,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.297,
+    "edge_stretch_max": 1.704,
+    "edges_over_1_5x": 14,
+    "edges_5mm_plus_max": 1.704,
+    "edges_5mm_plus_over_1_5x": 14
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  }
+ },
+ "fix": {
+  "underarm_vertices_moved": 310,
+  "underarm_largest_move_mm": 23.2,
+  "elbow_zone_vertices": 1160,
+  "islands": 19,
+  "jacket_bones": [
+   "Hips",
+   "LeftArm",
+   "LeftForeArm",
+   "LeftHand",
+   "LeftShoulder",
+   "Neck",
+   "RightArm",
+   "RightForeArm",
+   "RightHand",
+   "RightShoulder",
+   "Spine",
+   "Spine1",
+   "Spine2"
+  ],
+  "vertices": 8354,
+  "triangles": 16330
+ },
+ "metrics_after": {
+  "ArmsDown": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 4,
+    "inside_body_over_5mm_ratio": 0.0014,
+    "min_signed_distance_mm": -6.81,
+    "edge_stretch_p99": 1.357,
+    "edge_stretch_max": 2.608,
+    "edges_over_1_5x": 76,
+    "edges_5mm_plus_max": 2.156,
+    "edges_5mm_plus_over_1_5x": 61,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -6.8,
+     "sleeveR_upper": -6.7
+    },
+    "inside_against_body_part": {
+     "torso": 4
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 27,
+     "armpit_shoulderR": 17,
+     "back": 2,
+     "front": 5,
+     "sideL": 4,
+     "sideR": 4,
+     "sleeveL_upper": 13,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "ElbowBend": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -3.79,
+    "edge_stretch_p99": 1.411,
+    "edge_stretch_max": 2.654,
+    "edges_over_1_5x": 137,
+    "edges_5mm_plus_max": 2.654,
+    "edges_5mm_plus_over_1_5x": 121,
+    "inside_by_region_min_mm": {},
+    "inside_against_body_part": {},
+    "stretch_by_region": {
+     "armpit_shoulderL": 25,
+     "armpit_shoulderR": 15,
+     "back": 2,
+     "front": 5,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 37,
+     "sleeveL_upper": 9,
+     "sleeveR_fore": 32,
+     "sleeveR_upper": 6
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.17,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "HandToChest": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 2,
+    "inside_body_over_5mm_ratio": 0.0007,
+    "min_signed_distance_mm": -10.55,
+    "edge_stretch_p99": 1.506,
+    "edge_stretch_max": 3.611,
+    "edges_over_1_5x": 256,
+    "edges_5mm_plus_max": 2.349,
+    "edges_5mm_plus_over_1_5x": 237,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -10.6,
+     "sleeveR_upper": -5.2
+    },
+    "inside_against_body_part": {
+     "arm": 1,
+     "torso": 1
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 43,
+     "armpit_shoulderR": 30,
+     "back": 4,
+     "front": 5,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 65,
+     "sleeveL_upper": 27,
+     "sleeveR_fore": 58,
+     "sleeveR_upper": 18
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -2.21,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.91,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "HandToWaist": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 1,
+    "inside_body_over_5mm_ratio": 0.0004,
+    "min_signed_distance_mm": -8.92,
+    "edge_stretch_p99": 1.442,
+    "edge_stretch_max": 3.007,
+    "edges_over_1_5x": 167,
+    "edges_5mm_plus_max": 2.182,
+    "edges_5mm_plus_over_1_5x": 150,
+    "inside_by_region_min_mm": {
+     "sleeveL_upper": -8.9
+    },
+    "inside_against_body_part": {
+     "arm": 1
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 33,
+     "armpit_shoulderR": 19,
+     "back": 3,
+     "front": 5,
+     "sideL": 2,
+     "sideR": 4,
+     "sleeveL_fore": 45,
+     "sleeveL_upper": 14,
+     "sleeveR_fore": 35,
+     "sleeveR_upper": 7
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.67,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": -1.33,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "TorsoTwist": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 8,
+    "inside_body_over_5mm_ratio": 0.0029,
+    "min_signed_distance_mm": -7.04,
+    "edge_stretch_p99": 1.371,
+    "edge_stretch_max": 2.609,
+    "edges_over_1_5x": 84,
+    "edges_5mm_plus_max": 2.156,
+    "edges_5mm_plus_over_1_5x": 69,
+    "inside_by_region_min_mm": {
+     "armpit_shoulderL": -6.0,
+     "sideL": -6.1,
+     "sideR": -5.5,
+     "sleeveL_upper": -7.0,
+     "sleeveR_upper": -6.1
+    },
+    "inside_against_body_part": {
+     "arm": 4,
+     "torso": 4
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 27,
+     "armpit_shoulderR": 17,
+     "back": 2,
+     "front": 7,
+     "sideL": 6,
+     "sideR": 6,
+     "sleeveL_upper": 15,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  },
+  "LightBend": {
+   "Jacket": {
+    "sampled_vertices": 2785,
+    "inside_body_over_5mm": 11,
+    "inside_body_over_5mm_ratio": 0.0039,
+    "min_signed_distance_mm": -18.5,
+    "edge_stretch_p99": 1.382,
+    "edge_stretch_max": 2.957,
+    "edges_over_1_5x": 95,
+    "edges_5mm_plus_max": 2.236,
+    "edges_5mm_plus_over_1_5x": 78,
+    "inside_by_region_min_mm": {
+     "sideL": -14.7,
+     "sideR": -15.3,
+     "sleeveL_upper": -18.5,
+     "sleeveR_upper": -7.6
+    },
+    "inside_against_body_part": {
+     "arm": 5,
+     "torso": 6
+    },
+    "stretch_by_region": {
+     "armpit_shoulderL": 32,
+     "armpit_shoulderR": 21,
+     "back": 8,
+     "front": 5,
+     "sideL": 4,
+     "sideR": 4,
+     "sleeveL_upper": 17,
+     "sleeveR_upper": 4
+    }
+   },
+   "Trousers": {
+    "sampled_vertices": 2046,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 9.9,
+    "edge_stretch_p99": 1.297,
+    "edge_stretch_max": 1.704,
+    "edges_over_1_5x": 14,
+    "edges_5mm_plus_max": 1.704,
+    "edges_5mm_plus_over_1_5x": 14
+   },
+   "Glove_L": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.28,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Glove_R": {
+    "sampled_vertices": 1242,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 0.24,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_L": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.26,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   },
+   "Overboot_R": {
+    "sampled_vertices": 714,
+    "inside_body_over_5mm": 0,
+    "inside_body_over_5mm_ratio": 0.0,
+    "min_signed_distance_mm": 3.25,
+    "edge_stretch_p99": 1.0,
+    "edge_stretch_max": 1.0,
+    "edges_over_1_5x": 0,
+    "edges_5mm_plus_max": 1.0,
+    "edges_5mm_plus_over_1_5x": 0
+   }
+  }
+ },
+ "contract": {
+  "objects_checked": 33,
+  "problems": [],
+  "jacket_rest_skin_error_m": 2.4755668231600746e-07,
+  "bones": 65,
+  "other_worn_meshes_unchanged": true
+ },
+ "poses": {
+  "ArmsDown": "both upper arms aimed down and slightly out from the T pose",
+  "ElbowBend": "arms down and out, forearms forward (controller holding)",
+  "HandToChest": "arms down and forward, forearms folded in so the hands are in front of the chest",
+  "HandToWaist": "arms down, forearms forward and in so the hands are in front of the waist",
+  "TorsoTwist": "arms down, Spine/Spine1/Spine2 10 deg each about the vertical (30 deg)",
+  "LightBend": "arms down and forward, spine 20 deg forward, thighs 20 deg forward, knees 35 deg"
+ },
+ "roundtrip": {
+  "objects": 14,
+  "missing": [],
+  "max_matrix_difference": 3.5762786865234375e-07,
+  "max_bone_head_difference_m": 1.5613822253521774e-06,
+  "max_rest_vertex_difference_m": 7.119356268958654e-07,
+  "max_posed_vertex_difference_HandToChest_m": 1.31566051680549e-06,
+  "armature_modifiers_to_PC_Armature": true,
+  "pickup_fbx": "not re-exported (unchanged)"
+ },
+ "seconds": 190.2
+}

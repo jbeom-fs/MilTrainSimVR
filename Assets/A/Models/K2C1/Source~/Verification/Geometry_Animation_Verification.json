@@ -1,0 +1,135 @@
+{
+  "working": {
+    "parts": {
+      "01_Upper": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "02_Lower": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "03_PushRod": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "04_GasRod": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "05_BoltAssembly": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "06_GasRegulator": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      },
+      "07_Selector": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      },
+      "08_ChargingHandle": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      }
+    },
+    "animation": {
+      "frames_checked": 867,
+      "objects_checked": 8,
+      "world_transform_error": 0.0,
+      "complete_assembly_hold_seconds": 1.0,
+      "hold_transform_error": 0.0
+    }
+  },
+  "delivery": {
+    "parts": {
+      "01_Upper": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "02_Lower": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "03_PushRod": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "04_GasRod": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "05_BoltAssembly": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1,
+        "previous_uv_exactly_preserved": true
+      },
+      "06_GasRegulator": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      },
+      "07_Selector": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      },
+      "08_ChargingHandle": {
+        "geometry_exactly_unchanged": true,
+        "normals_exactly_unchanged": true,
+        "uv_count": 1,
+        "material_count": 1
+      }
+    },
+    "animation": {
+      "frames_checked": 867,
+      "objects_checked": 8,
+      "world_transform_error": 0.0,
+      "complete_assembly_hold_seconds": 1.0,
+      "hold_transform_error": 0.0
+    }
+  },
+  "delivery_scene": {
+    "scene_count": 1,
+    "mesh_count": 8,
+    "bake_source_meshes_removed": true
+  }
+}

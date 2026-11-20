@@ -1,0 +1,17 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/plastic_chair_3d_model_Clone1_1/plastic_chair_3d_model_Clone1_1.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/plastic_chair_3d_model_Clone1_1/plastic_chair_3d_model_Clone1_1.fbm/plastic_chair_3d_model_Clone1_1_basecolor.JPEG",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/plastic_chair_3d_model_Clone1_1/plastic_chair_3d_model_Clone1_1.fbm/plastic_chair_3d_model_Clone1_1_normal.PNG",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/plastic_chair_3d_model_Clone1_1/plastic_chair_3d_model_Clone1_1.fbm/plastic_chair_3d_model_Clone1_1_roughness.JPEG"
+ },
+ "out_dir": "C:/Temp/tripo_low/plastic_chair",
+ "name": "Plastic_Chair",
+ "target_tris": 2600,
+ "planar_deg": 3,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "bake_samples": 32
+}

@@ -1,0 +1,1146 @@
+{
+  "materials_identical": true,
+  "images_identical": true,
+  "mesh_visibility_identical": true,
+  "final": {
+    "materials": {
+      "Ch36_Body": {
+        "nodes": [
+          {
+            "name": "Principled BSDF",
+            "type": "BSDF_PRINCIPLED",
+            "inputs": [
+              [
+                "Base Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Metallic",
+                0.5
+              ],
+              [
+                "Roughness",
+                0.5527864098548889
+              ],
+              [
+                "IOR",
+                1.5
+              ],
+              [
+                "Alpha",
+                1.0
+              ],
+              [
+                "Thin Wall",
+                false
+              ],
+              [
+                "Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Weight",
+                0.0
+              ],
+              [
+                "Diffuse Roughness",
+                0.0
+              ],
+              [
+                "Subsurface Weight",
+                0.0
+              ],
+              [
+                "Subsurface Radius",
+                [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ]
+              ],
+              [
+                "Subsurface Scale",
+                0.004999999888241291
+              ],
+              [
+                "Subsurface IOR",
+                1.399999976158142
+              ],
+              [
+                "Subsurface Anisotropy",
+                0.0
+              ],
+              [
+                "Specular IOR Level",
+                1.0
+              ],
+              [
+                "Specular Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Anisotropic",
+                0.0
+              ],
+              [
+                "Anisotropic Rotation",
+                0.0
+              ],
+              [
+                "Tangent",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Transmission Weight",
+                0.0
+              ],
+              [
+                "Coat Weight",
+                0.0
+              ],
+              [
+                "Coat Roughness",
+                0.029999999329447746
+              ],
+              [
+                "Coat IOR",
+                1.5
+              ],
+              [
+                "Coat Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Coat Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Sheen Weight",
+                0.0
+              ],
+              [
+                "Sheen Roughness",
+                0.5
+              ],
+              [
+                "Sheen Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Color",
+                [
+                  0.0,
+                  0.0,
+                  0.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Strength",
+                1.0
+              ],
+              [
+                "Thin Film Thickness",
+                0.0
+              ],
+              [
+                "Thin Film IOR",
+                1.3300000429153442
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Material Output",
+            "type": "OUTPUT_MATERIAL",
+            "inputs": [
+              [
+                "Displacement",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Thickness",
+                0.0
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Normal Map",
+            "type": "NORMAL_MAP",
+            "inputs": [
+              [
+                "Strength",
+                1.0
+              ],
+              [
+                "Color",
+                [
+                  0.5,
+                  0.5,
+                  1.0,
+                  1.0
+                ]
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Image Texture",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "file2"
+          },
+          {
+            "name": "Image Texture.001",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "file4"
+          },
+          {
+            "name": "Image Texture.002",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "file5"
+          },
+          {
+            "name": "Image Texture.003",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "file6"
+          }
+        ],
+        "links": [
+          [
+            "Principled BSDF",
+            "BSDF",
+            "Material Output",
+            "Surface"
+          ],
+          [
+            "Normal Map",
+            "Normal",
+            "Principled BSDF",
+            "Normal"
+          ],
+          [
+            "Image Texture",
+            "Color",
+            "Principled BSDF",
+            "Base Color"
+          ],
+          [
+            "Image Texture.001",
+            "Color",
+            "Normal Map",
+            "Color"
+          ],
+          [
+            "Image Texture.002",
+            "Color",
+            "Principled BSDF",
+            "Specular IOR Level"
+          ],
+          [
+            "Image Texture.003",
+            "Color",
+            "Principled BSDF",
+            "Roughness"
+          ]
+        ]
+      },
+      "PC_Shared": {
+        "nodes": [
+          {
+            "name": "Principled BSDF",
+            "type": "BSDF_PRINCIPLED",
+            "inputs": [
+              [
+                "Base Color",
+                [
+                  0.800000011920929,
+                  0.800000011920929,
+                  0.800000011920929,
+                  1.0
+                ]
+              ],
+              [
+                "Metallic",
+                0.0
+              ],
+              [
+                "Roughness",
+                0.5
+              ],
+              [
+                "IOR",
+                1.4600000381469727
+              ],
+              [
+                "Alpha",
+                1.0
+              ],
+              [
+                "Thin Wall",
+                false
+              ],
+              [
+                "Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Weight",
+                0.0
+              ],
+              [
+                "Diffuse Roughness",
+                0.0
+              ],
+              [
+                "Subsurface Weight",
+                0.0
+              ],
+              [
+                "Subsurface Radius",
+                [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ]
+              ],
+              [
+                "Subsurface Scale",
+                0.004999999888241291
+              ],
+              [
+                "Subsurface IOR",
+                1.399999976158142
+              ],
+              [
+                "Subsurface Anisotropy",
+                0.0
+              ],
+              [
+                "Specular IOR Level",
+                0.41999998688697815
+              ],
+              [
+                "Specular Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Anisotropic",
+                0.0
+              ],
+              [
+                "Anisotropic Rotation",
+                0.0
+              ],
+              [
+                "Tangent",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Transmission Weight",
+                0.0
+              ],
+              [
+                "Coat Weight",
+                0.0
+              ],
+              [
+                "Coat Roughness",
+                0.029999999329447746
+              ],
+              [
+                "Coat IOR",
+                1.5
+              ],
+              [
+                "Coat Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Coat Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Sheen Weight",
+                0.0
+              ],
+              [
+                "Sheen Roughness",
+                0.5
+              ],
+              [
+                "Sheen Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Strength",
+                0.0
+              ],
+              [
+                "Thin Film Thickness",
+                0.0
+              ],
+              [
+                "Thin Film IOR",
+                1.3300000429153442
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Material Output",
+            "type": "OUTPUT_MATERIAL",
+            "inputs": [
+              [
+                "Displacement",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Thickness",
+                0.0
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Image Texture",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "PC_BaseColor_2K.png"
+          },
+          {
+            "name": "Image Texture.001",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "PC_Roughness_1K.png"
+          },
+          {
+            "name": "Image Texture.002",
+            "type": "TEX_IMAGE",
+            "inputs": [
+              [
+                "Vector",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            ],
+            "image": "PC_Normal_1K.png"
+          },
+          {
+            "name": "Normal Map",
+            "type": "NORMAL_MAP",
+            "inputs": [
+              [
+                "Strength",
+                0.44999998807907104
+              ],
+              [
+                "Color",
+                [
+                  0.5,
+                  0.5,
+                  1.0,
+                  1.0
+                ]
+              ]
+            ],
+            "image": null
+          }
+        ],
+        "links": [
+          [
+            "Principled BSDF",
+            "BSDF",
+            "Material Output",
+            "Surface"
+          ],
+          [
+            "Image Texture",
+            "Color",
+            "Principled BSDF",
+            "Base Color"
+          ],
+          [
+            "Image Texture.001",
+            "Color",
+            "Principled BSDF",
+            "Roughness"
+          ],
+          [
+            "Image Texture.002",
+            "Color",
+            "Normal Map",
+            "Color"
+          ],
+          [
+            "Normal Map",
+            "Normal",
+            "Principled BSDF",
+            "Normal"
+          ]
+        ]
+      },
+      "Reference_ReviewGrey": {
+        "nodes": [
+          {
+            "name": "Principled BSDF",
+            "type": "BSDF_PRINCIPLED",
+            "inputs": [
+              [
+                "Base Color",
+                [
+                  0.33000001311302185,
+                  0.3799999952316284,
+                  0.4000000059604645,
+                  1.0
+                ]
+              ],
+              [
+                "Metallic",
+                0.0
+              ],
+              [
+                "Roughness",
+                0.5
+              ],
+              [
+                "IOR",
+                1.5
+              ],
+              [
+                "Alpha",
+                1.0
+              ],
+              [
+                "Thin Wall",
+                false
+              ],
+              [
+                "Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Weight",
+                0.0
+              ],
+              [
+                "Diffuse Roughness",
+                0.0
+              ],
+              [
+                "Subsurface Weight",
+                0.0
+              ],
+              [
+                "Subsurface Radius",
+                [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ]
+              ],
+              [
+                "Subsurface Scale",
+                0.004999999888241291
+              ],
+              [
+                "Subsurface IOR",
+                1.399999976158142
+              ],
+              [
+                "Subsurface Anisotropy",
+                0.0
+              ],
+              [
+                "Specular IOR Level",
+                0.5
+              ],
+              [
+                "Specular Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Anisotropic",
+                0.0
+              ],
+              [
+                "Anisotropic Rotation",
+                0.0
+              ],
+              [
+                "Tangent",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Transmission Weight",
+                0.0
+              ],
+              [
+                "Coat Weight",
+                0.0
+              ],
+              [
+                "Coat Roughness",
+                0.029999999329447746
+              ],
+              [
+                "Coat IOR",
+                1.5
+              ],
+              [
+                "Coat Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Coat Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Sheen Weight",
+                0.0
+              ],
+              [
+                "Sheen Roughness",
+                0.5
+              ],
+              [
+                "Sheen Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Strength",
+                0.0
+              ],
+              [
+                "Thin Film Thickness",
+                0.0
+              ],
+              [
+                "Thin Film IOR",
+                1.3300000429153442
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Material Output",
+            "type": "OUTPUT_MATERIAL",
+            "inputs": [
+              [
+                "Displacement",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Thickness",
+                0.0
+              ]
+            ],
+            "image": null
+          }
+        ],
+        "links": [
+          [
+            "Principled BSDF",
+            "BSDF",
+            "Material Output",
+            "Surface"
+          ]
+        ]
+      },
+      "ReviewFloor": {
+        "nodes": [
+          {
+            "name": "Principled BSDF",
+            "type": "BSDF_PRINCIPLED",
+            "inputs": [
+              [
+                "Base Color",
+                [
+                  0.054999999701976776,
+                  0.06700000166893005,
+                  0.07800000160932541,
+                  1.0
+                ]
+              ],
+              [
+                "Metallic",
+                0.0
+              ],
+              [
+                "Roughness",
+                0.5
+              ],
+              [
+                "IOR",
+                1.5
+              ],
+              [
+                "Alpha",
+                1.0
+              ],
+              [
+                "Thin Wall",
+                false
+              ],
+              [
+                "Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Weight",
+                0.0
+              ],
+              [
+                "Diffuse Roughness",
+                0.0
+              ],
+              [
+                "Subsurface Weight",
+                0.0
+              ],
+              [
+                "Subsurface Radius",
+                [
+                  1.0,
+                  0.20000000298023224,
+                  0.10000000149011612
+                ]
+              ],
+              [
+                "Subsurface Scale",
+                0.004999999888241291
+              ],
+              [
+                "Subsurface IOR",
+                1.399999976158142
+              ],
+              [
+                "Subsurface Anisotropy",
+                0.0
+              ],
+              [
+                "Specular IOR Level",
+                0.5
+              ],
+              [
+                "Specular Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Anisotropic",
+                0.0
+              ],
+              [
+                "Anisotropic Rotation",
+                0.0
+              ],
+              [
+                "Tangent",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Transmission Weight",
+                0.0
+              ],
+              [
+                "Coat Weight",
+                0.0
+              ],
+              [
+                "Coat Roughness",
+                0.029999999329447746
+              ],
+              [
+                "Coat IOR",
+                1.5
+              ],
+              [
+                "Coat Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Coat Normal",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Sheen Weight",
+                0.0
+              ],
+              [
+                "Sheen Roughness",
+                0.5
+              ],
+              [
+                "Sheen Tint",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Color",
+                [
+                  1.0,
+                  1.0,
+                  1.0,
+                  1.0
+                ]
+              ],
+              [
+                "Emission Strength",
+                0.0
+              ],
+              [
+                "Thin Film Thickness",
+                0.0
+              ],
+              [
+                "Thin Film IOR",
+                1.3300000429153442
+              ]
+            ],
+            "image": null
+          },
+          {
+            "name": "Material Output",
+            "type": "OUTPUT_MATERIAL",
+            "inputs": [
+              [
+                "Displacement",
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              [
+                "Thickness",
+                0.0
+              ]
+            ],
+            "image": null
+          }
+        ],
+        "links": [
+          [
+            "Principled BSDF",
+            "BSDF",
+            "Material Output",
+            "Surface"
+          ]
+        ]
+      }
+    },
+    "images": {
+      "file2": {
+        "path": "//Backups\\Mannequin\\Ch36_1001_Diffuse.png",
+        "source": "FILE",
+        "packed_sha256": "fd9072c125f6e01bd50c82f4bc6b14009ce05e1f643587e3156679f0e4fff8d2"
+      },
+      "file4": {
+        "path": "//Backups\\Mannequin\\Ch36_1001_Normal.png",
+        "source": "FILE",
+        "packed_sha256": "d4dd3bbf4750642d272fc38744d397124dc38d8221c56101fcf18e24c338c9ab"
+      },
+      "file5": {
+        "path": "//Backups\\Mannequin\\Ch36_1001_Specular.png",
+        "source": "FILE",
+        "packed_sha256": "aa1e15b7bcc2c37168f785a5550a5ce46fe927359056e9c4ee27125f81f57347"
+      },
+      "file6": {
+        "path": "//Backups\\Mannequin\\Ch36_1001_Glossiness.png",
+        "source": "FILE",
+        "packed_sha256": "b69181bba4a392d06e6ad64dfe2bda8ed8b50421a31106279db4abe61aecf3da"
+      },
+      "PC_BaseColor_2K.png": {
+        "path": "//..\\Textures\\PC_BaseColor_2K.png",
+        "source": "FILE",
+        "packed_sha256": "d35fce2d555ed7206e7d246a6e3b55f60eb0cab117aea0fee63a129c61f590b0"
+      },
+      "PC_Normal_1K.png": {
+        "path": "//..\\Textures\\PC_Normal_1K.png",
+        "source": "FILE",
+        "packed_sha256": "6dbed2c1233d34670cb1ef14e502a0f780f1337e5801f3261fd916d7dbe74c5d"
+      },
+      "PC_Roughness_1K.png": {
+        "path": "//..\\Textures\\PC_Roughness_1K.png",
+        "source": "FILE",
+        "packed_sha256": "4da668bfcf1555686816d6c4fbc177b3c0b4909bec5e7b069d3a8cfac9cab3a9"
+      }
+    },
+    "mesh_visibility": {
+      "Ch36": [
+        false,
+        false,
+        false
+      ],
+      "Glove_L_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Glove_L_Worn": [
+        false,
+        false,
+        false
+      ],
+      "Glove_R_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Glove_R_Worn": [
+        false,
+        false,
+        false
+      ],
+      "Jacket_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Jacket_Worn": [
+        false,
+        false,
+        false
+      ],
+      "Overboot_L_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Overboot_L_Worn": [
+        false,
+        false,
+        false
+      ],
+      "Overboot_R_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Overboot_R_Worn": [
+        false,
+        false,
+        false
+      ],
+      "ReviewFloor": [
+        false,
+        false,
+        false
+      ],
+      "Trousers_Pickup": [
+        false,
+        false,
+        false
+      ],
+      "Trousers_Worn": [
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "passed": true
+}

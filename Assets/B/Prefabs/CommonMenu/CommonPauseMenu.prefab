@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400000}
+  - component: {fileID: 11400000}
+  - component: {fileID: 11400001}
+  m_Layer: 0
+  m_Name: CommonPauseMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b722bdb414e4cbed2596331ed0773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MilTrainSimVR.B.CommonMenu::MilTrainSimVR.B.CommonMenu.CommonPauseMenu
+  xrOrigin: {fileID: 0}
+  koreanFont: {fileID: 11400000, guid: 47f3dda554fd6de42acf8effa834bd7b, type: 2}
+  panelMaterial: {fileID: 2100000, guid: 7962483eaf0d4631bf587f244cfee31f, type: 2}
+  fontOverlayMaterial: {fileID: 2100000, guid: 2fe036a6dced4cbabd08eb240b6ea489, type: 2}
+  rayMaterial: {fileID: 2100000, guid: e51dd4e0cbfa49c4b80c68bc10b4a84e, type: 2}
+  mainRoute: {fileID: 11400001}
+  distance: 1.1
+--- !u!114 &11400001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67f1a20db24414abf75296c60b38ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MilTrainSimVR.B.CommonMenu.Hub::MilTrainSimVR.B.CommonMenu.CommonMenuHubRoute

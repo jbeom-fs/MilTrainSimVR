@@ -1,0 +1,10 @@
+{
+    "name": "MilTrainSimVR.A.Assembly",
+    "rootNamespace": "MilTrainSimVR.A.Assembly",
+    "references": [
+        "MilTrainSimVR.A.Common",
+        "MilTrainSimVR.A.Rifle",
+        "Unity.XR.Interaction.Toolkit",
+        "UnityEngine.UI"
+    ]
+}

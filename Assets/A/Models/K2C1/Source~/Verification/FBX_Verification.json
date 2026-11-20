@@ -1,0 +1,58 @@
+{
+  "01_Upper_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 18352,
+    "verified": true
+  },
+  "02_Lower_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 2706,
+    "verified": true
+  },
+  "03_PushRod_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 328,
+    "verified": true
+  },
+  "04_GasRod_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 5144,
+    "verified": true
+  },
+  "05_BoltAssembly_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 6290,
+    "verified": true
+  },
+  "06_GasRegulator_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 1058,
+    "verified": true
+  },
+  "07_Selector_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 320,
+    "verified": true
+  },
+  "08_ChargingHandle_UVReady.fbx": {
+    "mesh_count": 1,
+    "uv_count": 1,
+    "material_count": 1,
+    "triangles": 2898,
+    "verified": true
+  }
+}

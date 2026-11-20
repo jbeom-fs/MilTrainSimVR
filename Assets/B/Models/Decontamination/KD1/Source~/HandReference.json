@@ -1,0 +1,26 @@
+{
+  "source": "Assets/B/Models/Mannequin/Mannequin.fbx",
+  "selected_vertices": 1727,
+  "selected_faces": 1722,
+  "canonical_wrist_position": [
+    0,
+    -0.061,
+    0.035053187489509585
+  ],
+  "hand_bounds_xyz_m": [
+    [
+      -0.07364916801452637,
+      0.05803513526916504
+    ],
+    [
+      -0.07685568183660507,
+      0.1565636247396469
+    ],
+    [
+      -0.017926698550581932,
+      0.05764390528202057
+    ]
+  ],
+  "palm_top_z_m": 0.05764390528202057,
+  "original_scale_preserved": true
+}

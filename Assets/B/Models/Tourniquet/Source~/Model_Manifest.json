@@ -1,0 +1,1719 @@
+{
+  "unit": "m",
+  "basis": "Unity: +X right, +Y body outward, +Z limb; Blender B=(Ux,-Uz,Uy)",
+  "source_scene": "Tourniquet_Asset",
+  "fbx_version": 7400,
+  "export": {
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "bake_space_transform": false,
+    "apply_scale_options": "FBX_SCALE_UNITS",
+    "global_scale": 1,
+    "apply_unit_scale": true,
+    "use_selection": true,
+    "object_types": [
+      "MESH",
+      "EMPTY"
+    ],
+    "bake_anim": false,
+    "use_tspace": true,
+    "basis_preconversion": "Source already canonicalized: local axes/vertices are Unity basis. Blender root=C (+90X). Export global inv(C) cancels root C; bake_space_transform=False.",
+    "handedness": "FBX RH MayaYUp; Unity LH YUp. H=diag(-1,1,1). Export copy vertex_F=H@vertex_U; local_F=H@local_U@H; reverse polygon winding. Unity RH->LH conversion recovers U without negative root scale.",
+    "writer": "Blender native export_scene.fbx, no parse/re-encode step",
+    "canonical_visual_naming": "ObjectWrapper export-time names only; native FBX byte stream is not rewritten"
+  },
+  "visuals": [
+    {
+      "part": "Part_Band",
+      "path": "Tourniquet_Model/Part_Band/Visual",
+      "source_object": "Visual__Part_Band",
+      "local_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.1224,
+          0.1224,
+          0.038
+        ],
+        "min": [
+          -0.0612,
+          -0.0612,
+          -0.019
+        ],
+        "max": [
+          0.0612,
+          0.0612,
+          0.019
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.1224,
+          0.1224,
+          0.038
+        ],
+        "min": [
+          -0.0612,
+          -0.0612,
+          -0.019
+        ],
+        "max": [
+          0.0612,
+          0.0612,
+          0.019
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.1224,
+          0.1224,
+          0.038
+        ],
+        "min": [
+          -0.0612,
+          -0.0612,
+          -0.019
+        ],
+        "max": [
+          0.0612,
+          0.0612,
+          0.019
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.1224,
+          0.1224,
+          0.038
+        ],
+        "min": [
+          -0.0612,
+          -0.0612,
+          -0.019
+        ],
+        "max": [
+          0.0612,
+          0.0612,
+          0.019
+        ]
+      },
+      "pivot_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "triangles": 4480,
+      "vertices": 2240,
+      "materials": [
+        "TQ_WovenNylon"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Part_Body",
+      "path": "Tourniquet_Model/Part_Body/Visual",
+      "source_object": "Visual__Part_Body",
+      "local_bounds": {
+        "center": [
+          -0.00975,
+          0.007975,
+          0.0
+        ],
+        "size": [
+          0.1215,
+          0.04755,
+          0.049
+        ],
+        "min": [
+          -0.0705,
+          -0.0158,
+          -0.0245
+        ],
+        "max": [
+          0.051,
+          0.03175,
+          0.0245
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          -0.00975,
+          0.071775,
+          -0.0
+        ],
+        "size": [
+          0.1215,
+          0.04755,
+          0.049
+        ],
+        "min": [
+          -0.0705,
+          0.048,
+          -0.0245
+        ],
+        "max": [
+          0.051,
+          0.09555,
+          0.0245
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.00975,
+          0.007975,
+          0.0
+        ],
+        "size": [
+          0.1215,
+          0.04755,
+          0.049
+        ],
+        "min": [
+          -0.051,
+          -0.0158,
+          -0.0245
+        ],
+        "max": [
+          0.0705,
+          0.03175,
+          0.0245
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          0.00975,
+          0.071775,
+          -0.0
+        ],
+        "size": [
+          0.1215,
+          0.04755,
+          0.049
+        ],
+        "min": [
+          -0.051,
+          0.048,
+          -0.0245
+        ],
+        "max": [
+          0.0705,
+          0.09555,
+          0.0245
+        ]
+      },
+      "pivot_position": [
+        0.0,
+        0.0638,
+        -0.0
+      ],
+      "triangles": 2680,
+      "vertices": 1348,
+      "materials": [
+        "TQ_MattePolymer",
+        "TQ_WovenNylon"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Part_Windlass",
+      "path": "Tourniquet_Model/Pivot_WindlassAxis/Part_Windlass/Visual",
+      "source_object": "Visual__Part_Windlass",
+      "local_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.11,
+          0.0125235,
+          0.0116877
+        ],
+        "min": [
+          -0.055,
+          -0.0062617,
+          -0.0058439
+        ],
+        "max": [
+          0.055,
+          0.0062618,
+          0.0058439
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          0.0,
+          0.095,
+          -0.0
+        ],
+        "size": [
+          0.11,
+          0.0125235,
+          0.0116877
+        ],
+        "min": [
+          -0.055,
+          0.0887383,
+          -0.0058439
+        ],
+        "max": [
+          0.055,
+          0.1012617,
+          0.0058438
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          0.11,
+          0.0125235,
+          0.0116877
+        ],
+        "min": [
+          -0.055,
+          -0.0062617,
+          -0.0058439
+        ],
+        "max": [
+          0.055,
+          0.0062618,
+          0.0058439
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          0.0,
+          0.095,
+          -0.0
+        ],
+        "size": [
+          0.11,
+          0.0125235,
+          0.0116877
+        ],
+        "min": [
+          -0.055,
+          0.0887383,
+          -0.0058439
+        ],
+        "max": [
+          0.055,
+          0.1012617,
+          0.0058438
+        ]
+      },
+      "pivot_position": [
+        0.0,
+        0.095,
+        -0.0
+      ],
+      "triangles": 2684,
+      "vertices": 1342,
+      "materials": [
+        "TQ_MattePolymer"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Part_WindlassClip",
+      "path": "Tourniquet_Model/Part_WindlassClip/Visual",
+      "source_object": "Visual__Part_WindlassClip",
+      "local_bounds": {
+        "center": [
+          -0.0,
+          -0.0041864,
+          0.00075
+        ],
+        "size": [
+          0.018,
+          0.0298728,
+          0.0235
+        ],
+        "min": [
+          -0.009,
+          -0.0191228,
+          -0.011
+        ],
+        "max": [
+          0.009,
+          0.01075,
+          0.0125
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          0.04206,
+          0.0718136,
+          0.0251495
+        ],
+        "size": [
+          0.0268626,
+          0.0298728,
+          0.0288758
+        ],
+        "min": [
+          0.0286287,
+          0.0568772,
+          0.0107116
+        ],
+        "max": [
+          0.0554913,
+          0.08675,
+          0.0395874
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.0,
+          -0.0041864,
+          0.00075
+        ],
+        "size": [
+          0.018,
+          0.0298728,
+          0.0235
+        ],
+        "min": [
+          -0.009,
+          -0.0191228,
+          -0.011
+        ],
+        "max": [
+          0.009,
+          0.01075,
+          0.0125
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          -0.04206,
+          0.0718136,
+          0.0251495
+        ],
+        "size": [
+          0.0268626,
+          0.0298728,
+          0.0288758
+        ],
+        "min": [
+          -0.0554913,
+          0.0568772,
+          0.0107116
+        ],
+        "max": [
+          -0.0286287,
+          0.08675,
+          0.0395874
+        ]
+      },
+      "pivot_position": [
+        0.042435,
+        0.076,
+        0.0245
+      ],
+      "triangles": 756,
+      "vertices": 382,
+      "materials": [
+        "TQ_MattePolymer"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Part_SecuringStrap",
+      "path": "Tourniquet_Model/Part_SecuringStrap/Visual",
+      "source_object": "Visual__Part_SecuringStrap",
+      "local_bounds": {
+        "center": [
+          0.0,
+          0.002,
+          0.022
+        ],
+        "size": [
+          0.024,
+          0.0049,
+          0.044
+        ],
+        "min": [
+          -0.012,
+          -0.00045,
+          0.0
+        ],
+        "max": [
+          0.012,
+          0.00445,
+          0.044
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          0.044,
+          0.08935,
+          0.059
+        ],
+        "size": [
+          0.024,
+          0.0049,
+          0.044
+        ],
+        "min": [
+          0.032,
+          0.0869,
+          0.037
+        ],
+        "max": [
+          0.056,
+          0.0918,
+          0.081
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          -0.0,
+          0.002,
+          0.022
+        ],
+        "size": [
+          0.024,
+          0.0049,
+          0.044
+        ],
+        "min": [
+          -0.012,
+          -0.00045,
+          0.0
+        ],
+        "max": [
+          0.012,
+          0.00445,
+          0.044
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          -0.044,
+          0.08935,
+          0.059
+        ],
+        "size": [
+          0.024,
+          0.0049,
+          0.044
+        ],
+        "min": [
+          -0.056,
+          0.0869,
+          0.037
+        ],
+        "max": [
+          -0.032,
+          0.0918,
+          0.081
+        ]
+      },
+      "pivot_position": [
+        0.044,
+        0.08735,
+        0.037
+      ],
+      "triangles": 576,
+      "vertices": 290,
+      "materials": [
+        "TQ_WovenNylon"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Part_TimeLabel",
+      "path": "Tourniquet_Model/Part_TimeLabel/Visual",
+      "source_object": "Visual__Part_TimeLabel",
+      "local_bounds": {
+        "center": [
+          0.0,
+          -0.0005209,
+          -0.0
+        ],
+        "size": [
+          0.022,
+          0.0030167,
+          0.032
+        ],
+        "min": [
+          -0.011,
+          -0.0020293,
+          -0.016
+        ],
+        "max": [
+          0.011,
+          0.0009874,
+          0.016
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          0.044,
+          0.0908641,
+          0.064
+        ],
+        "size": [
+          0.022,
+          0.0030167,
+          0.032
+        ],
+        "min": [
+          0.033,
+          0.0893557,
+          0.048
+        ],
+        "max": [
+          0.055,
+          0.0923725,
+          0.08
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.0,
+          -0.0005209,
+          -0.0
+        ],
+        "size": [
+          0.022,
+          0.0030167,
+          0.032
+        ],
+        "min": [
+          -0.011,
+          -0.0020293,
+          -0.016
+        ],
+        "max": [
+          0.011,
+          0.0009874,
+          0.016
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          -0.044,
+          0.0908641,
+          0.064
+        ],
+        "size": [
+          0.022,
+          0.0030167,
+          0.032
+        ],
+        "min": [
+          -0.055,
+          0.0893557,
+          0.048
+        ],
+        "max": [
+          -0.033,
+          0.0923725,
+          0.08
+        ]
+      },
+      "pivot_position": [
+        0.044,
+        0.091385,
+        0.064
+      ],
+      "triangles": 416,
+      "vertices": 210,
+      "materials": [
+        "TQ_WriteablePatch"
+      ],
+      "transform_identity": true
+    },
+    {
+      "part": "Pivot_BandEnd",
+      "path": "Tourniquet_Model/Part_Band/Pivot_BandEnd/Visual",
+      "source_object": "Visual__Pivot_BandEnd",
+      "local_bounds": {
+        "center": [
+          0.0,
+          -0.0098957,
+          -0.0501137
+        ],
+        "size": [
+          0.036,
+          0.0264889,
+          0.1004818
+        ],
+        "min": [
+          -0.018,
+          -0.0231401,
+          -0.1003546
+        ],
+        "max": [
+          0.018,
+          0.0033488,
+          0.0001272
+        ]
+      },
+      "world_bounds": {
+        "center": [
+          -0.0996175,
+          0.0465,
+          -0.0
+        ],
+        "size": [
+          0.102765,
+          0.024,
+          0.036
+        ],
+        "min": [
+          -0.151,
+          0.0345,
+          -0.018
+        ],
+        "max": [
+          -0.048235,
+          0.0585,
+          0.018
+        ]
+      },
+      "fbx_raw_local_bounds": {
+        "center": [
+          0.0,
+          -0.0098957,
+          -0.0501137
+        ],
+        "size": [
+          0.036,
+          0.0264889,
+          0.1004818
+        ],
+        "min": [
+          -0.018,
+          -0.0231401,
+          -0.1003546
+        ],
+        "max": [
+          0.018,
+          0.0033488,
+          0.0001272
+        ]
+      },
+      "fbx_raw_world_bounds": {
+        "center": [
+          0.0996175,
+          0.0465,
+          -0.0
+        ],
+        "size": [
+          0.102765,
+          0.024,
+          0.036
+        ],
+        "min": [
+          0.048235,
+          0.0345,
+          -0.018
+        ],
+        "max": [
+          0.151,
+          0.0585,
+          0.018
+        ]
+      },
+      "pivot_position": [
+        -0.151,
+        0.035,
+        -0.0
+      ],
+      "triangles": 1536,
+      "vertices": 770,
+      "materials": [
+        "TQ_WovenNylon"
+      ],
+      "transform_identity": true
+    }
+  ],
+  "pivots": [
+    {
+      "name": "Tourniquet_Model",
+      "path": "Tourniquet_Model",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_degrees": [
+        -4.3e-06,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_Body",
+      "path": "Tourniquet_Model/Part_Body",
+      "local_position": [
+        0.0,
+        0.0638,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0638,
+        -0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.0638,
+        -0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_Band",
+      "path": "Tourniquet_Model/Part_Band",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Pivot_BandEnd",
+      "path": "Tourniquet_Model/Part_Band/Pivot_BandEnd",
+      "local_position": [
+        -0.151,
+        0.035,
+        0.0
+      ],
+      "world_position": [
+        -0.151,
+        0.035,
+        -0.0
+      ],
+      "fbx_raw_world_position": [
+        0.151,
+        0.035,
+        -0.0
+      ],
+      "local_rotation_degrees": [
+        14.7435644,
+        -89.9999888,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          2e-07,
+          1e-07,
+          1.0
+        ],
+        "Y": [
+          -0.2544933,
+          0.9670745,
+          -0.0
+        ],
+        "Z": [
+          -0.9670745,
+          -0.2544933,
+          2e-07
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Pivot_WindlassAxis",
+      "path": "Tourniquet_Model/Pivot_WindlassAxis",
+      "local_position": [
+        0.0,
+        0.095,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.095,
+        -0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.095,
+        -0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_Windlass",
+      "path": "Tourniquet_Model/Pivot_WindlassAxis/Part_Windlass",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.095,
+        -0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.095,
+        -0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_WindlassClip",
+      "path": "Tourniquet_Model/Part_WindlassClip",
+      "local_position": [
+        0.042435,
+        0.076,
+        0.0245
+      ],
+      "world_position": [
+        0.042435,
+        0.076,
+        0.0245
+      ],
+      "fbx_raw_world_position": [
+        -0.042435,
+        0.076,
+        0.0245
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -30.0000077,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          0.8660253,
+          0.0,
+          0.5000001
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          -0.5000001,
+          1e-07,
+          0.8660253
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_SecuringStrap",
+      "path": "Tourniquet_Model/Part_SecuringStrap",
+      "local_position": [
+        0.044,
+        0.08735,
+        0.037
+      ],
+      "world_position": [
+        0.044,
+        0.08735,
+        0.037
+      ],
+      "fbx_raw_world_position": [
+        -0.044,
+        0.08735,
+        0.037
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Part_TimeLabel",
+      "path": "Tourniquet_Model/Part_TimeLabel",
+      "local_position": [
+        0.044,
+        0.091385,
+        0.064
+      ],
+      "world_position": [
+        0.044,
+        0.091385,
+        0.064
+      ],
+      "fbx_raw_world_position": [
+        -0.044,
+        0.091385,
+        0.064
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Surface_TimeLabel",
+      "path": "Tourniquet_Model/Part_TimeLabel/Surface_TimeLabel",
+      "local_position": [
+        0.0,
+        0.000325,
+        0.0
+      ],
+      "world_position": [
+        0.044,
+        0.09171,
+        0.064
+      ],
+      "fbx_raw_world_position": [
+        -0.044,
+        0.09171,
+        0.064
+      ],
+      "local_rotation_degrees": [
+        -4.6560034,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          0.9967,
+          -0.0811733
+        ],
+        "Z": [
+          0.0,
+          0.0811733,
+          0.9967
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Point_Grab",
+      "path": "Tourniquet_Model/Point_Grab",
+      "local_position": [
+        -0.009,
+        0.073,
+        0.0
+      ],
+      "world_position": [
+        -0.009,
+        0.073,
+        -0.0
+      ],
+      "fbx_raw_world_position": [
+        0.009,
+        0.073,
+        -0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Point_LimbAttach",
+      "path": "Tourniquet_Model/Point_LimbAttach",
+      "local_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fbx_raw_world_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "local_rotation_degrees": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "world_axes": {
+        "X": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          1.0,
+          -1e-07
+        ],
+        "Z": [
+          0.0,
+          1e-07,
+          1.0
+        ]
+      },
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "world_bounds": {
+    "center": [
+      -0.0449,
+      0.0200309,
+      0.02825
+    ],
+    "size": [
+      0.2122,
+      0.1624618,
+      0.1055
+    ],
+    "min": [
+      -0.151,
+      -0.0612,
+      -0.0245
+    ],
+    "max": [
+      0.0612,
+      0.1012617,
+      0.081
+    ]
+  },
+  "total_triangles": 13128,
+  "mesh_count": 7,
+  "material_count": 3,
+  "bounds_space": "local_bounds/world_bounds/pivots are expected Unity LH values. fbx_raw_* and fbx_models are RH FBX storage values before Unity handedness conversion.",
+  "fbx_models": [
+    {
+      "id": 399635143,
+      "name": "Part_Band",
+      "parent_id": 16673160,
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 953113648,
+      "name": "Part_Body",
+      "parent_id": 16673160,
+      "translation": [
+        0.0,
+        0.06379999965429306,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 194437719,
+      "name": "Part_SecuringStrap",
+      "parent_id": 16673160,
+      "translation": [
+        -0.04399999976158142,
+        0.08735000342130661,
+        0.03700000047683716
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 266526392,
+      "name": "Part_TimeLabel",
+      "parent_id": 16673160,
+      "translation": [
+        -0.04399999976158142,
+        0.09138499945402145,
+        0.06400000303983688
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 119300514,
+      "name": "Part_Windlass",
+      "parent_id": 737826754,
+      "translation": [
+        0.0,
+        5.414936577404525e-16,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 84543113,
+      "name": "Part_WindlassClip",
+      "parent_id": 16673160,
+      "translation": [
+        -0.04243500158190727,
+        0.07599999755620956,
+        0.02449999935925007
+      ],
+      "rotation": [
+        0.0,
+        30.000007665015225,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 603006700,
+      "name": "Pivot_BandEnd",
+      "parent_id": 399635143,
+      "translation": [
+        0.1509999930858612,
+        0.03500000014901161,
+        0.0
+      ],
+      "rotation": [
+        14.74356779521407,
+        89.999995674289,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 737826754,
+      "name": "Pivot_WindlassAxis",
+      "parent_id": 16673160,
+      "translation": [
+        0.0,
+        0.0949999988079071,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 866519893,
+      "name": "Point_Grab",
+      "parent_id": 16673160,
+      "translation": [
+        0.008999999612569809,
+        0.0729999989271164,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 639289860,
+      "name": "Point_LimbAttach",
+      "parent_id": 16673160,
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 430089004,
+      "name": "Surface_TimeLabel",
+      "parent_id": 266526392,
+      "translation": [
+        0.0,
+        0.0003250043955631554,
+        0.0
+      ],
+      "rotation": [
+        -4.656004207187938,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 16673160,
+      "name": "Tourniquet_Model",
+      "parent_id": 0,
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -4.3257111045250854e-06,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 615634507,
+      "name": "Visual",
+      "parent_id": 399635143,
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 830767793,
+      "name": "Visual",
+      "parent_id": 953113648,
+      "translation": [
+        0.0,
+        3.636557288024027e-16,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 365444154,
+      "name": "Visual",
+      "parent_id": 194437719,
+      "translation": [
+        0.0,
+        -2.793421716162925e-09,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 210726076,
+      "name": "Visual",
+      "parent_id": 266526392,
+      "translation": [
+        0.0,
+        2.6187154666956758e-09,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 524075906,
+      "name": "Visual",
+      "parent_id": 119300514,
+      "translation": [
+        0.0,
+        5.414936577404525e-16,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 822762856,
+      "name": "Visual",
+      "parent_id": 84543113,
+      "translation": [
+        0.0,
+        -1.8496982834292908e-09,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        -0.0,
+        1.0177774980683254e-13
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "id": 418589321,
+      "name": "Visual",
+      "parent_id": 603006700,
+      "translation": [
+        -1.0658141036401503e-14,
+        -7.450580596923828e-09,
+        -1.4901161193847656e-08
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        -2.0355549961366507e-13
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "fbx_serialization_revision": "1.1"
+}

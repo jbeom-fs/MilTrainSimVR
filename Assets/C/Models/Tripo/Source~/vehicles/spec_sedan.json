@@ -1,0 +1,38 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/Sedan_orig.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_basecolor.jpg",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_normal.png",
+  "metallic": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_metallic.jpg",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Source~/vehicles/sedan/tripo_model_roughness.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/sedan",
+ "name": "Sedan",
+ "target_tris": 14000,
+ "planar_deg": 2,
+ "tex_res": 4096,
+ "cage": 0.004,
+ "ray": 0.02,
+ "bake_margin": 48,
+ "bake_samples": 16,
+ "_tripo": {
+  "image_task": "7e8dac73-53bd-4ebb-a941-8467181f9a22",
+  "model_task": "f68ba345-e83e-42d4-807d-9f3a3066724e",
+  "convert_task": "5b691657-5e49-421a-8f2b-fb3f8a64a2e6",
+  "model": "H3.1 (v3.1-20260211), pbr=true",
+  "credits": {
+   "image": 5,
+   "model": 30,
+   "convert_fbx": 5
+  }
+ },
+ "_unity": {
+  "prefab": "Assets/C/Prefabs/Vehicle/C_Vehicle_Sedan_White.prefab",
+  "model_scale_xyz": [
+   4.35,
+   4.12,
+   4.2
+  ],
+  "note": "model -X is the front; prefab child Model rotates it to +Z and lifts tyres to y=0"
+ }
+}

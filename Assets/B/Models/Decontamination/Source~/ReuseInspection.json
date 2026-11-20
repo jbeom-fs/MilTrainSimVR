@@ -1,0 +1,642 @@
+{
+  "reference_assets": [
+    {
+      "path": "Assets/B/Models/K1GasMask/K1_GasMask.fbx",
+      "bounds_blender_xyz_m": {
+        "min": [
+          -0.10933437198400497,
+          -0.13300001621246338,
+          -0.11699999868869781
+        ],
+        "max": [
+          0.16101431846618652,
+          0.17400000989437103,
+          0.1170000210404396
+        ],
+        "size": [
+          0.2703486904501915,
+          0.3070000261068344,
+          0.23400001972913742
+        ]
+      },
+      "mesh_count": 9,
+      "objects": [
+        "Part_FrontAssembly",
+        "Part_Buckles",
+        "Part_Harness",
+        "Part_Lens_L",
+        "Part_Lens_R",
+        "Part_Facepiece",
+        "Part_FilterCanister",
+        "Part_TubeAssembly",
+        "Part_FilterConnector"
+      ],
+      "parts": [
+        {
+          "name": "Part_FrontAssembly",
+          "dimensions_blender_xyz_m": [
+            0.07400000095367432,
+            0.032000020146369934,
+            0.07400000933557749
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Buckles",
+          "dimensions_blender_xyz_m": [
+            0.1631176918745041,
+            0.021366302389651537,
+            0.15262233465909958
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Harness",
+          "dimensions_blender_xyz_m": [
+            0.21866873651742935,
+            0.21512694284319878,
+            0.16723180562257767
+          ],
+          "parent": "K1_HarnessRig",
+          "armature_modifiers": [
+            "K1_HarnessRig"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Lens_L",
+          "dimensions_blender_xyz_m": [
+            0.05319000408053398,
+            0.006000019609928131,
+            0.0809121213387698
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Lens_R",
+          "dimensions_blender_xyz_m": [
+            0.05319000408053398,
+            0.006000019609928131,
+            0.0809121213387698
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Facepiece",
+          "dimensions_blender_xyz_m": [
+            0.17999900877475739,
+            0.1288311444222927,
+            0.23400001972913742
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_FilterCanister",
+          "dimensions_blender_xyz_m": [
+            0.09373515099287033,
+            0.11315324204042554,
+            0.10943163558840752
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_TubeAssembly",
+          "dimensions_blender_xyz_m": [
+            0.044064510613679886,
+            0.04002021253108978,
+            0.07100001722574234
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_FilterConnector",
+          "dimensions_blender_xyz_m": [
+            0.03427843376994133,
+            0.05134180933237076,
+            0.05231113452464342
+          ],
+          "parent": "Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        }
+      ],
+      "decision": "EXCLUDED from new production; existing original remains reusable for its original role. Reference only in blend, excluded from new FBX. Actual decontamination suitability undecided."
+    },
+    {
+      "path": "Assets/B/Models/K1Carrier/K1_Carrier.fbx",
+      "bounds_blender_xyz_m": {
+        "min": [
+          -0.15414723753929138,
+          -0.1291235387325287,
+          -0.1901000291109085
+        ],
+        "max": [
+          0.1998472362756729,
+          0.24312353134155273,
+          0.26806044578552246
+        ],
+        "size": [
+          0.3539944738149643,
+          0.3722470700740814,
+          0.45816047489643097
+        ]
+      },
+      "mesh_count": 8,
+      "objects": [
+        "Part_BagFlap",
+        "Part_Hardware",
+        "Part_AccessoryPocket",
+        "Part_ShoulderStrap",
+        "Part_StabilizerStrap",
+        "Part_BagBody",
+        "Part_Closure_Body",
+        "Part_Closure_Flap"
+      ],
+      "parts": [
+        {
+          "name": "Part_BagFlap",
+          "dimensions_blender_xyz_m": [
+            0.2996944785118103,
+            0.2422148734331131,
+            0.18956049531698227
+          ],
+          "parent": "K1_CarrierRig",
+          "armature_modifiers": [
+            "K1_CarrierRig"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Hardware",
+          "dimensions_blender_xyz_m": [
+            0.30829447507858276,
+            0.013472780585289001,
+            0.18860001116991043
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_AccessoryPocket",
+          "dimensions_blender_xyz_m": [
+            0.057999998331069946,
+            0.10600002482533455,
+            0.14200002048164606
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_ShoulderStrap",
+          "dimensions_blender_xyz_m": [
+            0.29399389028549194,
+            0.09878827631473541,
+            0.4085908383131027
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_StabilizerStrap",
+          "dimensions_blender_xyz_m": [
+            0.2940908372402191,
+            0.1179511696100235,
+            0.041817719116806984
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_BagBody",
+          "dimensions_blender_xyz_m": [
+            0.29406124353408813,
+            0.23201829195022583,
+            0.25400005678551985
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Closure_Body",
+          "dimensions_blender_xyz_m": [
+            0.03400000184774399,
+            0.006000012159347534,
+            0.044999994337558746
+          ],
+          "parent": "Carrier_Visuals",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Part_Closure_Flap",
+          "dimensions_blender_xyz_m": [
+            0.028000003658235073,
+            0.003999993205070496,
+            0.043000005185604095
+          ],
+          "parent": "K1_CarrierRig",
+          "armature_modifiers": [
+            "K1_CarrierRig"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        }
+      ],
+      "decision": "EXCLUDED from new production; existing original remains reusable for its original role. Reference only in blend, excluded from new FBX. Actual decontamination suitability undecided."
+    },
+    {
+      "path": "Assets/B/Models/ProtectiveClothing/ProtectiveClothing_Pickup.fbx",
+      "bounds_blender_xyz_m": {
+        "min": [
+          -0.17000000178813934,
+          -0.18000000715255737,
+          -2.9325724071327386e-08
+        ],
+        "max": [
+          0.17000000178813934,
+          0.18000005185604095,
+          0.28700003027915955
+        ],
+        "size": [
+          0.3400000035762787,
+          0.3600000590085983,
+          0.2870000596048836
+        ]
+      },
+      "mesh_count": 6,
+      "objects": [
+        "Glove_R_Pickup",
+        "Overboot_R_Pickup",
+        "Trousers_Pickup",
+        "Jacket_Pickup",
+        "Overboot_L_Pickup",
+        "Glove_L_Pickup"
+      ],
+      "parts": [
+        {
+          "name": "Glove_R_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.15880806744098663,
+            0.2909872233867645,
+            0.14031725512062287
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Overboot_R_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.2069999873638153,
+            0.3600000590085983,
+            0.2870000596048836
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Trousers_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.28999999165534973,
+            0.3200000077486038,
+            0.0885165370903529
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Jacket_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.3400000035762787,
+            0.2800000160932541,
+            0.10019667492328743
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Overboot_L_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.2069999873638153,
+            0.3600000590085983,
+            0.2870000596048836
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Glove_L_Pickup",
+          "dimensions_blender_xyz_m": [
+            0.15885061025619507,
+            0.29098692536354065,
+            0.14034419642003293
+          ],
+          "parent": "ProtectiveClothing_Pickup",
+          "armature_modifiers": [],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        }
+      ],
+      "decision": "EXCLUDED from new production; existing original remains reusable for its original role. Reference only in blend, excluded from new FBX. Actual decontamination suitability undecided."
+    },
+    {
+      "path": "Assets/B/Models/ProtectiveClothing/ProtectiveClothing_Worn.fbx",
+      "bounds_blender_xyz_m": {
+        "min": [
+          -0.8917979598045349,
+          -0.20200073719024658,
+          0.005999765358865261
+        ],
+        "max": [
+          0.8917976021766663,
+          0.15799960494041443,
+          1.5358002185821533
+        ],
+        "size": [
+          1.7835955619812012,
+          0.360000342130661,
+          1.529800453223288
+        ]
+      },
+      "mesh_count": 6,
+      "objects": [
+        "Glove_R_Worn",
+        "Glove_L_Worn",
+        "Overboot_R_Worn",
+        "Trousers_Worn",
+        "Jacket_Worn",
+        "Overboot_L_Worn"
+      ],
+      "parts": [
+        {
+          "name": "Glove_R_Worn",
+          "dimensions_blender_xyz_m": [
+            0.29098737239837646,
+            0.1588081419467926,
+            0.14031720161437988
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Glove_L_Worn",
+          "dimensions_blender_xyz_m": [
+            0.2909867763519287,
+            0.15885049104690552,
+            0.14034295082092285
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Overboot_R_Worn",
+          "dimensions_blender_xyz_m": [
+            0.20699988678097725,
+            0.360000342130661,
+            0.28700018767267466
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Trousers_Worn",
+          "dimensions_blender_xyz_m": [
+            0.4264383018016815,
+            0.31528227031230927,
+            0.7742000073194504
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Jacket_Worn",
+          "dimensions_blender_xyz_m": [
+            1.3562740087509155,
+            0.3490365892648697,
+            0.5944421887397766
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        },
+        {
+          "name": "Overboot_L_Worn",
+          "dimensions_blender_xyz_m": [
+            0.20699984207749367,
+            0.3600001335144043,
+            0.2870002086274326
+          ],
+          "parent": "PC_Armature",
+          "armature_modifiers": [
+            "PC_Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        }
+      ],
+      "decision": "EXCLUDED from new production; existing original remains reusable for its original role. Reference only in blend, excluded from new FBX. Actual decontamination suitability undecided."
+    },
+    {
+      "path": "Assets/B/Models/Mannequin/Mannequin.fbx",
+      "bounds_blender_xyz_m": {
+        "min": [
+          -0.8956959247589111,
+          -0.17369437217712402,
+          0.004109387751668692
+        ],
+        "max": [
+          0.8956460356712341,
+          0.13777928054332733,
+          1.7734898328781128
+        ],
+        "size": [
+          1.7913419604301453,
+          0.31147365272045135,
+          1.769380445126444
+        ]
+      },
+      "mesh_count": 1,
+      "objects": [
+        "Ch36"
+      ],
+      "parts": [
+        {
+          "name": "Ch36",
+          "dimensions_blender_xyz_m": [
+            1.7913419604301453,
+            0.31147365272045135,
+            1.769380445126444
+          ],
+          "parent": "Armature",
+          "armature_modifiers": [
+            "Armature"
+          ],
+          "reuse_note": "Worn and mannequin retain original armature/bind dependencies; pickup is rigid per part. Do not assume suitability as decontamination target."
+        }
+      ],
+      "decision": "EXCLUDED from new production; existing original remains reusable for its original role. Reference only in blend, excluded from new FBX. Actual decontamination suitability undecided."
+    }
+  ],
+  "scene_primitives": [
+    {
+      "scene": "Assets\\B\\Scene\\B_PressureBandage_Tutorial.unity",
+      "name": "PB_Tray",
+      "components": [
+        "4 &2053770807",
+        "23 &2053770808",
+        "33 &2053770809"
+      ],
+      "transform": "4 &2053770807\nTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 2053770806}\n  serializedVersion: 2\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: 0.5, y: 0.45, z: 0.35}\n  m_LocalScale: {x: 0.45, y: 0.9, z: 0.3}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 1911281158}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n",
+      "mesh": "{fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}",
+      "world_dimensions_unity_xyz_m": [
+        0.45000001788139343,
+        0.8999999761581421,
+        0.30000001192092896
+      ],
+      "world_position_unity_xyz_m": [
+        0.5,
+        0.44999998807907104,
+        0.3499999940395355
+      ],
+      "decision": "Existing Unity builtin Cube (fileID 10202), independent scene object. Reuse support role; not a separate completed tray FBX and not a hollow collection container."
+    },
+    {
+      "scene": "Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity",
+      "name": "PC_Workbench",
+      "components": [
+        "4 &516405331",
+        "23 &516405332",
+        "65 &516405333",
+        "33 &516405334"
+      ],
+      "transform": "4 &516405331\nTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 516405330}\n  serializedVersion: 2\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: -0.85, y: 0.425, z: 0.6}\n  m_LocalScale: {x: 0.85, y: 0.85, z: 1.3}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 1521365899}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n",
+      "mesh": "{fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}",
+      "world_dimensions_unity_xyz_m": [
+        0.8500000834465027,
+        0.8500000238418579,
+        1.2999999523162842
+      ],
+      "world_position_unity_xyz_m": [
+        -0.8500000238418579,
+        0.42500001192092896,
+        0.6000000238418579
+      ],
+      "decision": "Existing Unity builtin Cube (fileID 10202), independent scene object. Reuse support role; not a separate completed tray FBX and not a hollow collection container."
+    },
+    {
+      "scene": "Assets\\B\\Scene\\B_ProtectiveClothing_Tutorial.unity",
+      "name": "PC_Workbench",
+      "components": [
+        "4 &516405331",
+        "23 &516405332",
+        "65 &516405333",
+        "33 &516405334"
+      ],
+      "transform": "4 &516405331\nTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 516405330}\n  serializedVersion: 2\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: -0.85, y: 0.425, z: 0.6}\n  m_LocalScale: {x: 0.85, y: 0.85, z: 1.3}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 1521365899}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n",
+      "mesh": "{fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}",
+      "world_dimensions_unity_xyz_m": [
+        0.8500000834465027,
+        0.8500000238418579,
+        1.2999999523162842
+      ],
+      "world_position_unity_xyz_m": [
+        -0.8500000238418579,
+        0.42500001192092896,
+        0.6000000238418579
+      ],
+      "decision": "Existing Unity builtin Cube (fileID 10202), independent scene object. Reuse support role; not a separate completed tray FBX and not a hollow collection container."
+    },
+    {
+      "scene": "Assets\\B\\Scene\\B_Tourniquet_Tutorial.unity",
+      "name": "TQ_Tray",
+      "components": [
+        "4 &881197183",
+        "23 &881197184",
+        "65 &881197185",
+        "33 &881197186"
+      ],
+      "transform": "4 &881197183\nTransform:\n  m_ObjectHideFlags: 0\n  m_CorrespondingSourceObject: {fileID: 0}\n  m_PrefabInstance: {fileID: 0}\n  m_PrefabAsset: {fileID: 0}\n  m_GameObject: {fileID: 881197182}\n  serializedVersion: 2\n  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}\n  m_LocalPosition: {x: -0.5, y: 0.39, z: 0.35}\n  m_LocalScale: {x: 0.5, y: 0.78, z: 0.35}\n  m_ConstrainProportionsScale: 0\n  m_Children: []\n  m_Father: {fileID: 542281479}\n  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}\n",
+      "mesh": "{fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}",
+      "world_dimensions_unity_xyz_m": [
+        0.5,
+        0.7799999713897705,
+        0.34999997913837433
+      ],
+      "world_position_unity_xyz_m": [
+        -0.5,
+        0.38999998569488525,
+        0.3499999940395355
+      ],
+      "decision": "Existing Unity builtin Cube (fileID 10202), independent scene object. Reuse support role; not a separate completed tray FBX and not a hollow collection container."
+    }
+  ],
+  "existing_model_inventory": [
+    "Assets\\B\\Models\\AED\\AED_Trainer.fbx",
+    "Assets\\B\\Models\\K1Carrier\\K1_Carrier.fbx",
+    "Assets\\B\\Models\\K1Carrier\\K1_Carrier_Collision.fbx",
+    "Assets\\B\\Models\\K1GasMask\\K1_GasMask.fbx",
+    "Assets\\B\\Models\\K1GasMask\\K1_GasMask_Collision.fbx",
+    "Assets\\B\\Models\\Mannequin\\Mannequin.fbx",
+    "Assets\\B\\Models\\Pad_Mannequin\\Mannequin_AED_Attached.fbx",
+    "Assets\\B\\Models\\PressureBandage\\PressureBandage_Basic.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\Tourniquet\\Tourniquet_Model.fbx",
+    "Assets\\B\\Models\\Tourniquet\\Source~\\Archive\\2026-10-29_FBX_v1_rejected\\Tourniquet_Model.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Candidate_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\WornNodeFix\\Reproduced_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_162242_before_reference_upgrade\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_162242_before_reference_upgrade\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_145838_h4_review_before\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_161356_worn_nodes_before\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_161356_worn_nodes_before\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_jacket_deform_before\\Model\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261104_jacket_deform_before\\Model\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_userwear_fix_before\\Model\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_userwear_fix_before\\Model\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_userwear_before\\Model\\ProtectiveClothing_Pickup.fbx",
+    "Assets\\B\\Models\\ProtectiveClothing\\Source~\\Backups\\20261103_userwear_before\\Model\\ProtectiveClothing_Worn.fbx",
+    "Assets\\B\\Models\\K1GasMask\\Source~\\Backups\\20261026_101035_before_handedness_rig\\K1_GasMask.fbx",
+    "Assets\\B\\Models\\K1GasMask\\Source~\\Backups\\20261026_101035_before_handedness_rig\\K1_GasMask_Collision.fbx"
+  ],
+  "new_models_needed": [
+    "DC_KitCase",
+    "DC_Applicator",
+    "DC_CollectionBin"
+  ]
+}

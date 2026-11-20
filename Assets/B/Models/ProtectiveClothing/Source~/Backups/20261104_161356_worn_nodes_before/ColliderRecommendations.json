@@ -1,0 +1,146 @@
+{
+  "PC_Jacket_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.05075,
+      -1.4901161e-08
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.34956223,
+      0.101500034,
+      0.27999997
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.05009831488132477,
+      -0.0
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.3400000035762787,
+      0.10019662976264954,
+      0.2800000011920929
+    ],
+    "existing_contains_new_bounds": true,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  },
+  "PC_Trousers_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.04425,
+      0.0
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.29,
+      0.08850004,
+      0.32
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.0442582443356514,
+      -0.0
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.28999999165534973,
+      0.0885164886713028,
+      0.3199999928474426
+    ],
+    "existing_contains_new_bounds": false,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  },
+  "PC_Glove_L_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.068800606,
+      0.0
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.15948866,
+      0.13760124,
+      0.26649532
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.07017207145690918,
+      -0.0
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.15885061025619507,
+      0.14034414291381836,
+      0.29098689556121826
+    ],
+    "existing_contains_new_bounds": false,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  },
+  "PC_Glove_R_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.06885222,
+      0.0
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.15957752,
+      0.13770448,
+      0.26632592
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.07015860080718994,
+      -2.9802322387695312e-08
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.15880806744098663,
+      0.14031720161437988,
+      0.29098719358444214
+    ],
+    "existing_contains_new_bounds": false,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  },
+  "PC_Overboot_L_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.14250758,
+      -1.4901161e-08
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.20885986,
+      0.28501523,
+      0.35513628
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.14350000023841858,
+      -0.0
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.2069999873638153,
+      0.28700000047683716,
+      0.36000001430511475
+    ],
+    "existing_contains_new_bounds": false,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  },
+  "PC_Overboot_R_Pickup": {
+    "existing_center_unity_wrapper_m": [
+      0.0,
+      0.14250758,
+      -1.4901161e-08
+    ],
+    "existing_size_unity_wrapper_m": [
+      0.20885986,
+      0.28501523,
+      0.35513628
+    ],
+    "recommended_center_unity_wrapper_m": [
+      -0.0,
+      0.14350000023841858,
+      -0.0
+    ],
+    "recommended_size_unity_wrapper_m": [
+      0.2069999873638153,
+      0.28700000047683716,
+      0.36000001430511475
+    ],
+    "existing_contains_new_bounds": false,
+    "basis": "Static YAML comparison, old model bounds verified against existing BoxCollider. No Unity execution."
+  }
+}

@@ -1,0 +1,632 @@
+{
+  "contract": {
+    "passed": true,
+    "errors": [],
+    "equipment_mesh_count": 12,
+    "all_original_objects": 39,
+    "anchor_count": 20,
+    "anchor_max_error": 0.0,
+    "units": {
+      "system": "METRIC",
+      "scale_length": 1.0
+    }
+  },
+  "health": {
+    "Jacket_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 468,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Trousers_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 68,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Glove_L_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Overboot_L_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Glove_R_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Overboot_R_Worn": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Jacket_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Trousers_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 8,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Glove_L_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Glove_R_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Overboot_L_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    },
+    "Overboot_R_Pickup": {
+      "duplicate_faces_1um": 0,
+      "degenerate_faces": 0,
+      "nonmanifold_nonboundary_edges": 0,
+      "boundary_edges": 0,
+      "inward_closed_islands": 0,
+      "negative_scale": false,
+      "material_slots": 1,
+      "uv_layers": 1,
+      "active_modifiers": []
+    }
+  },
+  "fit": {
+    "Jacket_Worn": {
+      "samples": 9896,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.0034368415326753166,
+      "worst_samples": []
+    },
+    "Trousers_Worn": {
+      "samples": 6138,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.009677605299657444,
+      "worst_samples": []
+    },
+    "Glove_L_Worn": {
+      "samples": 3724,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.0002771641816252668,
+      "worst_samples": []
+    },
+    "Overboot_L_Worn": {
+      "samples": 2142,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.0021999212915488897,
+      "worst_samples": []
+    },
+    "Glove_R_Worn": {
+      "samples": 3724,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.00023358104408544023,
+      "worst_samples": []
+    },
+    "Overboot_R_Worn": {
+      "samples": 2142,
+      "inside_over_1mm": 0,
+      "minimum_signed_m": 0.002184789815601107,
+      "worst_samples": []
+    }
+  },
+  "roundtrip": {
+    "Worn": {
+      "passed": true,
+      "errors": [],
+      "objects": {
+        "Attach_Glove_L_Worn": {
+          "type": "EMPTY",
+          "parent": "Glove_L_Worn",
+          "max_matrix_error": 2.3096799850463867e-07
+        },
+        "Glove_L_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 7444,
+          "max_vertex_error_m": 2.421438694000244e-07,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Glove_R_Worn": {
+          "type": "EMPTY",
+          "parent": "Glove_R_Worn",
+          "max_matrix_error": 2.3096799850463867e-07
+        },
+        "Glove_R_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 7444,
+          "max_vertex_error_m": 2.421438694000244e-07,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Jacket_Worn": {
+          "type": "EMPTY",
+          "parent": "Jacket_Worn",
+          "max_matrix_error": 2.1047890186309814e-07
+        },
+        "Jacket_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 19282,
+          "max_vertex_error_m": 2.942979335784912e-07,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Overboot_L_Worn": {
+          "type": "EMPTY",
+          "parent": "Overboot_L_Worn",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Overboot_L_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 4264,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Overboot_R_Worn": {
+          "type": "EMPTY",
+          "parent": "Overboot_R_Worn",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Overboot_R_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 4264,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Trousers_Worn": {
+          "type": "EMPTY",
+          "parent": "Trousers_Worn",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Trousers_Worn": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Worn",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 12192,
+          "max_vertex_error_m": 1.7441361421788315e-07,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "ProtectiveClothing_Worn": {
+          "type": "EMPTY",
+          "parent": null,
+          "max_matrix_error": 1.6292068494294654e-07
+        }
+      },
+      "mesh_count": 6,
+      "fbx_settings": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "FrontAxis": 2,
+        "FrontAxisSign": 1,
+        "UnitScaleFactor": 100.0
+      },
+      "no_reference_camera_lights_rig": true
+    },
+    "Pickup": {
+      "passed": true,
+      "errors": [],
+      "objects": {
+        "Attach_Glove_L_Pickup": {
+          "type": "EMPTY",
+          "parent": "Glove_L_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Glove_L_Pickup": {
+          "type": "EMPTY",
+          "parent": "Glove_L_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Glove_L_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 7444,
+          "max_vertex_error_m": 4.214684778958144e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Glove_R_Pickup": {
+          "type": "EMPTY",
+          "parent": "Glove_R_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Glove_R_Pickup": {
+          "type": "EMPTY",
+          "parent": "Glove_R_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Glove_R_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 7444,
+          "max_vertex_error_m": 4.214684778958144e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Jacket_Pickup": {
+          "type": "EMPTY",
+          "parent": "Jacket_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Jacket_Pickup": {
+          "type": "EMPTY",
+          "parent": "Jacket_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Jacket_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 8028,
+          "max_vertex_error_m": 2.686345013103164e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Overboot_L_Pickup": {
+          "type": "EMPTY",
+          "parent": "Overboot_L_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Overboot_L_Pickup": {
+          "type": "EMPTY",
+          "parent": "Overboot_L_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Overboot_L_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 4264,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Overboot_R_Pickup": {
+          "type": "EMPTY",
+          "parent": "Overboot_R_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Overboot_R_Pickup": {
+          "type": "EMPTY",
+          "parent": "Overboot_R_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Overboot_R_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 4264,
+          "max_vertex_error_m": 5.372690026206328e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "Attach_Trousers_Pickup": {
+          "type": "EMPTY",
+          "parent": "Trousers_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Grip_Trousers_Pickup": {
+          "type": "EMPTY",
+          "parent": "Trousers_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07
+        },
+        "Trousers_Pickup": {
+          "type": "MESH",
+          "parent": "ProtectiveClothing_Pickup",
+          "max_matrix_error": 1.6292068494294654e-07,
+          "triangles": 3574,
+          "max_vertex_error_m": 3.003425064207477e-08,
+          "uv_values_match": true,
+          "material_slots": 1,
+          "image_paths": [
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Roughness_1K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_BaseColor_2K.png",
+            "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\ProtectiveClothing\\Textures\\PC_Normal_1K.png"
+          ]
+        },
+        "ProtectiveClothing_Pickup": {
+          "type": "EMPTY",
+          "parent": null,
+          "max_matrix_error": 1.6292068494294654e-07
+        }
+      },
+      "mesh_count": 6,
+      "fbx_settings": {
+        "UpAxis": 1,
+        "UpAxisSign": 1,
+        "FrontAxis": 2,
+        "FrontAxisSign": 1,
+        "UnitScaleFactor": 100.0
+      },
+      "no_reference_camera_lights_rig": true
+    }
+  },
+  "preservation": {
+    "ProtectiveClothing_Pickup.fbx.meta": {
+      "unchanged": true
+    },
+    "ProtectiveClothing_Worn.fbx.meta": {
+      "unchanged": true
+    },
+    "Textures.meta": {
+      "unchanged": true
+    },
+    "Source~\\AnchorManifest.json": {
+      "unchanged": true
+    },
+    "Textures\\PC_BaseColor_2K.png.meta": {
+      "unchanged": true
+    },
+    "Textures\\PC_Normal_1K.png.meta": {
+      "unchanged": true
+    },
+    "Textures\\PC_Roughness_1K.png.meta": {
+      "unchanged": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Mannequin\\Mannequin.fbx": {
+      "unchanged": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\K1_GasMask.fbx": {
+      "unchanged": true
+    }
+  },
+  "source_textures": {
+    "PC_BaseColor_2K.png": {
+      "path": "//Backups\\20261103_162242_before_reference_upgrade\\Textures\\PC_BaseColor_2K.png",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true
+    },
+    "PC_Normal_1K.png": {
+      "path": "//Backups\\20261103_162242_before_reference_upgrade\\Textures\\PC_Normal_1K.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true
+    },
+    "PC_Roughness_1K.png": {
+      "path": "//Backups\\20261103_162242_before_reference_upgrade\\Textures\\PC_Roughness_1K.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "packed": true
+    }
+  },
+  "external_preservation": {
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_Shared.mat": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_Shared.mat.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_MetallicSmoothness_1K.png": {
+      "unchanged": false,
+      "intentional_image_update": true
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_MetallicSmoothness_1K.png.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\MilTrainSimVR.B.ProtectiveClothing.asmdef.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingEquipment.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingGuide.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingPiece.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingSubtitles.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scripts\\ProtectiveClothing\\ProtectiveClothingTracking.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Editor\\ProtectiveClothing\\ProtectiveClothingSetup.cs.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity": {
+      "unchanged": true,
+      "intentional_image_update": false
+    },
+    "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Scene\\B_ProtectiveClothing_Equipment.unity.meta": {
+      "unchanged": true,
+      "intentional_image_update": false
+    }
+  },
+  "derived_image": {
+    "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Materials\\ProtectiveClothing\\PC_MetallicSmoothness_1K.png",
+    "rgb_zero": true,
+    "alpha_matches_1_minus_roughness": true,
+    "size": [
+      1024,
+      1024
+    ]
+  }
+}

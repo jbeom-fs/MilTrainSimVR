@@ -1,0 +1,15 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/floor_drain_3d_model_2/floor_drain_3d_model_2.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/floor_drain_3d_model_2/floor_drain_3d_model_2.fbm/floor_drain_3d_model_2_basecolor.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/bbq_table",
+ "name": "BBQ_Drum_Table",
+ "target_tris": 2400,
+ "planar_deg": 3,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "bake_samples": 32
+}

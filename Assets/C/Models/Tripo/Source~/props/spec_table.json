@@ -1,0 +1,15 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/pool_table_3d_model/pool_table_3d_model.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/pool_table_3d_model/pool_table_3d_model.fbm/pool_table_3d_model_basecolor.jpg"
+ },
+ "out_dir": "C:/Temp/tripo_low/table",
+ "name": "Billiard_Table",
+ "target_tris": 1500,
+ "planar_deg": 4,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "bake_samples": 32
+}

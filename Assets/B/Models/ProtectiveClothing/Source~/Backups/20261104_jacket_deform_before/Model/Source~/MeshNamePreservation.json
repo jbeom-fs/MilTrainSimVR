@@ -1,0 +1,50 @@
+{
+  "Jacket_Worn": {
+    "before": "JacketShell_Mesh",
+    "after": "JacketShell_Mesh"
+  },
+  "Trousers_Worn": {
+    "before": "Pelvis_Mesh",
+    "after": "Pelvis_Mesh"
+  },
+  "Glove_L_Worn": {
+    "before": "Glove_L_Worn_Mesh",
+    "after": "Glove_L_Worn_Mesh"
+  },
+  "Glove_R_Worn": {
+    "before": "Glove_R_Worn_Mesh",
+    "after": "Glove_R_Worn_Mesh"
+  },
+  "Overboot_L_Worn": {
+    "before": "Overboot_L_Worn_Mesh",
+    "after": "Overboot_L_Worn_Mesh"
+  },
+  "Overboot_R_Worn": {
+    "before": "Overboot_R_Worn_Mesh",
+    "after": "Overboot_R_Worn_Mesh"
+  },
+  "Jacket_Pickup": {
+    "before": "Cube.006",
+    "after": "Cube.006"
+  },
+  "Trousers_Pickup": {
+    "before": "Cube.014",
+    "after": "Cube.014"
+  },
+  "Glove_L_Pickup": {
+    "before": "Glove_L_Worn_Mesh.001",
+    "after": "Glove_L_Worn_Mesh.001"
+  },
+  "Glove_R_Pickup": {
+    "before": "Glove_R_Worn_Mesh.001",
+    "after": "Glove_R_Worn_Mesh.001"
+  },
+  "Overboot_L_Pickup": {
+    "before": "Overboot_L_Worn_Mesh.001",
+    "after": "Overboot_L_Worn_Mesh.001"
+  },
+  "Overboot_R_Pickup": {
+    "before": "Overboot_R_Worn_Mesh.001",
+    "after": "Overboot_R_Worn_Mesh.001"
+  }
+}

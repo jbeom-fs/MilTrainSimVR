@@ -1,0 +1,27 @@
+{
+ "src_fbx": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/orange_claw_machine_3d_model_Clone1/orange_claw_machine_3d_model_Clone1.fbx",
+ "maps": {
+  "basecolor": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/orange_claw_machine_3d_model_Clone1/orange_claw_machine_3d_model_Clone1.fbm/orange_claw_machine_3d_model_Clone1_basecolor.JPEG",
+  "normal": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/orange_claw_machine_3d_model_Clone1/orange_claw_machine_3d_model_Clone1.fbm/orange_claw_machine_3d_model_Clone1_normal.PNG",
+  "metallic": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/orange_claw_machine_3d_model_Clone1/orange_claw_machine_3d_model_Clone1.fbm/orange_claw_machine_3d_model_Clone1_metallic.JPEG",
+  "roughness": "C:/Users/leesn/UnityProject/MilTrainSimVR/Assets/C/Models/Tripo/Bridge/orange_claw_machine_3d_model_Clone1/orange_claw_machine_3d_model_Clone1.fbm/orange_claw_machine_3d_model_Clone1_roughness.JPEG"
+ },
+ "out_dir": "C:/Temp/tripo_low/claw",
+ "name": "Claw_Machine",
+ "target_tris": 4500,
+ "planar_deg": 4,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "glass_sides": [
+  "front",
+  "left",
+  "right",
+  "back"
+ ],
+ "glass_deep": 0.08,
+ "glass_step": 0.008,
+ "uv_front_boost": 1.0,
+ "repair_dark": true
+}

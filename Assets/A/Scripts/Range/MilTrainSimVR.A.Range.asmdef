@@ -1,0 +1,10 @@
+{
+    "name": "MilTrainSimVR.A.Range",
+    "rootNamespace": "MilTrainSimVR.A.Range",
+    "references": [
+        "MilTrainSimVR.A.Common",
+        "MilTrainSimVR.A.Rifle",
+        "Unity.XR.Interaction.Toolkit",
+        "UnityEngine.UI"
+    ]
+}

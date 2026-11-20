@@ -1,0 +1,880 @@
+{
+  "source": {
+    "DC_KitCase": {
+      "dimensions_xyz_m": [
+        0.18000000715255737,
+        0.13449999690055847,
+        0.05999999865889549
+      ],
+      "objects": [
+        {
+          "name": "DC_KitCase",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_LidHinge",
+          "type": "EMPTY",
+          "parent": "DC_KitCase",
+          "location": [
+            0.0,
+            0.06599999964237213,
+            0.04399999976158142
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_ToolRest",
+          "type": "EMPTY",
+          "parent": "DC_KitCase",
+          "location": [
+            0.0,
+            0.0,
+            0.004000000189989805
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_CaseBody",
+          "type": "MESH",
+          "parent": "DC_KitCase",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 402,
+          "triangles": 800,
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "zero_area_faces": 0,
+          "duplicate_vertex_positions": 0,
+          "signed_volume": 0.00022933385472826703,
+          "uv_layers": [
+            "UV 맵"
+          ],
+          "material_names": [
+            "DC_Mat_Case_Teal",
+            "DC_Mat_Grip_Graphite"
+          ]
+        },
+        {
+          "name": "Part_CaseLid",
+          "type": "MESH",
+          "parent": "DC_KitCase",
+          "location": [
+            0.0,
+            0.06599999964237213,
+            0.04399999976158142
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 337,
+          "triangles": 670,
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "zero_area_faces": 0,
+          "duplicate_vertex_positions": 0,
+          "signed_volume": 0.00017067430730530967,
+          "uv_layers": [
+            "UV 맵"
+          ],
+          "material_names": [
+            "DC_Mat_Case_Teal",
+            "DC_Mat_Grip_Graphite"
+          ]
+        }
+      ],
+      "triangles": 1470
+    },
+    "DC_Applicator": {
+      "dimensions_xyz_m": [
+        0.10000000149011612,
+        0.07000000029802322,
+        0.03200000151991844
+      ],
+      "objects": [
+        {
+          "name": "DC_Applicator",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "DC_Applicator",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            180.00000500895632,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            8.742277657347586e-08,
+            -1.0
+          ]
+        },
+        {
+          "name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "DC_Applicator",
+          "location": [
+            0.0,
+            0.0,
+            0.023000000044703484
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_PadGrip",
+          "type": "MESH",
+          "parent": "DC_Applicator",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 216,
+          "triangles": 428,
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "zero_area_faces": 0,
+          "duplicate_vertex_positions": 0,
+          "signed_volume": 9.550398208438728e-05,
+          "uv_layers": [
+            "UV 맵"
+          ],
+          "material_names": [
+            "DC_Mat_Grip_Graphite"
+          ]
+        },
+        {
+          "name": "Part_PadSurface",
+          "type": "MESH",
+          "parent": "DC_Applicator",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 144,
+          "triangles": 284,
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "zero_area_faces": 0,
+          "duplicate_vertex_positions": 0,
+          "signed_volume": 4.0530161285449e-05,
+          "uv_layers": [
+            "UV 맵"
+          ],
+          "material_names": [
+            "DC_Mat_Contact_Ivory"
+          ]
+        }
+      ],
+      "triangles": 712
+    },
+    "DC_CollectionBin": {
+      "dimensions_xyz_m": [
+        0.2199999988079071,
+        0.18000000715255737,
+        0.1599999964237213
+      ],
+      "objects": [
+        {
+          "name": "DC_CollectionBin",
+          "type": "EMPTY",
+          "parent": null,
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Opening",
+          "type": "EMPTY",
+          "parent": "DC_CollectionBin",
+          "location": [
+            0.0,
+            0.0,
+            0.1599999964237213
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Anchor_Return",
+          "type": "EMPTY",
+          "parent": "DC_CollectionBin",
+          "location": [
+            0.0,
+            0.0,
+            0.006000000052154064
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "world_plus_z": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "name": "Part_BinBody",
+          "type": "MESH",
+          "parent": "DC_CollectionBin",
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_degrees": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "vertices": 396,
+          "triangles": 788,
+          "nonmanifold_edges": 0,
+          "loose_vertices": 0,
+          "zero_area_faces": 0,
+          "duplicate_vertex_positions": 0,
+          "signed_volume": 0.0006266252774947689,
+          "uv_layers": [
+            "UV 맵"
+          ],
+          "material_names": [
+            "DC_Mat_Bin_Terracotta"
+          ]
+        }
+      ],
+      "triangles": 788
+    }
+  },
+  "geometry_checks": {
+    "lid_body_sweep_0_to_110_degrees_1degree_steps": [],
+    "lid_tool_sweep": [],
+    "tool_case_body_crossings": "0 volumetric crossings; pad bottom rests at floor z=0.004; coplanar floor contact expected; 0.1 mm lift test clear",
+    "bin_descent_crossings_1mm_steps": [],
+    "tool_case_body_0_1mm_lift_crossings": [
+      0,
+      0
+    ],
+    "cleanup": "All game meshes: no nonmanifold edges, loose vertices, duplicate positions or zero-area triangles; positive signed volumes; UV finite and inside 0..1"
+  },
+  "material_count": 4,
+  "texture_dependencies": [],
+  "units": "Metric; scale_length=1; metres",
+  "authoring_axes": "Blender +Z up, -Y forward; contact local +Z points Blender -Z",
+  "export_settings": {
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "global_scale": 1,
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_UNITS",
+    "use_space_transform": true,
+    "bake_space_transform": false,
+    "bake_anim": false,
+    "use_selection": true,
+    "object_types": [
+      "MESH",
+      "EMPTY"
+    ]
+  },
+  "unity_validation": "NOT PERFORMED",
+  "fbx_roundtrip": {
+    "DC_KitCase": {
+      "status": "PASS in Blender FBX reimport, not a Unity import test",
+      "object_count": 5,
+      "objects": [
+        {
+          "name": "DC_KitCase",
+          "type": "EMPTY",
+          "parent": null,
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            -9.334667642611415e-06,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Anchor_LidHinge",
+          "type": "EMPTY",
+          "parent": "DC_KitCase",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 1.0
+        },
+        {
+          "name": "Anchor_ToolRest",
+          "type": "EMPTY",
+          "parent": "DC_KitCase",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 1.0
+        },
+        {
+          "name": "Part_CaseBody",
+          "type": "MESH",
+          "parent": "DC_KitCase",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "vertices": 402,
+          "triangles": 800,
+          "max_vertex_error_m": 1.343172506551582e-08,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "DC_Mat_Case_Teal",
+            "DC_Mat_Grip_Graphite"
+          ]
+        },
+        {
+          "name": "Part_CaseLid",
+          "type": "MESH",
+          "parent": "DC_KitCase",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "vertices": 337,
+          "triangles": 670,
+          "max_vertex_error_m": 1.666000493116826e-08,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "DC_Mat_Case_Teal",
+            "DC_Mat_Grip_Graphite"
+          ]
+        }
+      ]
+    },
+    "DC_Applicator": {
+      "status": "PASS in Blender FBX reimport, not a Unity import test",
+      "object_count": 5,
+      "objects": [
+        {
+          "name": "DC_Applicator",
+          "type": "EMPTY",
+          "parent": null,
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            -9.334667642611415e-06,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Anchor_Contact",
+          "type": "EMPTY",
+          "parent": "DC_Applicator",
+          "world_matrix_max_error": 9.934765898833575e-08,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            -179.999991348578,
+            0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 0.999999999999999
+        },
+        {
+          "name": "Anchor_Grip",
+          "type": "EMPTY",
+          "parent": "DC_Applicator",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 1.0
+        },
+        {
+          "name": "Part_PadGrip",
+          "type": "MESH",
+          "parent": "DC_Applicator",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "vertices": 216,
+          "triangles": 428,
+          "max_vertex_error_m": 6.71586253275791e-09,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "DC_Mat_Grip_Graphite"
+          ]
+        },
+        {
+          "name": "Part_PadSurface",
+          "type": "MESH",
+          "parent": "DC_Applicator",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "vertices": 144,
+          "triangles": 284,
+          "max_vertex_error_m": 5.704350769519806e-09,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "DC_Mat_Contact_Ivory"
+          ]
+        }
+      ]
+    },
+    "DC_CollectionBin": {
+      "status": "PASS in Blender FBX reimport, not a Unity import test",
+      "object_count": 4,
+      "objects": [
+        {
+          "name": "DC_CollectionBin",
+          "type": "EMPTY",
+          "parent": null,
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            -9.334667642611415e-06,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "Anchor_Opening",
+          "type": "EMPTY",
+          "parent": "DC_CollectionBin",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 1.0
+        },
+        {
+          "name": "Anchor_Return",
+          "type": "EMPTY",
+          "parent": "DC_CollectionBin",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "plus_z_dot_source": 1.0
+        },
+        {
+          "name": "Part_BinBody",
+          "type": "MESH",
+          "parent": "DC_CollectionBin",
+          "world_matrix_max_error": 1.6292068494294654e-07,
+          "imported_scale": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "imported_rotation_degrees": [
+            0.0,
+            -0.0,
+            0.0
+          ],
+          "vertices": 396,
+          "triangles": 788,
+          "max_vertex_error_m": 3.003425064207477e-08,
+          "nonmanifold_edges": 0,
+          "positive_volume": true,
+          "uv_layers": 1,
+          "materials": [
+            "DC_Mat_Bin_Terracotta"
+          ]
+        }
+      ]
+    }
+  },
+  "shared_materials": [
+    {
+      "name": "DC_Mat_Case_Teal",
+      "base_color_linear_rgba": [
+        0.04500000178813934,
+        0.23999999463558197,
+        0.2549999952316284,
+        1.0
+      ],
+      "roughness": 0.3799999952316284,
+      "metallic": 0.0
+    },
+    {
+      "name": "DC_Mat_Grip_Graphite",
+      "base_color_linear_rgba": [
+        0.054999999701976776,
+        0.06700000166893005,
+        0.07800000160932541,
+        1.0
+      ],
+      "roughness": 0.550000011920929,
+      "metallic": 0.0
+    },
+    {
+      "name": "DC_Mat_Contact_Ivory",
+      "base_color_linear_rgba": [
+        0.7799999713897705,
+        0.8299999833106995,
+        0.7699999809265137,
+        1.0
+      ],
+      "roughness": 0.8799999952316284,
+      "metallic": 0.0
+    },
+    {
+      "name": "DC_Mat_Bin_Terracotta",
+      "base_color_linear_rgba": [
+        0.46000000834465027,
+        0.1550000011920929,
+        0.08500000089406967,
+        1.0
+      ],
+      "roughness": 0.47999998927116394,
+      "metallic": 0.0
+    }
+  ],
+  "blender_version": "5.2.1 LTS",
+  "blend_reopen": {
+    "status": "PASS",
+    "filepath": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\Decontamination\\Source~\\Decontamination_Prototype.blend",
+    "game_models": {
+      "DC_KitCase": {
+        "status": "PASS",
+        "root_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "root_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "triangles": 1470,
+        "hierarchy_matches_report": true
+      },
+      "DC_Applicator": {
+        "status": "PASS",
+        "root_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "root_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "triangles": 712,
+        "hierarchy_matches_report": true
+      },
+      "DC_CollectionBin": {
+        "status": "PASS",
+        "root_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "root_scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "triangles": 788,
+        "hierarchy_matches_report": true
+      }
+    },
+    "game_lid_closed": true,
+    "scenes": [
+      "Decontamination_Prototype",
+      "REVIEW_Presentation"
+    ]
+  },
+  "fbx_uv_normal_material_comparison": {
+    "DC_KitCase": [
+      {
+        "name": "Part_CaseBody",
+        "unmatched_position_uv_corners_at_1e_5": 0,
+        "minimum_normal_dot": 0.9999998740386218,
+        "maximum_material_value_error": 0
+      },
+      {
+        "name": "Part_CaseLid",
+        "unmatched_position_uv_corners_at_1e_5": 0,
+        "minimum_normal_dot": 0.9999998658895493,
+        "maximum_material_value_error": 0
+      }
+    ],
+    "DC_Applicator": [
+      {
+        "name": "Part_PadGrip",
+        "unmatched_position_uv_corners_at_1e_5": 0,
+        "minimum_normal_dot": 0.9999998435378075,
+        "maximum_material_value_error": 0
+      },
+      {
+        "name": "Part_PadSurface",
+        "unmatched_position_uv_corners_at_1e_5": 0,
+        "minimum_normal_dot": 0.99999985890463,
+        "maximum_material_value_error": 0
+      }
+    ],
+    "DC_CollectionBin": [
+      {
+        "name": "Part_BinBody",
+        "unmatched_position_uv_corners_at_1e_5": 0,
+        "minimum_normal_dot": 0.9999998845160007,
+        "maximum_material_value_error": 0
+      }
+    ]
+  }
+}

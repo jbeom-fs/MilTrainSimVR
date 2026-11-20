@@ -1,0 +1,5 @@
+{
+    "name": "MilTrainSimVR.B.BleedingControl.Tourniquet",
+    "rootNamespace": "MilTrainSimVR.B.BleedingControl.Tourniquet",
+    "references": ["Unity.TextMeshPro", "UnityEngine.UI", "Unity.XR.Interaction.Toolkit", "Unity.InputSystem"]
+}

@@ -1,0 +1,8 @@
+# 파이썬 캐시
+__pycache__/
+
+# Tripo 가 준 차량 원본(약 52 MB) · 거기서 꺼낸 텍스처 · 참고 그림 — 올리지 않는다.
+# 다시 필요하면 vehicles/tripo_tasks.json 의 task id 로 받는다
+vehicles/sedan/
+vehicles/van/
+vehicles/truck/

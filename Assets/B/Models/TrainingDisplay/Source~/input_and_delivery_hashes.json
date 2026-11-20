@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "Docs/B/AGENTS.md": "170703de43f34bbd5c69bda45dabbf88daceb27a5d2944600d88b16addc76065",
+    "Assets/B/Scene/B_FirstAid.unity": "37fea5e403f0ef20dececd232d4ddc63d103ed726cd59712c33cda8be259632b",
+    "Assets/B/Scene/B_CBRN.unity": "6881e4a0236723b78f253775bd9641c921890b3c7894c3701c3e512d183c3b5c",
+    "Assets/B/Editor/Decontamination/KD1/KD1EquipmentSetup.Tutorial.cs": "940fa6ce5fc062a80471a55aa969618ef5875aaa2cded0fa6d76e2acc7226997",
+    "Assets/B/Models/TrainingMirror/Source~/전달기록.md": "6107e67cefc11670baac0ad5bb7d42e9bfdcaa2546f62ebfd095ec6776df1963",
+    "Assets/B/Models/TrainingMirror/Source~/Previews/K1_Overview.png": "5bcaefb3c281d42262d99c1286a5026f950501515b85dbaa266faaa6a8d0b7ed",
+    "Assets/B/Editor/TrainingUI/AedBoardUi.cs": "62e873f2df972661a71c6b5dd9362bd5db50df56630ad9c7d31a3df15695e730",
+    "Assets/B/Editor/TrainingUI/K1BoardUi.cs": "0719913cab3be01d7339be540ea66ee6774f218c6c202ca8c10de0a265f9e138",
+    "Assets/B/Editor/TrainingUI/PressureBandageBoardUi.cs": "a0a498f9c1a9a2201db1a684e9d77a7d91579d3fe347b7b4c7e46baee99b29ea",
+    "Assets/B/Editor/TrainingUI/ProtectiveClothingBoardUi.cs": "0bd66a6d1c9f36700f48eacda751bfad78d823cbe3adc083fd729b11830a91ee",
+    "Assets/B/Editor/TrainingUI/TourniquetBoardUi.cs": "d86e18a6f4052477cfd1eedceade59c403f9c6e50a015344e4081cdae815aa99",
+    "Assets/B/Editor/TrainingUI/TrainingBoardKit.cs": "9ff9a0f69b9cca930a148d1a345550be5589362c058d775c10eca8d66ab0a187",
+    "Assets/B/Editor/TrainingUI/TrainingUiSetup.cs": "b2ef7d38f82922c0305f4e7a9eba69a1c57a07ac2caea30ff3e638fee5c402f3"
+  },
+  "deliveries": {
+    "Assets/B/Models/TrainingDisplay/Display_AED_720x460.fbx": "ba1e986e8db97a359a16a9cb596d192bf2061cf8b0817871bd56dfd34a93cdcc",
+    "Assets/B/Models/TrainingDisplay/Display_Entrance_760x560.fbx": "f7eff134b187eaf246edba3fc128f6e25996dcfa2bf519abe742529971efed31",
+    "Assets/B/Models/TrainingDisplay/Display_K1_720x480.fbx": "9e17dba0843492efbef40a452b50cfc2ef67a70ee82d4ab56d06769f34d9ba86",
+    "Assets/B/Models/TrainingDisplay/Display_KD1_720x440.fbx": "3044783cc7db76a584ec3a9a5cfb8e01493cbc784864d83e1d0de04e8ced322d",
+    "Assets/B/Models/TrainingDisplay/Display_PB_720x600.fbx": "c2a333ef800f67baba2666bc3b895f8dccac7f3e06ba2ecb0afa08c62100b4cb",
+    "Assets/B/Models/TrainingDisplay/Display_PC_720x520.fbx": "8a0f5297ea0934fe1d2df3df8020df58b507b19e6d709dbec7e51eefc0c59481",
+    "Assets/B/Models/TrainingDisplay/Display_TQ_720x640.fbx": "5b3e153dd961bdc69c5d382a9154d95cb4ff0087cfe2246c4617093bf4b2cb70",
+    "Assets/B/Models/TrainingDisplay/Source~/TrainingDisplay.blend": "e0ce3c498f4efe041f587e31eb7996a7b6481999c88dd3a7c0fb6b0760de7ce1"
+  }
+}

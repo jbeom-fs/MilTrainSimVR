@@ -1,0 +1,298 @@
+[
+  {
+    "file": "01_Upper_UVReady.fbx",
+    "label": "상부 본체",
+    "source_object": "GAME_Upper",
+    "vertices": 9287,
+    "triangles": 18352,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_01_Upper_UVReady_Final",
+    "assembled_matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "02_Lower_UVReady.fbx",
+    "label": "하부 본체",
+    "source_object": "GAME_Lower",
+    "vertices": 1381,
+    "triangles": 2706,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_02_Lower_UVReady_Final",
+    "assembled_matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "03_PushRod_UVReady.fbx",
+    "label": "밀대뭉치",
+    "source_object": "Gun_Part_1 | Mesh",
+    "vertices": 168,
+    "triangles": 328,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_03_PushRod_UVReady",
+    "assembled_matrix_world": [
+      [
+        -0.0030700599309056997,
+        2.0263119210911398e-17,
+        -4.635661576823935e-10,
+        -0.24426060914993286
+      ],
+      [
+        -6.525335627585966e-25,
+        0.0030700599309056997,
+        1.3419658440039228e-10,
+        -6.290275855747041e-09
+      ],
+      [
+        4.635661576823935e-10,
+        1.3419658440039228e-10,
+        -0.0030700599309056997,
+        0.014651522040367126
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "04_GasRod_UVReady.fbx",
+    "label": "가스활대",
+    "source_object": "COMPARE | Silver_Rod_ShaftOnly_v06_export",
+    "vertices": 2574,
+    "triangles": 5144,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_04_GasRod_UVReady",
+    "assembled_matrix_world": [
+      [
+        -1.1730290072620164e-09,
+        0.007200000341981649,
+        9.441660786535522e-10,
+        -0.036295510828495026
+      ],
+      [
+        -0.007200000341981649,
+        -1.1730290072620164e-09,
+        6.29443941413399e-10,
+        1.449835025368884e-07
+      ],
+      [
+        6.294440524357015e-10,
+        -9.441659676312497e-10,
+        0.007200000341981649,
+        0.014629855751991272
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "05_BoltAssembly_UVReady.fbx",
+    "label": "노리쇠뭉치",
+    "source_object": "COMPARE | Housing_CylindricalDisplayNeck001",
+    "vertices": 3153,
+    "triangles": 6290,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_05_BoltAssembly_UVReady",
+    "assembled_matrix_world": [
+      [
+        1.4018918248481782e-09,
+        0.007200000341981649,
+        3.147219984622751e-10,
+        -0.1280093491077423
+      ],
+      [
+        -0.007200000341981649,
+        1.4018918248481782e-09,
+        5.28370152772168e-17,
+        1.4899244149546575e-07
+      ],
+      [
+        -8.44161555193945e-18,
+        -3.147219984622751e-10,
+        0.007200000341981649,
+        -0.008999280631542206
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "06_GasRegulator_UVReady.fbx",
+    "label": "가스조절기",
+    "source_object": "GAME_Regulator",
+    "vertices": 545,
+    "triangles": 1058,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_06_GasRegulator_UVReady",
+    "assembled_matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "07_Selector_UVReady.fbx",
+    "label": "조정간",
+    "source_object": "Gun_Part_6 | Selector",
+    "vertices": 164,
+    "triangles": 320,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_07_Selector_UVReady",
+    "assembled_matrix_world": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.18000000715255737
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.032002612948417664
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.032999999821186066
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  {
+    "file": "08_ChargingHandle_UVReady.fbx",
+    "label": "장전손잡이",
+    "source_object": "Gun_Part_2 | Mesh",
+    "vertices": 1455,
+    "triangles": 2898,
+    "uv_layers": [
+      "UV_Game"
+    ],
+    "material": "M_08_ChargingHandle_UVReady",
+    "assembled_matrix_world": [
+      [
+        0.001125515322200954,
+        -1.3417188193809437e-10,
+        -5.864838755995912e-18,
+        -0.054999999701976776
+      ],
+      [
+        1.3417188193809437e-10,
+        0.001125515322200954,
+        4.919783677670431e-11,
+        -0.027855409309267998
+      ],
+      [
+        -2.3833714013593687e-25,
+        -4.919783677670431e-11,
+        0.001125515322200954,
+        0.016271594911813736
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+]

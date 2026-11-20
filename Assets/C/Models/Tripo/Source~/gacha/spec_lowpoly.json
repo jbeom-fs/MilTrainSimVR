@@ -1,0 +1,32 @@
+{
+ "src_fbx": "Assets/C/Models/Tripo/Bridge/pastel_gacha_vending_machine_3d_model/pastel_gacha_vending_machine_3d_model.fbx",
+ "tex": "Assets/C/Models/Tripo/Bridge/pastel_gacha_vending_machine_3d_model/pastel_gacha_vending_machine_3d_model.fbm/pastel_gacha_vending_machine_3d_model_basecolor.jpg",
+ "out_dir": "<임시 폴더>",
+ "name": "Gacha_Capsule_Machine",
+ "half_w": 0.1255,
+ "bands": [
+  [
+   0.271,
+   0.385
+  ],
+  [
+   0.742,
+   0.86
+  ]
+ ],
+ "depth": 0.006,
+ "target_tris": 1500,
+ "planar_deg": 4,
+ "tex_res": 2048,
+ "cage": 0.012,
+ "ray": 0.03,
+ "bake_margin": 24,
+ "sharp_deg": 100,
+ "pinch_deg": 75,
+ "cluster_deg": 80,
+ "ear_absx": 0.146,
+ "ear_y": -0.11,
+ "ear_dz": 0.045,
+ "jpeg_quality": 95,
+ "_note": "경로는 프로젝트 폴더 기준 — 돌릴 때 절대 경로로 바꾼다. 원본 Tripo 모델은 Bridge 폴더에 있다"
+}

@@ -1,0 +1,1544 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "scene": "K1_Prototype_Workshop",
+  "triangle_count": 14708,
+  "render_meshes": 9,
+  "materials": 3,
+  "pose_checks": [
+    {
+      "pose": "Tighten_P_LU",
+      "weight": 0,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_LU",
+      "weight": 0.5,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_LU",
+      "weight": 1,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_LD",
+      "weight": 0,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_LD",
+      "weight": 0.5,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_LD",
+      "weight": 1,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RU",
+      "weight": 0,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RU",
+      "weight": 0.5,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RU",
+      "weight": 1,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RD",
+      "weight": 0,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RD",
+      "weight": 0.5,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "Tighten_P_RD",
+      "weight": 1,
+      "nonadjacent_intersections": 0
+    },
+    {
+      "pose": "ALL",
+      "weight": 1,
+      "nonadjacent_intersections": 0
+    }
+  ],
+  "provisional_strap_ids": [
+    "P_LU",
+    "P_LD",
+    "P_RU",
+    "P_RD"
+  ],
+  "facepiece_bbox": {
+    "min_xyz_m": [
+      -0.08999950438737869,
+      -0.12483110278844833,
+      -0.11699999868869781
+    ],
+    "max_xyz_m": [
+      0.08999950438737869,
+      0.004000000189989805,
+      0.11699999868869781
+    ],
+    "dimensions_xyz_m": [
+      0.17999900877475739,
+      0.12883110297843814,
+      0.23399999737739563
+    ]
+  },
+  "overall_bbox": {
+    "min_xyz_m": [
+      -0.16101431846618652,
+      -0.13300000131130219,
+      -0.11699999868869781
+    ],
+    "max_xyz_m": [
+      0.1090478003025055,
+      0.17399999499320984,
+      0.11699999868869781
+    ],
+    "dimensions_xyz_m": [
+      0.270062118768692,
+      0.306999996304512,
+      0.23399999737739563
+    ]
+  },
+  "parts": [
+    {
+      "name": "Part_Facepiece",
+      "triangles": 7156,
+      "vertices": 3578,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0001623839957045273
+    },
+    {
+      "name": "Part_Lens_L",
+      "triangles": 192,
+      "vertices": 98,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        -0.03999999910593033,
+        -0.08399999886751175,
+        0.03799999877810478
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 6.729144859894964e-06
+    },
+    {
+      "name": "Part_Lens_R",
+      "triangles": 192,
+      "vertices": 98,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.03999999910593033,
+        -0.08399999886751175,
+        0.03799999877810478
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 6.7291448598949656e-06
+    },
+    {
+      "name": "Part_FilterConnector",
+      "triangles": 476,
+      "vertices": 240,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        -0.07500000298023224,
+        -0.04399999976158142,
+        -0.03799999877810478
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 3.613800492162202e-05
+    },
+    {
+      "name": "Part_FilterCanister",
+      "triangles": 1884,
+      "vertices": 952,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        -0.07500000298023224,
+        -0.04399999976158142,
+        -0.03799999877810478
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.0006217973218316258
+    },
+    {
+      "name": "Part_FrontAssembly",
+      "triangles": 1232,
+      "vertices": 624,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.0,
+        -0.10599999874830246,
+        -0.04699999839067459
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 0.00011793802713891978
+    },
+    {
+      "name": "Part_TubeAssembly",
+      "triangles": 328,
+      "vertices": 170,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.052000001072883606,
+        -0.06700000166893005,
+        -0.04699999839067459
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 3.5138264668907278e-06
+    },
+    {
+      "name": "Part_Harness",
+      "triangles": 2096,
+      "vertices": 1056,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 3.0239186225537994e-05
+    },
+    {
+      "name": "Part_Buckles",
+      "triangles": 1152,
+      "vertices": 592,
+      "slots": 1,
+      "parent": "Visuals",
+      "pivot_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_deg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "uv_layers": [
+        "UV0"
+      ],
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume_m3": 1.9785803668739503e-05
+    }
+  ],
+  "anchors": [
+    {
+      "name": "Anchor_FaceFit",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_blender_xyz_deg": [
+        90.00000250447816,
+        0.0,
+        0.0
+      ],
+      "local_Z_scene_xyz": [
+        0.0,
+        -1.0,
+        -4.371138828673793e-08
+      ],
+      "local_Y_scene_xyz": [
+        0.0,
+        -4.371138828673793e-08,
+        1.0
+      ],
+      "meaning": "face seal center; root origin; temporary anatomical fit"
+    },
+    {
+      "name": "Anchor_ViewOrigin",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.0,
+        0.017999999225139618,
+        0.03799999877810478
+      ],
+      "rotation_blender_xyz_deg": [
+        90.00000250447816,
+        0.0,
+        0.0
+      ],
+      "local_Z_scene_xyz": [
+        0.0,
+        -1.0,
+        -4.371138828673793e-08
+      ],
+      "local_Y_scene_xyz": [
+        0.0,
+        -4.371138828673793e-08,
+        1.0
+      ],
+      "meaning": "provisional binocular eye point; no anthropometric validation"
+    },
+    {
+      "name": "Anchor_Grip_L",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.05466484650969505,
+        -0.038865480571985245,
+        -0.06604345142841339
+      ],
+      "rotation_blender_xyz_deg": [
+        121.77008784384805,
+        -0.0,
+        -60.345295052952935
+      ],
+      "local_Z_scene_xyz": [
+        -0.738815188407898,
+        -0.4206390082836151,
+        -0.5265120267868042
+      ],
+      "local_Y_scene_xyz": [
+        -0.4575510323047638,
+        -0.2605033218860626,
+        0.8501676917076111
+      ],
+      "meaning": "outer lower rubber surface contact candidate, 1mm outward; hand offset required"
+    },
+    {
+      "name": "Anchor_Grip_R",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.05466484650969505,
+        -0.038865480571985245,
+        -0.06604345142841339
+      ],
+      "rotation_blender_xyz_deg": [
+        121.77008784384805,
+        -0.0,
+        60.345295052952935
+      ],
+      "local_Z_scene_xyz": [
+        0.738815188407898,
+        -0.4206390082836151,
+        -0.5265120267868042
+      ],
+      "local_Y_scene_xyz": [
+        0.4575510323047638,
+        -0.2605033218860626,
+        0.8501676917076111
+      ],
+      "meaning": "outer lower rubber surface contact candidate, 1mm outward; hand offset required"
+    },
+    {
+      "name": "Anchor_FilterAttach",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.07500000298023224,
+        -0.04399999976158142,
+        -0.03799999877810478
+      ],
+      "rotation_blender_xyz_deg": [
+        98.6439279180203,
+        -2.1344341156289847e-07,
+        -72.29957410057929
+      ],
+      "local_Z_scene_xyz": [
+        -0.9418383836746216,
+        -0.3005867004394531,
+        -0.15029336512088776
+      ],
+      "local_Y_scene_xyz": [
+        -0.14317835867404938,
+        -0.04569521173834801,
+        0.9886414408683777
+      ],
+      "meaning": "body mating center; Z toward filter"
+    },
+    {
+      "name": "Anchor_FilterMate",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.07500000298023224,
+        -0.04399999976158142,
+        -0.03799999877810478
+      ],
+      "rotation_blender_xyz_deg": [
+        81.35607026074688,
+        2.1344341156289847e-07,
+        107.70042407818787
+      ],
+      "local_Z_scene_xyz": [
+        0.9418383836746216,
+        0.30058664083480835,
+        0.15029339492321014
+      ],
+      "local_Y_scene_xyz": [
+        -0.14317838847637177,
+        -0.045695219188928604,
+        0.9886414408683777
+      ],
+      "meaning": "filter matching plane; opposite Z; reparent in Unity to detachable filter if needed"
+    },
+    {
+      "name": "Anchor_FilterInspect",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.15128891170024872,
+        -0.06834752857685089,
+        -0.05017375946044922
+      ],
+      "rotation_blender_xyz_deg": [
+        98.6439279180203,
+        -2.1344341156289847e-07,
+        -72.29957410057929
+      ],
+      "local_Z_scene_xyz": [
+        -0.9418383836746216,
+        -0.3005867004394531,
+        -0.15029336512088776
+      ],
+      "local_Y_scene_xyz": [
+        -0.14317835867404938,
+        -0.04569521173834801,
+        0.9886414408683777
+      ],
+      "meaning": "inspection candidate; not an approved procedure"
+    },
+    {
+      "name": "Anchor_FrontInspect",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.0,
+        -0.1340000033378601,
+        -0.04699999839067459
+      ],
+      "rotation_blender_xyz_deg": [
+        90.00000250447816,
+        0.0,
+        0.0
+      ],
+      "local_Z_scene_xyz": [
+        0.0,
+        -1.0,
+        -4.371138828673793e-08
+      ],
+      "local_Y_scene_xyz": [
+        0.0,
+        -4.371138828673793e-08,
+        1.0
+      ],
+      "meaning": "front inspection candidate; not an approved procedure"
+    },
+    {
+      "name": "Anchor_StrapPull_P_LU",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.10400000214576721,
+        -0.03799999877810478,
+        0.041999999433755875
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        -39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        -0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        -0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "provisional free strap end; interpolate position using BlendShape weight"
+    },
+    {
+      "name": "Anchor_StrapGuide_P_LU",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.07999999821186066,
+        0.0020000000949949026,
+        0.06700000166893005
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        -39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        -0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        -0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "stationary provisional buckle guide"
+    },
+    {
+      "name": "Anchor_StrapPull_P_LD",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.10400000214576721,
+        -0.03799999877810478,
+        -0.08100000023841858
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        -39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        -0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        -0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "provisional free strap end; interpolate position using BlendShape weight"
+    },
+    {
+      "name": "Anchor_StrapGuide_P_LD",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        -0.07999999821186066,
+        0.0020000000949949026,
+        -0.0560000017285347
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        -39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        -0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        -0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "stationary provisional buckle guide"
+    },
+    {
+      "name": "Anchor_StrapPull_P_RU",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.10400000214576721,
+        -0.03799999877810478,
+        0.041999999433755875
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "provisional free strap end; interpolate position using BlendShape weight"
+    },
+    {
+      "name": "Anchor_StrapGuide_P_RU",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.07999999821186066,
+        0.0020000000949949026,
+        0.06700000166893005
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "stationary provisional buckle guide"
+    },
+    {
+      "name": "Anchor_StrapPull_P_RD",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.10400000214576721,
+        -0.03799999877810478,
+        -0.08100000023841858
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "provisional free strap end; interpolate position using BlendShape weight"
+    },
+    {
+      "name": "Anchor_StrapGuide_P_RD",
+      "parent": "Anchors",
+      "position_blender_xyz_m": [
+        0.07999999821186066,
+        0.0020000000949949026,
+        -0.0560000017285347
+      ],
+      "rotation_blender_xyz_deg": [
+        111.91200751287694,
+        -0.0,
+        39.5596702009593
+      ],
+      "local_Z_scene_xyz": [
+        0.5908719301223755,
+        -0.7152659893035889,
+        -0.3731822073459625
+      ],
+      "local_Y_scene_xyz": [
+        0.2376728504896164,
+        -0.28770920634269714,
+        0.9277580380439758
+      ],
+      "meaning": "stationary provisional buckle guide"
+    }
+  ],
+  "straps": {
+    "P_LU": {
+      "guide": [
+        -0.08,
+        0.002,
+        0.067
+      ],
+      "pull0": [
+        -0.10400000214576721,
+        -0.03799999877810478,
+        0.041999999433755875
+      ],
+      "pull1": [
+        -0.12300000339746475,
+        -0.061000000685453415,
+        0.029999999329447746
+      ],
+      "direction": [
+        -0.5908719301223755,
+        -0.7152660489082336,
+        -0.3731822371482849
+      ],
+      "rear_fixed": [
+        -0.028,
+        0.169,
+        0.042
+      ],
+      "provisional": true
+    },
+    "P_LD": {
+      "guide": [
+        -0.08,
+        0.002,
+        -0.056
+      ],
+      "pull0": [
+        -0.10400000214576721,
+        -0.03799999877810478,
+        -0.08100000023841858
+      ],
+      "pull1": [
+        -0.12300000339746475,
+        -0.061000000685453415,
+        -0.09300000220537186
+      ],
+      "direction": [
+        -0.5908719301223755,
+        -0.7152660489082336,
+        -0.3731822967529297
+      ],
+      "rear_fixed": [
+        -0.028,
+        0.169,
+        -0.03
+      ],
+      "provisional": true
+    },
+    "P_RU": {
+      "guide": [
+        0.08,
+        0.002,
+        0.067
+      ],
+      "pull0": [
+        0.10400000214576721,
+        -0.03799999877810478,
+        0.041999999433755875
+      ],
+      "pull1": [
+        0.12300000339746475,
+        -0.061000000685453415,
+        0.029999999329447746
+      ],
+      "direction": [
+        0.5908719301223755,
+        -0.7152660489082336,
+        -0.3731822371482849
+      ],
+      "rear_fixed": [
+        0.028,
+        0.169,
+        0.042
+      ],
+      "provisional": true
+    },
+    "P_RD": {
+      "guide": [
+        0.08,
+        0.002,
+        -0.056
+      ],
+      "pull0": [
+        0.10400000214576721,
+        -0.03799999877810478,
+        -0.08100000023841858
+      ],
+      "pull1": [
+        0.12300000339746475,
+        -0.061000000685453415,
+        -0.09300000220537186
+      ],
+      "direction": [
+        0.5908719301223755,
+        -0.7152660489082336,
+        -0.3731822967529297
+      ],
+      "rear_fixed": [
+        0.028,
+        0.169,
+        -0.03
+      ],
+      "provisional": true
+    }
+  },
+  "collision": [
+    {
+      "name": "COL_Facepiece",
+      "parent": "K1_Collision_Root",
+      "pivot_xyz_m": [
+        0.0,
+        -0.07999999821186066,
+        0.09399999678134918
+      ],
+      "triangles": 12,
+      "boundary_edges": 0,
+      "max_convex_plane_violation_m": 0.0,
+      "bbox": {
+        "min_xyz_m": [
+          -0.0625,
+          -0.09349999576807022,
+          0.08149999380111694
+        ],
+        "max_xyz_m": [
+          0.0625,
+          -0.06650000065565109,
+          0.10649999976158142
+        ],
+        "dimensions_xyz_m": [
+          0.125,
+          0.02699999511241913,
+          0.025000005960464478
+        ]
+      }
+    },
+    {
+      "name": "COL_Facepiece_L",
+      "parent": "K1_Collision_Root",
+      "pivot_xyz_m": [
+        -0.0690000057220459,
+        -0.041999995708465576,
+        -0.012000001966953278
+      ],
+      "triangles": 12,
+      "boundary_edges": 0,
+      "max_convex_plane_violation_m": 0.0,
+      "bbox": {
+        "min_xyz_m": [
+          -0.08550000190734863,
+          -0.07400000095367432,
+          -0.07950000464916229
+        ],
+        "max_xyz_m": [
+          -0.05249999836087227,
+          -0.009999997913837433,
+          0.05550000071525574
+        ],
+        "dimensions_xyz_m": [
+          0.033000003546476364,
+          0.06400000303983688,
+          0.13500000536441803
+        ]
+      }
+    },
+    {
+      "name": "COL_Facepiece_R",
+      "parent": "K1_Collision_Root",
+      "pivot_xyz_m": [
+        0.0689999982714653,
+        -0.041999995708465576,
+        -0.012000001966953278
+      ],
+      "triangles": 12,
+      "boundary_edges": 0,
+      "max_convex_plane_violation_m": 0.0,
+      "bbox": {
+        "min_xyz_m": [
+          0.05249999836087227,
+          -0.07400000095367432,
+          -0.07950000464916229
+        ],
+        "max_xyz_m": [
+          0.08550000190734863,
+          -0.009999997913837433,
+          0.05550000071525574
+        ],
+        "dimensions_xyz_m": [
+          0.033000003546476364,
+          0.06400000303983688,
+          0.13500000536441803
+        ]
+      }
+    },
+    {
+      "name": "COL_Front",
+      "parent": "K1_Collision_Root",
+      "pivot_xyz_m": [
+        -9.313225746154785e-10,
+        -0.10499998927116394,
+        -0.06800000369548798
+      ],
+      "triangles": 12,
+      "boundary_edges": 0,
+      "max_convex_plane_violation_m": 0.0,
+      "bbox": {
+        "min_xyz_m": [
+          -0.03500000014901161,
+          -0.1274999976158142,
+          -0.10999999940395355
+        ],
+        "max_xyz_m": [
+          0.03500000014901161,
+          -0.08249999582767487,
+          -0.0260000042617321
+        ],
+        "dimensions_xyz_m": [
+          0.07000000029802322,
+          0.04500000178813934,
+          0.08399999514222145
+        ]
+      }
+    },
+    {
+      "name": "COL_Filter",
+      "parent": "K1_Collision_Root",
+      "pivot_xyz_m": [
+        -0.11549904942512512,
+        -0.05692523345351219,
+        -0.04446260631084442
+      ],
+      "triangles": 44,
+      "boundary_edges": 0,
+      "max_convex_plane_violation_m": 1.4086253941059113e-07,
+      "bbox": {
+        "min_xyz_m": [
+          -0.1677616536617279,
+          -0.1175852119922638,
+          -0.10143282264471054
+        ],
+        "max_xyz_m": [
+          -0.06323645263910294,
+          0.003734756261110306,
+          0.012507598847150803
+        ],
+        "dimensions_xyz_m": [
+          0.10452520102262497,
+          0.1213199682533741,
+          0.11394042149186134
+        ]
+      }
+    }
+  ],
+  "filter_mate_distance_m": 0.0,
+  "filter_axis_dot": -1.0000000186264515,
+  "attachment_max_motion_m": 0.0,
+  "uv_qa": {
+    "resolution": 2048,
+    "islands": 414,
+    "cross_island_overlap_pixels": 0,
+    "nearest_island_pixel_distance_under9px": null,
+    "packing_margin_target_px": 16,
+    "method": "triangle interior raster + neighboring island scan; not analytic subpixel proof"
+  },
+  "export": {
+    "use_selection": true,
+    "object_types": [
+      "EMPTY",
+      "MESH"
+    ],
+    "global_scale": 1.0,
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_ALL",
+    "use_space_transform": true,
+    "bake_space_transform": false,
+    "axis_forward": "-Z",
+    "axis_up": "Y",
+    "use_mesh_modifiers": false,
+    "use_mesh_modifiers_render": false,
+    "use_triangles": true,
+    "use_tspace": true,
+    "mesh_smooth_type": "OFF",
+    "bake_anim": false,
+    "add_leaf_bones": false,
+    "use_custom_props": true,
+    "path_mode": "RELATIVE",
+    "embed_textures": false,
+    "exporter_module": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\5.2\\scripts\\addons_core\\io_scene_fbx\\__init__.py",
+    "exporter_version": [
+      5,
+      15,
+      0
+    ]
+  },
+  "roundtrip": {
+    "object_count": 28,
+    "mesh_count": 9,
+    "parts": [
+      {
+        "name": "Part_Facepiece",
+        "vertices_source": 3578,
+        "vertices_imported": 3578,
+        "triangle_count": 7156,
+        "bbox_max_error_m": 1.862645149230957e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_Lens_L",
+        "vertices_source": 98,
+        "vertices_imported": 98,
+        "triangle_count": 192,
+        "bbox_max_error_m": 1.4901161193847656e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_Lens_R",
+        "vertices_source": 98,
+        "vertices_imported": 98,
+        "triangle_count": 192,
+        "bbox_max_error_m": 1.4901161193847656e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_FilterConnector",
+        "vertices_source": 240,
+        "vertices_imported": 240,
+        "triangle_count": 476,
+        "bbox_max_error_m": 7.450580596923828e-09,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_FilterCanister",
+        "vertices_source": 952,
+        "vertices_imported": 952,
+        "triangle_count": 1884,
+        "bbox_max_error_m": 8.381903171539307e-09,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_FrontAssembly",
+        "vertices_source": 624,
+        "vertices_imported": 624,
+        "triangle_count": 1232,
+        "bbox_max_error_m": 2.2351741790771484e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_TubeAssembly",
+        "vertices_source": 170,
+        "vertices_imported": 170,
+        "triangle_count": 328,
+        "bbox_max_error_m": 1.4901161193847656e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_Harness",
+        "vertices_source": 1056,
+        "vertices_imported": 1056,
+        "triangle_count": 2096,
+        "bbox_max_error_m": 2.2351741790771484e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      },
+      {
+        "name": "Part_Buckles",
+        "vertices_source": 592,
+        "vertices_imported": 592,
+        "triangle_count": 1152,
+        "bbox_max_error_m": 1.4901161193847656e-08,
+        "uv_layers": [
+          "UV0"
+        ],
+        "material_slots": 1,
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "parent": "Visuals"
+      }
+    ],
+    "anchors": [
+      {
+        "name": "Anchor_FaceFit",
+        "parent": "Anchors",
+        "position_error_m": 0.0,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_ViewOrigin",
+        "parent": "Anchors",
+        "position_error_m": 6.7158625935464895e-09,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_Grip_L",
+        "parent": "Anchors",
+        "position_error_m": 1.3431725187092979e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_Grip_R",
+        "parent": "Anchors",
+        "position_error_m": 1.3431725187092979e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_FilterAttach",
+        "parent": "Anchors",
+        "position_error_m": 1.0536712127723509e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_FilterMate",
+        "parent": "Anchors",
+        "position_error_m": 1.0536712127723509e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_FilterInspect",
+        "parent": "Anchors",
+        "position_error_m": 1.3431725187092979e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_FrontInspect",
+        "parent": "Anchors",
+        "position_error_m": 2.6863450374185958e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapPull_P_LU",
+        "parent": "Anchors",
+        "position_error_m": 1.0536712127723509e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapGuide_P_LU",
+        "parent": "Anchors",
+        "position_error_m": 1.0943040251731873e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapPull_P_LD",
+        "parent": "Anchors",
+        "position_error_m": 1.666000468656264e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapGuide_P_LD",
+        "parent": "Anchors",
+        "position_error_m": 9.080395102500916e-09,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapPull_P_RU",
+        "parent": "Anchors",
+        "position_error_m": 1.0536712127723509e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapGuide_P_RU",
+        "parent": "Anchors",
+        "position_error_m": 1.0943040251731873e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapPull_P_RD",
+        "parent": "Anchors",
+        "position_error_m": 1.666000468656264e-08,
+        "z_axis_angle_error_deg": 0.0
+      },
+      {
+        "name": "Anchor_StrapGuide_P_RD",
+        "parent": "Anchors",
+        "position_error_m": 9.080395102500916e-09,
+        "z_axis_angle_error_deg": 0.0
+      }
+    ],
+    "texture_paths": [
+      {
+        "file": "BaseColor.png",
+        "exists": true,
+        "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\Textures\\BaseColor.png"
+      },
+      {
+        "file": "Normal.png",
+        "exists": true,
+        "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\Textures\\Normal.png"
+      },
+      {
+        "file": "Harness_BaseColor.png",
+        "exists": true,
+        "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\Textures\\Harness_BaseColor.png"
+      },
+      {
+        "file": "Harness_Normal.png",
+        "exists": true,
+        "path": "D:\\TeamProject\\MilTrainSimVR\\Assets\\B\\Models\\K1GasMask\\Textures\\Harness_Normal.png"
+      }
+    ],
+    "shape_names": [
+      "Basis",
+      "Tighten_P_LU",
+      "Tighten_P_LD",
+      "Tighten_P_RU",
+      "Tighten_P_RD"
+    ],
+    "shape_max_error_m": {
+      "Basis": 3.003425057343598e-08,
+      "Tighten_P_LU": 3.003425057343598e-08,
+      "Tighten_P_LD": 3.003425057343598e-08,
+      "Tighten_P_RU": 3.003425057343598e-08,
+      "Tighten_P_RD": 3.003425057343598e-08
+    },
+    "pose_max_error_m": {
+      "Tighten_P_LU@0": 3.003425057343598e-08,
+      "Tighten_P_LU@0.5": 3.003425057343598e-08,
+      "Tighten_P_LU@1": 3.003425057343598e-08,
+      "Tighten_P_LD@0": 3.003425057343598e-08,
+      "Tighten_P_LD@0.5": 3.003425057343598e-08,
+      "Tighten_P_LD@1": 3.003425057343598e-08,
+      "Tighten_P_RU@0": 3.003425057343598e-08,
+      "Tighten_P_RU@0.5": 3.003425057343598e-08,
+      "Tighten_P_RU@1": 3.003425057343598e-08,
+      "Tighten_P_RD@0": 3.003425057343598e-08,
+      "Tighten_P_RD@0.5": 3.003425057343598e-08,
+      "Tighten_P_RD@1": 3.003425057343598e-08
+    },
+    "root_scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "max_mesh_bbox_error_m": 2.2351741790771484e-08,
+    "max_anchor_position_error_m": 2.6863450374185958e-08,
+    "final_export_rechecked": true,
+    "all_keys_1_max_error_m": 3.003425057343598e-08
+  },
+  "collision_roundtrip": {
+    "mesh_count": 5,
+    "parts": [
+      {
+        "name": "COL_Facepiece",
+        "triangles": 12,
+        "bbox_max_error_m": 1.4901161193847656e-08
+      },
+      {
+        "name": "COL_Facepiece_L",
+        "triangles": 12,
+        "bbox_max_error_m": 1.4901161193847656e-08
+      },
+      {
+        "name": "COL_Facepiece_R",
+        "triangles": 12,
+        "bbox_max_error_m": 1.4901161193847656e-08
+      },
+      {
+        "name": "COL_Front",
+        "triangles": 12,
+        "bbox_max_error_m": 1.862645149230957e-08
+      },
+      {
+        "name": "COL_Filter",
+        "triangles": 44,
+        "bbox_max_error_m": 7.450580596923828e-09
+      }
+    ]
+  },
+  "overall_bbox_all_tight": {
+    "min_xyz_m": [
+      -0.16101431846618652,
+      -0.13300000131130219,
+      -0.11699999868869781
+    ],
+    "max_xyz_m": [
+      0.12554201483726501,
+      0.17399999499320984,
+      0.11699999868869781
+    ],
+    "dimensions_xyz_m": [
+      0.28655633330345154,
+      0.306999996304512,
+      0.23399999737739563
+    ]
+  },
+  "textures": [
+    {
+      "file": "BaseColor.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorspace": "sRGB",
+      "exists": true
+    },
+    {
+      "file": "Normal.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "exists": true
+    },
+    {
+      "file": "MetallicSmoothness.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "exists": true
+    },
+    {
+      "file": "AO.png",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "colorspace": "Non-Color",
+      "exists": true
+    },
+    {
+      "file": "Harness_BaseColor.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorspace": "sRGB",
+      "exists": true
+    },
+    {
+      "file": "Harness_Normal.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "exists": true
+    },
+    {
+      "file": "Harness_MetallicSmoothness.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "colorspace": "Non-Color",
+      "exists": true
+    }
+  ],
+  "status": "외형/상호작용 프로토타입. 실측, 실제 후면 구조, Unity 실행 및 VR 실기 미검증.",
+  "intended_unity_axes": "+X wearer right / +Y up / +Z front; user verification required",
+  "blender_axes": "+X wearer right / +Z up / -Y front",
+  "source_reference_pixels": [
+    200,
+    200
+  ],
+  "previews": {
+    "render_resolution": [
+      1600,
+      1200
+    ],
+    "rendered": [
+      "01_ThreeQuarter",
+      "02_Front",
+      "03_Rear",
+      "04_WearerLeft",
+      "05_WearerRight",
+      "06_Inside",
+      "07_Wireframe",
+      "08_UVChecker",
+      "09_AllLoose",
+      "10_AllTight",
+      "Tighten_P_LD_100",
+      "Tighten_P_LD_50",
+      "Tighten_P_LU_100",
+      "Tighten_P_LU_50",
+      "Tighten_P_RD_100",
+      "Tighten_P_RD_50",
+      "Tighten_P_RU_100",
+      "Tighten_P_RU_50"
+    ],
+    "errors": []
+  },
+  "source_saved": "Source~/K1_GasMask.blend"
+}
